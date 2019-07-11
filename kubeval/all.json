@@ -1,0 +1,49 @@
+{
+  "oneOf": [
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.ObjectMeta"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.OwnerReference"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Fields"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Initializers"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Time"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.StatusCause"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1alpha1.HelmResourceCondition"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1alpha1.ArmadaChartGroupStatus"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Initializer"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1alpha1.ArmadaChartGroup"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.ManagedFieldsEntry"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1alpha1.ArmadaChartGroupSpec"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Status"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.StatusDetails"
+    }, 
+    {
+      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.ListMeta"
+    }
+  ]
+}
