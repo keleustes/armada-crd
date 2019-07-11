@@ -4,32 +4,15 @@ go 1.12
 
 require (
 	github.com/emicklei/go-restful v2.9.6+incompatible
-	github.com/evanphx/json-patch v4.5.0+incompatible // indirect
 	github.com/go-openapi/spec v0.19.2
 	github.com/go-openapi/strfmt v0.19.2
 	github.com/go-openapi/validate v0.19.2
-	github.com/gogo/protobuf v1.2.1 // indirect
-	github.com/googleapis/gnostic v0.2.0 // indirect
-	github.com/imdario/mergo v0.3.7 // indirect
-	github.com/json-iterator/go v1.1.5 // indirect
-	github.com/onsi/ginkgo v1.7.0 // indirect
-	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/pkg/errors v0.8.1 // indirect
-	github.com/prometheus/client_model v0.0.0-20190129233127-fd36f4220a90 // indirect
-	github.com/prometheus/common v0.2.0 // indirect
-	github.com/prometheus/procfs v0.0.0-20190219184716-e4d4a2206da0 // indirect
-	github.com/spf13/pflag v1.0.3 // indirect
-	golang.org/x/crypto v0.0.0-20190621222207-cc06ce4a13d4 // indirect
-	golang.org/x/time v0.0.0-20181108054448-85acf8d2951c // indirect
-	gopkg.in/inf.v0 v0.9.1 // indirect
+	github.com/keleustes/armada-operator v1.4.1 // indirect
 	k8s.io/api v0.0.0
 	k8s.io/apiextensions-apiserver v0.0.0
 	k8s.io/apimachinery v0.0.0
 	k8s.io/apiserver v0.0.0
-	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible // indirect
-	k8s.io/component-base v0.0.0 // indirect
-	k8s.io/kube-openapi v0.0.0-20190228160746-b3a7cee44a30
-	k8s.io/utils v0.0.0-20190506122338-8fab8cb257d5 // indirect
+	k8s.io/kube-openapi v0.0.0-20190709113604-33be087ad058
 )
 
 replace (

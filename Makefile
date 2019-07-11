@@ -8,6 +8,8 @@ DOCKER_NAMESPACE ?= keleustes
 IMG_V2           ?= ${DHUBREPO}:v${VERSION_V2}
 IMG_V3           ?= ${DHUBREPO}:v${VERSION_V3}
 
+OPENAPI_GEN      := "k8s.io/kube-openapi/cmd/openapi-gen"
+
 clean:
 	rm -fr vendor
 	rm -fr cover.out
@@ -21,11 +23,11 @@ crd-yaml:
 
 openapi-gen:
 	# go get k8s.io/kube-openapi
-	GO111MODULE=on go run vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./testdata/golden.report
+	GO111MODULE=on go run ${OPENAPI_GEN} -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
 
 swagger-gen:
-	GO111MODULE=on go run cmd/builder/main.go kubeval/swagger.json
- 
+	GO111MODULE=on go run cmd/builder/main.go swagger/swagger.json
+
 kubeval-json:
 	REPO="keleustes/armada-operator"
 	schema=swagger/golden.json
