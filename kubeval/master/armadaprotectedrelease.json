@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Protected", 
+  "properties": {
+    "continue_processing": {
+      "type": "boolean", 
+      "description": "do not delete FAILED releases when encountered from previous run (provide the 'continue_processing' bool to continue or halt execution (default: halt))"
+    }
+  }
+}

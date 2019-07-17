@@ -1,0 +1,27 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "default": {
+      "type": "integer", 
+      "description": "default contains tbd", 
+      "format": "int32"
+    }, 
+    "internal": {
+      "type": "integer", 
+      "description": "internal contains tbd", 
+      "format": "int32"
+    }, 
+    "nodeport": {
+      "type": "integer", 
+      "description": "nodeport contains tbd", 
+      "format": "int32"
+    }, 
+    "public": {
+      "type": "integer", 
+      "description": "public contains tbd", 
+      "format": "int32"
+    }
+  }
+}

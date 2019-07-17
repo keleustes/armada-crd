@@ -1,0 +1,24 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "enabled": {
+      "type": "boolean"
+    }, 
+    "options": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "description": "Test. JEB that structure could not be converted automatically", 
+      "properties": {
+        "cleanup": {
+          "type": "boolean"
+        }
+      }
+    }, 
+    "timeout": {
+      "type": "integer", 
+      "format": "int64"
+    }
+  }
+}

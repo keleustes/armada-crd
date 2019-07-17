@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Post", 
+  "properties": {
+    "create": {
+      "items": {
+        "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaHookActionItems"
+      }, 
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "description": "Upgrade", 
+  "required": [
+    "no_hooks"
+  ], 
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "pre": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "description": "Pre", 
+      "properties": {
+        "create": {
+          "items": {
+            "additionalProperties": false, 
+            "required": [
+              "type"
+            ], 
+            "type": "object", 
+            "description": "HookActionItems", 
+            "properties": {
+              "labels": {
+                "type": "object", 
+                "description": "Labels"
+              }, 
+              "type": {
+                "type": "string"
+              }, 
+              "name": {
+                "type": "string"
+              }
+            }
+          }, 
+          "type": "array", 
+          "description": "| pre         | object   | actions performed prior to updating a release                 |"
+        }, 
+        "update": {
+          "items": {
+            "additionalProperties": false, 
+            "required": [
+              "type"
+            ], 
+            "type": "object", 
+            "description": "HookActionItems", 
+            "properties": {
+              "labels": {
+                "type": "object", 
+                "description": "Labels"
+              }, 
+              "type": {
+                "type": "string"
+              }, 
+              "name": {
+                "type": "string"
+              }
+            }
+          }, 
+          "type": "array"
+        }, 
+        "delete": {
+          "items": {
+            "additionalProperties": false, 
+            "required": [
+              "type"
+            ], 
+            "type": "object", 
+            "description": "HookActionItems", 
+            "properties": {
+              "labels": {
+                "type": "object", 
+                "description": "Labels"
+              }, 
+              "type": {
+                "type": "string"
+              }, 
+              "name": {
+                "type": "string"
+              }
+            }
+          }, 
+          "type": "array"
+        }
+      }
+    }, 
+    "post": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "description": "Post", 
+      "properties": {
+        "create": {
+          "items": {
+            "additionalProperties": false, 
+            "required": [
+              "type"
+            ], 
+            "type": "object", 
+            "description": "HookActionItems", 
+            "properties": {
+              "labels": {
+                "type": "object", 
+                "description": "Labels"
+              }, 
+              "type": {
+                "type": "string"
+              }, 
+              "name": {
+                "type": "string"
+              }
+            }
+          }, 
+          "type": "array"
+        }
+      }
+    }, 
+    "no_hooks": {
+      "type": "boolean"
+    }, 
+    "options": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "description": "Options", 
+      "properties": {
+        "recreate_pods": {
+          "type": "boolean"
+        }, 
+        "force": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

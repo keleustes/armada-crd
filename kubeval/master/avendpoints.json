@@ -1,0 +1,218 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "fluentd": {
+      "description": "fluentd contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "process_exporter_metrics": {
+      "description": "process_exporter_metrics contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "prometheus_elasticsearch_exporter": {
+      "description": "prometheus_elasticsearch_exporter contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_messaging": {
+      "description": "oslo_messaging contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "image": {
+      "description": "image contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "ceph_object_store": {
+      "description": "ceph_object_store contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "kibana": {
+      "description": "kibana contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "nagios": {
+      "description": "nagios contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "prometheus_fluentd_exporter": {
+      "description": "prometheus_fluentd_exporter contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "compute_novnc_proxy": {
+      "description": "compute_novnc_proxy contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "armada": {
+      "description": "armada contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "image_registry": {
+      "description": "image_registry contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "maas_region_ui": {
+      "description": "maas_region_ui contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "placement": {
+      "description": "placement contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "postgresql_airflow_celery_db": {
+      "description": "postgresql_airflow_celery_db contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "monitoring": {
+      "description": "monitoring contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "network": {
+      "description": "network contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_db_cell0": {
+      "description": "oslo_db_cell0 contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "deckhand": {
+      "description": "deckhand contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "alerts": {
+      "description": "alerts contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "compute_metadata": {
+      "description": "compute_metadata contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "cloudwatch": {
+      "description": "cloudwatch contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "grafana": {
+      "description": "grafana contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "postgresql_airflow_db": {
+      "description": "postgresql_airflow_db contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "ldap": {
+      "description": "ldap contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "postgresql_shipyard_db": {
+      "description": "postgresql_shipyard_db contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "prometheus_openstack_exporter": {
+      "description": "prometheus_openstack_exporter contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "object_store": {
+      "description": "object_store contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_db_api": {
+      "description": "oslo_db_api contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "maas_db": {
+      "description": "maas_db contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "prometheus_rabbitmq_exporter": {
+      "description": "prometheus_rabbitmq_exporter contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_db_session": {
+      "description": "oslo_db_session contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "cloudformation": {
+      "description": "cloudformation contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "kube_state_metrics": {
+      "description": "kube_state_metrics contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "kubernetesprovisioner": {
+      "description": "kubernetesprovisioner contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "identity": {
+      "description": "identity contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "volume": {
+      "description": "volume contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_db": {
+      "description": "oslo_db contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "physicalprovisioner": {
+      "description": "physicalprovisioner contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "compute": {
+      "description": "compute contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "volumev2": {
+      "description": "volumev2 contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "volumev3": {
+      "description": "volumev3 contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "shipyard": {
+      "description": "shipyard contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "compute_spice_proxy": {
+      "description": "compute_spice_proxy contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "kube_scheduler": {
+      "description": "kube_scheduler contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "prometheus_mysql_exporter": {
+      "description": "prometheus_mysql_exporter contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "node_metrics": {
+      "description": "node_metrics contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "elasticsearch": {
+      "description": "elasticsearch contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "dashboard": {
+      "description": "dashboard contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "orchestration": {
+      "description": "orchestration contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "kube_controller_manager": {
+      "description": "kube_controller_manager contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }, 
+    "postgresql": {
+      "description": "postgresql contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+    }, 
+    "key_manager": {
+      "description": "key_manager contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+    }
+  }
+}

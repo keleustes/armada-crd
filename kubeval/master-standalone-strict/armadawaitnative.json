@@ -1,0 +1,12 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Native", 
+  "properties": {
+    "enabled": {
+      "type": "boolean", 
+      "description": "Config for the native ``helm (install|upgrade) --wait`` flag. defaults to true"
+    }
+  }
+}

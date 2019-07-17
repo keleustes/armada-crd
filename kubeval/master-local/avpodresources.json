@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "requests": {
+      "description": "requests contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodResourceSettings"
+    }, 
+    "limits": {
+      "description": "limits contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodResourceSettings"
+    }
+  }
+}

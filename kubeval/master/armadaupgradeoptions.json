@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Options", 
+  "properties": {
+    "recreate_pods": {
+      "type": "boolean"
+    }, 
+    "force": {
+      "type": "boolean"
+    }
+  }
+}

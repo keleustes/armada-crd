@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "name": {
+      "type": "string", 
+      "description": "name contains tbd"
+    }, 
+    "namespace": {
+      "type": "string", 
+      "description": "namespace contains tbd"
+    }, 
+    "auth": {
+      "additionalProperties": {
+        "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointAuth"
+      }, 
+      "type": "object", 
+      "description": "auth contains tbd"
+    }, 
+    "port": {
+      "additionalProperties": {
+        "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointPort"
+      }, 
+      "type": "object", 
+      "description": "port contains tbd"
+    }, 
+    "hosts": {
+      "description": "hosts contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }, 
+    "path": {
+      "description": "path contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }, 
+    "scheme": {
+      "description": "scheme contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }, 
+    "type": {
+      "type": "string", 
+      "description": "type contains tbd"
+    }, 
+    "host_fqdn_override": {
+      "description": "host_fqdn_override contains tbd", 
+      "$ref": "_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }
+  }
+}

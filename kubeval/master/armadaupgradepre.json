@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Pre", 
+  "properties": {
+    "create": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.ArmadaHookActionItems"
+      }, 
+      "type": "array", 
+      "description": "| pre         | object   | actions performed prior to updating a release                 |"
+    }, 
+    "update": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.ArmadaHookActionItems"
+      }, 
+      "type": "array"
+    }, 
+    "delete": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.ArmadaHookActionItems"
+      }, 
+      "type": "array"
+    }
+  }
+}

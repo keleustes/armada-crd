@@ -1,0 +1,19 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "default": {
+      "type": "string", 
+      "description": "default contains tbd"
+    }, 
+    "public": {
+      "type": "string", 
+      "description": "public contains tbd"
+    }, 
+    "discovery": {
+      "type": "string", 
+      "description": "discovery contains tbd"
+    }
+  }
+}

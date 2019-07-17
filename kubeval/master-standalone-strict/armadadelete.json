@@ -1,0 +1,13 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Delete", 
+  "properties": {
+    "timeout": {
+      "type": "integer", 
+      "description": "time (in seconds) to wait for chart to be deleted", 
+      "format": "int64"
+    }
+  }
+}

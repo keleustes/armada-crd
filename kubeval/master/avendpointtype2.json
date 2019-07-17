@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "name": {
+      "type": "string", 
+      "description": "name contains tbd"
+    }, 
+    "namespace": {
+      "type": "string", 
+      "description": "namespace contains tbd"
+    }, 
+    "auth": {
+      "additionalProperties": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointAuth"
+      }, 
+      "type": "object", 
+      "description": "auth contains tbd"
+    }, 
+    "port": {
+      "additionalProperties": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVEndpointPort"
+      }, 
+      "type": "object", 
+      "description": "port contains tbd"
+    }, 
+    "hosts": {
+      "description": "hosts contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }, 
+    "path": {
+      "type": "string", 
+      "description": "path contains tbd"
+    }, 
+    "scheme": {
+      "type": "string", 
+      "description": "scheme contains tbd"
+    }, 
+    "type": {
+      "type": "string", 
+      "description": "type contains tbd"
+    }, 
+    "host_fqdn_override": {
+      "description": "host_fqdn_override contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+    }
+  }
+}

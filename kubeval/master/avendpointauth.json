@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "username": {
+      "type": "string", 
+      "description": "username contains tbd"
+    }, 
+    "tls": {
+      "description": "tls contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/v1alpha1.AVTls"
+    }, 
+    "project_name": {
+      "type": "string", 
+      "description": "project_name contains tbd"
+    }, 
+    "region_name": {
+      "type": "string", 
+      "description": "region_name contains tbd"
+    }, 
+    "database": {
+      "type": "string", 
+      "description": "database contains tbd"
+    }, 
+    "bind": {
+      "type": "string", 
+      "description": "bind contains tbd"
+    }, 
+    "user_domain_name": {
+      "type": "string", 
+      "description": "user_domain_name contains tbd"
+    }, 
+    "bind_dn": {
+      "type": "string", 
+      "description": "bind_dn contains tbd"
+    }, 
+    "domain_name": {
+      "type": "string", 
+      "description": "domain_name contains tbd"
+    }, 
+    "tmpurlkey": {
+      "type": "string", 
+      "description": "tmpurlkey contains tbd"
+    }, 
+    "role": {
+      "type": "string", 
+      "description": "role contains tbd"
+    }, 
+    "access_key": {
+      "type": "string", 
+      "description": "access_key contains tbd"
+    }, 
+    "secret_key": {
+      "type": "string", 
+      "description": "secret_key contains tbd"
+    }, 
+    "password": {
+      "type": "string", 
+      "description": "password contains tbd"
+    }, 
+    "email": {
+      "type": "string", 
+      "description": "email contains tbd"
+    }, 
+    "project_domain_name": {
+      "type": "string", 
+      "description": "project_domain_name contains tbd"
+    }
+  }
+}
