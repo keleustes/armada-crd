@@ -102,7 +102,9 @@ func createOpenAPIBuilderConfig() *common.Config {
 // for testing.
 func createWebServices() []*restful.WebService {
 	w := new(restful.WebService)
+	w.Route(buildRouteForType(w, "v1alpha1", "ArmadaChart"))
 	w.Route(buildRouteForType(w, "v1alpha1", "ArmadaChartGroup"))
+	w.Route(buildRouteForType(w, "v1alpha1", "ArmadaManifest"))
 	return []*restful.WebService{w}
 }
 

@@ -22,7 +22,7 @@
     }, 
     "causes": {
       "items": {
-        "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.StatusCause"
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/#/definitions/v1.StatusCause"
       }, 
       "type": "array", 
       "description": "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes."

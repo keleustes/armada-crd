@@ -11,7 +11,7 @@
       "type": "string"
     }, 
     "lastTransitionTime": {
-      "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1.Time"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/#/definitions/v1.Time"
     }, 
     "reason": {
       "type": "string"

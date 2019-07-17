@@ -17,7 +17,7 @@
     }, 
     "conditions": {
       "items": {
-        "$ref": "github.com/keleustes/armada-operator/pkg/apis/armada#/definitions/v1alpha1.HelmResourceCondition"
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/#/definitions/v1alpha1.HelmResourceCondition"
       }, 
       "type": "array", 
       "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder"

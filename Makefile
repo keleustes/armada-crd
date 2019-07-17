@@ -1,35 +1,43 @@
-
-# Image URL to use all building/pushing image targets
-COMPONENT        ?= armada-operator
-VERSION_V2       ?= 2.14.1
-VERSION_V3       ?= 3.0.0
-DHUBREPO         ?= keleustes/${COMPONENT}-dev
-DOCKER_NAMESPACE ?= keleustes
-IMG_V2           ?= ${DHUBREPO}:v${VERSION_V2}
-IMG_V3           ?= ${DHUBREPO}:v${VERSION_V3}
-
+# JEB: We will have to put all those tools into a docker image
+# to be allow CI/CD to rebuild
 OPENAPI_GEN      := "k8s.io/kube-openapi/cmd/openapi-gen"
 
+.PHONY: clean
+
+all: crd-yaml openapi-gen swagger-gen kubeval-json standalone-json
+
 clean:
-	rm -fr vendor
-	rm -fr cover.out
-	rm -fr build/_output
-	rm -fr config/crds
+	rm -f kubectl/*.yaml
+	rm -f pkg/generated/openapi_generated.go
+	rm -f swagger/golden.report
+	rm -f swagger/swagger.json
+	rm -f kubeval/*.json
+	rm -f standalone/*.json
 
 # Generate code
 crd-yaml:
         # go get sigs.k8s.io/controller-tools
+	mkdir -p kubectl
 	GO111MODULE=on controller-gen crd paths=github.com/keleustes/armada-operator/pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
 
 openapi-gen:
 	# go get k8s.io/kube-openapi
+	mkdir -p pkg/generated
+	mkdir -p swagger
 	GO111MODULE=on go run ${OPENAPI_GEN} -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
 
 swagger-gen:
+	mkdir -p swagger
 	GO111MODULE=on go run cmd/builder/main.go swagger/swagger.json
 
 kubeval-json:
-	REPO="keleustes/armada-operator"
-	schema=swagger/golden.json
-	prefix=https://raw.githubusercontent.com/${REPO}/master/${version}/
-	openapi2jsonschema -o "${version}" --prefix "${prefix}" "${schema}"
+	# JEB: Kubernetes option would be important but it does not work
+	mkdir -p kubeval
+	# openapi2jsonschema -o kubeval -p https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/ --expanded --kubernetes swagger/swagger.json
+	openapi2jsonschema -o kubeval -p https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/ --expanded swagger/swagger.json
+
+standalone-json:
+	# JEB: Note really sure if it will be usable
+	mkdir -p standalone
+	openapi2jsonschema -o standalone --stand-alone --expanded swagger/swagger.json
+

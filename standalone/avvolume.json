@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "class_name": {
+      "type": "string", 
+      "description": "class_name contains tbd"
+    }, 
+    "backup": {
+      "type": "object", 
+      "properties": {
+        "class_name": {
+          "type": "string", 
+          "description": "class_name contains tbd"
+        }, 
+        "enabled": {
+          "type": "boolean", 
+          "description": "enabled contains tbd"
+        }, 
+        "size": {
+          "type": "string", 
+          "description": "size contains tbd"
+        }
+      }
+    }, 
+    "chown_on_start": {
+      "type": "boolean", 
+      "description": "chown_on_start contains tbd"
+    }, 
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }, 
+    "size": {
+      "type": "string", 
+      "description": "size contains tbd"
+    }
+  }
+}
