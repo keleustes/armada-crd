@@ -694,6 +694,11 @@
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaManifest": {
       "type": "object", 
+      "x-kubernetes-group-version-kind": {
+        "kind": "ArmadaManifest", 
+        "version": "v1alpha1", 
+        "group": "armada.airshipit.org"
+      }, 
       "description": "ArmadaManifest is the Schema for the armadamanifests API", 
       "properties": {
         "status": {
@@ -868,6 +873,11 @@
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaChart": {
       "type": "object", 
+      "x-kubernetes-group-version-kind": {
+        "kind": "ArmadaChart", 
+        "version": "v1alpha1", 
+        "group": "armada.airshipit.org"
+      }, 
       "description": "ArmadaChart is the Schema for the armadacharts API", 
       "properties": {
         "status": {
@@ -1054,6 +1064,11 @@
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaChartGroup": {
       "type": "object", 
+      "x-kubernetes-group-version-kind": {
+        "kind": "ArmadaChartGroup", 
+        "version": "v1alpha1", 
+        "group": "armada.airshipit.org"
+      }, 
       "description": "ArmadaChartGroup is the Schema for the armadachartgroups API", 
       "properties": {
         "status": {

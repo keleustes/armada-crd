@@ -1,8 +1,13 @@
 {
+  "description": "ArmadaChartGroup is the Schema for the armadachartgroups API", 
+  "x-kubernetes-group-version-kind": {
+    "kind": "ArmadaChartGroup", 
+    "version": "v1alpha1", 
+    "group": "armada.airshipit.org"
+  }, 
   "additionalProperties": false, 
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
-  "description": "ArmadaChartGroup is the Schema for the armadachartgroups API", 
   "properties": {
     "status": {
       "additionalProperties": false, 

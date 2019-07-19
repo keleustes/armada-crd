@@ -7,10 +7,19 @@
   "paths": {
    "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadachartgroups/{name}": {
     "get": {
+     "description": "read the status of the specified ArmadaChartGroup",
+     "consumes": [
+      "*/*"
+     ],
+     "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+     ],
      "schemes": [
       "https"
      ],
-     "operationId": "func2",
+     "operationId": "readArmadav1alpha1ArmadaChartGroup",
      "responses": {
       "200": {
        "description": "OK",
@@ -22,14 +31,41 @@
        "description": "Unauthorized"
       }
      }
-    }
+    },
+    "parameters": [
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "name of the ArmadaChartGroup",
+      "name": "name",
+      "in": "path",
+      "required": true
+     },
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "object name and auth scope, such as for teams and projects",
+      "name": "namespace",
+      "in": "path",
+      "required": true
+     }
+    ]
    },
    "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadacharts/{name}": {
     "get": {
+     "description": "read the status of the specified ArmadaChart",
+     "consumes": [
+      "*/*"
+     ],
+     "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+     ],
      "schemes": [
       "https"
      ],
-     "operationId": "func1",
+     "operationId": "readArmadav1alpha1ArmadaChart",
      "responses": {
       "200": {
        "description": "OK",
@@ -41,14 +77,41 @@
        "description": "Unauthorized"
       }
      }
-    }
+    },
+    "parameters": [
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "name of the ArmadaChart",
+      "name": "name",
+      "in": "path",
+      "required": true
+     },
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "object name and auth scope, such as for teams and projects",
+      "name": "namespace",
+      "in": "path",
+      "required": true
+     }
+    ]
    },
    "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadamanifests/{name}": {
     "get": {
+     "description": "read the status of the specified ArmadaManifest",
+     "consumes": [
+      "*/*"
+     ],
+     "produces": [
+      "application/json",
+      "application/yaml",
+      "application/vnd.kubernetes.protobuf"
+     ],
      "schemes": [
       "https"
      ],
-     "operationId": "func3",
+     "operationId": "readArmadav1alpha1ArmadaManifest",
      "responses": {
       "200": {
        "description": "OK",
@@ -60,7 +123,25 @@
        "description": "Unauthorized"
       }
      }
-    }
+    },
+    "parameters": [
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "name of the ArmadaManifest",
+      "name": "name",
+      "in": "path",
+      "required": true
+     },
+     {
+      "uniqueItems": true,
+      "type": "string",
+      "description": "object name and auth scope, such as for teams and projects",
+      "name": "namespace",
+      "in": "path",
+      "required": true
+     }
+    ]
    }
   },
   "definitions": {
@@ -1123,6 +1204,11 @@
      "status": {
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartStatus"
      }
+    },
+    "x-kubernetes-group-version-kind": {
+     "group": "armada.airshipit.org",
+     "kind": "ArmadaChart",
+     "version": "v1alpha1"
     }
    },
    "org.airshipit.armada.v1alpha1.ArmadaChartGroup": {
@@ -1146,6 +1232,11 @@
      "status": {
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus"
      }
+    },
+    "x-kubernetes-group-version-kind": {
+     "group": "armada.airshipit.org",
+     "kind": "ArmadaChartGroup",
+     "version": "v1alpha1"
     }
    },
    "org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec": {
@@ -1541,6 +1632,11 @@
      "status": {
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestStatus"
      }
+    },
+    "x-kubernetes-group-version-kind": {
+     "group": "armada.airshipit.org",
+     "kind": "ArmadaManifest",
+     "version": "v1alpha1"
     }
    },
    "org.airshipit.armada.v1alpha1.ArmadaManifestSpec": {

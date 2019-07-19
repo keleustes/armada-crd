@@ -96,15 +96,31 @@ func createOpenAPIBuilderConfig() *common.Config {
 			401: *spec.NewResponse().WithDescription("Unauthorized"),
 			// 404: *spec.ResponseRef("#/responses/NotFound"),
 		},
+		GetOperationIDAndTags: func(r *restful.Route) (string, []string, error) {
+			return r.Operation, nil, nil
+		},
 		GetDefinitionName: func(name string) (string, spec.Extensions) {
+			gvk := name[strings.LastIndex(name, "/")+1:]
+			kind := gvk[strings.LastIndex(gvk, ".")+1:]
+			version := gvk[:strings.LastIndex(gvk, ".")]
+			log.Printf("kind %s version %s", kind, version)
+
 			prefix := "org.airshipit.armada."
-			if (strings.Contains(name, "apimachinery")) {
+			if strings.Contains(name, "apimachinery") {
 				prefix = "io.k8s.apimachinery.pkg.apis.meta."
 			}
-			friendlyName := name[strings.LastIndex(name, "/")+1:]
-			friendlyName = prefix + friendlyName
-			extensions := spec.Extensions{}
-			// extensions := spec.Extensions{"x-kubernetes-group-version-kind": "test2"}
+			friendlyName := prefix + gvk
+			var extensions spec.Extensions
+			switch kind {
+			case "ArmadaChart", "ArmadaChartGroup", "ArmadaManifest":
+				extensions = spec.Extensions{"x-kubernetes-group-version-kind": map[string]interface{}{
+					"group":   "armada.airshipit.org",
+					"kind":    kind,
+					"version": version,
+				}}
+			default:
+				extensions = spec.Extensions{}
+			}
 			return friendlyName, extensions
 		},
 	}
@@ -138,6 +154,12 @@ func buildRouteForType(ws *restful.WebService, pkg, name string) *restful.RouteB
 		name: name,
 	}
 	return ws.GET(fmt.Sprintf("/api/armada.airshipit.org/%s/namespaces/{namespace}/%ss/{name}", pkg, strings.ToLower(name))).
+		Doc(fmt.Sprintf("read the status of the specified %s", name)).
+		Operation(fmt.Sprintf("readArmada%s%s", pkg, name)).
+		Param(ws.PathParameter("name", fmt.Sprintf("name of the %s", name)).DataType("string")).
+		Param(ws.PathParameter("namespace", "object name and auth scope, such as for teams and projects").DataType("string")).
+		Produces("application/json", "application/yaml", "application/vnd.kubernetes.protobuf").
+		Consumes("*/*").
 		To(func(*restful.Request, *restful.Response) {}).
 		Writes(&namer)
 }

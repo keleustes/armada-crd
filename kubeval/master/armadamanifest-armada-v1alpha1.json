@@ -1,4 +1,9 @@
 {
+  "x-kubernetes-group-version-kind": {
+    "kind": "ArmadaManifest", 
+    "version": "v1alpha1", 
+    "group": "armada.airshipit.org"
+  }, 
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "description": "ArmadaManifest is the Schema for the armadamanifests API", 
