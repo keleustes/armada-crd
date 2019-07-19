@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "required": [
+    "chart_groups", 
+    "release_prefix", 
+    "target_state"
+  ], 
+  "type": "object", 
+  "description": "======= ArmadaManifestSpec Definition ======= ArmadaManifestSpec defines the desired state of ArmadaManifest", 
+  "properties": {
+    "release_prefix": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Appends to the front of all charts released by the manifest in order to manage releases throughout their lifecycle"
+    }, 
+    "target_state": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Target state of the Helm Custom Resources"
+    }, 
+    "revisionHistoryLimit": {
+      "type": "integer", 
+      "description": "revisionHistoryLimit is the maximum number of revisions that will be maintained in the ArmadaManifest's revision history. The revision history consists of all revisions not represented by a currently applied ArmadaManifest version. The default value is 10.", 
+      "format": "int32"
+    }, 
+    "chart_groups": {
+      "items": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "References ChartGroup document of all groups"
+    }
+  }
+}

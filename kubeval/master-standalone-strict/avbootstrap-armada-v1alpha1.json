@@ -1,0 +1,25 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "ip": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "ip contains tbd"
+    }, 
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }, 
+    "script": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "script contains tbd"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "peer": {
+      "type": "object", 
+      "properties": {
+        "ca": {
+          "type": "string", 
+          "description": "ca contains tbd"
+        }
+      }
+    }, 
+    "ca": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "ca contains tbd"
+    }, 
+    "client": {
+      "type": "object", 
+      "properties": {
+        "ca": {
+          "type": "string", 
+          "description": "ca contains tbd"
+        }
+      }
+    }, 
+    "crt": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "crt contains tbd"
+    }, 
+    "key": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "key contains tbd"
+    }
+  }
+}

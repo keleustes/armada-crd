@@ -50,9 +50,9 @@ kubeval-json:
 	mkdir -p kubeval/master-local
 	mkdir -p kubeval/master-standalone
 	mkdir -p kubeval/master-standalone-strict
-	openapi2jsonschema -o kubeval/master-standalone-strict --stand-alone --expanded --strict swagger/swagger.json
-	openapi2jsonschema -o kubeval/master-standalone --stand-alone --expanded swagger/swagger.json
-	openapi2jsonschema -o kubeval/master-local --expanded swagger/swagger.json
-	openapi2jsonschema -o kubeval/master --expanded --prefix https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json swagger/swagger.json
+	openapi2jsonschema -o kubeval/master-standalone-strict --stand-alone --expanded --strict --kubernetes swagger/swagger.json
+	openapi2jsonschema -o kubeval/master-standalone --stand-alone --expanded --kubernetes swagger/swagger.json
+	openapi2jsonschema -o kubeval/master-local --expanded --kubernetes swagger/swagger.json
+	openapi2jsonschema -o kubeval/master --expanded --kubernetes --prefix https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json swagger/swagger.json
 
 

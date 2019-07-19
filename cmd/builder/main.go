@@ -26,10 +26,10 @@ import (
 
 	"github.com/emicklei/go-restful"
 	"github.com/go-openapi/spec"
+	"github.com/keleustes/armada-crd/pkg/generated"
 	"k8s.io/kube-openapi/pkg/builder"
 	"k8s.io/kube-openapi/pkg/common"
 	"k8s.io/kube-openapi/pkg/util"
-	"github.com/keleustes/armada-crd/pkg/generated"
 )
 
 // TODO: Change this to output the generated swagger to stdout.
@@ -81,7 +81,7 @@ func createOpenAPIBuilderConfig() *common.Config {
 		IgnorePrefixes: []string{"/swaggerapi"},
 		Info: &spec.Info{
 			InfoProps: spec.InfoProps{
-				Title:   "Integration Test",
+				Title:   "Armada Operator",
 				Version: "1.0",
 			},
 		},
@@ -93,7 +93,19 @@ func createOpenAPIBuilderConfig() *common.Config {
 			},
 		},
 		CommonResponses: map[int]spec.Response{
-			404: *spec.ResponseRef("#/responses/NotFound"),
+			401: *spec.NewResponse().WithDescription("Unauthorized"),
+			// 404: *spec.ResponseRef("#/responses/NotFound"),
+		},
+		GetDefinitionName: func(name string) (string, spec.Extensions) {
+			prefix := "org.airshipit.armada."
+			if (strings.Contains(name, "apimachinery")) {
+				prefix = "io.k8s.apimachinery.pkg.apis.meta."
+			}
+			friendlyName := name[strings.LastIndex(name, "/")+1:]
+			friendlyName = prefix + friendlyName
+			extensions := spec.Extensions{}
+			// extensions := spec.Extensions{"x-kubernetes-group-version-kind": "test2"}
+			return friendlyName, extensions
 		},
 	}
 }
@@ -125,7 +137,7 @@ func buildRouteForType(ws *restful.WebService, pkg, name string) *restful.RouteB
 		pkg:  pkg,
 		name: name,
 	}
-	return ws.GET(fmt.Sprintf("test/%s/%s", pkg, strings.ToLower(name))).
+	return ws.GET(fmt.Sprintf("/api/armada.airshipit.org/%s/namespaces/{namespace}/%ss/{name}", pkg, strings.ToLower(name))).
 		To(func(*restful.Request, *restful.Response) {}).
 		Writes(&namer)
 }

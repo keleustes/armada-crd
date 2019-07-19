@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "username": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "username contains tbd"
+    }, 
+    "tls": {
+      "type": "object", 
+      "properties": {
+        "peer": {
+          "type": "object", 
+          "properties": {
+            "ca": {
+              "type": "string", 
+              "description": "ca contains tbd"
+            }
+          }
+        }, 
+        "ca": {
+          "type": "string", 
+          "description": "ca contains tbd"
+        }, 
+        "client": {
+          "type": "object", 
+          "properties": {
+            "ca": {
+              "type": "string", 
+              "description": "ca contains tbd"
+            }
+          }
+        }, 
+        "crt": {
+          "type": "string", 
+          "description": "crt contains tbd"
+        }, 
+        "key": {
+          "type": "string", 
+          "description": "key contains tbd"
+        }
+      }
+    }, 
+    "project_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "project_name contains tbd"
+    }, 
+    "region_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "region_name contains tbd"
+    }, 
+    "database": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "database contains tbd"
+    }, 
+    "bind": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "bind contains tbd"
+    }, 
+    "user_domain_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "user_domain_name contains tbd"
+    }, 
+    "bind_dn": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "bind_dn contains tbd"
+    }, 
+    "domain_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "domain_name contains tbd"
+    }, 
+    "tmpurlkey": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "tmpurlkey contains tbd"
+    }, 
+    "role": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "role contains tbd"
+    }, 
+    "access_key": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "access_key contains tbd"
+    }, 
+    "secret_key": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "secret_key contains tbd"
+    }, 
+    "password": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "password contains tbd"
+    }, 
+    "email": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "email contains tbd"
+    }, 
+    "project_domain_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "project_domain_name contains tbd"
+    }
+  }
+}

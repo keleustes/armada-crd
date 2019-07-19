@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Post", 
+  "properties": {
+    "create": {
+      "items": {
+        "additionalProperties": false, 
+        "required": [
+          "type"
+        ], 
+        "type": "object", 
+        "description": "HookActionItems", 
+        "properties": {
+          "labels": {
+            "type": "object", 
+            "description": "Labels"
+          }, 
+          "type": {
+            "type": "string"
+          }, 
+          "name": {
+            "type": "string"
+          }
+        }
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ]
+    }
+  }
+}

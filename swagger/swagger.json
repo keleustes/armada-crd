@@ -1,30 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-   "title": "Integration Test",
+   "title": "Armada Operator",
    "version": "1.0"
   },
   "paths": {
-   "/test/v1alpha1/armadachart": {
-    "get": {
-     "schemes": [
-      "https"
-     ],
-     "operationId": "func1",
-     "responses": {
-      "200": {
-       "description": "OK",
-       "schema": {
-        "$ref": "#/definitions/v1alpha1.ArmadaChart"
-       }
-      },
-      "404": {
-       "$ref": "#/responses/NotFound"
-      }
-     }
-    }
-   },
-   "/test/v1alpha1/armadachartgroup": {
+   "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadachartgroups/{name}": {
     "get": {
      "schemes": [
       "https"
@@ -34,16 +15,35 @@
       "200": {
        "description": "OK",
        "schema": {
-        "$ref": "#/definitions/v1alpha1.ArmadaChartGroup"
+        "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroup"
        }
       },
-      "404": {
-       "$ref": "#/responses/NotFound"
+      "401": {
+       "description": "Unauthorized"
       }
      }
     }
    },
-   "/test/v1alpha1/armadamanifest": {
+   "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadacharts/{name}": {
+    "get": {
+     "schemes": [
+      "https"
+     ],
+     "operationId": "func1",
+     "responses": {
+      "200": {
+       "description": "OK",
+       "schema": {
+        "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChart"
+       }
+      },
+      "401": {
+       "description": "Unauthorized"
+      }
+     }
+    }
+   },
+   "/api/armada.airshipit.org/v1alpha1/namespaces/{namespace}/armadamanifests/{name}": {
     "get": {
      "schemes": [
       "https"
@@ -53,22 +53,22 @@
       "200": {
        "description": "OK",
        "schema": {
-        "$ref": "#/definitions/v1alpha1.ArmadaManifest"
+        "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifest"
        }
       },
-      "404": {
-       "$ref": "#/responses/NotFound"
+      "401": {
+       "description": "Unauthorized"
       }
      }
     }
    }
   },
   "definitions": {
-   "v1.Fields": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Fields": {
     "description": "Fields stores a set of fields in a data structure like a Trie. To understand how this is used, see: https://github.com/kubernetes-sigs/structured-merge-diff",
     "type": "object"
    },
-   "v1.Initializer": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Initializer": {
     "description": "Initializer is information about an initializer that has not yet completed.",
     "type": "object",
     "required": [
@@ -81,7 +81,7 @@
      }
     }
    },
-   "v1.Initializers": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Initializers": {
     "description": "Initializers tracks the progress of initialization.",
     "type": "object",
     "required": [
@@ -92,18 +92,18 @@
       "description": "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1.Initializer"
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializer"
       },
       "x-kubernetes-patch-merge-key": "name",
       "x-kubernetes-patch-strategy": "merge"
      },
      "result": {
       "description": "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.",
-      "$ref": "#/definitions/v1.Status"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
      }
     }
    },
-   "v1.ListMeta": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta": {
     "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
     "type": "object",
     "properties": {
@@ -126,7 +126,7 @@
      }
     }
    },
-   "v1.ManagedFieldsEntry": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry": {
     "description": "ManagedFieldsEntry is a workflow-id, a FieldSet and the group version of the resource that the fieldset applies to.",
     "type": "object",
     "properties": {
@@ -136,7 +136,7 @@
      },
      "fields": {
       "description": "Fields identifies a set of fields.",
-      "$ref": "#/definitions/v1.Fields"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Fields"
      },
      "manager": {
       "description": "Manager is an identifier of the workflow managing these fields.",
@@ -148,11 +148,11 @@
      },
      "time": {
       "description": "Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'",
-      "$ref": "#/definitions/v1.Time"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      }
     }
    },
-   "v1.ObjectMeta": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
     "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
     "type": "object",
     "properties": {
@@ -169,7 +169,7 @@
      },
      "creationTimestamp": {
       "description": "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
-      "$ref": "#/definitions/v1.Time"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      },
      "deletionGracePeriodSeconds": {
       "description": "Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.",
@@ -178,7 +178,7 @@
      },
      "deletionTimestamp": {
       "description": "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
-      "$ref": "#/definitions/v1.Time"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      },
      "finalizers": {
       "description": "Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed.",
@@ -199,7 +199,7 @@
      },
      "initializers": {
       "description": "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.\n\nDEPRECATED - initializers are an alpha field and will be removed in v1.15.",
-      "$ref": "#/definitions/v1.Initializers"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializers"
      },
      "labels": {
       "description": "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels",
@@ -212,7 +212,7 @@
       "description": "ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object.\n\nThis field is alpha and can be changed or removed without notice.",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1.ManagedFieldsEntry"
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry"
       }
      },
      "name": {
@@ -227,7 +227,7 @@
       "description": "List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1.OwnerReference"
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference"
       },
       "x-kubernetes-patch-merge-key": "uid",
       "x-kubernetes-patch-strategy": "merge"
@@ -246,7 +246,7 @@
      }
     }
    },
-   "v1.OwnerReference": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference": {
     "description": "OwnerReference contains enough information to let you identify an owning object. An owning object must be in the same namespace as the dependent, or be cluster-scoped, so there is no namespace field.",
     "type": "object",
     "required": [
@@ -282,7 +282,7 @@
      }
     }
    },
-   "v1.Status": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Status": {
     "description": "Status is a return value for calls that don't return other objects.",
     "type": "object",
     "properties": {
@@ -297,7 +297,7 @@
      },
      "details": {
       "description": "Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.",
-      "$ref": "#/definitions/v1.StatusDetails"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails"
      },
      "kind": {
       "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
@@ -309,7 +309,7 @@
      },
      "metadata": {
       "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "$ref": "#/definitions/v1.ListMeta"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
      },
      "reason": {
       "description": "A machine-readable description of why this operation is in the \"Failure\" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.",
@@ -321,7 +321,7 @@
      }
     }
    },
-   "v1.StatusCause": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause": {
     "description": "StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.",
     "type": "object",
     "properties": {
@@ -339,7 +339,7 @@
      }
     }
    },
-   "v1.StatusDetails": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails": {
     "description": "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.",
     "type": "object",
     "properties": {
@@ -347,7 +347,7 @@
       "description": "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1.StatusCause"
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
       }
      },
      "group": {
@@ -373,18 +373,18 @@
      }
     }
    },
-   "v1.Time": {
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Time": {
     "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
     "type": "string",
     "format": "date-time"
    },
-   "v1alpha1.AVAnchor": {
+   "org.airshipit.armada.v1alpha1.AVAnchor": {
     "type": "object"
    },
-   "v1alpha1.AVApiserver": {
+   "org.airshipit.armada.v1alpha1.AVApiserver": {
     "type": "object"
    },
-   "v1alpha1.AVBootstrap": {
+   "org.airshipit.armada.v1alpha1.AVBootstrap": {
     "type": "object",
     "properties": {
      "enabled": {
@@ -401,19 +401,19 @@
      }
     }
    },
-   "v1alpha1.AVBootstrapping": {
+   "org.airshipit.armada.v1alpha1.AVBootstrapping": {
     "type": "object"
    },
-   "v1alpha1.AVCephMgrModulesConfig": {
+   "org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig": {
     "type": "object"
    },
-   "v1alpha1.AVConf": {
+   "org.airshipit.armada.v1alpha1.AVConf": {
     "type": "object"
    },
-   "v1alpha1.AVData": {
+   "org.airshipit.armada.v1alpha1.AVData": {
     "type": "object"
    },
-   "v1alpha1.AVDefaultPublic": {
+   "org.airshipit.armada.v1alpha1.AVDefaultPublic": {
     "type": "object",
     "properties": {
      "default": {
@@ -430,10 +430,10 @@
      }
     }
    },
-   "v1alpha1.AVDevelopment": {
+   "org.airshipit.armada.v1alpha1.AVDevelopment": {
     "type": "object"
    },
-   "v1alpha1.AVEndpointAuth": {
+   "org.airshipit.armada.v1alpha1.AVEndpointAuth": {
     "type": "object",
     "properties": {
      "access_key": {
@@ -486,7 +486,7 @@
      },
      "tls": {
       "description": "tls contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTls"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTls"
      },
      "tmpurlkey": {
       "description": "tmpurlkey contains tbd",
@@ -502,7 +502,7 @@
      }
     }
    },
-   "v1alpha1.AVEndpointPort": {
+   "org.airshipit.armada.v1alpha1.AVEndpointPort": {
     "type": "object",
     "properties": {
      "default": {
@@ -527,23 +527,23 @@
      }
     }
    },
-   "v1alpha1.AVEndpointType1": {
+   "org.airshipit.armada.v1alpha1.AVEndpointType1": {
     "type": "object",
     "properties": {
      "auth": {
       "description": "auth contains tbd",
       "type": "object",
       "additionalProperties": {
-       "$ref": "#/definitions/v1alpha1.AVEndpointAuth"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
       }
      },
      "host_fqdn_override": {
       "description": "host_fqdn_override contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "hosts": {
       "description": "hosts contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "name": {
       "description": "name contains tbd",
@@ -555,18 +555,18 @@
      },
      "path": {
       "description": "path contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "port": {
       "description": "port contains tbd",
       "type": "object",
       "additionalProperties": {
-       "$ref": "#/definitions/v1alpha1.AVEndpointPort"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
       }
      },
      "scheme": {
       "description": "scheme contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "type": {
       "description": "type contains tbd",
@@ -574,23 +574,23 @@
      }
     }
    },
-   "v1alpha1.AVEndpointType2": {
+   "org.airshipit.armada.v1alpha1.AVEndpointType2": {
     "type": "object",
     "properties": {
      "auth": {
       "description": "auth contains tbd",
       "type": "object",
       "additionalProperties": {
-       "$ref": "#/definitions/v1alpha1.AVEndpointAuth"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
       }
      },
      "host_fqdn_override": {
       "description": "host_fqdn_override contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "hosts": {
       "description": "hosts contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
      },
      "name": {
       "description": "name contains tbd",
@@ -608,7 +608,7 @@
       "description": "port contains tbd",
       "type": "object",
       "additionalProperties": {
-       "$ref": "#/definitions/v1alpha1.AVEndpointPort"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
       }
      },
      "scheme": {
@@ -621,224 +621,224 @@
      }
     }
    },
-   "v1alpha1.AVEndpoints": {
+   "org.airshipit.armada.v1alpha1.AVEndpoints": {
     "type": "object",
     "properties": {
      "alerts": {
       "description": "alerts contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "armada": {
       "description": "armada contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "ceph_object_store": {
       "description": "ceph_object_store contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "cloudformation": {
       "description": "cloudformation contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "cloudwatch": {
       "description": "cloudwatch contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "compute": {
       "description": "compute contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "compute_metadata": {
       "description": "compute_metadata contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "compute_novnc_proxy": {
       "description": "compute_novnc_proxy contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "compute_spice_proxy": {
       "description": "compute_spice_proxy contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "dashboard": {
       "description": "dashboard contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "deckhand": {
       "description": "deckhand contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "elasticsearch": {
       "description": "elasticsearch contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "fluentd": {
       "description": "fluentd contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "grafana": {
       "description": "grafana contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "identity": {
       "description": "identity contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "image": {
       "description": "image contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "image_registry": {
       "description": "image_registry contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "key_manager": {
       "description": "key_manager contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "kibana": {
       "description": "kibana contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "kube_controller_manager": {
       "description": "kube_controller_manager contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "kube_scheduler": {
       "description": "kube_scheduler contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "kube_state_metrics": {
       "description": "kube_state_metrics contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "kubernetesprovisioner": {
       "description": "kubernetesprovisioner contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "ldap": {
       "description": "ldap contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "maas_db": {
       "description": "maas_db contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "maas_region_ui": {
       "description": "maas_region_ui contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "monitoring": {
       "description": "monitoring contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "nagios": {
       "description": "nagios contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "network": {
       "description": "network contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "node_metrics": {
       "description": "node_metrics contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "object_store": {
       "description": "object_store contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "orchestration": {
       "description": "orchestration contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "oslo_db": {
       "description": "oslo_db contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "oslo_db_api": {
       "description": "oslo_db_api contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "oslo_db_cell0": {
       "description": "oslo_db_cell0 contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "oslo_db_session": {
       "description": "oslo_db_session contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "oslo_messaging": {
       "description": "oslo_messaging contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "physicalprovisioner": {
       "description": "physicalprovisioner contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "placement": {
       "description": "placement contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "postgresql": {
       "description": "postgresql contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "postgresql_airflow_celery_db": {
       "description": "postgresql_airflow_celery_db contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "postgresql_airflow_db": {
       "description": "postgresql_airflow_db contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "postgresql_shipyard_db": {
       "description": "postgresql_shipyard_db contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "process_exporter_metrics": {
       "description": "process_exporter_metrics contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "prometheus_elasticsearch_exporter": {
       "description": "prometheus_elasticsearch_exporter contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "prometheus_fluentd_exporter": {
       "description": "prometheus_fluentd_exporter contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "prometheus_mysql_exporter": {
       "description": "prometheus_mysql_exporter contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "prometheus_openstack_exporter": {
       "description": "prometheus_openstack_exporter contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "prometheus_rabbitmq_exporter": {
       "description": "prometheus_rabbitmq_exporter contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "shipyard": {
       "description": "shipyard contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "volume": {
       "description": "volume contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "volumev2": {
       "description": "volumev2 contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "volumev3": {
       "description": "volumev3 contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      }
     }
    },
-   "v1alpha1.AVImages": {
+   "org.airshipit.armada.v1alpha1.AVImages": {
     "type": "object",
     "properties": {
      "pull_policy": {
@@ -854,34 +854,34 @@
      }
     }
    },
-   "v1alpha1.AVJobs": {
+   "org.airshipit.armada.v1alpha1.AVJobs": {
     "type": "object"
    },
-   "v1alpha1.AVKubeService": {
+   "org.airshipit.armada.v1alpha1.AVKubeService": {
     "type": "object"
    },
-   "v1alpha1.AVLivenessprobe": {
+   "org.airshipit.armada.v1alpha1.AVLivenessprobe": {
     "type": "object"
    },
-   "v1alpha1.AVMonitoring": {
+   "org.airshipit.armada.v1alpha1.AVMonitoring": {
     "type": "object"
    },
-   "v1alpha1.AVNetwork": {
+   "org.airshipit.armada.v1alpha1.AVNetwork": {
     "type": "object"
    },
-   "v1alpha1.AVNetworking": {
+   "org.airshipit.armada.v1alpha1.AVNetworking": {
     "type": "object"
    },
-   "v1alpha1.AVPod": {
+   "org.airshipit.armada.v1alpha1.AVPod": {
     "type": "object",
     "properties": {
      "affinity": {
       "description": "affinity contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPodAffinity"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
      },
      "lifecycle": {
       "description": "lifecycle contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPodLifecycle"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodLifecycle"
      },
      "replicas": {
       "description": "replicas contains tbd",
@@ -895,22 +895,22 @@
       "description": "resources contains tbd",
       "type": "object",
       "additionalProperties": {
-       "$ref": "#/definitions/v1alpha1.AVPodResources"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResources"
       }
      },
      "security_context": {
       "description": "security_context contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPodSecurityContext"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodSecurityContext"
      }
     }
    },
-   "v1alpha1.AVPodAffinity": {
+   "org.airshipit.armada.v1alpha1.AVPodAffinity": {
     "type": "object"
    },
-   "v1alpha1.AVPodLifecycle": {
+   "org.airshipit.armada.v1alpha1.AVPodLifecycle": {
     "type": "object"
    },
-   "v1alpha1.AVPodResourceSettings": {
+   "org.airshipit.armada.v1alpha1.AVPodResourceSettings": {
     "type": "object",
     "properties": {
      "cpu": {
@@ -923,41 +923,41 @@
      }
     }
    },
-   "v1alpha1.AVPodResources": {
+   "org.airshipit.armada.v1alpha1.AVPodResources": {
     "type": "object",
     "properties": {
      "limits": {
       "description": "limits contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPodResourceSettings"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
      },
      "requests": {
       "description": "requests contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPodResourceSettings"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
      }
     }
    },
-   "v1alpha1.AVPodSecurityContext": {
+   "org.airshipit.armada.v1alpha1.AVPodSecurityContext": {
     "type": "object"
    },
-   "v1alpha1.AVSecretAnchor": {
+   "org.airshipit.armada.v1alpha1.AVSecretAnchor": {
     "type": "object",
     "properties": {
      "tls": {
       "description": "tls contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTls"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTls"
      }
     }
    },
-   "v1alpha1.AVSecretEtcd": {
+   "org.airshipit.armada.v1alpha1.AVSecretEtcd": {
     "type": "object",
     "properties": {
      "tls": {
       "description": "tls contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTls"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTls"
      }
     }
    },
-   "v1alpha1.AVSecretKeyrings": {
+   "org.airshipit.armada.v1alpha1.AVSecretKeyrings": {
     "type": "object",
     "properties": {
      "admin": {
@@ -966,7 +966,7 @@
      }
     }
    },
-   "v1alpha1.AVSecretMaasRegion": {
+   "org.airshipit.armada.v1alpha1.AVSecretMaasRegion": {
     "type": "object",
     "properties": {
      "value": {
@@ -975,7 +975,7 @@
      }
     }
    },
-   "v1alpha1.AVSecretServiceAccount": {
+   "org.airshipit.armada.v1alpha1.AVSecretServiceAccount": {
     "type": "object",
     "properties": {
      "private_key": {
@@ -988,45 +988,45 @@
      }
     }
    },
-   "v1alpha1.AVSecrets": {
+   "org.airshipit.armada.v1alpha1.AVSecrets": {
     "type": "object",
     "properties": {
      "anchor": {
       "description": "anchor contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecretAnchor"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecretAnchor"
      },
      "etcd": {
       "description": "etcd contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecretEtcd"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecretEtcd"
      },
      "keyrings": {
       "description": "keyrings contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecretKeyrings"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecretKeyrings"
      },
      "maas_region": {
       "description": "maas_region contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecretMaasRegion"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecretMaasRegion"
      },
      "service_account": {
       "description": "service_account contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecretServiceAccount"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecretServiceAccount"
      },
      "tls": {
       "description": "tls contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTls"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTls"
      }
     }
    },
-   "v1alpha1.AVService": {
+   "org.airshipit.armada.v1alpha1.AVService": {
     "type": "object"
    },
-   "v1alpha1.AVStorage": {
+   "org.airshipit.armada.v1alpha1.AVStorage": {
     "type": "object"
    },
-   "v1alpha1.AVStorageclass": {
+   "org.airshipit.armada.v1alpha1.AVStorageclass": {
     "type": "object"
    },
-   "v1alpha1.AVTls": {
+   "org.airshipit.armada.v1alpha1.AVTls": {
     "type": "object",
     "properties": {
      "ca": {
@@ -1035,7 +1035,7 @@
      },
      "client": {
       "description": "client contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTlsCa"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
      },
      "crt": {
       "description": "crt contains tbd",
@@ -1047,11 +1047,11 @@
      },
      "peer": {
       "description": "peer contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVTlsCa"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
      }
     }
    },
-   "v1alpha1.AVTlsCa": {
+   "org.airshipit.armada.v1alpha1.AVTlsCa": {
     "type": "object",
     "properties": {
      "ca": {
@@ -1060,12 +1060,12 @@
      }
     }
    },
-   "v1alpha1.AVVolume": {
+   "org.airshipit.armada.v1alpha1.AVVolume": {
     "type": "object",
     "properties": {
      "backup": {
       "description": "backup contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVVolumeBackup"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVVolumeBackup"
      },
      "chown_on_start": {
       "description": "chown_on_start contains tbd",
@@ -1085,7 +1085,7 @@
      }
     }
    },
-   "v1alpha1.AVVolumeBackup": {
+   "org.airshipit.armada.v1alpha1.AVVolumeBackup": {
     "type": "object",
     "properties": {
      "class_name": {
@@ -1102,7 +1102,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaChart": {
+   "org.airshipit.armada.v1alpha1.ArmadaChart": {
     "description": "ArmadaChart is the Schema for the armadacharts API",
     "type": "object",
     "properties": {
@@ -1115,17 +1115,17 @@
       "type": "string"
      },
      "metadata": {
-      "$ref": "#/definitions/v1.ObjectMeta"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
      },
      "spec": {
-      "$ref": "#/definitions/v1alpha1.ArmadaChartSpec"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSpec"
      },
      "status": {
-      "$ref": "#/definitions/v1alpha1.ArmadaChartStatus"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartStatus"
      }
     }
    },
-   "v1alpha1.ArmadaChartGroup": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartGroup": {
     "description": "ArmadaChartGroup is the Schema for the armadachartgroups API",
     "type": "object",
     "properties": {
@@ -1138,17 +1138,17 @@
       "type": "string"
      },
      "metadata": {
-      "$ref": "#/definitions/v1.ObjectMeta"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
      },
      "spec": {
-      "$ref": "#/definitions/v1alpha1.ArmadaChartGroupSpec"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec"
      },
      "status": {
-      "$ref": "#/definitions/v1alpha1.ArmadaChartGroupStatus"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus"
      }
     }
    },
-   "v1alpha1.ArmadaChartGroupSpec": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec": {
     "description": "======= ArmadaChartGroupSpec Definition ======= ArmadaChartGroupSpec defines the desired state of ArmadaChartGroup",
     "type": "object",
     "required": [
@@ -1190,7 +1190,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaChartGroupStatus": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus": {
     "description": "======= ArmadaChartGroupStatus Definition ======= ArmadaChartGroupStatus defines the observed state of ArmadaChartGroup",
     "type": "object",
     "required": [
@@ -1206,7 +1206,7 @@
       "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.HelmResourceCondition"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
       }
      },
      "reason": {
@@ -1219,7 +1219,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaChartSource": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartSource": {
     "description": "Source",
     "type": "object",
     "required": [
@@ -1252,7 +1252,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaChartSpec": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartSpec": {
     "description": "======= ArmadaChartSpec Definition ======= ArmadaChartSpec defines the desired state of ArmadaChart",
     "type": "object",
     "required": [
@@ -1269,7 +1269,7 @@
      },
      "delete": {
       "description": "See Delete_.",
-      "$ref": "#/definitions/v1alpha1.ArmadaDelete"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaDelete"
      },
      "dependencies": {
       "description": "reference any chart dependencies before install",
@@ -1284,7 +1284,7 @@
      },
      "protected": {
       "description": "do not delete FAILED releases when encountered from previous run (provide the 'continue_processing' bool to continue or halt execution (default: halt))",
-      "$ref": "#/definitions/v1alpha1.ArmadaProtectedRelease"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaProtectedRelease"
      },
      "release": {
       "description": "name of the release (Armada will prepend with ``release-prefix`` during processing)",
@@ -1297,7 +1297,7 @@
      },
      "source": {
       "description": "provide a path to a ``git repo``, ``local dir``, or ``tarball url`` chart",
-      "$ref": "#/definitions/v1alpha1.ArmadaChartSource"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSource"
      },
      "target_state": {
       "description": "Target state of the Helm Custom Resources",
@@ -1305,7 +1305,7 @@
      },
      "test": {
       "description": "See Test_.",
-      "$ref": "#/definitions/v1alpha1.ArmadaTest"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaTest"
      },
      "timeout": {
       "description": "time (in seconds) allotted for chart to deploy when 'wait' flag is set (DEPRECATED)",
@@ -1314,19 +1314,19 @@
      },
      "upgrade": {
       "description": "upgrade the chart managed by the armada yaml",
-      "$ref": "#/definitions/v1alpha1.ArmadaUpgrade"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgrade"
      },
      "values": {
       "description": "override any default values in the charts",
-      "$ref": "#/definitions/v1alpha1.ArmadaChartValues"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartValues"
      },
      "wait": {
       "description": "See `ArmwadaWait`.",
-      "$ref": "#/definitions/v1alpha1.ArmadaWait"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaWait"
      }
     }
    },
-   "v1alpha1.ArmadaChartStatus": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartStatus": {
     "description": "======= ArmadaChartStatus Definition ======= ArmadaChartStatus defines the observed state of ArmadaChart",
     "type": "object",
     "required": [
@@ -1342,7 +1342,7 @@
       "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.HelmResourceCondition"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
       }
      },
      "reason": {
@@ -1355,24 +1355,24 @@
      }
     }
    },
-   "v1alpha1.ArmadaChartValues": {
+   "org.airshipit.armada.v1alpha1.ArmadaChartValues": {
     "type": "object",
     "properties": {
      "anchor": {
       "description": "anchor contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVAnchor"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVAnchor"
      },
      "apiserver": {
       "description": "apiserver contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVApiserver"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVApiserver"
      },
      "bootstrap": {
       "description": "bootstrap contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVBootstrap"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrap"
      },
      "bootstrapping": {
       "description": "bootstrapping contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVBootstrapping"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
      },
      "ceph_client": {
       "description": "ceph_client contains tbd",
@@ -1383,7 +1383,7 @@
      },
      "ceph_mgr_modules_config": {
       "description": "ceph_mgr_modules_config contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVCephMgrModulesConfig"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
      },
      "command_prefix": {
       "description": "command_prefix contains tbd",
@@ -1394,11 +1394,11 @@
      },
      "conf": {
       "description": "conf contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVConf"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVConf"
      },
      "data": {
       "description": "data contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVData"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVData"
      },
      "deployment": {
       "description": "deployment contains tbd",
@@ -1409,11 +1409,11 @@
      },
      "development": {
       "description": "development contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVDevelopment"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
      },
      "endpoints": {
       "description": "endpoints contains tbd. JEB: Would have been too consistent. Different structures are used depending on the direction of the wind. Endpoints *map[string]AVEndpoint `json:\"endpoints,omitempty\"`",
-      "$ref": "#/definitions/v1alpha1.AVEndpoints"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpoints"
      },
      "etcd": {
       "description": "etcd contains tbd",
@@ -1424,19 +1424,19 @@
      },
      "images": {
       "description": "images contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVImages"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVImages"
      },
      "jobs": {
       "description": "jobs contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVJobs"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
      },
      "kube_service": {
       "description": "kube_service contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVKubeService"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
      },
      "livenessProbe": {
       "description": "livenessProbe contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVLivenessprobe"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
      },
      "manifests": {
       "description": "manifests contains tbd",
@@ -1447,19 +1447,19 @@
      },
      "monitoring": {
       "description": "monitoring contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVMonitoring"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
      },
      "network": {
       "description": "network contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVNetwork"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
      },
      "networking": {
       "description": "networking contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVNetworking"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
      },
      "pod": {
       "description": "pod contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVPod"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPod"
      },
      "prod_environment": {
       "description": "prod_environment contains tbd",
@@ -1467,27 +1467,27 @@
      },
      "secrets": {
       "description": "secrets contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVSecrets"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecrets"
      },
      "service": {
       "description": "service contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVService"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVService"
      },
      "storage": {
       "description": "storage contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVStorage"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVStorage"
      },
      "storageclass": {
       "description": "storageclass contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVStorageclass"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVStorageclass"
      },
      "volume": {
       "description": "volume contains tbd",
-      "$ref": "#/definitions/v1alpha1.AVVolume"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVVolume"
      }
     }
    },
-   "v1alpha1.ArmadaDelete": {
+   "org.airshipit.armada.v1alpha1.ArmadaDelete": {
     "description": "Delete",
     "type": "object",
     "properties": {
@@ -1498,7 +1498,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaHookActionItems": {
+   "org.airshipit.armada.v1alpha1.ArmadaHookActionItems": {
     "description": "HookActionItems",
     "type": "object",
     "required": [
@@ -1506,7 +1506,7 @@
     ],
     "properties": {
      "labels": {
-      "$ref": "#/definitions/v1alpha1.ArmadaLabels"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
      },
      "name": {
       "type": "string"
@@ -1516,11 +1516,11 @@
      }
     }
    },
-   "v1alpha1.ArmadaLabels": {
+   "org.airshipit.armada.v1alpha1.ArmadaLabels": {
     "description": "Labels",
     "type": "object"
    },
-   "v1alpha1.ArmadaManifest": {
+   "org.airshipit.armada.v1alpha1.ArmadaManifest": {
     "description": "ArmadaManifest is the Schema for the armadamanifests API",
     "type": "object",
     "properties": {
@@ -1533,17 +1533,17 @@
       "type": "string"
      },
      "metadata": {
-      "$ref": "#/definitions/v1.ObjectMeta"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
      },
      "spec": {
-      "$ref": "#/definitions/v1alpha1.ArmadaManifestSpec"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestSpec"
      },
      "status": {
-      "$ref": "#/definitions/v1alpha1.ArmadaManifestStatus"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestStatus"
      }
     }
    },
-   "v1alpha1.ArmadaManifestSpec": {
+   "org.airshipit.armada.v1alpha1.ArmadaManifestSpec": {
     "description": "======= ArmadaManifestSpec Definition ======= ArmadaManifestSpec defines the desired state of ArmadaManifest",
     "type": "object",
     "required": [
@@ -1574,7 +1574,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaManifestStatus": {
+   "org.airshipit.armada.v1alpha1.ArmadaManifestStatus": {
     "description": "======= ArmadaManifestStatus Definition ======= ArmadaManifestStatus defines the observed state of ArmadaManifest",
     "type": "object",
     "required": [
@@ -1590,7 +1590,7 @@
       "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.HelmResourceCondition"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
       }
      },
      "reason": {
@@ -1603,7 +1603,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaProtectedRelease": {
+   "org.airshipit.armada.v1alpha1.ArmadaProtectedRelease": {
     "description": "Protected",
     "type": "object",
     "properties": {
@@ -1613,14 +1613,14 @@
      }
     }
    },
-   "v1alpha1.ArmadaTest": {
+   "org.airshipit.armada.v1alpha1.ArmadaTest": {
     "type": "object",
     "properties": {
      "enabled": {
       "type": "boolean"
      },
      "options": {
-      "$ref": "#/definitions/v1alpha1.ArmadaTestOptions"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaTestOptions"
      },
      "timeout": {
       "type": "integer",
@@ -1628,7 +1628,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaTestOptions": {
+   "org.airshipit.armada.v1alpha1.ArmadaTestOptions": {
     "description": "Test. JEB that structure could not be converted automatically",
     "type": "object",
     "properties": {
@@ -1637,7 +1637,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaUpgrade": {
+   "org.airshipit.armada.v1alpha1.ArmadaUpgrade": {
     "description": "Upgrade",
     "type": "object",
     "required": [
@@ -1648,17 +1648,17 @@
       "type": "boolean"
      },
      "options": {
-      "$ref": "#/definitions/v1alpha1.ArmadaUpgradeOptions"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradeOptions"
      },
      "post": {
-      "$ref": "#/definitions/v1alpha1.ArmadaUpgradePost"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePost"
      },
      "pre": {
-      "$ref": "#/definitions/v1alpha1.ArmadaUpgradePre"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePre"
      }
     }
    },
-   "v1alpha1.ArmadaUpgradeOptions": {
+   "org.airshipit.armada.v1alpha1.ArmadaUpgradeOptions": {
     "description": "Options",
     "type": "object",
     "properties": {
@@ -1670,19 +1670,19 @@
      }
     }
    },
-   "v1alpha1.ArmadaUpgradePost": {
+   "org.airshipit.armada.v1alpha1.ArmadaUpgradePost": {
     "description": "Post",
     "type": "object",
     "properties": {
      "create": {
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.ArmadaHookActionItems"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
       }
      }
     }
    },
-   "v1alpha1.ArmadaUpgradePre": {
+   "org.airshipit.armada.v1alpha1.ArmadaUpgradePre": {
     "description": "Pre",
     "type": "object",
     "properties": {
@@ -1690,40 +1690,40 @@
       "description": "| pre         | object   | actions performed prior to updating a release                 |",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.ArmadaHookActionItems"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
       }
      },
      "delete": {
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.ArmadaHookActionItems"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
       }
      },
      "update": {
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.ArmadaHookActionItems"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
       }
      }
     }
    },
-   "v1alpha1.ArmadaWait": {
+   "org.airshipit.armada.v1alpha1.ArmadaWait": {
     "description": "Wait",
     "type": "object",
     "properties": {
      "labels": {
       "description": "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array.",
-      "$ref": "#/definitions/v1alpha1.ArmadaLabels"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
      },
      "native": {
       "description": "See `Wait Native`_.",
-      "$ref": "#/definitions/v1alpha1.ArmadaWaitNative"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitNative"
      },
      "resources": {
       "description": "Array of `Wait Resource`_ to wait on, with ``labels`` added to each item. Defaults to pods and jobs (if any exist) matching ``labels``.",
       "type": "array",
       "items": {
-       "$ref": "#/definitions/v1alpha1.ArmadaWaitResourcesItems"
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitResourcesItems"
       }
      },
      "timeout": {
@@ -1733,7 +1733,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaWaitNative": {
+   "org.airshipit.armada.v1alpha1.ArmadaWaitNative": {
     "description": "Native",
     "type": "object",
     "properties": {
@@ -1743,7 +1743,7 @@
      }
     }
    },
-   "v1alpha1.ArmadaWaitResourcesItems": {
+   "org.airshipit.armada.v1alpha1.ArmadaWaitResourcesItems": {
     "description": "ResourcesItems",
     "type": "object",
     "required": [
@@ -1752,7 +1752,7 @@
     "properties": {
      "labels": {
       "description": "mapping of kubernetes resource labels",
-      "$ref": "#/definitions/v1alpha1.ArmadaLabels"
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
      },
      "min_ready": {
       "description": "Only for controller ``type``s. Amount of pods in a controller which must be ready. Can be integer or percent string e.g. ``80%``. Default ``100%``.",
@@ -1765,7 +1765,7 @@
      }
     }
    },
-   "v1alpha1.HelmResourceCondition": {
+   "org.airshipit.armada.v1alpha1.HelmResourceCondition": {
     "description": "HelmResourceCondition represents one current condition of an Helm resource A condition might not show up if it is not happening. For example, if a chart is not deploying, the Deploying condition would not show up. If a chart is deploying and encountered a problem that prevents the deployment, the Deploying condition's status will would be False and communicate the problem back.",
     "type": "object",
     "required": [
@@ -1774,7 +1774,7 @@
     ],
     "properties": {
      "lastTransitionTime": {
-      "$ref": "#/definitions/v1.Time"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      },
      "message": {
       "type": "string"

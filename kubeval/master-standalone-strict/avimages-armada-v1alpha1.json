@@ -1,0 +1,24 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "pull_policy": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "pull_policy contains tbd"
+    }, 
+    "tags": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "tags contains tbd"
+    }
+  }
+}

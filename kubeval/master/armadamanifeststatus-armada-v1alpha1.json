@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "required": [
+    "satisfied", 
+    "actual_state"
+  ], 
+  "type": "object", 
+  "description": "======= ArmadaManifestStatus Definition ======= ArmadaManifestStatus defines the observed state of ArmadaManifest", 
+  "properties": {
+    "actual_state": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Actual state of the Helm Custom Resources"
+    }, 
+    "reason": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Reason indicates the reason for any related failures."
+    }, 
+    "conditions": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder"
+    }, 
+    "satisfied": {
+      "type": "boolean", 
+      "description": "Satisfied indicates if the release's ActualState satisfies its target state"
+    }
+  }
+}

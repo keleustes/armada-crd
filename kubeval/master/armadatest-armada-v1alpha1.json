@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "enabled": {
+      "type": "boolean"
+    }, 
+    "options": {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaTestOptions"
+    }, 
+    "timeout": {
+      "type": "integer", 
+      "format": "int64"
+    }
+  }
+}

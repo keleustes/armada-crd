@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Post", 
+  "properties": {
+    "create": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ]
+    }
+  }
+}

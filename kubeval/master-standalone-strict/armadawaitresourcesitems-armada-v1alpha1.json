@@ -1,0 +1,27 @@
+{
+  "description": "ResourcesItems", 
+  "required": [
+    "type"
+  ], 
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "min_ready": {
+      "type": "integer", 
+      "description": "Only for controller ``type``s. Amount of pods in a controller which must be ready. Can be integer or percent string e.g. ``80%``. Default ``100%``.", 
+      "format": "int32"
+    }, 
+    "labels": {
+      "type": "object", 
+      "description": "Labels"
+    }, 
+    "type": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "k8s resource type, supports: controllers ('deployment', 'daemonset', 'statefulset', 'pod', 'job')"
+    }
+  }
+}

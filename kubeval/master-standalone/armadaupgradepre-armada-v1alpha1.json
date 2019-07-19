@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "description": "Pre", 
+  "properties": {
+    "create": {
+      "items": {
+        "required": [
+          "type"
+        ], 
+        "type": "object", 
+        "description": "HookActionItems", 
+        "properties": {
+          "labels": {
+            "type": "object", 
+            "description": "Labels"
+          }, 
+          "type": {
+            "type": "string"
+          }, 
+          "name": {
+            "type": "string"
+          }
+        }
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "| pre         | object   | actions performed prior to updating a release                 |"
+    }, 
+    "update": {
+      "items": {
+        "required": [
+          "type"
+        ], 
+        "type": "object", 
+        "description": "HookActionItems", 
+        "properties": {
+          "labels": {
+            "type": "object", 
+            "description": "Labels"
+          }, 
+          "type": {
+            "type": "string"
+          }, 
+          "name": {
+            "type": "string"
+          }
+        }
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ]
+    }, 
+    "delete": {
+      "items": {
+        "required": [
+          "type"
+        ], 
+        "type": "object", 
+        "description": "HookActionItems", 
+        "properties": {
+          "labels": {
+            "type": "object", 
+            "description": "Labels"
+          }, 
+          "type": {
+            "type": "string"
+          }, 
+          "name": {
+            "type": "string"
+          }
+        }
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ]
+    }
+  }
+}

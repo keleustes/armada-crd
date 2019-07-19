@@ -1,232 +1,238 @@
 {
   "oneOf": [
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartStatus"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestStatus"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.Initializers"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPod"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.Time"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartValues"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVTls"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartSource"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaProtectedRelease"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPod"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.Fields"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretKeyrings"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVConf"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecrets"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVConf"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVImages"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializers"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaProtectedRelease"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodAffinity"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartGroup"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretEtcd"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaTest"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSource"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaWait"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaUpgradePre"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartStatus"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVStorageclass"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrap"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVLivenessprobe"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodSecurityContext"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpoints"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaDelete"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecretEtcd"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecrets"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVNetwork"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretMaasRegion"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaHookActionItems"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretAnchor"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChart"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.StatusCause"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVApiserver"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorageclass"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaTestOptions"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgrade"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaManifest"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.ListMeta"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializer"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVData"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorage"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.Initializer"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifest"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaDelete"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodLifecycle"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartGroupSpec"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVKubeService"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitNative"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodSecurityContext"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVCephMgrModulesConfig"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVApiserver"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecretServiceAccount"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWait"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.StatusDetails"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitResourcesItems"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.ObjectMeta"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaUpgradePost"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaUpgrade"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaTest"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVBootstrap"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChart"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaManifestStatus"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVImages"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVTlsCa"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVMonitoring"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestSpec"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVDevelopment"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVJobs"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVBootstrapping"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.ManagedFieldsEntry"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaLabels"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointPort"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.HelmResourceCondition"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroup"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointType1"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResources"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.OwnerReference"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointAuth"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePre"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVEndpointType2"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVNetworking"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTls"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVDefaultPublic"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecretMaasRegion"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaWaitResourcesItems"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVService"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSpec"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaWaitNative"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodLifecycle"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodResourceSettings"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolume"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVStorage"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartGroupStatus"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartSpec"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradeOptions"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVVolumeBackup"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVPodResources"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretServiceAccount"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVAnchor"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePost"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaUpgradeOptions"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVAnchor"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecretAnchor"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolumeBackup"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVVolume"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaTestOptions"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaManifestSpec"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpoints"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.ArmadaChartValues"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1.Status"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Fields"
     }, 
     {
-      "$ref": "_definitions.json#/definitions/v1alpha1.AVSecretKeyrings"
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
+    }, 
+    {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+    }, 
+    {
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
     }
   ]
 }

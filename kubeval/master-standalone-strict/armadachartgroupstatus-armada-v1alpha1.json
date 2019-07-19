@@ -1,0 +1,72 @@
+{
+  "description": "======= ArmadaChartGroupStatus Definition ======= ArmadaChartGroupStatus defines the observed state of ArmadaChartGroup", 
+  "required": [
+    "satisfied", 
+    "actual_state"
+  ], 
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "actual_state": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Actual state of the Helm Custom Resources"
+    }, 
+    "reason": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "Reason indicates the reason for any related failures."
+    }, 
+    "conditions": {
+      "items": {
+        "additionalProperties": false, 
+        "required": [
+          "type", 
+          "status"
+        ], 
+        "type": "object", 
+        "description": "HelmResourceCondition represents one current condition of an Helm resource A condition might not show up if it is not happening. For example, if a chart is not deploying, the Deploying condition would not show up. If a chart is deploying and encountered a problem that prevents the deployment, the Deploying condition's status will would be False and communicate the problem back.", 
+        "properties": {
+          "status": {
+            "type": "string"
+          }, 
+          "lastTransitionTime": {
+            "type": "string", 
+            "description": "Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.", 
+            "format": "date-time"
+          }, 
+          "reason": {
+            "type": "string"
+          }, 
+          "resourceVersion": {
+            "type": "integer", 
+            "format": "int32"
+          }, 
+          "resourceName": {
+            "type": "string"
+          }, 
+          "message": {
+            "type": "string"
+          }, 
+          "type": {
+            "type": "string"
+          }
+        }
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "List of conditions and states related to the resource. JEB: Feature kind of overlap with event recorder"
+    }, 
+    "satisfied": {
+      "type": "boolean", 
+      "description": "Satisfied indicates if the release's ActualState satisfies its target state"
+    }
+  }
+}

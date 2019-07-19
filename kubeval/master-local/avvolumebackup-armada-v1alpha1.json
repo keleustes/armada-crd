@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "class_name": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "class_name contains tbd"
+    }, 
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }, 
+    "size": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "size contains tbd"
+    }
+  }
+}

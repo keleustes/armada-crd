@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "required": [
+    "type"
+  ], 
+  "type": "object", 
+  "description": "HookActionItems", 
+  "properties": {
+    "labels": {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+    }, 
+    "type": {
+      "type": [
+        "string", 
+        "null"
+      ]
+    }, 
+    "name": {
+      "type": [
+        "string", 
+        "null"
+      ]
+    }
+  }
+}

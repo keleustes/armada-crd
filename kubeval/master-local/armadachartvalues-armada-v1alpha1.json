@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "livenessProbe": {
+      "description": "livenessProbe contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
+    }, 
+    "ceph_client": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "ceph_client contains tbd"
+    }, 
+    "manifests": {
+      "additionalProperties": {
+        "type": "boolean"
+      }, 
+      "type": "object", 
+      "description": "manifests contains tbd"
+    }, 
+    "ceph_mgr_modules_config": {
+      "description": "ceph_mgr_modules_config contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
+    }, 
+    "conf": {
+      "description": "conf contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVConf"
+    }, 
+    "images": {
+      "description": "images contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVImages"
+    }, 
+    "pod": {
+      "description": "pod contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPod"
+    }, 
+    "monitoring": {
+      "description": "monitoring contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
+    }, 
+    "network": {
+      "description": "network contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
+    }, 
+    "service": {
+      "description": "service contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
+    }, 
+    "storage": {
+      "description": "storage contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorage"
+    }, 
+    "prod_environment": {
+      "type": "boolean", 
+      "description": "prod_environment contains tbd"
+    }, 
+    "etcd": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "etcd contains tbd"
+    }, 
+    "development": {
+      "description": "development contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+    }, 
+    "kube_service": {
+      "description": "kube_service contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
+    }, 
+    "jobs": {
+      "description": "jobs contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
+    }, 
+    "volume": {
+      "description": "volume contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolume"
+    }, 
+    "deployment": {
+      "additionalProperties": {
+        "type": "boolean"
+      }, 
+      "type": "object", 
+      "description": "deployment contains tbd"
+    }, 
+    "networking": {
+      "description": "networking contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
+    }, 
+    "data": {
+      "description": "data contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
+    }, 
+    "bootstrapping": {
+      "description": "bootstrapping contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+    }, 
+    "secrets": {
+      "description": "secrets contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecrets"
+    }, 
+    "bootstrap": {
+      "description": "bootstrap contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrap"
+    }, 
+    "apiserver": {
+      "description": "apiserver contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVApiserver"
+    }, 
+    "endpoints": {
+      "description": "endpoints contains tbd. JEB: Would have been too consistent. Different structures are used depending on the direction of the wind. Endpoints *map[string]AVEndpoint `json:\"endpoints,omitempty\"`", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpoints"
+    }, 
+    "command_prefix": {
+      "items": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "command_prefix contains tbd"
+    }, 
+    "anchor": {
+      "description": "anchor contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVAnchor"
+    }, 
+    "storageclass": {
+      "description": "storageclass contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorageclass"
+    }
+  }
+}
