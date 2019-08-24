@@ -2,10 +2,35 @@
 # to be allow CI/CD to rebuild
 OPENAPI_GEN      := "k8s.io/kube-openapi/cmd/openapi-gen"
 
-.PHONY: clean
 
 all: clean crd-yaml openapi-gen swagger-gen kubeval-json
 
+.PHONY: install-tools
+install-tools:
+	cd /tmp && GO111MODULE=on go get sigs.k8s.io/kind@v0.5.0
+	cd /tmp && GO111MODULE=on go get github.com/instrumenta/kubeval@0.13.0
+
+clusterexist=$(shell kind get clusters | grep armadacrd  | wc -l)
+ifeq ($(clusterexist), 1)
+  testcluster=$(shell kind get kubeconfig-path --name="armadacrd")
+  SETKUBECONFIG=KUBECONFIG=$(testcluster)
+else
+  SETKUBECONFIG=
+endif
+
+.PHONY: which-cluster
+which-cluster:
+	echo $(SETKUBECONFIG)
+
+.PHONY: create-testcluster
+create-testcluster:
+	kind create cluster --name armadacrd
+
+.PHONY: delete-testcluster
+delete-testcluster:
+	kind delete cluster --name armadacrd
+
+.PHONY: clean
 clean:
 	rm -f kubectl/*.yaml
 	rm -f pkg/generated/openapi_generated.go
