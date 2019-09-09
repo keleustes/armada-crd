@@ -30,145 +30,145 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVAnchor":                        schema_pkg_apis_armada_v1alpha1_AVAnchor(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVApiserver":                     schema_pkg_apis_armada_v1alpha1_AVApiserver(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrap":                     schema_pkg_apis_armada_v1alpha1_AVBootstrap(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrapping":                 schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig":          schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVConf":                          schema_pkg_apis_armada_v1alpha1_AVConf(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVData":                          schema_pkg_apis_armada_v1alpha1_AVData(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic":                 schema_pkg_apis_armada_v1alpha1_AVDefaultPublic(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDevelopment":                   schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointAuth":                  schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointPort":                  schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpoints":                     schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVImages":                        schema_pkg_apis_armada_v1alpha1_AVImages(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVJobs":                          schema_pkg_apis_armada_v1alpha1_AVJobs(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVKubeService":                   schema_pkg_apis_armada_v1alpha1_AVKubeService(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVLivenessprobe":                 schema_pkg_apis_armada_v1alpha1_AVLivenessprobe(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVMonitoring":                    schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetwork":                       schema_pkg_apis_armada_v1alpha1_AVNetwork(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetworking":                    schema_pkg_apis_armada_v1alpha1_AVNetworking(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPod":                           schema_pkg_apis_armada_v1alpha1_AVPod(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodAffinity":                   schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodLifecycle":                  schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodReplicas":                   schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResourceSettings":           schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResources":                  schema_pkg_apis_armada_v1alpha1_AVPodResources(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodSecurityContext":            schema_pkg_apis_armada_v1alpha1_AVPodSecurityContext(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretAnchor":                  schema_pkg_apis_armada_v1alpha1_AVSecretAnchor(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretEtcd":                    schema_pkg_apis_armada_v1alpha1_AVSecretEtcd(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretKeyrings":                schema_pkg_apis_armada_v1alpha1_AVSecretKeyrings(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretMaasRegion":              schema_pkg_apis_armada_v1alpha1_AVSecretMaasRegion(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretServiceAccount":          schema_pkg_apis_armada_v1alpha1_AVSecretServiceAccount(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecrets":                       schema_pkg_apis_armada_v1alpha1_AVSecrets(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVService":                       schema_pkg_apis_armada_v1alpha1_AVService(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorage":                       schema_pkg_apis_armada_v1alpha1_AVStorage(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorageclass":                  schema_pkg_apis_armada_v1alpha1_AVStorageclass(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls":                           schema_pkg_apis_armada_v1alpha1_AVTls(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTlsCa":                         schema_pkg_apis_armada_v1alpha1_AVTlsCa(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolume":                        schema_pkg_apis_armada_v1alpha1_AVVolume(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolumeBackup":                  schema_pkg_apis_armada_v1alpha1_AVVolumeBackup(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackup":                    schema_pkg_apis_armada_v1alpha1_ArmadaBackup(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupList":                schema_pkg_apis_armada_v1alpha1_ArmadaBackupList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupSpec":                schema_pkg_apis_armada_v1alpha1_ArmadaBackupSpec(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupStatus":              schema_pkg_apis_armada_v1alpha1_ArmadaBackupStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChart":                     schema_pkg_apis_armada_v1alpha1_ArmadaChart(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroup":                schema_pkg_apis_armada_v1alpha1_ArmadaChartGroup(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupList":            schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec":            schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupSpec(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus":          schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroups":               schema_pkg_apis_armada_v1alpha1_ArmadaChartGroups(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartList":                 schema_pkg_apis_armada_v1alpha1_ArmadaChartList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSource":               schema_pkg_apis_armada_v1alpha1_ArmadaChartSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSpec":                 schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartStatus":               schema_pkg_apis_armada_v1alpha1_ArmadaChartStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartValues":               schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaCharts":                    schema_pkg_apis_armada_v1alpha1_ArmadaCharts(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaDelete":                    schema_pkg_apis_armada_v1alpha1_ArmadaDelete(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems":           schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels":                    schema_pkg_apis_armada_v1alpha1_ArmadaLabels(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifest":                  schema_pkg_apis_armada_v1alpha1_ArmadaManifest(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestList":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestSpec":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestSpec(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestStatus":            schema_pkg_apis_armada_v1alpha1_ArmadaManifestStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease":          schema_pkg_apis_armada_v1alpha1_ArmadaProtectedRelease(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestore":                   schema_pkg_apis_armada_v1alpha1_ArmadaRestore(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreList":               schema_pkg_apis_armada_v1alpha1_ArmadaRestoreList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec":               schema_pkg_apis_armada_v1alpha1_ArmadaRestoreSpec(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus":             schema_pkg_apis_armada_v1alpha1_ArmadaRestoreStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaStatus":                    schema_pkg_apis_armada_v1alpha1_ArmadaStatus(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTest":                      schema_pkg_apis_armada_v1alpha1_ArmadaTest(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTestOptions":               schema_pkg_apis_armada_v1alpha1_ArmadaTestOptions(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgrade":                   schema_pkg_apis_armada_v1alpha1_ArmadaUpgrade(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions":            schema_pkg_apis_armada_v1alpha1_ArmadaUpgradeOptions(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePost":               schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePost(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePre":                schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWait":                      schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitNative":                schema_pkg_apis_armada_v1alpha1_ArmadaWaitNative(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems":        schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.BackupPolicy":                    schema_pkg_apis_armada_v1alpha1_BackupPolicy(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.BackupSource":                    schema_pkg_apis_armada_v1alpha1_BackupSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephBackupSource":                schema_pkg_apis_armada_v1alpha1_CephBackupSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephRestoreSource":               schema_pkg_apis_armada_v1alpha1_CephRestoreSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ControllerRevision":              schema_pkg_apis_armada_v1alpha1_ControllerRevision(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ControllerRevisionList":          schema_pkg_apis_armada_v1alpha1_ControllerRevisionList(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition":           schema_pkg_apis_armada_v1alpha1_HelmResourceCondition(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceConditionListHelper": schema_pkg_apis_armada_v1alpha1_HelmResourceConditionListHelper(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteBackupSource":             schema_pkg_apis_armada_v1alpha1_OffsiteBackupSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteRestoreSource":            schema_pkg_apis_armada_v1alpha1_OffsiteRestoreSource(ref),
-		"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.RestoreSource":                   schema_pkg_apis_armada_v1alpha1_RestoreSource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                                 schema_pkg_apis_meta_v1_APIGroup(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                             schema_pkg_apis_meta_v1_APIGroupList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                              schema_pkg_apis_meta_v1_APIResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":                                          schema_pkg_apis_meta_v1_APIResourceList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":                                              schema_pkg_apis_meta_v1_APIVersions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":                                            schema_pkg_apis_meta_v1_CreateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":                                            schema_pkg_apis_meta_v1_DeleteOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                                                 schema_pkg_apis_meta_v1_Duration(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions":                                            schema_pkg_apis_meta_v1_ExportOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Fields":                                                   schema_pkg_apis_meta_v1_Fields(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                                               schema_pkg_apis_meta_v1_GetOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                                                schema_pkg_apis_meta_v1_GroupKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":                                            schema_pkg_apis_meta_v1_GroupResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":                                             schema_pkg_apis_meta_v1_GroupVersion(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":                                 schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":                                         schema_pkg_apis_meta_v1_GroupVersionKind(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":                                     schema_pkg_apis_meta_v1_GroupVersionResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializer":                                              schema_pkg_apis_meta_v1_Initializer(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializers":                                             schema_pkg_apis_meta_v1_Initializers(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":                                            schema_pkg_apis_meta_v1_InternalEvent(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":                                            schema_pkg_apis_meta_v1_LabelSelector(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":                                 schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                                                     schema_pkg_apis_meta_v1_List(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                                                 schema_pkg_apis_meta_v1_ListMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":                                              schema_pkg_apis_meta_v1_ListOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":                                       schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                                                schema_pkg_apis_meta_v1_MicroTime(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                                               schema_pkg_apis_meta_v1_ObjectMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":                                           schema_pkg_apis_meta_v1_OwnerReference(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":                                    schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList":                                schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                                                    schema_pkg_apis_meta_v1_Patch(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":                                             schema_pkg_apis_meta_v1_PatchOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":                                            schema_pkg_apis_meta_v1_Preconditions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                                                schema_pkg_apis_meta_v1_RootPaths(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR":                                schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                                                   schema_pkg_apis_meta_v1_Status(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":                                              schema_pkg_apis_meta_v1_StatusCause(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":                                            schema_pkg_apis_meta_v1_StatusDetails(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                                                    schema_pkg_apis_meta_v1_Table(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":                                    schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":                                             schema_pkg_apis_meta_v1_TableOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                                                 schema_pkg_apis_meta_v1_TableRow(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":                                        schema_pkg_apis_meta_v1_TableRowCondition(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                                                     schema_pkg_apis_meta_v1_Time(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                                                schema_pkg_apis_meta_v1_Timestamp(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                                                 schema_pkg_apis_meta_v1_TypeMeta(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":                                            schema_pkg_apis_meta_v1_UpdateOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                                               schema_pkg_apis_meta_v1_WatchEvent(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor":                        schema_pkg_apis_armada_v1alpha1_AVAnchor(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver":                     schema_pkg_apis_armada_v1alpha1_AVApiserver(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap":                     schema_pkg_apis_armada_v1alpha1_AVBootstrap(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping":                 schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig":          schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf":                          schema_pkg_apis_armada_v1alpha1_AVConf(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData":                          schema_pkg_apis_armada_v1alpha1_AVData(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic":                 schema_pkg_apis_armada_v1alpha1_AVDefaultPublic(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment":                   schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth":                  schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort":                  schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints":                     schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages":                        schema_pkg_apis_armada_v1alpha1_AVImages(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs":                          schema_pkg_apis_armada_v1alpha1_AVJobs(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService":                   schema_pkg_apis_armada_v1alpha1_AVKubeService(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe":                 schema_pkg_apis_armada_v1alpha1_AVLivenessprobe(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring":                    schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork":                       schema_pkg_apis_armada_v1alpha1_AVNetwork(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking":                    schema_pkg_apis_armada_v1alpha1_AVNetworking(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod":                           schema_pkg_apis_armada_v1alpha1_AVPod(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity":                   schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle":                  schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodReplicas":                   schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings":           schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources":                  schema_pkg_apis_armada_v1alpha1_AVPodResources(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext":            schema_pkg_apis_armada_v1alpha1_AVPodSecurityContext(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor":                  schema_pkg_apis_armada_v1alpha1_AVSecretAnchor(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretEtcd":                    schema_pkg_apis_armada_v1alpha1_AVSecretEtcd(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretKeyrings":                schema_pkg_apis_armada_v1alpha1_AVSecretKeyrings(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretMaasRegion":              schema_pkg_apis_armada_v1alpha1_AVSecretMaasRegion(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount":          schema_pkg_apis_armada_v1alpha1_AVSecretServiceAccount(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets":                       schema_pkg_apis_armada_v1alpha1_AVSecrets(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService":                       schema_pkg_apis_armada_v1alpha1_AVService(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage":                       schema_pkg_apis_armada_v1alpha1_AVStorage(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass":                  schema_pkg_apis_armada_v1alpha1_AVStorageclass(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls":                           schema_pkg_apis_armada_v1alpha1_AVTls(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTlsCa":                         schema_pkg_apis_armada_v1alpha1_AVTlsCa(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume":                        schema_pkg_apis_armada_v1alpha1_AVVolume(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolumeBackup":                  schema_pkg_apis_armada_v1alpha1_AVVolumeBackup(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackup":                    schema_pkg_apis_armada_v1alpha1_ArmadaBackup(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupList":                schema_pkg_apis_armada_v1alpha1_ArmadaBackupList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupSpec":                schema_pkg_apis_armada_v1alpha1_ArmadaBackupSpec(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupStatus":              schema_pkg_apis_armada_v1alpha1_ArmadaBackupStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChart":                     schema_pkg_apis_armada_v1alpha1_ArmadaChart(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroup":                schema_pkg_apis_armada_v1alpha1_ArmadaChartGroup(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupList":            schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec":            schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupSpec(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus":          schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroups":               schema_pkg_apis_armada_v1alpha1_ArmadaChartGroups(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartList":                 schema_pkg_apis_armada_v1alpha1_ArmadaChartList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSource":               schema_pkg_apis_armada_v1alpha1_ArmadaChartSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSpec":                 schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartStatus":               schema_pkg_apis_armada_v1alpha1_ArmadaChartStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartValues":               schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaCharts":                    schema_pkg_apis_armada_v1alpha1_ArmadaCharts(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaDelete":                    schema_pkg_apis_armada_v1alpha1_ArmadaDelete(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems":           schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels":                    schema_pkg_apis_armada_v1alpha1_ArmadaLabels(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifest":                  schema_pkg_apis_armada_v1alpha1_ArmadaManifest(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestList":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestSpec":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestSpec(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestStatus":            schema_pkg_apis_armada_v1alpha1_ArmadaManifestStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease":          schema_pkg_apis_armada_v1alpha1_ArmadaProtectedRelease(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestore":                   schema_pkg_apis_armada_v1alpha1_ArmadaRestore(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreList":               schema_pkg_apis_armada_v1alpha1_ArmadaRestoreList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec":               schema_pkg_apis_armada_v1alpha1_ArmadaRestoreSpec(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus":             schema_pkg_apis_armada_v1alpha1_ArmadaRestoreStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaStatus":                    schema_pkg_apis_armada_v1alpha1_ArmadaStatus(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTest":                      schema_pkg_apis_armada_v1alpha1_ArmadaTest(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTestOptions":               schema_pkg_apis_armada_v1alpha1_ArmadaTestOptions(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgrade":                   schema_pkg_apis_armada_v1alpha1_ArmadaUpgrade(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions":            schema_pkg_apis_armada_v1alpha1_ArmadaUpgradeOptions(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePost":               schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePost(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePre":                schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWait":                      schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitNative":                schema_pkg_apis_armada_v1alpha1_ArmadaWaitNative(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems":        schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.BackupPolicy":                    schema_pkg_apis_armada_v1alpha1_BackupPolicy(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.BackupSource":                    schema_pkg_apis_armada_v1alpha1_BackupSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephBackupSource":                schema_pkg_apis_armada_v1alpha1_CephBackupSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephRestoreSource":               schema_pkg_apis_armada_v1alpha1_CephRestoreSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ControllerRevision":              schema_pkg_apis_armada_v1alpha1_ControllerRevision(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ControllerRevisionList":          schema_pkg_apis_armada_v1alpha1_ControllerRevisionList(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition":           schema_pkg_apis_armada_v1alpha1_HelmResourceCondition(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceConditionListHelper": schema_pkg_apis_armada_v1alpha1_HelmResourceConditionListHelper(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteBackupSource":             schema_pkg_apis_armada_v1alpha1_OffsiteBackupSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteRestoreSource":            schema_pkg_apis_armada_v1alpha1_OffsiteRestoreSource(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.RestoreSource":                   schema_pkg_apis_armada_v1alpha1_RestoreSource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup":                                            schema_pkg_apis_meta_v1_APIGroup(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList":                                        schema_pkg_apis_meta_v1_APIGroupList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource":                                         schema_pkg_apis_meta_v1_APIResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList":                                     schema_pkg_apis_meta_v1_APIResourceList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions":                                         schema_pkg_apis_meta_v1_APIVersions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions":                                       schema_pkg_apis_meta_v1_CreateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":                                       schema_pkg_apis_meta_v1_DeleteOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                                            schema_pkg_apis_meta_v1_Duration(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions":                                       schema_pkg_apis_meta_v1_ExportOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Fields":                                              schema_pkg_apis_meta_v1_Fields(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                                          schema_pkg_apis_meta_v1_GetOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                                           schema_pkg_apis_meta_v1_GroupKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":                                       schema_pkg_apis_meta_v1_GroupResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion":                                        schema_pkg_apis_meta_v1_GroupVersion(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":                            schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":                                    schema_pkg_apis_meta_v1_GroupVersionKind(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":                                schema_pkg_apis_meta_v1_GroupVersionResource(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializer":                                         schema_pkg_apis_meta_v1_Initializer(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializers":                                        schema_pkg_apis_meta_v1_Initializers(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":                                       schema_pkg_apis_meta_v1_InternalEvent(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":                                       schema_pkg_apis_meta_v1_LabelSelector(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":                            schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.List":                                                schema_pkg_apis_meta_v1_List(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta":                                            schema_pkg_apis_meta_v1_ListMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions":                                         schema_pkg_apis_meta_v1_ListOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry":                                  schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime":                                           schema_pkg_apis_meta_v1_MicroTime(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta":                                          schema_pkg_apis_meta_v1_ObjectMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference":                                      schema_pkg_apis_meta_v1_OwnerReference(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadata":                               schema_pkg_apis_meta_v1_PartialObjectMetadata(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PartialObjectMetadataList":                           schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Patch":                                               schema_pkg_apis_meta_v1_Patch(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.PatchOptions":                                        schema_pkg_apis_meta_v1_PatchOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions":                                       schema_pkg_apis_meta_v1_Preconditions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths":                                           schema_pkg_apis_meta_v1_RootPaths(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR":                           schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Status":                                              schema_pkg_apis_meta_v1_Status(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause":                                         schema_pkg_apis_meta_v1_StatusCause(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails":                                       schema_pkg_apis_meta_v1_StatusDetails(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Table":                                               schema_pkg_apis_meta_v1_Table(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableColumnDefinition":                               schema_pkg_apis_meta_v1_TableColumnDefinition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableOptions":                                        schema_pkg_apis_meta_v1_TableOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRow":                                            schema_pkg_apis_meta_v1_TableRow(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TableRowCondition":                                   schema_pkg_apis_meta_v1_TableRowCondition(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Time":                                                schema_pkg_apis_meta_v1_Time(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp":                                           schema_pkg_apis_meta_v1_Timestamp(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                                            schema_pkg_apis_meta_v1_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":                                       schema_pkg_apis_meta_v1_UpdateOptions(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                                          schema_pkg_apis_meta_v1_WatchEvent(ref),
 	}
 }
 
@@ -401,7 +401,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref common.ReferenceCallback
 					"tls": {
 						SchemaProps: spec.SchemaProps{
 							Description: "tls contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"),
 						},
 					},
 					"tmpurlkey": {
@@ -429,7 +429,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref common.ReferenceCallback
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"},
 	}
 }
 
@@ -487,7 +487,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointAuth"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth"),
 									},
 								},
 							},
@@ -496,13 +496,13 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"host_fqdn_override": {
 						SchemaProps: spec.SchemaProps{
 							Description: "host_fqdn_override contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"hosts": {
 						SchemaProps: spec.SchemaProps{
 							Description: "hosts contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"name": {
@@ -522,7 +522,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"path": {
 						SchemaProps: spec.SchemaProps{
 							Description: "path contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"port": {
@@ -533,7 +533,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointPort"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"),
 									},
 								},
 							},
@@ -542,7 +542,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"scheme": {
 						SchemaProps: spec.SchemaProps{
 							Description: "scheme contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"type": {
@@ -556,7 +556,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointPort"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"},
 	}
 }
 
@@ -574,7 +574,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointAuth"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth"),
 									},
 								},
 							},
@@ -583,13 +583,13 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 					"host_fqdn_override": {
 						SchemaProps: spec.SchemaProps{
 							Description: "host_fqdn_override contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"hosts": {
 						SchemaProps: spec.SchemaProps{
 							Description: "hosts contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
 						},
 					},
 					"name": {
@@ -621,7 +621,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointPort"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"),
 									},
 								},
 							},
@@ -645,7 +645,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointPort"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"},
 	}
 }
 
@@ -658,326 +658,326 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref common.ReferenceCallback) c
 					"alerts": {
 						SchemaProps: spec.SchemaProps{
 							Description: "alerts contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"armada": {
 						SchemaProps: spec.SchemaProps{
 							Description: "armada contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"ceph_object_store": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ceph_object_store contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"cloudformation": {
 						SchemaProps: spec.SchemaProps{
 							Description: "cloudformation contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"cloudwatch": {
 						SchemaProps: spec.SchemaProps{
 							Description: "cloudwatch contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"compute_metadata": {
 						SchemaProps: spec.SchemaProps{
 							Description: "compute_metadata contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"compute_novnc_proxy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "compute_novnc_proxy contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"compute": {
 						SchemaProps: spec.SchemaProps{
 							Description: "compute contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"compute_spice_proxy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "compute_spice_proxy contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"dashboard": {
 						SchemaProps: spec.SchemaProps{
 							Description: "dashboard contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"deckhand": {
 						SchemaProps: spec.SchemaProps{
 							Description: "deckhand contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"elasticsearch": {
 						SchemaProps: spec.SchemaProps{
 							Description: "elasticsearch contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"fluentd": {
 						SchemaProps: spec.SchemaProps{
 							Description: "fluentd contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"grafana": {
 						SchemaProps: spec.SchemaProps{
 							Description: "grafana contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"identity": {
 						SchemaProps: spec.SchemaProps{
 							Description: "identity contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"image": {
 						SchemaProps: spec.SchemaProps{
 							Description: "image contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"image_registry": {
 						SchemaProps: spec.SchemaProps{
 							Description: "image_registry contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"key_manager": {
 						SchemaProps: spec.SchemaProps{
 							Description: "key_manager contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"kibana": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kibana contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"kube_controller_manager": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_controller_manager contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"kubernetesprovisioner": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kubernetesprovisioner contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"kube_scheduler": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_scheduler contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"kube_state_metrics": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_state_metrics contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"ldap": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ldap contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"maas_region_ui": {
 						SchemaProps: spec.SchemaProps{
 							Description: "maas_region_ui contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"monitoring": {
 						SchemaProps: spec.SchemaProps{
 							Description: "monitoring contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"nagios": {
 						SchemaProps: spec.SchemaProps{
 							Description: "nagios contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"network": {
 						SchemaProps: spec.SchemaProps{
 							Description: "network contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"node_metrics": {
 						SchemaProps: spec.SchemaProps{
 							Description: "node_metrics contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"object_store": {
 						SchemaProps: spec.SchemaProps{
 							Description: "object_store contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"orchestration": {
 						SchemaProps: spec.SchemaProps{
 							Description: "orchestration contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"physicalprovisioner": {
 						SchemaProps: spec.SchemaProps{
 							Description: "physicalprovisioner contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"placement": {
 						SchemaProps: spec.SchemaProps{
 							Description: "placement contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"process_exporter_metrics": {
 						SchemaProps: spec.SchemaProps{
 							Description: "process_exporter_metrics contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"prometheus_elasticsearch_exporter": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus_elasticsearch_exporter contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"prometheus_fluentd_exporter": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus_fluentd_exporter contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"prometheus_mysql_exporter": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus_mysql_exporter contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"prometheus_openstack_exporter": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus_openstack_exporter contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"prometheus_rabbitmq_exporter": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus_rabbitmq_exporter contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"shipyard": {
 						SchemaProps: spec.SchemaProps{
 							Description: "shipyard contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"volume": {
 						SchemaProps: spec.SchemaProps{
 							Description: "volume contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"volumev2": {
 						SchemaProps: spec.SchemaProps{
 							Description: "volumev2 contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"volumev3": {
 						SchemaProps: spec.SchemaProps{
 							Description: "volumev3 contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
 						},
 					},
 					"maas_db": {
 						SchemaProps: spec.SchemaProps{
 							Description: "maas_db contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"oslo_db_api": {
 						SchemaProps: spec.SchemaProps{
 							Description: "oslo_db_api contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"oslo_db_cell0": {
 						SchemaProps: spec.SchemaProps{
 							Description: "oslo_db_cell0 contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"oslo_db": {
 						SchemaProps: spec.SchemaProps{
 							Description: "oslo_db contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"oslo_db_session": {
 						SchemaProps: spec.SchemaProps{
 							Description: "oslo_db_session contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"oslo_messaging": {
 						SchemaProps: spec.SchemaProps{
 							Description: "oslo_messaging contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"postgresql_airflow_celery_db": {
 						SchemaProps: spec.SchemaProps{
 							Description: "postgresql_airflow_celery_db contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"postgresql_airflow_db": {
 						SchemaProps: spec.SchemaProps{
 							Description: "postgresql_airflow_db contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"postgresql": {
 						SchemaProps: spec.SchemaProps{
 							Description: "postgresql contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 					"postgresql_shipyard_db": {
 						SchemaProps: spec.SchemaProps{
 							Description: "postgresql_shipyard_db contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType1", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpointType2"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"},
 	}
 }
 
@@ -1084,13 +1084,13 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 					"affinity": {
 						SchemaProps: spec.SchemaProps{
 							Description: "affinity contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodAffinity"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity"),
 						},
 					},
 					"lifecycle": {
 						SchemaProps: spec.SchemaProps{
 							Description: "lifecycle contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodLifecycle"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle"),
 						},
 					},
 					"replicas": {
@@ -1116,7 +1116,7 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResources"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources"),
 									},
 								},
 							},
@@ -1125,14 +1125,14 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 					"security_context": {
 						SchemaProps: spec.SchemaProps{
 							Description: "security_context contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodSecurityContext"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodAffinity", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodLifecycle", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResources", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodSecurityContext"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"},
 	}
 }
 
@@ -1201,20 +1201,20 @@ func schema_pkg_apis_armada_v1alpha1_AVPodResources(ref common.ReferenceCallback
 					"limits": {
 						SchemaProps: spec.SchemaProps{
 							Description: "limits contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
 						},
 					},
 					"requests": {
 						SchemaProps: spec.SchemaProps{
 							Description: "requests contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPodResourceSettings"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"},
 	}
 }
 
@@ -1237,14 +1237,14 @@ func schema_pkg_apis_armada_v1alpha1_AVSecretAnchor(ref common.ReferenceCallback
 					"tls": {
 						SchemaProps: spec.SchemaProps{
 							Description: "tls contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"},
 	}
 }
 
@@ -1257,14 +1257,14 @@ func schema_pkg_apis_armada_v1alpha1_AVSecretEtcd(ref common.ReferenceCallback) 
 					"tls": {
 						SchemaProps: spec.SchemaProps{
 							Description: "tls contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"},
 	}
 }
 
@@ -1341,44 +1341,44 @@ func schema_pkg_apis_armada_v1alpha1_AVSecrets(ref common.ReferenceCallback) com
 					"anchor": {
 						SchemaProps: spec.SchemaProps{
 							Description: "anchor contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretAnchor"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor"),
 						},
 					},
 					"etcd": {
 						SchemaProps: spec.SchemaProps{
 							Description: "etcd contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretEtcd"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretEtcd"),
 						},
 					},
 					"keyrings": {
 						SchemaProps: spec.SchemaProps{
 							Description: "keyrings contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretKeyrings"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretKeyrings"),
 						},
 					},
 					"maas_region": {
 						SchemaProps: spec.SchemaProps{
 							Description: "maas_region contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretMaasRegion"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretMaasRegion"),
 						},
 					},
 					"service_account": {
 						SchemaProps: spec.SchemaProps{
 							Description: "service_account contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretServiceAccount"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount"),
 						},
 					},
 					"tls": {
 						SchemaProps: spec.SchemaProps{
 							Description: "tls contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretAnchor", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretEtcd", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretKeyrings", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretMaasRegion", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecretServiceAccount", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTls"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretEtcd", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretKeyrings", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretMaasRegion", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"},
 	}
 }
 
@@ -1442,20 +1442,20 @@ func schema_pkg_apis_armada_v1alpha1_AVTls(ref common.ReferenceCallback) common.
 					"client": {
 						SchemaProps: spec.SchemaProps{
 							Description: "client contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTlsCa"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTlsCa"),
 						},
 					},
 					"peer": {
 						SchemaProps: spec.SchemaProps{
 							Description: "peer contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTlsCa"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTlsCa"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVTlsCa"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTlsCa"},
 	}
 }
 
@@ -1494,7 +1494,7 @@ func schema_pkg_apis_armada_v1alpha1_AVVolume(ref common.ReferenceCallback) comm
 					"backup": {
 						SchemaProps: spec.SchemaProps{
 							Description: "backup contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolumeBackup"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolumeBackup"),
 						},
 					},
 					"class_name": {
@@ -1522,7 +1522,7 @@ func schema_pkg_apis_armada_v1alpha1_AVVolume(ref common.ReferenceCallback) comm
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolumeBackup"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolumeBackup"},
 	}
 }
 
@@ -1587,19 +1587,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackup(ref common.ReferenceCallback) 
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupSpec"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupStatus"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupSpec", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackupStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupSpec", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackupStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1635,7 +1635,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupList(ref common.ReferenceCallba
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackup"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackup"),
 									},
 								},
 							},
@@ -1646,7 +1646,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupList(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaBackup", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaBackup", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1681,19 +1681,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupSpec(ref common.ReferenceCallba
 					"backupPolicy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "BackupPolicy configures the backup process.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.BackupPolicy"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.BackupPolicy"),
 						},
 					},
 					"offsite": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Offsite defines the Offsite backup source spec.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteBackupSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteBackupSource"),
 						},
 					},
 					"ceph": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Ceph defines the Ceph backup source spec.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephBackupSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephBackupSource"),
 						},
 					},
 					"clientTLSSecret": {
@@ -1729,7 +1729,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupSpec(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.BackupPolicy", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephBackupSource", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteBackupSource"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.BackupPolicy", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephBackupSource", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteBackupSource"},
 	}
 }
 
@@ -1768,7 +1768,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupStatus(ref common.ReferenceCall
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -1779,7 +1779,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupStatus(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -1811,19 +1811,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChart(ref common.ReferenceCallback) c
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSpec"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartStatus"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSpec", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSpec", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1855,19 +1855,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroup(ref common.ReferenceCallba
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupSpec", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1903,7 +1903,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupList(ref common.ReferenceCa
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroup"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroup"),
 									},
 								},
 							},
@@ -1914,7 +1914,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupList(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroup", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroup", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2023,7 +2023,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupStatus(ref common.Reference
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -2034,7 +2034,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupStatus(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -2053,7 +2053,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroups(ref common.ReferenceCallb
 					},
 					"List": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupList"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupList"),
 						},
 					},
 				},
@@ -2061,7 +2061,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroups(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartGroupList"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartGroupList"},
 	}
 }
 
@@ -2097,7 +2097,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartList(ref common.ReferenceCallbac
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChart"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChart"),
 									},
 								},
 							},
@@ -2108,7 +2108,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartList(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChart", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChart", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2197,7 +2197,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref common.ReferenceCallbac
 					"source": {
 						SchemaProps: spec.SchemaProps{
 							Description: "provide a path to a ``git repo``, ``local dir``, or ``tarball url`` chart",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSource"),
 						},
 					},
 					"dependencies": {
@@ -2217,31 +2217,31 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref common.ReferenceCallbac
 					"values": {
 						SchemaProps: spec.SchemaProps{
 							Description: "override any default values in the charts",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartValues"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartValues"),
 						},
 					},
 					"delete": {
 						SchemaProps: spec.SchemaProps{
 							Description: "See Delete_.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaDelete"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaDelete"),
 						},
 					},
 					"upgrade": {
 						SchemaProps: spec.SchemaProps{
 							Description: "upgrade the chart managed by the armada yaml",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgrade"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgrade"),
 						},
 					},
 					"protected": {
 						SchemaProps: spec.SchemaProps{
 							Description: "do not delete FAILED releases when encountered from previous run (provide the 'continue_processing' bool to continue or halt execution (default: halt))",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease"),
 						},
 					},
 					"test": {
 						SchemaProps: spec.SchemaProps{
 							Description: "See Test_.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTest"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTest"),
 						},
 					},
 					"timeout": {
@@ -2254,7 +2254,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref common.ReferenceCallbac
 					"wait": {
 						SchemaProps: spec.SchemaProps{
 							Description: "See `ArmwadaWait`.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWait"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWait"),
 						},
 					},
 					"target_state": {
@@ -2276,7 +2276,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartSpec(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartSource", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartValues", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaDelete", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTest", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgrade", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWait"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartSource", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartValues", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaDelete", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaProtectedRelease", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTest", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgrade", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWait"},
 	}
 }
 
@@ -2315,7 +2315,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartStatus(ref common.ReferenceCallb
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -2326,7 +2326,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartStatus(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -2339,25 +2339,25 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"anchor": {
 						SchemaProps: spec.SchemaProps{
 							Description: "anchor contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVAnchor"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor"),
 						},
 					},
 					"apiserver": {
 						SchemaProps: spec.SchemaProps{
 							Description: "apiserver contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVApiserver"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver"),
 						},
 					},
 					"bootstrap": {
 						SchemaProps: spec.SchemaProps{
 							Description: "bootstrap contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrap"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap"),
 						},
 					},
 					"bootstrapping": {
 						SchemaProps: spec.SchemaProps{
 							Description: "bootstrapping contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrapping"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping"),
 						},
 					},
 					"ceph_client": {
@@ -2378,7 +2378,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"ceph_mgr_modules_config": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ceph_mgr_modules_config contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig"),
 						},
 					},
 					"command_prefix": {
@@ -2398,13 +2398,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"conf": {
 						SchemaProps: spec.SchemaProps{
 							Description: "conf contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVConf"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf"),
 						},
 					},
 					"data": {
 						SchemaProps: spec.SchemaProps{
 							Description: "data contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVData"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData"),
 						},
 					},
 					"deployment": {
@@ -2425,13 +2425,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"development": {
 						SchemaProps: spec.SchemaProps{
 							Description: "development contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDevelopment"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment"),
 						},
 					},
 					"endpoints": {
 						SchemaProps: spec.SchemaProps{
 							Description: "endpoints contains tbd. JEB: Would have been too consistent. Different structures are used depending on the direction of the wind. Endpoints *map[string]AVEndpoint `json:\"endpoints,omitempty\"`",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpoints"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints"),
 						},
 					},
 					"etcd": {
@@ -2452,25 +2452,25 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"images": {
 						SchemaProps: spec.SchemaProps{
 							Description: "images contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVImages"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages"),
 						},
 					},
 					"jobs": {
 						SchemaProps: spec.SchemaProps{
 							Description: "jobs contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVJobs"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs"),
 						},
 					},
 					"kube_service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_service contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVKubeService"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService"),
 						},
 					},
 					"livenessProbe": {
 						SchemaProps: spec.SchemaProps{
 							Description: "livenessProbe contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVLivenessprobe"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe"),
 						},
 					},
 					"manifests": {
@@ -2491,25 +2491,25 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"monitoring": {
 						SchemaProps: spec.SchemaProps{
 							Description: "monitoring contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVMonitoring"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring"),
 						},
 					},
 					"network": {
 						SchemaProps: spec.SchemaProps{
 							Description: "network contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetwork"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork"),
 						},
 					},
 					"networking": {
 						SchemaProps: spec.SchemaProps{
 							Description: "networking contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetworking"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking"),
 						},
 					},
 					"pod": {
 						SchemaProps: spec.SchemaProps{
 							Description: "pod contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPod"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod"),
 						},
 					},
 					"prod_environment": {
@@ -2522,38 +2522,38 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"secrets": {
 						SchemaProps: spec.SchemaProps{
 							Description: "secrets contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecrets"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets"),
 						},
 					},
 					"service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "service contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVService"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService"),
 						},
 					},
 					"storage": {
 						SchemaProps: spec.SchemaProps{
 							Description: "storage contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorage"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage"),
 						},
 					},
 					"storageclass": {
 						SchemaProps: spec.SchemaProps{
 							Description: "storageclass contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorageclass"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass"),
 						},
 					},
 					"volume": {
 						SchemaProps: spec.SchemaProps{
 							Description: "volume contains tbd",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolume"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.AVVolume"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
 	}
 }
 
@@ -2566,7 +2566,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaCharts(ref common.ReferenceCallback) 
 				Properties: map[string]spec.Schema{
 					"List": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartList"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartList"),
 						},
 					},
 					"Name": {
@@ -2580,7 +2580,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaCharts(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaChartList"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaChartList"},
 	}
 }
 
@@ -2613,7 +2613,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref common.ReferenceC
 				Properties: map[string]spec.Schema{
 					"labels": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
 						},
 					},
 					"name": {
@@ -2633,7 +2633,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref common.ReferenceC
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"},
 	}
 }
 
@@ -2676,19 +2676,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifest(ref common.ReferenceCallback
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestSpec"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestStatus"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestSpec", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifestStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestSpec", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2724,7 +2724,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref common.ReferenceCall
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifest"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifest"),
 									},
 								},
 							},
@@ -2735,7 +2735,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaManifest", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifest", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2823,7 +2823,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifestStatus(ref common.ReferenceCa
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -2834,7 +2834,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifestStatus(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -2886,19 +2886,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestore(ref common.ReferenceCallback)
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreSpec", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestoreStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2934,7 +2934,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreList(ref common.ReferenceCallb
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestore"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestore"),
 									},
 								},
 							},
@@ -2945,7 +2945,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreList(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaRestore", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaRestore", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2966,13 +2966,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreSpec(ref common.ReferenceCallb
 					"offsite": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Offsite tells where on Offsite the backup is saved and how to fetch the backup.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"),
 						},
 					},
 					"ceph": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Ceph tells where on Ceph the backup is saved and how to fetch the backup.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephRestoreSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephRestoreSource"),
 						},
 					},
 					"charts": {
@@ -3001,7 +3001,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreSpec(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephRestoreSource", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephRestoreSource", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"},
 	}
 }
 
@@ -3040,7 +3040,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreStatus(ref common.ReferenceCal
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -3051,7 +3051,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreStatus(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -3090,7 +3090,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaStatus(ref common.ReferenceCallback) 
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -3101,7 +3101,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaStatus(ref common.ReferenceCallback) 
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -3125,14 +3125,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaTest(ref common.ReferenceCallback) co
 					},
 					"options": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTestOptions"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTestOptions"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaTestOptions"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaTestOptions"},
 	}
 }
 
@@ -3170,17 +3170,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgrade(ref common.ReferenceCallback)
 					},
 					"options": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions"),
 						},
 					},
 					"post": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePost"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePost"),
 						},
 					},
 					"pre": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePre"),
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePre"),
 						},
 					},
 				},
@@ -3188,7 +3188,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgrade(ref common.ReferenceCallback)
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePost", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaUpgradePre"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradeOptions", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePost", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaUpgradePre"},
 	}
 }
 
@@ -3230,7 +3230,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePost(ref common.ReferenceCallb
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
 									},
 								},
 							},
@@ -3240,7 +3240,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePost(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"},
 	}
 }
 
@@ -3258,7 +3258,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref common.ReferenceCallba
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
 									},
 								},
 							},
@@ -3270,7 +3270,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref common.ReferenceCallba
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
 									},
 								},
 							},
@@ -3282,7 +3282,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref common.ReferenceCallba
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"),
 									},
 								},
 							},
@@ -3292,7 +3292,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaUpgradePre(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems"},
 	}
 }
 
@@ -3306,13 +3306,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref common.ReferenceCallback) co
 					"labels": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
 						},
 					},
 					"native": {
 						SchemaProps: spec.SchemaProps{
 							Description: "See `Wait Native`_.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitNative"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitNative"),
 						},
 					},
 					"resources": {
@@ -3322,7 +3322,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref common.ReferenceCallback) co
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"),
 									},
 								},
 							},
@@ -3339,7 +3339,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitNative", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitNative", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"},
 	}
 }
 
@@ -3373,7 +3373,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref common.Referen
 					"labels": {
 						SchemaProps: spec.SchemaProps{
 							Description: "mapping of kubernetes resource labels",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
 						},
 					},
 					"min_ready": {
@@ -3395,7 +3395,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref common.Referen
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ArmadaLabels"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"},
 	}
 }
 
@@ -3429,20 +3429,20 @@ func schema_pkg_apis_armada_v1alpha1_BackupSource(ref common.ReferenceCallback) 
 					"offsite": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Offsite defines the Offsite backup source spec.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteBackupSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteBackupSource"),
 						},
 					},
 					"ceph": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Ceph defines the Ceph backup source spec.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephBackupSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephBackupSource"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephBackupSource", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteBackupSource"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephBackupSource", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteBackupSource"},
 	}
 }
 
@@ -3584,7 +3584,7 @@ func schema_pkg_apis_armada_v1alpha1_ControllerRevisionList(ref common.Reference
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ControllerRevision"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ControllerRevision"),
 									},
 								},
 							},
@@ -3595,7 +3595,7 @@ func schema_pkg_apis_armada_v1alpha1_ControllerRevisionList(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.ControllerRevision", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ControllerRevision", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -3668,7 +3668,7 @@ func schema_pkg_apis_armada_v1alpha1_HelmResourceConditionListHelper(ref common.
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"),
 									},
 								},
 							},
@@ -3679,7 +3679,7 @@ func schema_pkg_apis_armada_v1alpha1_HelmResourceConditionListHelper(ref common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.HelmResourceCondition"},
 	}
 }
 
@@ -3775,20 +3775,20 @@ func schema_pkg_apis_armada_v1alpha1_RestoreSource(ref common.ReferenceCallback)
 					"offsite": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Offsite tells where on Offsite the backup is saved and how to fetch the backup.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"),
 						},
 					},
 					"ceph": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Ceph tells where on Ceph the backup is saved and how to fetch the backup.",
-							Ref:         ref("github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephRestoreSource"),
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephRestoreSource"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.CephRestoreSource", "github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.CephRestoreSource", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.OffsiteRestoreSource"},
 	}
 }
 

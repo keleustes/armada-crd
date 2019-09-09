@@ -145,7 +145,7 @@ type typeNamer struct {
 }
 
 func (t *typeNamer) OpenAPICanonicalTypeName() string {
-	return fmt.Sprintf("github.com/keleustes/armada-operator/pkg/apis/armada/%s.%s", t.pkg, t.name)
+	return fmt.Sprintf("github.com/keleustes/armada-crd/pkg/apis/armada/%s.%s", t.pkg, t.name)
 }
 
 func buildRouteForType(ws *restful.WebService, pkg, name string) *restful.RouteBuilder {

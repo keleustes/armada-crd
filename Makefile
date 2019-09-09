@@ -51,7 +51,7 @@ crd-yaml:
  	# cd controller-tools/
 	# GO111MODULE=on go build -o $HOME/bin/controller-gen cmd/controller-gen/main.go
 	mkdir -p kubectl
-	GO111MODULE=on controller-gen crd paths=github.com/keleustes/armada-operator/pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	GO111MODULE=on controller-gen crd paths=github.com/keleustes/armada-crd/pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
 
 openapi-gen:
 	# GO111MODULE=on go get -u k8s.io/kube-openapi/cmd/openapi-gen
@@ -59,7 +59,7 @@ openapi-gen:
 	# touch -p $HOME/src/k8s.io/kube-openapi/boilerplate/boilerplate.go.txt
 	mkdir -p pkg/generated
 	mkdir -p swagger
-	GO111MODULE=on go run ${OPENAPI_GEN} -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-operator/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
+	GO111MODULE=on go run ${OPENAPI_GEN} -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
 
 swagger-gen:
 	mkdir -p swagger
