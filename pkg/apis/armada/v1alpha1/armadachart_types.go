@@ -44,6 +44,8 @@ type ArmadaChartValues struct {
 	Conf *AVConf `json:"conf,omitempty"`
 	// data contains tbd
 	Data *AVData `json:"data,omitempty"`
+	// dependencies contains tbd
+	Dependencies *AVDependencies `json:"dependencies,omitempty"`
 	// deployment contains tbd
 	Deployment *map[string]bool `json:"deployment,omitempty"`
 	// development contains tbd
@@ -57,12 +59,14 @@ type ArmadaChartValues struct {
 	Etcd *map[string]string `json:"etcd,omitempty"`
 	// images contains tbd
 	Images *AVImages `json:"images,omitempty"`
+	// global contains tbd
+	Global *AVGlobal `json:"global,omitempty"`
 	// jobs contains tbd
 	Jobs *AVJobs `json:"jobs,omitempty"`
 	// kube_service contains tbd
 	KubeService *AVKubeService `json:"kube_service,omitempty"`
 	// labels contains tbd
-	// +k8s:openapi-gen=false
+	// +k8s:openapi-gen=true
 	Labels *map[string]ArmadaMapString `json:"labels,omitempty"`
 	// livenessProbe contains tbd
 	Livenessprobe *AVLivenessprobe `json:"livenessProbe,omitempty"`
@@ -74,10 +78,14 @@ type ArmadaChartValues struct {
 	Network *AVNetwork `json:"network,omitempty"`
 	// networking contains tbd
 	Networking *AVNetworking `json:"networking,omitempty"`
+	// nodes contains tbd
+	Nodes []AVNodes `json:"nodes,omitempty"`
 	// pod contains tbd
 	Pod *AVPod `json:"pod,omitempty"`
 	// prod_environment contains tbd
 	ProdEnvironment *bool `json:"prod_environment,omitempty"`
+	// replicas contains tbd
+	Replicas *map[string]int `json:"replicas,omitempty"`
 	// secrets contains tbd
 	Secrets *AVSecrets `json:"secrets,omitempty"`
 	// service contains tbd

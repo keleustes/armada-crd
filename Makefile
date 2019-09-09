@@ -51,7 +51,8 @@ crd-yaml:
  	# cd controller-tools/
 	# GO111MODULE=on go build -o $HOME/bin/controller-gen cmd/controller-gen/main.go
 	mkdir -p kubectl
-	GO111MODULE=on controller-gen crd paths=github.com/keleustes/armada-crd/pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	GO111MODULE=on controller-gen crd paths=./pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	GO111MODULE=on controller-gen object paths=./pkg/apis/armada/... output:object:dir=./pkg/apis/armada/v1alpha1 output:none
 
 openapi-gen:
 	# GO111MODULE=on go get -u k8s.io/kube-openapi/cmd/openapi-gen

@@ -19,6 +19,10 @@ import ()
 type AVPod struct {
 	// affinity contains tbd
 	Affinity *AVPodAffinity `json:"affinity,omitempty"`
+	// env contains tbd
+	Env *AVPodEnv `json:"env,omitempty"`
+	// mount_path contains tbd
+	MountPath string `json:"mount_path,omitempty"`
 	// lifecycle contains tbd
 	Lifecycle *AVPodLifecycle `json:"lifecycle,omitempty"`
 	// replicas contains tbd
@@ -33,10 +37,26 @@ type AVPodSecurityContext struct {
 }
 
 type AVPodResources struct {
+	// curator contains tbd
+	Curator *AVPodResourceCurator `json:"curator,omitempty"`
+	// fluentbit contains tbd
+	Fluentbit *AVPodResourceFluentbit `json:"fluentbit,omitempty"`
 	// limits contains tbd
 	Limits *AVPodResourceSettings `json:"limits,omitempty"`
 	// requests contains tbd
 	Requests *AVPodResourceSettings `json:"requests,omitempty"`
+	// image_repo_sync contains tbd
+	ImageRepoSync *AVPodResourceImageRepoSync `json:"image_repo_sync,omitempty"`
+	// snapshot_repository contains tbd
+	SnapshortRepository *AVPodResourceSnapshotRepository `json:"snapshot_repository,omitempty"`
+	// tests contains tbd
+	Tests *AVPodResourceTest `json:"tests,omitempty"`
+}
+
+type AVPodResourceCurator struct {
+}
+
+type AVPodResourceFluentbit struct {
 }
 
 type AVPodResourceSettings struct {
@@ -46,6 +66,15 @@ type AVPodResourceSettings struct {
 	Memory string `json:"memory,omitempty"`
 }
 
+type AVPodResourceImageRepoSync struct {
+}
+
+type AVPodResourceTest struct {
+}
+
+type AVPodResourceSnapshotRepository struct {
+}
+
 type AVPodLifecycle struct {
 }
 
@@ -53,6 +82,9 @@ type AVPodReplicas struct {
 }
 
 type AVPodAffinity struct {
+}
+
+type AVPodEnv struct {
 }
 
 type AVStorageclass struct {
@@ -74,7 +106,16 @@ type AVImages struct {
 type AVData struct {
 }
 
+type AVDependencies struct {
+}
+
+type AVGlobal struct {
+}
+
 type AVJobs struct {
+}
+
+type AVNodes struct {
 }
 
 type AVStorage struct {
@@ -264,25 +305,35 @@ type AVEndpoints struct {
 	Postgresql *AVEndpointType2 `json:"postgresql,omitempty"`
 	// postgresql_shipyard_db contains tbd
 	PostgresqlShipyardDb *AVEndpointType2 `json:"postgresql_shipyard_db,omitempty"`
+
+	// Added recently
+	CephMon     *AVEndpointType1 `json:"ceph_mon,omitempty"`
+	CephMgr     *AVEndpointType1 `json:"ceph_mgr,omitempty"`
+	Etcd        *AVEndpointType1 `json:"etcd,omitempty"`
+	Fluentbit   *AVEndpointType1 `json:"fluentbit,omitempty"`
+	Ingress     *AVEndpointType1 `json:"ingress,omitempty"`
+	MaasIngress *AVEndpointType1 `json:"maas_ingress,omitempty"`
+	MaasRegion  *AVEndpointType1 `json:"maas_region,omitempty"`
+	OsloCache   *AVEndpointType2 `json:"oslo_cache,omitempty"`
 }
 
 type AVEndpointType1 struct {
 	// auth contains tbd
 	Auth *map[string]AVEndpointAuth `json:"auth,omitempty"`
 	// host_fqdn_override contains tbd
-	HostFqdnOverride *AVDefaultPublic `json:"host_fqdn_override,omitempty"`
+	HostFqdnOverride *map[string]string `json:"host_fqdn_override,omitempty"`
 	// hosts contains tbd
-	Hosts *AVDefaultPublic `json:"hosts,omitempty"`
+	Hosts *map[string]string `json:"hosts,omitempty"`
 	// name contains tbd
 	Name string `json:"name,omitempty"`
 	// namespace contains tbd
 	Namespace string `json:"namespace,omitempty"`
 	// path contains tbd
-	Path *AVDefaultPublic `json:"path,omitempty"`
+	Path *map[string]string `json:"path,omitempty"`
 	// port contains tbd
-	Port *map[string]AVEndpointPort `json:"port,omitempty"`
+	Port *map[string]ArmadaMapInt `json:"port,omitempty"`
 	// scheme contains tbd
-	Scheme *AVDefaultPublic `json:"scheme,omitempty"`
+	Scheme *map[string]string `json:"scheme,omitempty"`
 	// type contains tbd
 	Type string `json:"type,omitempty"`
 }
@@ -291,9 +342,9 @@ type AVEndpointType2 struct {
 	// auth contains tbd
 	Auth *map[string]AVEndpointAuth `json:"auth,omitempty"`
 	// host_fqdn_override contains tbd
-	HostFqdnOverride *AVDefaultPublic `json:"host_fqdn_override,omitempty"`
+	HostFqdnOverride *map[string]string `json:"host_fqdn_override,omitempty"`
 	// hosts contains tbd
-	Hosts *AVDefaultPublic `json:"hosts,omitempty"`
+	Hosts *map[string]string `json:"hosts,omitempty"`
 	// name contains tbd
 	Name string `json:"name,omitempty"`
 	// namespace contains tbd
@@ -301,9 +352,11 @@ type AVEndpointType2 struct {
 	// path contains tbd
 	Path string `json:"path,omitempty"`
 	// port contains tbd
-	Port *map[string]AVEndpointPort `json:"port,omitempty"`
+	Port *map[string]ArmadaMapInt `json:"port,omitempty"`
 	// scheme contains tbd
 	Scheme string `json:"scheme,omitempty"`
+	// statefulset contains tbd
+	StatefuleSet *map[string]string `json:"statefulset,omitempty"`
 	// type contains tbd
 	Type string `json:"type,omitempty"`
 }
@@ -321,6 +374,8 @@ type AVEndpointAuth struct {
 	DomainName string `json:"domain_name,omitempty"`
 	// email contains tbd
 	Email string `json:"email,omitempty"`
+	// memcache_secret_key contains tbd
+	MemcacheSecretKey string `json:"memcache_secret_key,omitempty"`
 	// password contains tbd
 	Password string `json:"password,omitempty"`
 	// project_domain_name contains tbd
@@ -350,6 +405,8 @@ type AVEndpointPort struct {
 	Internal int `json:"internal,omitempty"`
 	// nodeport contains tbd
 	Nodeport int `json:"nodeport,omitempty"`
+	// podport contains tbd
+	Podport int `json:"podport,omitempty"`
 	// public contains tbd
 	Public int `json:"public,omitempty"`
 }
@@ -359,6 +416,8 @@ type AVTls struct {
 	Ca string `json:"ca,omitempty"`
 	// crt contains tbd
 	Crt string `json:"crt,omitempty"`
+	// cert contains tbd
+	Cert string `json:"cert,omitempty"`
 	// key contains tbd
 	Key string `json:"key,omitempty"`
 	// client contains tbd
@@ -370,15 +429,6 @@ type AVTls struct {
 type AVTlsCa struct {
 	// ca contains tbd
 	Ca string `json:"ca,omitempty"`
-}
-
-type AVDefaultPublic struct {
-	// default contains tbd
-	Default string `json:"default,omitempty"`
-	// discovery contains tbd
-	Discovery string `json:"discovery,omitempty"`
-	// public contains tbd
-	Public string `json:"public,omitempty"`
 }
 
 type AVSecretAnchor struct {

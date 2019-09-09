@@ -22,11 +22,6 @@ package v1alpha1
 
 import ()
 
-// Labels
-type ArmadaLabels struct {
-	AdditionalProperties map[string]string `json:"-,omitempty"`
-}
-
 // Native
 type ArmadaWaitNative struct {
 	// Config for the native ``helm (install|upgrade) --wait`` flag. defaults to true
@@ -36,7 +31,7 @@ type ArmadaWaitNative struct {
 // ResourcesItems
 type ArmadaWaitResourcesItems struct {
 	// mapping of kubernetes resource labels
-	Labels *ArmadaLabels `json:"labels,omitempty"`
+	Labels *map[string]string `json:"labels,omitempty"`
 	// Only for controller ``type``s. Amount of pods in a controller which must be ready.
 	// Can be integer or percent string e.g. ``80%``. Default ``100%``.
 	MinReady int `json:"min_ready,omitempty"`
@@ -48,7 +43,7 @@ type ArmadaWaitResourcesItems struct {
 type ArmadaWait struct {
 	// Base mapping of labels to wait on. They are added to any labels in
 	// each item in the ``resources`` array.
-	Labels *ArmadaLabels `json:"labels,omitempty"`
+	Labels *map[string]string `json:"labels,omitempty"`
 	// See `Wait Native`_.
 	Native *ArmadaWaitNative `json:"native,omitempty"`
 	// Array of `Wait Resource`_ to wait on, with ``labels`` added to each
@@ -60,7 +55,7 @@ type ArmadaWait struct {
 
 // HookActionItems
 type ArmadaHookActionItems struct {
-	Labels *ArmadaLabels `json:"labels,omitempty"`
+	Labels *map[string]string `json:"labels,omitempty"`
 	Name   string        `json:"name,omitempty"`
 	Type   string        `json:"type"`
 }
@@ -132,3 +127,6 @@ type ArmadaTest struct {
 
 // +k8s:deepcopy-gen=false
 type ArmadaMapString map[string]string
+
+// +k8s:deepcopy-gen=false
+type ArmadaMapInt map[string]int
