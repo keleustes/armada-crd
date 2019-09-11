@@ -173,9 +173,6 @@ type AVSecrets struct {
 	Tls *AVTls `json:"tls,omitempty"`
 }
 
-type AVService struct {
-}
-
 type AVBootstrap struct {
 	// enabled contains tbd
 	Enabled bool `json:"enabled,omitempty"`
@@ -183,18 +180,6 @@ type AVBootstrap struct {
 	Script string `json:"script,omitempty"`
 	// ip contains tbd
 	Ip string `json:"ip,omitempty"`
-}
-
-type AVConf struct {
-}
-
-type AVNetwork struct {
-}
-
-type AVDevelopment struct {
-}
-
-type AVBootstrapping struct {
 }
 
 type AVEndpoints struct {

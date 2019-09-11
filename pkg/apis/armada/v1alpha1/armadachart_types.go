@@ -33,7 +33,7 @@ type ArmadaChartValues struct {
 	// bootstrap contains tbd
 	Bootstrap *AVBootstrap `json:"bootstrap,omitempty"`
 	// bootstrapping contains tbd
-	Bootstrapping *AVBootstrapping `json:"bootstrapping,omitempty"`
+	Bootstrapping *map[string]ArmadaMapString `json:"bootstrapping,omitempty"`
 	// ceph_client contains tbd
 	CephClient *map[string]string `json:"ceph_client,omitempty"`
 	// ceph_mgr_modules_config contains tbd
@@ -41,7 +41,7 @@ type ArmadaChartValues struct {
 	// command_prefix contains tbd
 	CommandPrefix []string `json:"command_prefix,omitempty"`
 	// conf contains tbd
-	Conf *AVConf `json:"conf,omitempty"`
+	Conf *map[string]ArmadaMapString `json:"conf,omitempty"`
 	// data contains tbd
 	Data *AVData `json:"data,omitempty"`
 	// dependencies contains tbd
@@ -49,7 +49,7 @@ type ArmadaChartValues struct {
 	// deployment contains tbd
 	Deployment *map[string]bool `json:"deployment,omitempty"`
 	// development contains tbd
-	Development *AVDevelopment `json:"development,omitempty"`
+	Development *map[string]ArmadaMapString `json:"development,omitempty"`
 	// endpoints contains tbd.
 	// JEB: Would have been too consistent. Different structures are
 	// used depending on the direction of the wind.
@@ -75,7 +75,7 @@ type ArmadaChartValues struct {
 	// monitoring contains tbd
 	Monitoring *AVMonitoring `json:"monitoring,omitempty"`
 	// network contains tbd
-	Network *AVNetwork `json:"network,omitempty"`
+	Network *map[string]ArmadaMapString `json:"network,omitempty"`
 	// networking contains tbd
 	Networking *AVNetworking `json:"networking,omitempty"`
 	// nodes contains tbd
@@ -89,7 +89,7 @@ type ArmadaChartValues struct {
 	// secrets contains tbd
 	Secrets *AVSecrets `json:"secrets,omitempty"`
 	// service contains tbd
-	Service *AVService `json:"service,omitempty"`
+	Service *map[string]ArmadaMapString `json:"service,omitempty"`
 	// storage contains tbd
 	Storage *AVStorage `json:"storage,omitempty"`
 	// storageclass contains tbd

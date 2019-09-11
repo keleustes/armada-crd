@@ -267,7 +267,9 @@
           "type": "object"
         }, 
         "conf": {
-          "type": "object"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "conf contains tbd"
         }, 
         "images": {
           "additionalProperties": false, 
@@ -373,10 +375,14 @@
           "type": "object"
         }, 
         "network": {
-          "type": "object"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "network contains tbd"
         }, 
         "service": {
-          "type": "object"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "service contains tbd"
         }, 
         "storage": {
           "type": "object"
@@ -400,7 +406,9 @@
           "description": "nodes contains tbd"
         }, 
         "development": {
-          "type": "object"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "development contains tbd"
         }, 
         "kube_service": {
           "type": "object"
@@ -473,7 +481,9 @@
           "type": "object"
         }, 
         "bootstrapping": {
-          "type": "object"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "bootstrapping contains tbd"
         }, 
         "secrets": {
           "additionalProperties": false, 

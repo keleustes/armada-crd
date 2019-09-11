@@ -254,6 +254,10 @@ spec:
                       type: string
                   type: object
                 bootstrapping:
+                  additionalProperties:
+                    additionalProperties:
+                      type: string
+                    type: object
                   description: bootstrapping contains tbd
                   type: object
                 ceph_client:
@@ -270,6 +274,10 @@ spec:
                     type: string
                   type: array
                 conf:
+                  additionalProperties:
+                    additionalProperties:
+                      type: string
+                    type: object
                   description: conf contains tbd
                   type: object
                 data:
@@ -284,6 +292,10 @@ spec:
                   description: deployment contains tbd
                   type: object
                 development:
+                  additionalProperties:
+                    additionalProperties:
+                      type: string
+                    type: object
                   description: development contains tbd
                   type: object
                 endpoints:
@@ -7905,6 +7917,10 @@ spec:
                   description: monitoring contains tbd
                   type: object
                 network:
+                  additionalProperties:
+                    additionalProperties:
+                      type: string
+                    type: object
                   description: network contains tbd
                   type: object
                 networking:
@@ -8115,6 +8131,10 @@ spec:
                       type: object
                   type: object
                 service:
+                  additionalProperties:
+                    additionalProperties:
+                      type: string
+                    type: object
                   description: service contains tbd
                   type: object
                 storage:

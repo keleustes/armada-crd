@@ -333,22 +333,13 @@
      }
     }
    },
-   "org.airshipit.armada.v1alpha1.AVBootstrapping": {
-    "type": "object"
-   },
    "org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig": {
-    "type": "object"
-   },
-   "org.airshipit.armada.v1alpha1.AVConf": {
     "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVData": {
     "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVDependencies": {
-    "type": "object"
-   },
-   "org.airshipit.armada.v1alpha1.AVDevelopment": {
     "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVEndpointAuth": {
@@ -812,9 +803,6 @@
    "org.airshipit.armada.v1alpha1.AVMonitoring": {
     "type": "object"
    },
-   "org.airshipit.armada.v1alpha1.AVNetwork": {
-    "type": "object"
-   },
    "org.airshipit.armada.v1alpha1.AVNetworking": {
     "type": "object"
    },
@@ -1011,9 +999,6 @@
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTls"
      }
     }
-   },
-   "org.airshipit.armada.v1alpha1.AVService": {
-    "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVStorage": {
     "type": "object"
@@ -1381,7 +1366,8 @@
      },
      "bootstrapping": {
       "description": "bootstrapping contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+      "type": "object",
+      "additionalProperties": {}
      },
      "ceph_client": {
       "description": "ceph_client contains tbd",
@@ -1403,7 +1389,8 @@
      },
      "conf": {
       "description": "conf contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVConf"
+      "type": "object",
+      "additionalProperties": {}
      },
      "data": {
       "description": "data contains tbd",
@@ -1422,7 +1409,8 @@
      },
      "development": {
       "description": "development contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+      "type": "object",
+      "additionalProperties": {}
      },
      "endpoints": {
       "description": "endpoints contains tbd. JEB: Would have been too consistent. Different structures are used depending on the direction of the wind. Endpoints *map[string]AVEndpoint `json:\"endpoints,omitempty\"`",
@@ -1473,7 +1461,8 @@
      },
      "network": {
       "description": "network contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
+      "type": "object",
+      "additionalProperties": {}
      },
      "networking": {
       "description": "networking contains tbd",
@@ -1508,7 +1497,8 @@
      },
      "service": {
       "description": "service contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVService"
+      "type": "object",
+      "additionalProperties": {}
      },
      "storage": {
       "description": "storage contains tbd",

@@ -33,12 +33,9 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor":                        schema_pkg_apis_armada_v1alpha1_AVAnchor(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver":                     schema_pkg_apis_armada_v1alpha1_AVApiserver(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap":                     schema_pkg_apis_armada_v1alpha1_AVBootstrap(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping":                 schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig":          schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf":                          schema_pkg_apis_armada_v1alpha1_AVConf(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData":                          schema_pkg_apis_armada_v1alpha1_AVData(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies":                  schema_pkg_apis_armada_v1alpha1_AVDependencies(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment":                   schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth":                  schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort":                  schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref),
@@ -50,7 +47,6 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService":                   schema_pkg_apis_armada_v1alpha1_AVKubeService(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe":                 schema_pkg_apis_armada_v1alpha1_AVLivenessprobe(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring":                    schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork":                       schema_pkg_apis_armada_v1alpha1_AVNetwork(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking":                    schema_pkg_apis_armada_v1alpha1_AVNetworking(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes":                         schema_pkg_apis_armada_v1alpha1_AVNodes(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod":                           schema_pkg_apis_armada_v1alpha1_AVPod(ref),
@@ -72,7 +68,6 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretMaasRegion":              schema_pkg_apis_armada_v1alpha1_AVSecretMaasRegion(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount":          schema_pkg_apis_armada_v1alpha1_AVSecretServiceAccount(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets":                       schema_pkg_apis_armada_v1alpha1_AVSecrets(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService":                       schema_pkg_apis_armada_v1alpha1_AVService(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage":                       schema_pkg_apis_armada_v1alpha1_AVStorage(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass":                  schema_pkg_apis_armada_v1alpha1_AVStorageclass(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls":                           schema_pkg_apis_armada_v1alpha1_AVTls(ref),
@@ -230,27 +225,7 @@ func schema_pkg_apis_armada_v1alpha1_AVBootstrap(ref common.ReferenceCallback) c
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -271,16 +246,6 @@ func schema_pkg_apis_armada_v1alpha1_AVData(ref common.ReferenceCallback) common
 }
 
 func schema_pkg_apis_armada_v1alpha1_AVDependencies(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1175,16 +1140,6 @@ func schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref common.ReferenceCallback) 
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVNetworking(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1612,16 +1567,6 @@ func schema_pkg_apis_armada_v1alpha1_AVSecrets(ref common.ReferenceCallback) com
 		},
 		Dependencies: []string{
 			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretEtcd", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretKeyrings", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretMaasRegion", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls"},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVService(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
 	}
 }
 
@@ -2597,7 +2542,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"bootstrapping": {
 						SchemaProps: spec.SchemaProps{
 							Description: "bootstrapping contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"ceph_client": {
@@ -2638,7 +2593,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"conf": {
 						SchemaProps: spec.SchemaProps{
 							Description: "conf contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"data": {
@@ -2671,7 +2636,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"development": {
 						SchemaProps: spec.SchemaProps{
 							Description: "development contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"endpoints": {
@@ -2765,7 +2740,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"network": {
 						SchemaProps: spec.SchemaProps{
 							Description: "network contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"networking": {
@@ -2824,7 +2809,17 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "service contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"storage": {
@@ -2849,7 +2844,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
 	}
 }
 

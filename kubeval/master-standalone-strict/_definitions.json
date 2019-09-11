@@ -205,8 +205,9 @@
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
         }, 
         "conf": {
-          "description": "conf contains tbd", 
-          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVConf"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "conf contains tbd"
         }, 
         "images": {
           "description": "images contains tbd", 
@@ -221,12 +222,14 @@
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
         }, 
         "network": {
-          "description": "network contains tbd", 
-          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "network contains tbd"
         }, 
         "service": {
-          "description": "service contains tbd", 
-          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVService"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "service contains tbd"
         }, 
         "storage": {
           "description": "storage contains tbd", 
@@ -251,8 +254,9 @@
           "description": "nodes contains tbd"
         }, 
         "development": {
-          "description": "development contains tbd", 
-          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "development contains tbd"
         }, 
         "kube_service": {
           "description": "kube_service contains tbd", 
@@ -294,8 +298,9 @@
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVData"
         }, 
         "bootstrapping": {
-          "description": "bootstrapping contains tbd", 
-          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "bootstrapping contains tbd"
         }, 
         "secrets": {
           "description": "secrets contains tbd", 
@@ -454,9 +459,6 @@
     "org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig": {
       "type": "object"
     }, 
-    "org.airshipit.armada.v1alpha1.AVService": {
-      "type": "object"
-    }, 
     "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
       "additionalProperties": false, 
       "type": "object", 
@@ -549,9 +551,6 @@
       }
     }, 
     "org.airshipit.armada.v1alpha1.AVPodResourceCurator": {
-      "type": "object"
-    }, 
-    "org.airshipit.armada.v1alpha1.AVConf": {
       "type": "object"
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaWaitNative": {
@@ -687,8 +686,63 @@
         }
       }
     }, 
-    "org.airshipit.armada.v1alpha1.AVNetwork": {
-      "type": "object"
+    "org.airshipit.armada.v1alpha1.AVEndpointType1": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "name": {
+          "type": "string", 
+          "description": "name contains tbd"
+        }, 
+        "namespace": {
+          "type": "string", 
+          "description": "namespace contains tbd"
+        }, 
+        "auth": {
+          "additionalProperties": {
+            "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
+          }, 
+          "type": "object", 
+          "description": "auth contains tbd"
+        }, 
+        "port": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "port contains tbd"
+        }, 
+        "hosts": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "hosts contains tbd"
+        }, 
+        "path": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "path contains tbd"
+        }, 
+        "scheme": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "scheme contains tbd"
+        }, 
+        "type": {
+          "type": "string", 
+          "description": "type contains tbd"
+        }, 
+        "host_fqdn_override": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "host_fqdn_override contains tbd"
+        }
+      }
     }, 
     "org.airshipit.armada.v1alpha1.AVEndpointType2": {
       "additionalProperties": false, 
@@ -1537,12 +1591,6 @@
         }
       }
     }, 
-    "org.airshipit.armada.v1alpha1.AVBootstrapping": {
-      "type": "object"
-    }, 
-    "org.airshipit.armada.v1alpha1.AVDevelopment": {
-      "type": "object"
-    }, 
     "io.k8s.apimachinery.pkg.apis.meta.v1.FieldsV1": {
       "type": "object", 
       "description": "FieldsV1 stores a set of fields in a data structure like a Trie, in JSON format.\n\nEach key is either a '.' representing the field itself, and will always map to an empty set, or a string representing a sub-field or item. The string will follow one of these four formats: 'f:<name>', where <name> is the name of a field in a struct, or key in a map 'v:<value>', where <value> is the exact json formatted value of a list item 'i:<index>', where <index> is position of a item in a list 'k:<keys>', where <keys> is a map of  a list item's key fields to their unique values If a key maps to an empty Fields value, the field that key represents is part of the set.\n\nThe exact format is defined in sigs.k8s.io/structured-merge-diff"
@@ -1624,64 +1672,6 @@
     }, 
     "org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync": {
       "type": "object"
-    }, 
-    "org.airshipit.armada.v1alpha1.AVEndpointType1": {
-      "additionalProperties": false, 
-      "type": "object", 
-      "properties": {
-        "name": {
-          "type": "string", 
-          "description": "name contains tbd"
-        }, 
-        "namespace": {
-          "type": "string", 
-          "description": "namespace contains tbd"
-        }, 
-        "auth": {
-          "additionalProperties": {
-            "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
-          }, 
-          "type": "object", 
-          "description": "auth contains tbd"
-        }, 
-        "port": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "port contains tbd"
-        }, 
-        "hosts": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
-          "type": "object", 
-          "description": "hosts contains tbd"
-        }, 
-        "path": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
-          "type": "object", 
-          "description": "path contains tbd"
-        }, 
-        "scheme": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
-          "type": "object", 
-          "description": "scheme contains tbd"
-        }, 
-        "type": {
-          "type": "string", 
-          "description": "type contains tbd"
-        }, 
-        "host_fqdn_override": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
-          "type": "object", 
-          "description": "host_fqdn_override contains tbd"
-        }
-      }
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaChart": {
       "additionalProperties": false, 

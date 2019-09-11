@@ -37,8 +37,9 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
     }, 
     "conf": {
-      "description": "conf contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVConf"
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "conf contains tbd"
     }, 
     "images": {
       "description": "images contains tbd", 
@@ -53,12 +54,14 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
     }, 
     "network": {
-      "description": "network contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "network contains tbd"
     }, 
     "service": {
-      "description": "service contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "service contains tbd"
     }, 
     "storage": {
       "description": "storage contains tbd", 
@@ -89,8 +92,9 @@
       "description": "nodes contains tbd"
     }, 
     "development": {
-      "description": "development contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "development contains tbd"
     }, 
     "kube_service": {
       "description": "kube_service contains tbd", 
@@ -132,8 +136,9 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
     }, 
     "bootstrapping": {
-      "description": "bootstrapping contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "bootstrapping contains tbd"
     }, 
     "secrets": {
       "description": "secrets contains tbd", 
