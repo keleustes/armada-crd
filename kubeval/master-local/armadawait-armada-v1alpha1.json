@@ -4,8 +4,14 @@
   "description": "Wait", 
   "properties": {
     "labels": {
-      "description": "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array.", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array."
     }, 
     "timeout": {
       "type": "integer", 

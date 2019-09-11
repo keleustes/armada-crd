@@ -37,13 +37,14 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig":          schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf":                          schema_pkg_apis_armada_v1alpha1_AVConf(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData":                          schema_pkg_apis_armada_v1alpha1_AVData(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic":                 schema_pkg_apis_armada_v1alpha1_AVDefaultPublic(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies":                  schema_pkg_apis_armada_v1alpha1_AVDependencies(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment":                   schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth":                  schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort":                  schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints":                     schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal":                        schema_pkg_apis_armada_v1alpha1_AVGlobal(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages":                        schema_pkg_apis_armada_v1alpha1_AVImages(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs":                          schema_pkg_apis_armada_v1alpha1_AVJobs(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService":                   schema_pkg_apis_armada_v1alpha1_AVKubeService(ref),
@@ -51,11 +52,18 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring":                    schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork":                       schema_pkg_apis_armada_v1alpha1_AVNetwork(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking":                    schema_pkg_apis_armada_v1alpha1_AVNetworking(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes":                         schema_pkg_apis_armada_v1alpha1_AVNodes(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod":                           schema_pkg_apis_armada_v1alpha1_AVPod(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity":                   schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv":                        schema_pkg_apis_armada_v1alpha1_AVPodEnv(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle":                  schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodReplicas":                   schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator":            schema_pkg_apis_armada_v1alpha1_AVPodResourceCurator(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit":          schema_pkg_apis_armada_v1alpha1_AVPodResourceFluentbit(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync":      schema_pkg_apis_armada_v1alpha1_AVPodResourceImageRepoSync(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings":           schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository": schema_pkg_apis_armada_v1alpha1_AVPodResourceSnapshotRepository(ref),
+		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest":               schema_pkg_apis_armada_v1alpha1_AVPodResourceTest(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources":                  schema_pkg_apis_armada_v1alpha1_AVPodResources(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext":            schema_pkg_apis_armada_v1alpha1_AVPodSecurityContext(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor":                  schema_pkg_apis_armada_v1alpha1_AVSecretAnchor(ref),
@@ -89,7 +97,6 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaCharts":                    schema_pkg_apis_armada_v1alpha1_ArmadaCharts(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaDelete":                    schema_pkg_apis_armada_v1alpha1_ArmadaDelete(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaHookActionItems":           schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels":                    schema_pkg_apis_armada_v1alpha1_ArmadaLabels(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifest":                  schema_pkg_apis_armada_v1alpha1_ArmadaManifest(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestList":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaManifestSpec":              schema_pkg_apis_armada_v1alpha1_ArmadaManifestSpec(ref),
@@ -129,7 +136,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions":                                       schema_pkg_apis_meta_v1_DeleteOptions(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.Duration":                                            schema_pkg_apis_meta_v1_Duration(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions":                                       schema_pkg_apis_meta_v1_ExportOptions(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Fields":                                              schema_pkg_apis_meta_v1_Fields(ref),
+		"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1":                                            schema_pkg_apis_meta_v1_FieldsV1(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions":                                          schema_pkg_apis_meta_v1_GetOptions(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind":                                           schema_pkg_apis_meta_v1_GroupKind(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource":                                       schema_pkg_apis_meta_v1_GroupResource(ref),
@@ -137,8 +144,6 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery":                            schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind":                                    schema_pkg_apis_meta_v1_GroupVersionKind(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource":                                schema_pkg_apis_meta_v1_GroupVersionResource(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializer":                                         schema_pkg_apis_meta_v1_Initializer(ref),
-		"k8s.io/apimachinery/pkg/apis/meta/v1.Initializers":                                        schema_pkg_apis_meta_v1_Initializers(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent":                                       schema_pkg_apis_meta_v1_InternalEvent(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector":                                       schema_pkg_apis_meta_v1_LabelSelector(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement":                            schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref),
@@ -265,34 +270,11 @@ func schema_pkg_apis_armada_v1alpha1_AVData(ref common.ReferenceCallback) common
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVDefaultPublic(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_armada_v1alpha1_AVDependencies(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
 				Type: []string{"object"},
-				Properties: map[string]spec.Schema{
-					"default": {
-						SchemaProps: spec.SchemaProps{
-							Description: "default contains tbd",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"discovery": {
-						SchemaProps: spec.SchemaProps{
-							Description: "discovery contains tbd",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-					"public": {
-						SchemaProps: spec.SchemaProps{
-							Description: "public contains tbd",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
 			},
 		},
 	}
@@ -352,6 +334,13 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref common.ReferenceCallback
 					"email": {
 						SchemaProps: spec.SchemaProps{
 							Description: "email contains tbd",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"memcache_secret_key": {
+						SchemaProps: spec.SchemaProps{
+							Description: "memcache_secret_key contains tbd",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -460,6 +449,13 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref common.ReferenceCallback
 							Format:      "int32",
 						},
 					},
+					"podport": {
+						SchemaProps: spec.SchemaProps{
+							Description: "podport contains tbd",
+							Type:        []string{"integer"},
+							Format:      "int32",
+						},
+					},
 					"public": {
 						SchemaProps: spec.SchemaProps{
 							Description: "public contains tbd",
@@ -496,13 +492,31 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"host_fqdn_override": {
 						SchemaProps: spec.SchemaProps{
 							Description: "host_fqdn_override contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"hosts": {
 						SchemaProps: spec.SchemaProps{
 							Description: "hosts contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"name": {
@@ -522,7 +536,16 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"path": {
 						SchemaProps: spec.SchemaProps{
 							Description: "path contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"port": {
@@ -533,7 +556,9 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"),
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapInt
+										//    type: map[string]map[string]int
 									},
 								},
 							},
@@ -542,7 +567,16 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 					"scheme": {
 						SchemaProps: spec.SchemaProps{
 							Description: "scheme contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"type": {
@@ -556,7 +590,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth"},
 	}
 }
 
@@ -583,13 +617,31 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 					"host_fqdn_override": {
 						SchemaProps: spec.SchemaProps{
 							Description: "host_fqdn_override contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"hosts": {
 						SchemaProps: spec.SchemaProps{
 							Description: "hosts contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"name": {
@@ -621,7 +673,9 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"),
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapInt
+										//    type: map[string]map[string]int
 									},
 								},
 							},
@@ -632,6 +686,21 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 							Description: "scheme contains tbd",
 							Type:        []string{"string"},
 							Format:      "",
+						},
+					},
+					"statefulset": {
+						SchemaProps: spec.SchemaProps{
+							Description: "statefulset contains tbd",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"type": {
@@ -645,7 +714,7 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDefaultPublic", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth"},
 	}
 }
 
@@ -973,11 +1042,62 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref common.ReferenceCallback) c
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
 						},
 					},
+					"ceph_mon": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Added recently",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"ceph_mgr": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"etcd": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"fluentbit": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"ingress": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"maas_ingress": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"maas_region": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1"),
+						},
+					},
+					"oslo_cache": {
+						SchemaProps: spec.SchemaProps{
+							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"),
+						},
+					},
 				},
 			},
 		},
 		Dependencies: []string{
 			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2"},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVGlobal(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
 	}
 }
 
@@ -1075,6 +1195,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetworking(ref common.ReferenceCallback) 
 	}
 }
 
+func schema_pkg_apis_armada_v1alpha1_AVNodes(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
 func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1085,6 +1215,19 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 						SchemaProps: spec.SchemaProps{
 							Description: "affinity contains tbd",
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity"),
+						},
+					},
+					"env": {
+						SchemaProps: spec.SchemaProps{
+							Description: "env contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv"),
+						},
+					},
+					"mount_path": {
+						SchemaProps: spec.SchemaProps{
+							Description: "mount_path contains tbd",
+							Type:        []string{"string"},
+							Format:      "",
 						},
 					},
 					"lifecycle": {
@@ -1132,11 +1275,21 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"},
 	}
 }
 
 func schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVPodEnv(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1157,6 +1310,36 @@ func schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref common.ReferenceCallback
 }
 
 func schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVPodResourceCurator(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVPodResourceFluentbit(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVPodResourceImageRepoSync(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
@@ -1192,12 +1375,44 @@ func schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref common.ReferenceC
 	}
 }
 
+func schema_pkg_apis_armada_v1alpha1_AVPodResourceSnapshotRepository(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_pkg_apis_armada_v1alpha1_AVPodResourceTest(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+			},
+		},
+	}
+}
+
 func schema_pkg_apis_armada_v1alpha1_AVPodResources(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
 				Type: []string{"object"},
 				Properties: map[string]spec.Schema{
+					"curator": {
+						SchemaProps: spec.SchemaProps{
+							Description: "curator contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator"),
+						},
+					},
+					"fluentbit": {
+						SchemaProps: spec.SchemaProps{
+							Description: "fluentbit contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit"),
+						},
+					},
 					"limits": {
 						SchemaProps: spec.SchemaProps{
 							Description: "limits contains tbd",
@@ -1210,11 +1425,29 @@ func schema_pkg_apis_armada_v1alpha1_AVPodResources(ref common.ReferenceCallback
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
 						},
 					},
+					"image_repo_sync": {
+						SchemaProps: spec.SchemaProps{
+							Description: "image_repo_sync contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync"),
+						},
+					},
+					"snapshot_repository": {
+						SchemaProps: spec.SchemaProps{
+							Description: "snapshot_repository contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository"),
+						},
+					},
+					"tests": {
+						SchemaProps: spec.SchemaProps{
+							Description: "tests contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest"),
+						},
+					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest"},
 	}
 }
 
@@ -1432,6 +1665,13 @@ func schema_pkg_apis_armada_v1alpha1_AVTls(ref common.ReferenceCallback) common.
 							Format:      "",
 						},
 					},
+					"cert": {
+						SchemaProps: spec.SchemaProps{
+							Description: "cert contains tbd",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
 					"key": {
 						SchemaProps: spec.SchemaProps{
 							Description: "key contains tbd",
@@ -1568,14 +1808,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackup(ref common.ReferenceCallback) 
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -1612,14 +1852,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaBackupList(ref common.ReferenceCallba
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -1792,14 +2032,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChart(ref common.ReferenceCallback) c
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -1836,14 +2076,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroup(ref common.ReferenceCallba
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -1880,14 +2120,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartGroupList(ref common.ReferenceCa
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -2074,14 +2314,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartList(ref common.ReferenceCallbac
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -2407,6 +2647,12 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData"),
 						},
 					},
+					"dependencies": {
+						SchemaProps: spec.SchemaProps{
+							Description: "dependencies contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies"),
+						},
+					},
 					"deployment": {
 						SchemaProps: spec.SchemaProps{
 							Description: "deployment contains tbd",
@@ -2455,6 +2701,12 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages"),
 						},
 					},
+					"global": {
+						SchemaProps: spec.SchemaProps{
+							Description: "global contains tbd",
+							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal"),
+						},
+					},
 					"jobs": {
 						SchemaProps: spec.SchemaProps{
 							Description: "jobs contains tbd",
@@ -2465,6 +2717,22 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_service contains tbd",
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService"),
+						},
+					},
+					"labels": {
+						SchemaProps: spec.SchemaProps{
+							Description: "labels contains tbd",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										// limited support by openapi-gen
+										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
+										//    type: map[string]map[string]string
+									},
+								},
+							},
 						},
 					},
 					"livenessProbe": {
@@ -2506,6 +2774,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking"),
 						},
 					},
+					"nodes": {
+						SchemaProps: spec.SchemaProps{
+							Description: "nodes contains tbd",
+							Type:        []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes"),
+									},
+								},
+							},
+						},
+					},
 					"pod": {
 						SchemaProps: spec.SchemaProps{
 							Description: "pod contains tbd",
@@ -2517,6 +2798,21 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 							Description: "prod_environment contains tbd",
 							Type:        []string{"boolean"},
 							Format:      "",
+						},
+					},
+					"replicas": {
+						SchemaProps: spec.SchemaProps{
+							Description: "replicas contains tbd",
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"integer"},
+										Format: "int32",
+									},
+								},
+							},
 						},
 					},
 					"secrets": {
@@ -2553,7 +2849,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
 	}
 }
 
@@ -2613,7 +2909,16 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref common.ReferenceC
 				Properties: map[string]spec.Schema{
 					"labels": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Type: []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"name": {
@@ -2632,19 +2937,6 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaHookActionItems(ref common.ReferenceC
 				Required: []string{"type"},
 			},
 		},
-		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_ArmadaLabels(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "Labels",
-				Type:        []string{"object"},
-			},
-		},
 	}
 }
 
@@ -2657,14 +2949,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifest(ref common.ReferenceCallback
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -2701,14 +2993,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaManifestList(ref common.ReferenceCall
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -2867,14 +3159,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestore(ref common.ReferenceCallback)
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -2911,14 +3203,14 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaRestoreList(ref common.ReferenceCallb
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -3306,7 +3598,16 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref common.ReferenceCallback) co
 					"labels": {
 						SchemaProps: spec.SchemaProps{
 							Description: "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array.",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"native": {
@@ -3339,7 +3640,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWait(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitNative", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitNative", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaWaitResourcesItems"},
 	}
 }
 
@@ -3373,7 +3674,16 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref common.Referen
 					"labels": {
 						SchemaProps: spec.SchemaProps{
 							Description: "mapping of kubernetes resource labels",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"),
+							Type:        []string{"object"},
+							AdditionalProperties: &spec.SchemaOrBool{
+								Allows: true,
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Type:   []string{"string"},
+										Format: "",
+									},
+								},
+							},
 						},
 					},
 					"min_ready": {
@@ -3394,8 +3704,6 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaWaitResourcesItems(ref common.Referen
 				Required: []string{"type"},
 			},
 		},
-		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaLabels"},
 	}
 }
 
@@ -3510,14 +3818,14 @@ func schema_pkg_apis_armada_v1alpha1_ControllerRevision(ref common.ReferenceCall
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -3559,14 +3867,14 @@ func schema_pkg_apis_armada_v1alpha1_ControllerRevisionList(ref common.Reference
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -3801,14 +4109,14 @@ func schema_pkg_apis_meta_v1_APIGroup(ref common.ReferenceCallback) common.OpenA
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -3870,14 +4178,14 @@ func schema_pkg_apis_meta_v1_APIGroupList(ref common.ReferenceCallback) common.O
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4018,14 +4326,14 @@ func schema_pkg_apis_meta_v1_APIResourceList(ref common.ReferenceCallback) commo
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4068,14 +4376,14 @@ func schema_pkg_apis_meta_v1_APIVersions(ref common.ReferenceCallback) common.Op
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4125,14 +4433,14 @@ func schema_pkg_apis_meta_v1_CreateOptions(ref common.ReferenceCallback) common.
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4173,14 +4481,14 @@ func schema_pkg_apis_meta_v1_DeleteOptions(ref common.ReferenceCallback) common.
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4255,14 +4563,14 @@ func schema_pkg_apis_meta_v1_ExportOptions(ref common.ReferenceCallback) common.
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4288,11 +4596,11 @@ func schema_pkg_apis_meta_v1_ExportOptions(ref common.ReferenceCallback) common.
 	}
 }
 
-func schema_pkg_apis_meta_v1_Fields(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_meta_v1_FieldsV1(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "Fields stores a set of fields in a data structure like a Trie. To understand how this is used, see: https://github.com/kubernetes-sigs/structured-merge-diff",
+				Description: "FieldsV1 stores a set of fields in a data structure like a Trie, in JSON format.\n\nEach key is either a '.' representing the field itself, and will always map to an empty set, or a string representing a sub-field or item. The string will follow one of these four formats: 'f:<name>', where <name> is the name of a field in a struct, or key in a map 'v:<value>', where <value> is the exact json formatted value of a list item 'i:<index>', where <index> is position of a item in a list 'k:<keys>', where <keys> is a map of  a list item's key fields to their unique values If a key maps to an empty Fields value, the field that key represents is part of the set.\n\nThe exact format is defined in sigs.k8s.io/structured-merge-diff",
 				Type:        []string{"object"},
 			},
 		},
@@ -4308,14 +4616,14 @@ func schema_pkg_apis_meta_v1_GetOptions(ref common.ReferenceCallback) common.Ope
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4503,68 +4811,6 @@ func schema_pkg_apis_meta_v1_GroupVersionResource(ref common.ReferenceCallback) 
 	}
 }
 
-func schema_pkg_apis_meta_v1_Initializer(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "Initializer is information about an initializer that has not yet completed.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"name": {
-						SchemaProps: spec.SchemaProps{
-							Description: "name of the process that is responsible for initializing this object.",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
-				},
-				Required: []string{"name"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_meta_v1_Initializers(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "Initializers tracks the progress of initialization.",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"pending": {
-						VendorExtensible: spec.VendorExtensible{
-							Extensions: spec.Extensions{
-								"x-kubernetes-patch-merge-key": "name",
-								"x-kubernetes-patch-strategy":  "merge",
-							},
-						},
-						SchemaProps: spec.SchemaProps{
-							Description: "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.",
-							Type:        []string{"array"},
-							Items: &spec.SchemaOrArray{
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Initializer"),
-									},
-								},
-							},
-						},
-					},
-					"result": {
-						SchemaProps: spec.SchemaProps{
-							Description: "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Status"),
-						},
-					},
-				},
-				Required: []string{"pending"},
-			},
-		},
-		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Initializer", "k8s.io/apimachinery/pkg/apis/meta/v1.Status"},
-	}
-}
-
 func schema_pkg_apis_meta_v1_InternalEvent(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -4693,21 +4939,21 @@ func schema_pkg_apis_meta_v1_List(ref common.ReferenceCallback) common.OpenAPIDe
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"metadata": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
 						},
 					},
@@ -4742,14 +4988,14 @@ func schema_pkg_apis_meta_v1_ListMeta(ref common.ReferenceCallback) common.OpenA
 				Properties: map[string]spec.Schema{
 					"selfLink": {
 						SchemaProps: spec.SchemaProps{
-							Description: "selfLink is a URL representing this object. Populated by the system. Read-only.",
+							Description: "selfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"resourceVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency",
+							Description: "String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4763,7 +5009,7 @@ func schema_pkg_apis_meta_v1_ListMeta(ref common.ReferenceCallback) common.OpenA
 					},
 					"remainingItemCount": {
 						SchemaProps: spec.SchemaProps{
-							Description: "remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.\n\nThis field is alpha and can be changed or removed without notice.",
+							Description: "remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.",
 							Type:        []string{"integer"},
 							Format:      "int64",
 						},
@@ -4783,14 +5029,14 @@ func schema_pkg_apis_meta_v1_ListOptions(ref common.ReferenceCallback) common.Op
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4818,7 +5064,7 @@ func schema_pkg_apis_meta_v1_ListOptions(ref common.ReferenceCallback) common.Op
 					},
 					"allowWatchBookmarks": {
 						SchemaProps: spec.SchemaProps{
-							Description: "allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. If the feature gate WatchBookmarks is not enabled in apiserver, this field is ignored.\n\nThis field is alpha and can be changed or removed without notice.",
+							Description: "allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. If the feature gate WatchBookmarks is not enabled in apiserver, this field is ignored.\n\nThis field is beta.",
 							Type:        []string{"boolean"},
 							Format:      "",
 						},
@@ -4891,17 +5137,24 @@ func schema_pkg_apis_meta_v1_ManagedFieldsEntry(ref common.ReferenceCallback) co
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
 						},
 					},
-					"fields": {
+					"fieldsType": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Fields identifies a set of fields.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Fields"),
+							Description: "FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: \"FieldsV1\"",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"fieldsV1": {
+						SchemaProps: spec.SchemaProps{
+							Description: "FieldsV1 holds the first JSON version format as described in the \"FieldsV1\" type.",
+							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Fields", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.FieldsV1", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
 	}
 }
 
@@ -4933,7 +5186,7 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 					},
 					"generateName": {
 						SchemaProps: spec.SchemaProps{
-							Description: "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency",
+							Description: "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4947,7 +5200,7 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 					},
 					"selfLink": {
 						SchemaProps: spec.SchemaProps{
-							Description: "SelfLink is a URL representing this object. Populated by the system. Read-only.",
+							Description: "SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4961,7 +5214,7 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 					},
 					"resourceVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency",
+							Description: "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -4975,13 +5228,13 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 					},
 					"creationTimestamp": {
 						SchemaProps: spec.SchemaProps{
-							Description: "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
+							Description: "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
 						},
 					},
 					"deletionTimestamp": {
 						SchemaProps: spec.SchemaProps{
-							Description: "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
+							Description: "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time"),
 						},
 					},
@@ -5041,12 +5294,6 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 							},
 						},
 					},
-					"initializers": {
-						SchemaProps: spec.SchemaProps{
-							Description: "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.\n\nDEPRECATED - initializers are an alpha field and will be removed in v1.15.",
-							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.Initializers"),
-						},
-					},
 					"finalizers": {
 						VendorExtensible: spec.VendorExtensible{
 							Extensions: spec.Extensions{
@@ -5090,7 +5337,7 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.Initializers", "k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry", "k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ManagedFieldsEntry", "k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"},
 	}
 }
 
@@ -5110,7 +5357,7 @@ func schema_pkg_apis_meta_v1_OwnerReference(ref common.ReferenceCallback) common
 					},
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5159,21 +5406,21 @@ func schema_pkg_apis_meta_v1_PartialObjectMetadata(ref common.ReferenceCallback)
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"metadata": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
+							Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
 						},
 					},
@@ -5194,21 +5441,21 @@ func schema_pkg_apis_meta_v1_PartialObjectMetadataList(ref common.ReferenceCallb
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"metadata": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
 						},
 					},
@@ -5254,14 +5501,14 @@ func schema_pkg_apis_meta_v1_PatchOptions(ref common.ReferenceCallback) common.O
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5392,27 +5639,27 @@ func schema_pkg_apis_meta_v1_Status(ref common.ReferenceCallback) common.OpenAPI
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"metadata": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Status of the operation. One of: \"Success\" or \"Failure\". More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status",
+							Description: "Status of the operation. One of: \"Success\" or \"Failure\". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5509,7 +5756,7 @@ func schema_pkg_apis_meta_v1_StatusDetails(ref common.ReferenceCallback) common.
 					},
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5558,21 +5805,21 @@ func schema_pkg_apis_meta_v1_Table(ref common.ReferenceCallback) common.OpenAPID
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"metadata": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Ref:         ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
 						},
 					},
@@ -5669,14 +5916,14 @@ func schema_pkg_apis_meta_v1_TableOptions(ref common.ReferenceCallback) common.O
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5834,14 +6081,14 @@ func schema_pkg_apis_meta_v1_TypeMeta(ref common.ReferenceCallback) common.OpenA
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},
@@ -5861,14 +6108,14 @@ func schema_pkg_apis_meta_v1_UpdateOptions(ref common.ReferenceCallback) common.
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
 							Type:        []string{"string"},
 							Format:      "",
 						},
 					},
 					"apiVersion": {
 						SchemaProps: spec.SchemaProps{
-							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
 							Type:        []string{"string"},
 							Format:      "",
 						},

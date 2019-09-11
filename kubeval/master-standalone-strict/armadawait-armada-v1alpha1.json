@@ -5,8 +5,14 @@
   "description": "Wait", 
   "properties": {
     "labels": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "description": "Labels"
+      "description": "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array."
     }, 
     "timeout": {
       "type": "integer", 
@@ -28,8 +34,11 @@
             "format": "int32"
           }, 
           "labels": {
+            "additionalProperties": {
+              "type": "string"
+            }, 
             "type": "object", 
-            "description": "Labels"
+            "description": "mapping of kubernetes resource labels"
           }, 
           "type": {
             "type": "string", 

@@ -145,67 +145,9 @@
    }
   },
   "definitions": {
-   "io.k8s.apimachinery.pkg.apis.meta.v1.Fields": {
-    "description": "Fields stores a set of fields in a data structure like a Trie. To understand how this is used, see: https://github.com/kubernetes-sigs/structured-merge-diff",
+   "io.k8s.apimachinery.pkg.apis.meta.v1.FieldsV1": {
+    "description": "FieldsV1 stores a set of fields in a data structure like a Trie, in JSON format.\n\nEach key is either a '.' representing the field itself, and will always map to an empty set, or a string representing a sub-field or item. The string will follow one of these four formats: 'f:\u003cname\u003e', where \u003cname\u003e is the name of a field in a struct, or key in a map 'v:\u003cvalue\u003e', where \u003cvalue\u003e is the exact json formatted value of a list item 'i:\u003cindex\u003e', where \u003cindex\u003e is position of a item in a list 'k:\u003ckeys\u003e', where \u003ckeys\u003e is a map of  a list item's key fields to their unique values If a key maps to an empty Fields value, the field that key represents is part of the set.\n\nThe exact format is defined in sigs.k8s.io/structured-merge-diff",
     "type": "object"
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.Initializer": {
-    "description": "Initializer is information about an initializer that has not yet completed.",
-    "type": "object",
-    "required": [
-     "name"
-    ],
-    "properties": {
-     "name": {
-      "description": "name of the process that is responsible for initializing this object.",
-      "type": "string"
-     }
-    }
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.Initializers": {
-    "description": "Initializers tracks the progress of initialization.",
-    "type": "object",
-    "required": [
-     "pending"
-    ],
-    "properties": {
-     "pending": {
-      "description": "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializer"
-      },
-      "x-kubernetes-patch-merge-key": "name",
-      "x-kubernetes-patch-strategy": "merge"
-     },
-     "result": {
-      "description": "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
-     }
-    }
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta": {
-    "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
-    "type": "object",
-    "properties": {
-     "continue": {
-      "description": "continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.",
-      "type": "string"
-     },
-     "remainingItemCount": {
-      "description": "remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.\n\nThis field is alpha and can be changed or removed without notice.",
-      "type": "integer",
-      "format": "int64"
-     },
-     "resourceVersion": {
-      "description": "String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency",
-      "type": "string"
-     },
-     "selfLink": {
-      "description": "selfLink is a URL representing this object. Populated by the system. Read-only.",
-      "type": "string"
-     }
-    }
    },
    "io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry": {
     "description": "ManagedFieldsEntry is a workflow-id, a FieldSet and the group version of the resource that the fieldset applies to.",
@@ -215,9 +157,13 @@
       "description": "APIVersion defines the version of this resource that this field set applies to. The format is \"group/version\" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.",
       "type": "string"
      },
-     "fields": {
-      "description": "Fields identifies a set of fields.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Fields"
+     "fieldsType": {
+      "description": "FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: \"FieldsV1\"",
+      "type": "string"
+     },
+     "fieldsV1": {
+      "description": "FieldsV1 holds the first JSON version format as described in the \"FieldsV1\" type.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.FieldsV1"
      },
      "manager": {
       "description": "Manager is an identifier of the workflow managing these fields.",
@@ -249,7 +195,7 @@
       "type": "string"
      },
      "creationTimestamp": {
-      "description": "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
+      "description": "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      },
      "deletionGracePeriodSeconds": {
@@ -258,7 +204,7 @@
       "format": "int64"
      },
      "deletionTimestamp": {
-      "description": "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata",
+      "description": "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      },
      "finalizers": {
@@ -270,17 +216,13 @@
       "x-kubernetes-patch-strategy": "merge"
      },
      "generateName": {
-      "description": "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency",
+      "description": "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency",
       "type": "string"
      },
      "generation": {
       "description": "A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.",
       "type": "integer",
       "format": "int64"
-     },
-     "initializers": {
-      "description": "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.\n\nDEPRECATED - initializers are an alpha field and will be removed in v1.15.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializers"
      },
      "labels": {
       "description": "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels",
@@ -314,11 +256,11 @@
       "x-kubernetes-patch-strategy": "merge"
      },
      "resourceVersion": {
-      "description": "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency",
+      "description": "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency",
       "type": "string"
      },
      "selfLink": {
-      "description": "SelfLink is a URL representing this object. Populated by the system. Read-only.",
+      "description": "SelfLink is a URL representing this object. Populated by the system. Read-only.\n\nDEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.",
       "type": "string"
      },
      "uid": {
@@ -350,7 +292,7 @@
       "type": "boolean"
      },
      "kind": {
-      "description": "Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "description": "Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
       "type": "string"
      },
      "name": {
@@ -359,97 +301,6 @@
      },
      "uid": {
       "description": "UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
-      "type": "string"
-     }
-    }
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.Status": {
-    "description": "Status is a return value for calls that don't return other objects.",
-    "type": "object",
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "code": {
-      "description": "Suggested HTTP return code for this status, 0 if not set.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "details": {
-      "description": "Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails"
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "message": {
-      "description": "A human-readable description of the status of this operation.",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
-     },
-     "reason": {
-      "description": "A machine-readable description of why this operation is in the \"Failure\" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.",
-      "type": "string"
-     },
-     "status": {
-      "description": "Status of the operation. One of: \"Success\" or \"Failure\". More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status",
-      "type": "string"
-     }
-    }
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause": {
-    "description": "StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.",
-    "type": "object",
-    "properties": {
-     "field": {
-      "description": "The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.\n\nExamples:\n  \"name\" - the field \"name\" on the current resource\n  \"items[0].name\" - the field \"name\" on the first array entry in \"items\"",
-      "type": "string"
-     },
-     "message": {
-      "description": "A human-readable description of the cause of the error.  This field may be presented as-is to a reader.",
-      "type": "string"
-     },
-     "reason": {
-      "description": "A machine-readable description of the cause of the error. If this value is empty there is no information available.",
-      "type": "string"
-     }
-    }
-   },
-   "io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails": {
-    "description": "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.",
-    "type": "object",
-    "properties": {
-     "causes": {
-      "description": "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause"
-      }
-     },
-     "group": {
-      "description": "The group attribute of the resource associated with the status StatusReason.",
-      "type": "string"
-     },
-     "kind": {
-      "description": "The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "name": {
-      "description": "The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).",
-      "type": "string"
-     },
-     "retryAfterSeconds": {
-      "description": "If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "uid": {
-      "description": "UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
     }
@@ -494,22 +345,8 @@
    "org.airshipit.armada.v1alpha1.AVData": {
     "type": "object"
    },
-   "org.airshipit.armada.v1alpha1.AVDefaultPublic": {
-    "type": "object",
-    "properties": {
-     "default": {
-      "description": "default contains tbd",
-      "type": "string"
-     },
-     "discovery": {
-      "description": "discovery contains tbd",
-      "type": "string"
-     },
-     "public": {
-      "description": "public contains tbd",
-      "type": "string"
-     }
-    }
+   "org.airshipit.armada.v1alpha1.AVDependencies": {
+    "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVDevelopment": {
     "type": "object"
@@ -539,6 +376,10 @@
      },
      "email": {
       "description": "email contains tbd",
+      "type": "string"
+     },
+     "memcache_secret_key": {
+      "description": "memcache_secret_key contains tbd",
       "type": "string"
      },
      "password": {
@@ -583,31 +424,6 @@
      }
     }
    },
-   "org.airshipit.armada.v1alpha1.AVEndpointPort": {
-    "type": "object",
-    "properties": {
-     "default": {
-      "description": "default contains tbd",
-      "type": "integer",
-      "format": "int32"
-     },
-     "internal": {
-      "description": "internal contains tbd",
-      "type": "integer",
-      "format": "int32"
-     },
-     "nodeport": {
-      "description": "nodeport contains tbd",
-      "type": "integer",
-      "format": "int32"
-     },
-     "public": {
-      "description": "public contains tbd",
-      "type": "integer",
-      "format": "int32"
-     }
-    }
-   },
    "org.airshipit.armada.v1alpha1.AVEndpointType1": {
     "type": "object",
     "properties": {
@@ -620,11 +436,17 @@
      },
      "host_fqdn_override": {
       "description": "host_fqdn_override contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "hosts": {
       "description": "hosts contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "name": {
       "description": "name contains tbd",
@@ -636,18 +458,22 @@
      },
      "path": {
       "description": "path contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "port": {
       "description": "port contains tbd",
       "type": "object",
-      "additionalProperties": {
-       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
-      }
+      "additionalProperties": {}
      },
      "scheme": {
       "description": "scheme contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "type": {
       "description": "type contains tbd",
@@ -667,11 +493,17 @@
      },
      "host_fqdn_override": {
       "description": "host_fqdn_override contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "hosts": {
       "description": "hosts contains tbd",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "name": {
       "description": "name contains tbd",
@@ -688,13 +520,18 @@
      "port": {
       "description": "port contains tbd",
       "type": "object",
-      "additionalProperties": {
-       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
-      }
+      "additionalProperties": {}
      },
      "scheme": {
       "description": "scheme contains tbd",
       "type": "string"
+     },
+     "statefulset": {
+      "description": "statefulset contains tbd",
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "type": {
       "description": "type contains tbd",
@@ -711,6 +548,13 @@
      },
      "armada": {
       "description": "armada contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "ceph_mgr": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "ceph_mon": {
+      "description": "Added recently",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "ceph_object_store": {
@@ -753,6 +597,12 @@
       "description": "elasticsearch contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
+     "etcd": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "fluentbit": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
      "fluentd": {
       "description": "fluentd contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
@@ -771,6 +621,9 @@
      },
      "image_registry": {
       "description": "image_registry contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "ingress": {
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
      },
      "key_manager": {
@@ -805,6 +658,12 @@
       "description": "maas_db contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
+     "maas_ingress": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "maas_region": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
      "maas_region_ui": {
       "description": "maas_region_ui contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
@@ -832,6 +691,9 @@
      "orchestration": {
       "description": "orchestration contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+     },
+     "oslo_cache": {
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
      },
      "oslo_db": {
       "description": "oslo_db contains tbd",
@@ -919,6 +781,9 @@
      }
     }
    },
+   "org.airshipit.armada.v1alpha1.AVGlobal": {
+    "type": "object"
+   },
    "org.airshipit.armada.v1alpha1.AVImages": {
     "type": "object",
     "properties": {
@@ -953,6 +818,9 @@
    "org.airshipit.armada.v1alpha1.AVNetworking": {
     "type": "object"
    },
+   "org.airshipit.armada.v1alpha1.AVNodes": {
+    "type": "object"
+   },
    "org.airshipit.armada.v1alpha1.AVPod": {
     "type": "object",
     "properties": {
@@ -960,9 +828,17 @@
       "description": "affinity contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
      },
+     "env": {
+      "description": "env contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodEnv"
+     },
      "lifecycle": {
       "description": "lifecycle contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodLifecycle"
+     },
+     "mount_path": {
+      "description": "mount_path contains tbd",
+      "type": "string"
      },
      "replicas": {
       "description": "replicas contains tbd",
@@ -988,7 +864,19 @@
    "org.airshipit.armada.v1alpha1.AVPodAffinity": {
     "type": "object"
    },
+   "org.airshipit.armada.v1alpha1.AVPodEnv": {
+    "type": "object"
+   },
    "org.airshipit.armada.v1alpha1.AVPodLifecycle": {
+    "type": "object"
+   },
+   "org.airshipit.armada.v1alpha1.AVPodResourceCurator": {
+    "type": "object"
+   },
+   "org.airshipit.armada.v1alpha1.AVPodResourceFluentbit": {
+    "type": "object"
+   },
+   "org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync": {
     "type": "object"
    },
    "org.airshipit.armada.v1alpha1.AVPodResourceSettings": {
@@ -1004,9 +892,27 @@
      }
     }
    },
+   "org.airshipit.armada.v1alpha1.AVPodResourceSnapshotRepository": {
+    "type": "object"
+   },
+   "org.airshipit.armada.v1alpha1.AVPodResourceTest": {
+    "type": "object"
+   },
    "org.airshipit.armada.v1alpha1.AVPodResources": {
     "type": "object",
     "properties": {
+     "curator": {
+      "description": "curator contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceCurator"
+     },
+     "fluentbit": {
+      "description": "fluentbit contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceFluentbit"
+     },
+     "image_repo_sync": {
+      "description": "image_repo_sync contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync"
+     },
      "limits": {
       "description": "limits contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
@@ -1014,6 +920,14 @@
      "requests": {
       "description": "requests contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
+     },
+     "snapshot_repository": {
+      "description": "snapshot_repository contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSnapshotRepository"
+     },
+     "tests": {
+      "description": "tests contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceTest"
      }
     }
    },
@@ -1114,6 +1028,10 @@
       "description": "ca contains tbd",
       "type": "string"
      },
+     "cert": {
+      "description": "cert contains tbd",
+      "type": "string"
+     },
      "client": {
       "description": "client contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
@@ -1188,11 +1106,11 @@
     "type": "object",
     "properties": {
      "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "type": "string"
      },
      "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
       "type": "string"
      },
      "metadata": {
@@ -1216,11 +1134,11 @@
     "type": "object",
     "properties": {
      "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "type": "string"
      },
      "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
       "type": "string"
      },
      "metadata": {
@@ -1491,6 +1409,10 @@
       "description": "data contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVData"
      },
+     "dependencies": {
+      "description": "dependencies contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDependencies"
+     },
      "deployment": {
       "description": "deployment contains tbd",
       "type": "object",
@@ -1513,6 +1435,10 @@
        "type": "string"
       }
      },
+     "global": {
+      "description": "global contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVGlobal"
+     },
      "images": {
       "description": "images contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVImages"
@@ -1524,6 +1450,11 @@
      "kube_service": {
       "description": "kube_service contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
+     },
+     "labels": {
+      "description": "labels contains tbd",
+      "type": "object",
+      "additionalProperties": {}
      },
      "livenessProbe": {
       "description": "livenessProbe contains tbd",
@@ -1548,6 +1479,13 @@
       "description": "networking contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
      },
+     "nodes": {
+      "description": "nodes contains tbd",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNodes"
+      }
+     },
      "pod": {
       "description": "pod contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVPod"
@@ -1555,6 +1493,14 @@
      "prod_environment": {
       "description": "prod_environment contains tbd",
       "type": "boolean"
+     },
+     "replicas": {
+      "description": "replicas contains tbd",
+      "type": "object",
+      "additionalProperties": {
+       "type": "integer",
+       "format": "int32"
+      }
      },
      "secrets": {
       "description": "secrets contains tbd",
@@ -1597,7 +1543,10 @@
     ],
     "properties": {
      "labels": {
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "name": {
       "type": "string"
@@ -1607,20 +1556,16 @@
      }
     }
    },
-   "org.airshipit.armada.v1alpha1.ArmadaLabels": {
-    "description": "Labels",
-    "type": "object"
-   },
    "org.airshipit.armada.v1alpha1.ArmadaManifest": {
     "description": "ArmadaManifest is the Schema for the armadamanifests API",
     "type": "object",
     "properties": {
      "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
       "type": "string"
      },
      "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
       "type": "string"
      },
      "metadata": {
@@ -1809,7 +1754,10 @@
     "properties": {
      "labels": {
       "description": "Base mapping of labels to wait on. They are added to any labels in each item in the ``resources`` array.",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "native": {
       "description": "See `Wait Native`_.",
@@ -1848,7 +1796,10 @@
     "properties": {
      "labels": {
       "description": "mapping of kubernetes resource labels",
-      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
      },
      "min_ready": {
       "description": "Only for controller ``type``s. Amount of pods in a controller which must be ready. Can be integer or percent string e.g. ``80%``. Default ``100%``.",

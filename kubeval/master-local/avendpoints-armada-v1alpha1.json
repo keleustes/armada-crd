@@ -6,6 +6,9 @@
       "description": "fluentd contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
+    "ingress": {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
     "process_exporter_metrics": {
       "description": "process_exporter_metrics contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
@@ -14,9 +17,8 @@
       "description": "prometheus_elasticsearch_exporter contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "oslo_messaging": {
-      "description": "oslo_messaging contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
+    "fluentbit": {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "image": {
       "description": "image contains tbd", 
@@ -26,20 +28,20 @@
       "description": "ceph_object_store contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "kibana": {
-      "description": "kibana contains tbd", 
+    "cloudformation": {
+      "description": "cloudformation contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "nagios": {
-      "description": "nagios contains tbd", 
+    "ceph_mon": {
+      "description": "Added recently", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "prometheus_fluentd_exporter": {
       "description": "prometheus_fluentd_exporter contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "deckhand": {
-      "description": "deckhand contains tbd", 
+    "compute_novnc_proxy": {
+      "description": "compute_novnc_proxy contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "armada": {
@@ -66,9 +68,9 @@
       "description": "monitoring contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "network": {
-      "description": "network contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    "oslo_messaging": {
+      "description": "oslo_messaging contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
     "oslo_db_cell0": {
       "description": "oslo_db_cell0 contains tbd", 
@@ -90,17 +92,23 @@
       "description": "grafana contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "compute_novnc_proxy": {
-      "description": "compute_novnc_proxy contains tbd", 
+    "maas_region": {
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "postgresql_airflow_db": {
       "description": "postgresql_airflow_db contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
+    "etcd": {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
     "ldap": {
       "description": "ldap contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "postgresql": {
+      "description": "postgresql contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
     "postgresql_shipyard_db": {
       "description": "postgresql_shipyard_db contains tbd", 
@@ -113,6 +121,9 @@
     "object_store": {
       "description": "object_store contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "oslo_cache": {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
     "oslo_db_api": {
       "description": "oslo_db_api contains tbd", 
@@ -130,12 +141,20 @@
       "description": "oslo_db_session contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
-    "cloudformation": {
-      "description": "cloudformation contains tbd", 
+    "kibana": {
+      "description": "kibana contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "kube_controller_manager": {
+      "description": "kube_controller_manager contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "kube_state_metrics": {
       "description": "kube_state_metrics contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "nagios": {
+      "description": "nagios contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "kubernetesprovisioner": {
@@ -144,6 +163,10 @@
     }, 
     "identity": {
       "description": "identity contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "network": {
+      "description": "network contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "volume": {
@@ -164,6 +187,9 @@
     }, 
     "volumev2": {
       "description": "volumev2 contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+    }, 
+    "maas_ingress": {
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "volumev3": {
@@ -202,13 +228,12 @@
       "description": "orchestration contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "kube_controller_manager": {
-      "description": "kube_controller_manager contains tbd", 
+    "deckhand": {
+      "description": "deckhand contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
-    "postgresql": {
-      "description": "postgresql contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
+    "ceph_mgr": {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     "key_manager": {
       "description": "key_manager contains tbd", 

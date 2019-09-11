@@ -24,23 +24,39 @@
       "description": "auth contains tbd"
     }, 
     "port": {
-      "additionalProperties": {
-        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
-      }, 
+      "additionalProperties": {}, 
       "type": "object", 
       "description": "port contains tbd"
     }, 
     "hosts": {
-      "description": "hosts contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "hosts contains tbd"
     }, 
     "path": {
-      "description": "path contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "path contains tbd"
     }, 
     "scheme": {
-      "description": "scheme contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "scheme contains tbd"
     }, 
     "type": {
       "type": [
@@ -50,8 +66,14 @@
       "description": "type contains tbd"
     }, 
     "host_fqdn_override": {
-      "description": "host_fqdn_override contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "host_fqdn_override contains tbd"
     }
   }
 }

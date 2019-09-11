@@ -9,9 +9,12 @@
       ], 
       "description": "username contains tbd"
     }, 
-    "tls": {
-      "description": "tls contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTls"
+    "memcache_secret_key": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "memcache_secret_key contains tbd"
     }, 
     "project_name": {
       "type": [
@@ -47,6 +50,10 @@
         "null"
       ], 
       "description": "user_domain_name contains tbd"
+    }, 
+    "tls": {
+      "description": "tls contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTls"
     }, 
     "bind_dn": {
       "type": [

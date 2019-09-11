@@ -6,9 +6,28 @@
       "description": "security_context contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodSecurityContext"
     }, 
+    "mount_path": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "mount_path contains tbd"
+    }, 
+    "replicas": {
+      "additionalProperties": {
+        "type": "integer", 
+        "format": "int32"
+      }, 
+      "type": "object", 
+      "description": "replicas contains tbd"
+    }, 
     "affinity": {
       "description": "affinity contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
+    }, 
+    "env": {
+      "description": "env contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodEnv"
     }, 
     "lifecycle": {
       "description": "lifecycle contains tbd", 
@@ -20,14 +39,6 @@
       }, 
       "type": "object", 
       "description": "resources contains tbd"
-    }, 
-    "replicas": {
-      "additionalProperties": {
-        "type": "integer", 
-        "format": "int32"
-      }, 
-      "type": "object", 
-      "description": "replicas contains tbd"
     }
   }
 }

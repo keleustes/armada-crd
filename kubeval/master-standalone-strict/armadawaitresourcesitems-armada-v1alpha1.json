@@ -13,8 +13,14 @@
       "format": "int32"
     }, 
     "labels": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "description": "Labels"
+      "description": "mapping of kubernetes resource labels"
     }, 
     "type": {
       "type": [

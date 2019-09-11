@@ -2,7 +2,10 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
-    "requests": {
+    "tests": {
+      "type": "object"
+    }, 
+    "limits": {
       "type": "object", 
       "properties": {
         "cpu": {
@@ -15,7 +18,19 @@
         }
       }
     }, 
-    "limits": {
+    "fluentbit": {
+      "type": "object"
+    }, 
+    "image_repo_sync": {
+      "type": "object"
+    }, 
+    "snapshot_repository": {
+      "type": "object"
+    }, 
+    "curator": {
+      "type": "object"
+    }, 
+    "requests": {
       "type": "object", 
       "properties": {
         "cpu": {

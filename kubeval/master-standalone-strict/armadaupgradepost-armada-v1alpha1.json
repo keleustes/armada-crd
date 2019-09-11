@@ -14,8 +14,10 @@
         "description": "HookActionItems", 
         "properties": {
           "labels": {
-            "type": "object", 
-            "description": "Labels"
+            "additionalProperties": {
+              "type": "string"
+            }, 
+            "type": "object"
           }, 
           "type": {
             "type": "string"

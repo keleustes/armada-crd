@@ -6,7 +6,25 @@
     "security_context": {
       "type": "object"
     }, 
+    "mount_path": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "mount_path contains tbd"
+    }, 
+    "replicas": {
+      "additionalProperties": {
+        "type": "integer", 
+        "format": "int32"
+      }, 
+      "type": "object", 
+      "description": "replicas contains tbd"
+    }, 
     "affinity": {
+      "type": "object"
+    }, 
+    "env": {
       "type": "object"
     }, 
     "lifecycle": {
@@ -17,7 +35,10 @@
         "additionalProperties": false, 
         "type": "object", 
         "properties": {
-          "requests": {
+          "tests": {
+            "type": "object"
+          }, 
+          "limits": {
             "additionalProperties": false, 
             "type": "object", 
             "properties": {
@@ -31,7 +52,19 @@
               }
             }
           }, 
-          "limits": {
+          "fluentbit": {
+            "type": "object"
+          }, 
+          "image_repo_sync": {
+            "type": "object"
+          }, 
+          "snapshot_repository": {
+            "type": "object"
+          }, 
+          "curator": {
+            "type": "object"
+          }, 
+          "requests": {
             "additionalProperties": false, 
             "type": "object", 
             "properties": {
@@ -49,14 +82,6 @@
       }, 
       "type": "object", 
       "description": "resources contains tbd"
-    }, 
-    "replicas": {
-      "additionalProperties": {
-        "type": "integer", 
-        "format": "int32"
-      }, 
-      "type": "object", 
-      "description": "replicas contains tbd"
     }
   }
 }

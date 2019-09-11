@@ -2,11 +2,41 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
+    "security_context": {
+      "type": "object"
+    }, 
+    "mount_path": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "mount_path contains tbd"
+    }, 
+    "replicas": {
+      "additionalProperties": {
+        "type": "integer", 
+        "format": "int32"
+      }, 
+      "type": "object", 
+      "description": "replicas contains tbd"
+    }, 
+    "affinity": {
+      "type": "object"
+    }, 
+    "env": {
+      "type": "object"
+    }, 
+    "lifecycle": {
+      "type": "object"
+    }, 
     "resources": {
       "additionalProperties": {
         "type": "object", 
         "properties": {
-          "requests": {
+          "tests": {
+            "type": "object"
+          }, 
+          "limits": {
             "type": "object", 
             "properties": {
               "cpu": {
@@ -19,7 +49,19 @@
               }
             }
           }, 
-          "limits": {
+          "fluentbit": {
+            "type": "object"
+          }, 
+          "image_repo_sync": {
+            "type": "object"
+          }, 
+          "snapshot_repository": {
+            "type": "object"
+          }, 
+          "curator": {
+            "type": "object"
+          }, 
+          "requests": {
             "type": "object", 
             "properties": {
               "cpu": {
@@ -36,23 +78,6 @@
       }, 
       "type": "object", 
       "description": "resources contains tbd"
-    }, 
-    "affinity": {
-      "type": "object"
-    }, 
-    "lifecycle": {
-      "type": "object"
-    }, 
-    "security_context": {
-      "type": "object"
-    }, 
-    "replicas": {
-      "additionalProperties": {
-        "type": "integer", 
-        "format": "int32"
-      }, 
-      "type": "object", 
-      "description": "replicas contains tbd"
     }
   }
 }

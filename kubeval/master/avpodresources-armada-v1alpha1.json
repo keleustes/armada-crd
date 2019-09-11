@@ -2,12 +2,32 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
-    "requests": {
-      "description": "requests contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
+    "tests": {
+      "description": "tests contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceTest"
     }, 
     "limits": {
       "description": "limits contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
+    }, 
+    "fluentbit": {
+      "description": "fluentbit contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceFluentbit"
+    }, 
+    "image_repo_sync": {
+      "description": "image_repo_sync contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync"
+    }, 
+    "snapshot_repository": {
+      "description": "snapshot_repository contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSnapshotRepository"
+    }, 
+    "curator": {
+      "description": "curator contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceCurator"
+    }, 
+    "requests": {
+      "description": "requests contains tbd", 
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
     }
   }

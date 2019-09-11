@@ -6,6 +6,7 @@ API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/a
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaChartList,Items
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaChartSpec,Dependencies
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaChartValues,CommandPrefix
+API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaChartValues,Nodes
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaManifestList,Items
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaManifestSpec,ChartGroups
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaRestoreList,Items
@@ -28,7 +29,7 @@ API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIVe
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIVersions,Versions
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,CreateOptions,DryRun
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,DeleteOptions,DryRun
-API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Initializers,Pending
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,FieldsV1,Raw
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,LabelSelector,MatchExpressions
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,LabelSelectorRequirement,Values
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,List,Items
@@ -47,6 +48,7 @@ API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Updat
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,AccessKey
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,BindDn
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,DomainName
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,MemcacheSecretKey
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,ProjectDomainName
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,ProjectName
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,RegionName
@@ -54,6 +56,9 @@ API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointAuth,UserDomainName
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointType1,HostFqdnOverride
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointType2,HostFqdnOverride
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpointType2,StatefuleSet
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,CephMgr
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,CephMon
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,CephObjectStore
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,ComputeMetadata
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,ComputeNovncProxy
@@ -64,9 +69,12 @@ API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,KubeScheduler
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,KubeStateMetrics
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,MaasDb
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,MaasIngress
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,MaasRegion
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,MaasRegionUi
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,NodeMetrics
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,ObjectStore
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,OsloCache
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,OsloDb
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,OsloDbApi
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,OsloDbCell0
@@ -82,7 +90,10 @@ API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,PrometheusOpenstackExporter
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVEndpoints,PrometheusRabbitmqExporter
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVImages,PullPolicy
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPod,MountPath
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPod,SecurityContext
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPodResources,ImageRepoSync
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPodResources,SnapshortRepository
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVSecretServiceAccount,PrivateKey
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVSecretServiceAccount,PublicKey
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVSecrets,MaasRegion
@@ -107,7 +118,6 @@ API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaChartValues,ProdEnvironment
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaCharts,List
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaCharts,Name
-API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaLabels,AdditionalProperties
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaManifestSpec,ChartGroups
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaManifestSpec,ReleasePrefix
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaManifestSpec,TargetState

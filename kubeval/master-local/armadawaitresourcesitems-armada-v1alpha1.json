@@ -12,8 +12,14 @@
       "format": "int32"
     }, 
     "labels": {
-      "description": "mapping of kubernetes resource labels", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaLabels"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "mapping of kubernetes resource labels"
     }, 
     "type": {
       "type": [

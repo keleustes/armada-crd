@@ -9,40 +9,12 @@
       ], 
       "description": "username contains tbd"
     }, 
-    "tls": {
-      "type": "object", 
-      "properties": {
-        "peer": {
-          "type": "object", 
-          "properties": {
-            "ca": {
-              "type": "string", 
-              "description": "ca contains tbd"
-            }
-          }
-        }, 
-        "ca": {
-          "type": "string", 
-          "description": "ca contains tbd"
-        }, 
-        "client": {
-          "type": "object", 
-          "properties": {
-            "ca": {
-              "type": "string", 
-              "description": "ca contains tbd"
-            }
-          }
-        }, 
-        "crt": {
-          "type": "string", 
-          "description": "crt contains tbd"
-        }, 
-        "key": {
-          "type": "string", 
-          "description": "key contains tbd"
-        }
-      }
+    "memcache_secret_key": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "memcache_secret_key contains tbd"
     }, 
     "project_name": {
       "type": [
@@ -78,6 +50,45 @@
         "null"
       ], 
       "description": "user_domain_name contains tbd"
+    }, 
+    "tls": {
+      "type": "object", 
+      "properties": {
+        "crt": {
+          "type": "string", 
+          "description": "crt contains tbd"
+        }, 
+        "ca": {
+          "type": "string", 
+          "description": "ca contains tbd"
+        }, 
+        "cert": {
+          "type": "string", 
+          "description": "cert contains tbd"
+        }, 
+        "client": {
+          "type": "object", 
+          "properties": {
+            "ca": {
+              "type": "string", 
+              "description": "ca contains tbd"
+            }
+          }
+        }, 
+        "key": {
+          "type": "string", 
+          "description": "key contains tbd"
+        }, 
+        "peer": {
+          "type": "object", 
+          "properties": {
+            "ca": {
+              "type": "string", 
+              "description": "ca contains tbd"
+            }
+          }
+        }
+      }
     }, 
     "bind_dn": {
       "type": [

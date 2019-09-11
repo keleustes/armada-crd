@@ -26,43 +26,9 @@
             "type": "string", 
             "description": "username contains tbd"
           }, 
-          "tls": {
-            "additionalProperties": false, 
-            "type": "object", 
-            "properties": {
-              "peer": {
-                "additionalProperties": false, 
-                "type": "object", 
-                "properties": {
-                  "ca": {
-                    "type": "string", 
-                    "description": "ca contains tbd"
-                  }
-                }
-              }, 
-              "ca": {
-                "type": "string", 
-                "description": "ca contains tbd"
-              }, 
-              "client": {
-                "additionalProperties": false, 
-                "type": "object", 
-                "properties": {
-                  "ca": {
-                    "type": "string", 
-                    "description": "ca contains tbd"
-                  }
-                }
-              }, 
-              "crt": {
-                "type": "string", 
-                "description": "crt contains tbd"
-              }, 
-              "key": {
-                "type": "string", 
-                "description": "key contains tbd"
-              }
-            }
+          "memcache_secret_key": {
+            "type": "string", 
+            "description": "memcache_secret_key contains tbd"
           }, 
           "project_name": {
             "type": "string", 
@@ -83,6 +49,48 @@
           "user_domain_name": {
             "type": "string", 
             "description": "user_domain_name contains tbd"
+          }, 
+          "tls": {
+            "additionalProperties": false, 
+            "type": "object", 
+            "properties": {
+              "crt": {
+                "type": "string", 
+                "description": "crt contains tbd"
+              }, 
+              "ca": {
+                "type": "string", 
+                "description": "ca contains tbd"
+              }, 
+              "cert": {
+                "type": "string", 
+                "description": "cert contains tbd"
+              }, 
+              "client": {
+                "additionalProperties": false, 
+                "type": "object", 
+                "properties": {
+                  "ca": {
+                    "type": "string", 
+                    "description": "ca contains tbd"
+                  }
+                }
+              }, 
+              "key": {
+                "type": "string", 
+                "description": "key contains tbd"
+              }, 
+              "peer": {
+                "additionalProperties": false, 
+                "type": "object", 
+                "properties": {
+                  "ca": {
+                    "type": "string", 
+                    "description": "ca contains tbd"
+                  }
+                }
+              }
+            }
           }, 
           "bind_dn": {
             "type": "string", 
@@ -126,88 +134,39 @@
       "description": "auth contains tbd"
     }, 
     "port": {
-      "additionalProperties": {
-        "additionalProperties": false, 
-        "type": "object", 
-        "properties": {
-          "default": {
-            "type": "integer", 
-            "description": "default contains tbd", 
-            "format": "int32"
-          }, 
-          "internal": {
-            "type": "integer", 
-            "description": "internal contains tbd", 
-            "format": "int32"
-          }, 
-          "nodeport": {
-            "type": "integer", 
-            "description": "nodeport contains tbd", 
-            "format": "int32"
-          }, 
-          "public": {
-            "type": "integer", 
-            "description": "public contains tbd", 
-            "format": "int32"
-          }
-        }
-      }, 
+      "additionalProperties": {}, 
       "type": "object", 
       "description": "port contains tbd"
     }, 
     "hosts": {
-      "additionalProperties": false, 
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "properties": {
-        "default": {
-          "type": "string", 
-          "description": "default contains tbd"
-        }, 
-        "public": {
-          "type": "string", 
-          "description": "public contains tbd"
-        }, 
-        "discovery": {
-          "type": "string", 
-          "description": "discovery contains tbd"
-        }
-      }
+      "description": "hosts contains tbd"
     }, 
     "path": {
-      "additionalProperties": false, 
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "properties": {
-        "default": {
-          "type": "string", 
-          "description": "default contains tbd"
-        }, 
-        "public": {
-          "type": "string", 
-          "description": "public contains tbd"
-        }, 
-        "discovery": {
-          "type": "string", 
-          "description": "discovery contains tbd"
-        }
-      }
+      "description": "path contains tbd"
     }, 
     "scheme": {
-      "additionalProperties": false, 
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "properties": {
-        "default": {
-          "type": "string", 
-          "description": "default contains tbd"
-        }, 
-        "public": {
-          "type": "string", 
-          "description": "public contains tbd"
-        }, 
-        "discovery": {
-          "type": "string", 
-          "description": "discovery contains tbd"
-        }
-      }
+      "description": "scheme contains tbd"
     }, 
     "type": {
       "type": [
@@ -217,22 +176,14 @@
       "description": "type contains tbd"
     }, 
     "host_fqdn_override": {
-      "additionalProperties": false, 
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
       "type": "object", 
-      "properties": {
-        "default": {
-          "type": "string", 
-          "description": "default contains tbd"
-        }, 
-        "public": {
-          "type": "string", 
-          "description": "public contains tbd"
-        }, 
-        "discovery": {
-          "type": "string", 
-          "description": "discovery contains tbd"
-        }
-      }
+      "description": "host_fqdn_override contains tbd"
     }
   }
 }

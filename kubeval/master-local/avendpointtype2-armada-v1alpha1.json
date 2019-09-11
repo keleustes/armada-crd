@@ -2,6 +2,16 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
+    "statefulset": {
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "statefulset contains tbd"
+    }, 
     "name": {
       "type": [
         "string", 
@@ -24,15 +34,19 @@
       "description": "auth contains tbd"
     }, 
     "port": {
-      "additionalProperties": {
-        "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointPort"
-      }, 
+      "additionalProperties": {}, 
       "type": "object", 
       "description": "port contains tbd"
     }, 
     "hosts": {
-      "description": "hosts contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "hosts contains tbd"
     }, 
     "path": {
       "type": [
@@ -56,8 +70,14 @@
       "description": "type contains tbd"
     }, 
     "host_fqdn_override": {
-      "description": "host_fqdn_override contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDefaultPublic"
+      "additionalProperties": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": "object", 
+      "description": "host_fqdn_override contains tbd"
     }
   }
 }

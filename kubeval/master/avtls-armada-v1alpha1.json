@@ -2,9 +2,12 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
-    "peer": {
-      "description": "peer contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
+    "crt": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "crt contains tbd"
     }, 
     "ca": {
       "type": [
@@ -12,6 +15,13 @@
         "null"
       ], 
       "description": "ca contains tbd"
+    }, 
+    "cert": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "cert contains tbd"
     }, 
     "client": {
       "description": "client contains tbd", 
@@ -24,12 +34,9 @@
       ], 
       "description": "key contains tbd"
     }, 
-    "crt": {
-      "type": [
-        "string", 
-        "null"
-      ], 
-      "description": "crt contains tbd"
+    "peer": {
+      "description": "peer contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
     }
   }
 }

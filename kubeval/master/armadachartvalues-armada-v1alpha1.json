@@ -6,6 +6,11 @@
       "description": "livenessProbe contains tbd", 
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
     }, 
+    "labels": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "labels contains tbd"
+    }, 
     "ceph_client": {
       "additionalProperties": {
         "type": [
@@ -22,6 +27,10 @@
       }, 
       "type": "object", 
       "description": "manifests contains tbd"
+    }, 
+    "global": {
+      "description": "global contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVGlobal"
     }, 
     "ceph_mgr_modules_config": {
       "description": "ceph_mgr_modules_config contains tbd", 
@@ -69,6 +78,16 @@
       "type": "object", 
       "description": "etcd contains tbd"
     }, 
+    "nodes": {
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNodes"
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
+      "description": "nodes contains tbd"
+    }, 
     "development": {
       "description": "development contains tbd", 
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
@@ -81,9 +100,21 @@
       "description": "jobs contains tbd", 
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
     }, 
+    "replicas": {
+      "additionalProperties": {
+        "type": "integer", 
+        "format": "int32"
+      }, 
+      "type": "object", 
+      "description": "replicas contains tbd"
+    }, 
     "volume": {
       "description": "volume contains tbd", 
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolume"
+    }, 
+    "dependencies": {
+      "description": "dependencies contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDependencies"
     }, 
     "deployment": {
       "additionalProperties": {
