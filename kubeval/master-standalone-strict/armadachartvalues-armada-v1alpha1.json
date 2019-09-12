@@ -68,10 +68,7 @@
         }, 
         "sysctl": {
           "additionalProperties": {
-            "additionalProperties": {
-              "type": "string"
-            }, 
-            "type": "object"
+            "type": "string"
           }, 
           "type": "object", 
           "description": "sysctl contains tbd"
@@ -393,7 +390,8 @@
         "exec": {
           "additionalProperties": {
             "additionalProperties": {
-              "type": "string"
+              "type": "integer", 
+              "format": "int32"
             }, 
             "type": "object"
           }, 

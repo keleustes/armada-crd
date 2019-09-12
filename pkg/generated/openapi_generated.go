@@ -798,8 +798,8 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 											Allows: true,
 											Schema: &spec.Schema{
 												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
+													Type:   []string{"integer"},
+													Format: "int32",
 												},
 											},
 										},
@@ -1619,16 +1619,8 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
+										Type:   []string{"string"},
+										Format: "",
 									},
 								},
 							},

@@ -498,7 +498,7 @@ type AVConf struct {
 	// eventconfig contains tbd
 	Eventconfig *map[string]ArmadaMapString `json:"eventconfig,omitempty"`
 	// exec contains tbd
-	Exec *map[string]ArmadaMapString `json:"exec,omitempty"`
+	Exec *map[string]ArmadaMapInt `json:"exec,omitempty"`
 	// features contains tbd
 	Features *map[string]ArmadaMapString `json:"features,omitempty"`
 	// fluentbit contains tbd
@@ -574,7 +574,7 @@ type AVConf struct {
 	// storage contains tbd
 	Storage *map[string]ArmadaMapString `json:"storage,omitempty"`
 	// sysctl contains tbd
-	Sysctl *map[string]ArmadaMapString `json:"sysctl,omitempty"`
+	Sysctl *ArmadaMapString `json:"sysctl,omitempty"`
 	// test contains tbd
 	Test *map[string]ArmadaMapString `json:"test,omitempty"`
 	// uamlite contains tbd

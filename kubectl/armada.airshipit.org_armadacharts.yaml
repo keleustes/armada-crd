@@ -439,7 +439,7 @@ spec:
                     exec:
                       additionalProperties:
                         additionalProperties:
-                          type: string
+                          type: integer
                         type: object
                       description: exec contains tbd
                       type: object
@@ -692,9 +692,7 @@ spec:
                       type: object
                     sysctl:
                       additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
+                        type: string
                       description: sysctl contains tbd
                       type: object
                     test:

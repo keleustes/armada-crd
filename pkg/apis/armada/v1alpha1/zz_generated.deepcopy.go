@@ -550,17 +550,17 @@ func (in *AVConf) DeepCopyInto(out *AVConf) {
 	}
 	if in.Exec != nil {
 		in, out := &in.Exec, &out.Exec
-		*out = new(map[string]ArmadaMapString)
+		*out = new(map[string]ArmadaMapInt)
 		if **in != nil {
 			in, out := *in, *out
-			*out = make(map[string]ArmadaMapString, len(*in))
+			*out = make(map[string]ArmadaMapInt, len(*in))
 			for key, val := range *in {
-				var outVal map[string]string
+				var outVal map[string]int
 				if val == nil {
 					(*out)[key] = nil
 				} else {
 					in, out := &val, &outVal
-					*out = make(ArmadaMapString, len(*in))
+					*out = make(ArmadaMapInt, len(*in))
 					for key, val := range *in {
 						(*out)[key] = val
 					}
@@ -1285,22 +1285,12 @@ func (in *AVConf) DeepCopyInto(out *AVConf) {
 	}
 	if in.Sysctl != nil {
 		in, out := &in.Sysctl, &out.Sysctl
-		*out = new(map[string]ArmadaMapString)
+		*out = new(map[string]string)
 		if **in != nil {
 			in, out := *in, *out
-			*out = make(map[string]ArmadaMapString, len(*in))
+			*out = make(map[string]string, len(*in))
 			for key, val := range *in {
-				var outVal map[string]string
-				if val == nil {
-					(*out)[key] = nil
-				} else {
-					in, out := &val, &outVal
-					*out = make(ArmadaMapString, len(*in))
-					for key, val := range *in {
-						(*out)[key] = val
-					}
-				}
-				(*out)[key] = outVal
+				(*out)[key] = val
 			}
 		}
 	}
