@@ -7,7 +7,15 @@
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
     }, 
     "labels": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "labels contains tbd"
     }, 

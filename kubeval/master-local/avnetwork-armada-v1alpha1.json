@@ -3,22 +3,54 @@
   "type": "object", 
   "properties": {
     "ingress": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "ingress contains tbd"
     }, 
     "region_api": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "region_api contains tbd"
     }, 
     "service_peer": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "service_peer contains tbd"
     }, 
     "maas_ingress": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "maas_ingress contains tbd"
     }, 
@@ -48,17 +80,41 @@
       "description": "host_namespace contains tbd"
     }, 
     "region_proxy": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "region_proxy contains tbd"
     }, 
     "vip": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "vip contains tbd"
     }, 
     "api": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "api contains tbd"
     }, 
@@ -77,17 +133,41 @@
       "description": "kubernetes_service_ip contains tbd"
     }, 
     "service_client": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "service_client contains tbd"
     }, 
     "interface": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "interface contains tbd"
     }, 
     "drydock": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": [
+            "string", 
+            "null"
+          ]
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "drydock contains tbd"
     }, 

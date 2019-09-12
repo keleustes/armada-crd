@@ -359,132 +359,262 @@
      "acconfig": {
       "description": "acconfig contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "agent": {
       "description": "agent contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "anchor": {
       "description": "anchor contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "apache": {
       "description": "apache contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "api_metadata": {
       "description": "api_metadata contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "armada": {
       "description": "armada contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "auto_bridge_add": {
       "description": "auto_bridge_add contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "cache": {
       "description": "cache contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "ceph": {
       "description": "ceph contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "cni_network_config": {
       "description": "cni_network_config contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "conductor": {
       "description": "conductor contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "config": {
       "description": "config contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "consoleauth": {
       "description": "consoleauth contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "controllers": {
       "description": "controllers contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "coredns": {
       "description": "coredns contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "curator": {
       "description": "curator contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "deckhand": {
       "description": "deckhand contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "defaults": {
       "description": "defaults contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "drydock": {
       "description": "drydock contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "elasticsearch": {
       "description": "elasticsearch contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "encryption_provider": {
       "description": "encryption_provider contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "eventconfig": {
       "description": "eventconfig contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "exec": {
       "description": "exec contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "features": {
       "description": "features contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "fluentbit": {
       "description": "fluentbit contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "fluentd": {
       "description": "fluentd contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "httpd": {
       "description": "httpd contains tbd",
@@ -493,57 +623,112 @@
      "ingress": {
       "description": "ingress contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "job": {
       "description": "job contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "keystone": {
       "description": "keystone contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "ldap": {
       "description": "ldap contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "logging": {
       "description": "logging contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "maas": {
       "description": "maas contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "metadata_agent": {
       "description": "metadata_agent contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "neutron": {
       "description": "neutron contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "node": {
       "description": "node contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "nova": {
       "description": "nova contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "novncproxy": {
       "description": "novncproxy contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "openstack_version": {
       "description": "openstack_version contains tbd",
@@ -552,77 +737,152 @@
      "osapi": {
       "description": "osapi contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "osd": {
       "description": "osd contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "overrides": {
       "description": "overrides contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "parsers": {
       "description": "parsers contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "paste": {
       "description": "paste contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "placement": {
       "description": "placement contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "plugins": {
       "description": "plugins contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "pool": {
       "description": "pool contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "postgresql": {
       "description": "postgresql contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "prometheus": {
       "description": "prometheus contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "provisioning": {
       "description": "provisioning contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "qemu": {
       "description": "qemu contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "rgw_ks": {
       "description": "rgw_ks contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "rgw_s3": {
       "description": "rgw_s3 contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "scheduler": {
       "description": "scheduler contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "security": {
       "description": "security contains tbd",
@@ -631,42 +891,82 @@
      "shipyard": {
       "description": "shipyard contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "software": {
       "description": "software contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "spiceproxy": {
       "description": "spiceproxy contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "ssh": {
       "description": "ssh contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "storage": {
       "description": "storage contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "sysctl": {
       "description": "sysctl contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "test": {
       "description": "test contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "uamlite": {
       "description": "uamlite contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      }
     }
    },
@@ -800,7 +1100,13 @@
      "port": {
       "description": "port contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+       }
+      }
      },
      "scheme": {
       "description": "scheme contains tbd",
@@ -854,7 +1160,13 @@
      "port": {
       "description": "port contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "integer",
+        "format": "int32"
+       }
+      }
      },
      "scheme": {
       "description": "scheme contains tbd",
@@ -1152,7 +1464,12 @@
      "api": {
       "description": "api contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "backend": {
       "description": "backend contains tbd",
@@ -1168,7 +1485,12 @@
      "drydock": {
       "description": "drydock contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "host_namespace": {
       "description": "host_namespace contains tbd",
@@ -1177,12 +1499,22 @@
      "ingress": {
       "description": "ingress contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "interface": {
       "description": "interface contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "kubernetes_netloc": {
       "description": "kubernetes_netloc contains tbd",
@@ -1195,7 +1527,12 @@
      "maas_ingress": {
       "description": "maas_ingress contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "pod_cidr": {
       "description": "pod_cidr contains tbd",
@@ -1208,12 +1545,22 @@
      "region_api": {
       "description": "region_api contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "region_proxy": {
       "description": "region_proxy contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "service_cidr": {
       "description": "service_cidr contains tbd",
@@ -1222,17 +1569,32 @@
      "service_client": {
       "description": "service_client contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "service_peer": {
       "description": "service_peer contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "vip": {
       "description": "vip contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      }
     }
    },
@@ -1885,7 +2247,12 @@
      "labels": {
       "description": "labels contains tbd",
       "type": "object",
-      "additionalProperties": {}
+      "additionalProperties": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "string"
+       }
+      }
      },
      "livenessProbe": {
       "description": "livenessProbe contains tbd",

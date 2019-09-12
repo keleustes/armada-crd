@@ -144,7 +144,13 @@
       "description": "auth contains tbd"
     }, 
     "port": {
-      "additionalProperties": {}, 
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "integer", 
+          "format": "int32"
+        }, 
+        "type": "object"
+      }, 
       "type": "object", 
       "description": "port contains tbd"
     }, 

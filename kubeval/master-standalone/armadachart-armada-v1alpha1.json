@@ -281,7 +281,12 @@
               "type": "object"
             }, 
             "labels": {
-              "additionalProperties": {}, 
+              "additionalProperties": {
+                "additionalProperties": {
+                  "type": "string"
+                }, 
+                "type": "object"
+              }, 
               "type": "object", 
               "description": "labels contains tbd"
             }, 
@@ -309,87 +314,172 @@
               "type": "object", 
               "properties": {
                 "fluentd": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "fluentd contains tbd"
                 }, 
                 "ingress": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "ingress contains tbd"
                 }, 
                 "sysctl": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "sysctl contains tbd"
                 }, 
                 "features": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "features contains tbd"
                 }, 
                 "encryption_provider": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "encryption_provider contains tbd"
                 }, 
                 "eventconfig": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "eventconfig contains tbd"
                 }, 
                 "agent": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "agent contains tbd"
                 }, 
                 "osapi": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "osapi contains tbd"
                 }, 
                 "ceph": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "ceph contains tbd"
                 }, 
                 "shipyard": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "shipyard contains tbd"
                 }, 
                 "parsers": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "parsers contains tbd"
                 }, 
                 "deckhand": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "deckhand contains tbd"
                 }, 
                 "novncproxy": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "novncproxy contains tbd"
                 }, 
                 "plugins": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "plugins contains tbd"
                 }, 
                 "armada": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "armada contains tbd"
                 }, 
                 "qemu": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "qemu contains tbd"
                 }, 
                 "osd": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "osd contains tbd"
                 }, 
@@ -398,122 +488,242 @@
                   "description": "httpd contains tbd"
                 }, 
                 "uamlite": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "uamlite contains tbd"
                 }, 
                 "fluentbit": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "fluentbit contains tbd"
                 }, 
                 "spiceproxy": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "spiceproxy contains tbd"
                 }, 
                 "cache": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "cache contains tbd"
                 }, 
                 "storage": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "storage contains tbd"
                 }, 
                 "nova": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "nova contains tbd"
                 }, 
                 "provisioning": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "provisioning contains tbd"
                 }, 
                 "acconfig": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "acconfig contains tbd"
                 }, 
                 "keystone": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "keystone contains tbd"
                 }, 
                 "ldap": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "ldap contains tbd"
                 }, 
                 "test": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "test contains tbd"
                 }, 
                 "consoleauth": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "consoleauth contains tbd"
                 }, 
                 "config": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "config contains tbd"
                 }, 
                 "neutron": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "neutron contains tbd"
                 }, 
                 "node": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "node contains tbd"
                 }, 
                 "api_metadata": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "api_metadata contains tbd"
                 }, 
                 "conductor": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "conductor contains tbd"
                 }, 
                 "exec": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "exec contains tbd"
                 }, 
                 "rgw_s3": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "rgw_s3 contains tbd"
                 }, 
                 "maas": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "maas contains tbd"
                 }, 
                 "job": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "job contains tbd"
                 }, 
                 "ssh": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "ssh contains tbd"
                 }, 
                 "scheduler": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "scheduler contains tbd"
                 }, 
                 "apache": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "apache contains tbd"
                 }, 
@@ -522,77 +732,152 @@
                   "description": "openstack_version contains tbd"
                 }, 
                 "logging": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "logging contains tbd"
                 }, 
                 "paste": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "paste contains tbd"
                 }, 
                 "drydock": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "drydock contains tbd"
                 }, 
                 "pool": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "pool contains tbd"
                 }, 
                 "rgw_ks": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "rgw_ks contains tbd"
                 }, 
                 "placement": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "placement contains tbd"
                 }, 
                 "metadata_agent": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "metadata_agent contains tbd"
                 }, 
                 "auto_bridge_add": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "auto_bridge_add contains tbd"
                 }, 
                 "overrides": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "overrides contains tbd"
                 }, 
                 "curator": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "curator contains tbd"
                 }, 
                 "controllers": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "controllers contains tbd"
                 }, 
                 "elasticsearch": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "elasticsearch contains tbd"
                 }, 
                 "postgresql": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "postgresql contains tbd"
                 }, 
                 "defaults": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "defaults contains tbd"
                 }, 
                 "coredns": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "coredns contains tbd"
                 }, 
@@ -601,22 +886,42 @@
                   "description": "security contains tbd"
                 }, 
                 "prometheus": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "prometheus contains tbd"
                 }, 
                 "anchor": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "anchor contains tbd"
                 }, 
                 "cni_network_config": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "cni_network_config contains tbd"
                 }, 
                 "software": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "software contains tbd"
                 }
@@ -724,22 +1029,42 @@
               "type": "object", 
               "properties": {
                 "ingress": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "ingress contains tbd"
                 }, 
                 "region_api": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "region_api contains tbd"
                 }, 
                 "service_peer": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "service_peer contains tbd"
                 }, 
                 "maas_ingress": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "maas_ingress contains tbd"
                 }, 
@@ -748,12 +1073,22 @@
                   "description": "kubernetes_netloc contains tbd"
                 }, 
                 "vip": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "vip contains tbd"
                 }, 
                 "drydock": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "drydock contains tbd"
                 }, 
@@ -762,7 +1097,12 @@
                   "description": "host_namespace contains tbd"
                 }, 
                 "region_proxy": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "region_proxy contains tbd"
                 }, 
@@ -771,7 +1111,12 @@
                   "description": "pod_cidr contains tbd"
                 }, 
                 "api": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "api contains tbd"
                 }, 
@@ -791,7 +1136,12 @@
                   "description": "backend contains tbd"
                 }, 
                 "interface": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "interface contains tbd"
                 }, 
@@ -804,7 +1154,12 @@
                   "description": "service_cidr contains tbd"
                 }, 
                 "service_client": {
-                  "additionalProperties": {}, 
+                  "additionalProperties": {
+                    "additionalProperties": {
+                      "type": "string"
+                    }, 
+                    "type": "object"
+                  }, 
                   "type": "object", 
                   "description": "service_client contains tbd"
                 }
@@ -1280,7 +1635,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -1442,7 +1803,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -1604,7 +1971,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -1766,7 +2139,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -1928,7 +2307,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2090,7 +2475,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2252,7 +2643,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2414,7 +2811,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2576,7 +2979,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2738,7 +3147,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -2900,7 +3315,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3062,7 +3483,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3224,7 +3651,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3386,7 +3819,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3548,7 +3987,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3710,7 +4155,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -3873,7 +4324,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4035,7 +4492,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4198,7 +4661,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4361,7 +4830,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4523,7 +4998,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4685,7 +5166,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -4847,7 +5334,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5009,7 +5502,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5171,7 +5670,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5333,7 +5838,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5495,7 +6006,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5657,7 +6174,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5819,7 +6342,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -5981,7 +6510,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6143,7 +6678,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6306,7 +6847,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6469,7 +7016,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6632,7 +7185,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6795,7 +7354,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -6957,7 +7522,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7120,7 +7691,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7282,7 +7859,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7445,7 +8028,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7607,7 +8196,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7769,7 +8364,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -7932,7 +8533,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8094,7 +8701,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8256,7 +8869,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8418,7 +9037,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8581,7 +9206,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8743,7 +9374,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -8905,7 +9542,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9067,7 +9710,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9229,7 +9878,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9391,7 +10046,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9553,7 +10214,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9715,7 +10382,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -9877,7 +10550,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10039,7 +10718,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10201,7 +10886,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10363,7 +11054,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10525,7 +11222,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10687,7 +11390,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -10849,7 +11558,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }
@@ -11011,7 +11726,13 @@
                       "description": "type contains tbd"
                     }, 
                     "port": {
-                      "additionalProperties": {}, 
+                      "additionalProperties": {
+                        "additionalProperties": {
+                          "type": "integer", 
+                          "format": "int32"
+                        }, 
+                        "type": "object"
+                      }, 
                       "type": "object", 
                       "description": "port contains tbd"
                     }

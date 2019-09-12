@@ -287,9 +287,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -303,9 +310,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -319,9 +333,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -335,9 +356,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -351,9 +379,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -367,9 +402,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -383,9 +425,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -399,9 +448,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -415,9 +471,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -431,9 +494,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -447,9 +517,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -463,9 +540,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -479,9 +563,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -495,9 +586,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -511,9 +609,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -527,9 +632,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -543,9 +655,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -559,9 +678,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -575,9 +701,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -591,9 +724,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -607,9 +747,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -623,9 +770,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -639,9 +793,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -655,9 +816,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -671,9 +839,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -687,9 +862,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -710,9 +892,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -726,9 +915,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -742,9 +938,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -758,9 +961,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -774,9 +984,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -790,9 +1007,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -806,9 +1030,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -822,9 +1053,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -838,9 +1076,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -854,9 +1099,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -870,9 +1122,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -893,9 +1152,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -909,9 +1175,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -925,9 +1198,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -941,9 +1221,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -957,9 +1244,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -973,9 +1267,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -989,9 +1290,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1005,9 +1313,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1021,9 +1336,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1037,9 +1359,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1053,9 +1382,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1069,9 +1405,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1085,9 +1428,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1101,9 +1451,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1117,9 +1474,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1140,9 +1504,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1156,9 +1527,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1172,9 +1550,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1188,9 +1573,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1204,9 +1596,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1220,9 +1619,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1236,9 +1642,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1252,9 +1665,16 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1571,9 +1991,16 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapInt
-										//    type: map[string]map[string]int
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"integer"},
+													Format: "int32",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -1688,9 +2115,16 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref common.ReferenceCallbac
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapInt
-										//    type: map[string]map[string]int
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"integer"},
+													Format: "int32",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2204,9 +2638,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2241,9 +2682,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2264,9 +2712,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2280,9 +2735,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2310,9 +2772,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2340,9 +2809,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2356,9 +2832,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2379,9 +2862,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2395,9 +2885,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -2411,9 +2908,16 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
@@ -3983,9 +4487,16 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 								Allows: true,
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										// limited support by openapi-gen
-										//    name: map[string]github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.ArmadaMapString
-										//    type: map[string]map[string]string
+										Type: []string{"object"},
+										AdditionalProperties: &spec.SchemaOrBool{
+											Allows: true,
+											Schema: &spec.Schema{
+												SchemaProps: spec.SchemaProps{
+													Type:   []string{"string"},
+													Format: "",
+												},
+											},
+										},
 									},
 								},
 							},
