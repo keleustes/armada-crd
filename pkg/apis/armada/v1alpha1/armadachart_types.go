@@ -32,6 +32,8 @@ type ArmadaChartValues struct {
 	Apiserver *AVApiserver `json:"apiserver,omitempty"`
 	// bootstrap contains tbd
 	Bootstrap *AVBootstrap `json:"bootstrap,omitempty"`
+	// bootstrapping contains tbd
+	Bootstrapping *AVBootstrapping `json:"bootstrapping,omitempty"`
 	// ceph_client contains tbd
 	CephClient *map[string]string `json:"ceph_client,omitempty"`
 	// ceph_mgr_modules_config contains tbd

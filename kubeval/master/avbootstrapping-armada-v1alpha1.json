@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "host_directory": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "host_directory contains tbd"
+    }, 
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }, 
+    "filename": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "filename contains tbd"
+    }
+  }
+}

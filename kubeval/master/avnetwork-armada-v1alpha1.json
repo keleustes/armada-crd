@@ -2,15 +2,15 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
-    "service_cidion_api": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "service_cidion_api contains tbd"
-    }, 
     "ingress": {
       "additionalProperties": {}, 
       "type": "object", 
       "description": "ingress contains tbd"
+    }, 
+    "region_api": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "region_api contains tbd"
     }, 
     "service_peer": {
       "additionalProperties": {}, 
@@ -23,23 +23,28 @@
       "description": "maas_ingress contains tbd"
     }, 
     "kubernetes_netloc": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "kubernetes_netloc contains tbd"
     }, 
-    "vip": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "vip contains tbd"
+    "pod_cidr": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "pod_cidr contains tbd"
     }, 
     "public": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "public contains tbd"
     }, 
     "host_namespace": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": "boolean", 
       "description": "host_namespace contains tbd"
     }, 
     "region_proxy": {
@@ -47,20 +52,34 @@
       "type": "object", 
       "description": "region_proxy contains tbd"
     }, 
-    "pod_cidr": {
+    "vip": {
       "additionalProperties": {}, 
       "type": "object", 
-      "description": "pod_cidr contains tbd"
+      "description": "vip contains tbd"
+    }, 
+    "api": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "api contains tbd"
     }, 
     "cluster": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "cluster contains tbd"
     }, 
     "kubernetes_service_ip": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "kubernetes_service_ip contains tbd"
+    }, 
+    "service_client": {
       "additionalProperties": {}, 
       "type": "object", 
-      "description": "kubernetes_service_ip contains tbd"
+      "description": "service_client contains tbd"
     }, 
     "interface": {
       "additionalProperties": {}, 
@@ -72,9 +91,24 @@
       "type": "object", 
       "description": "drydock contains tbd"
     }, 
+    "service_cidr": {
+      "type": [
+        "string", 
+        "null"
+      ], 
+      "description": "service_cidr contains tbd"
+    }, 
     "backend": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "items": {
+        "type": [
+          "string", 
+          "null"
+        ]
+      }, 
+      "type": [
+        "array", 
+        "null"
+      ], 
       "description": "backend contains tbd"
     }
   }

@@ -253,6 +253,19 @@ spec:
                       description: script contains tbd
                       type: string
                   type: object
+                bootstrapping:
+                  description: bootstrapping contains tbd
+                  properties:
+                    enabled:
+                      description: enabled contains tbd
+                      type: boolean
+                    filename:
+                      description: filename contains tbd
+                      type: string
+                    host_directory:
+                      description: host_directory contains tbd
+                      type: string
+                  type: object
                 ceph_client:
                   additionalProperties:
                     type: string
@@ -452,12 +465,8 @@ spec:
                       description: fluentd contains tbd
                       type: object
                     httpd:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: httpd contains tbd
-                      type: object
+                      type: string
                     ingress:
                       additionalProperties:
                         additionalProperties:
@@ -536,12 +545,8 @@ spec:
                       description: novncproxy contains tbd
                       type: object
                     openstack_version:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: openstack_version contains tbd
-                      type: object
+                      type: string
                     osapi:
                       additionalProperties:
                         additionalProperties:
@@ -648,12 +653,8 @@ spec:
                       description: scheduler contains tbd
                       type: object
                     security:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: security contains tbd
-                      type: object
+                      type: string
                     shipyard:
                       additionalProperties:
                         additionalProperties:
@@ -8350,20 +8351,21 @@ spec:
                 network:
                   description: network contains tbd
                   properties:
+                    api:
+                      additionalProperties:
+                        additionalProperties:
+                          type: string
+                        type: object
+                      description: api contains tbd
+                      type: object
                     backend:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: backend contains tbd
-                      type: object
+                      items:
+                        type: string
+                      type: array
                     cluster:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: cluster contains tbd
-                      type: object
+                      type: string
                     drydock:
                       additionalProperties:
                         additionalProperties:
@@ -8372,12 +8374,8 @@ spec:
                       description: drydock contains tbd
                       type: object
                     host_namespace:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: host_namespace contains tbd
-                      type: object
+                      type: boolean
                     ingress:
                       additionalProperties:
                         additionalProperties:
@@ -8393,19 +8391,11 @@ spec:
                       description: interface contains tbd
                       type: object
                     kubernetes_netloc:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: kubernetes_netloc contains tbd
-                      type: object
+                      type: string
                     kubernetes_service_ip:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: kubernetes_service_ip contains tbd
-                      type: object
+                      type: string
                     maas_ingress:
                       additionalProperties:
                         additionalProperties:
@@ -8414,18 +8404,17 @@ spec:
                       description: maas_ingress contains tbd
                       type: object
                     pod_cidr:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: pod_cidr contains tbd
-                      type: object
+                      type: string
                     public:
+                      description: public contains tbd
+                      type: string
+                    region_api:
                       additionalProperties:
                         additionalProperties:
                           type: string
                         type: object
-                      description: public contains tbd
+                      description: region_api contains tbd
                       type: object
                     region_proxy:
                       additionalProperties:
@@ -8434,12 +8423,15 @@ spec:
                         type: object
                       description: region_proxy contains tbd
                       type: object
-                    service_cidion_api:
+                    service_cidr:
+                      description: service_cidr contains tbd
+                      type: string
+                    service_client:
                       additionalProperties:
                         additionalProperties:
                           type: string
                         type: object
-                      description: service_cidion_api contains tbd
+                      description: service_client contains tbd
                       type: object
                     service_peer:
                       additionalProperties:
@@ -8667,19 +8659,11 @@ spec:
                   description: service contains tbd
                   properties:
                     ip:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ip contains tbd
-                      type: object
+                      type: string
                     name:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: name contains tbd
-                      type: object
+                      type: string
                   type: object
                 storage:
                   description: storage contains tbd

@@ -88,8 +88,10 @@
       "description": "osd contains tbd"
     }, 
     "httpd": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "httpd contains tbd"
     }, 
     "uamlite": {
@@ -213,8 +215,10 @@
       "description": "apache contains tbd"
     }, 
     "openstack_version": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "openstack_version contains tbd"
     }, 
     "logging": {
@@ -293,8 +297,10 @@
       "description": "coredns contains tbd"
     }, 
     "security": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "security contains tbd"
     }, 
     "prometheus": {

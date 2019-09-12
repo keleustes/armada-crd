@@ -394,8 +394,7 @@
                   "description": "osd contains tbd"
                 }, 
                 "httpd": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "httpd contains tbd"
                 }, 
                 "uamlite": {
@@ -519,8 +518,7 @@
                   "description": "apache contains tbd"
                 }, 
                 "openstack_version": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "openstack_version contains tbd"
                 }, 
                 "logging": {
@@ -599,8 +597,7 @@
                   "description": "coredns contains tbd"
                 }, 
                 "security": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "security contains tbd"
                 }, 
                 "prometheus": {
@@ -726,15 +723,15 @@
             "network": {
               "type": "object", 
               "properties": {
-                "service_cidion_api": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
-                  "description": "service_cidion_api contains tbd"
-                }, 
                 "ingress": {
                   "additionalProperties": {}, 
                   "type": "object", 
                   "description": "ingress contains tbd"
+                }, 
+                "region_api": {
+                  "additionalProperties": {}, 
+                  "type": "object", 
+                  "description": "region_api contains tbd"
                 }, 
                 "service_peer": {
                   "additionalProperties": {}, 
@@ -747,14 +744,13 @@
                   "description": "maas_ingress contains tbd"
                 }, 
                 "kubernetes_netloc": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "kubernetes_netloc contains tbd"
                 }, 
-                "pod_cidr": {
+                "vip": {
                   "additionalProperties": {}, 
                   "type": "object", 
-                  "description": "pod_cidr contains tbd"
+                  "description": "vip contains tbd"
                 }, 
                 "drydock": {
                   "additionalProperties": {}, 
@@ -762,8 +758,7 @@
                   "description": "drydock contains tbd"
                 }, 
                 "host_namespace": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "boolean", 
                   "description": "host_namespace contains tbd"
                 }, 
                 "region_proxy": {
@@ -771,20 +766,29 @@
                   "type": "object", 
                   "description": "region_proxy contains tbd"
                 }, 
-                "vip": {
+                "pod_cidr": {
+                  "type": "string", 
+                  "description": "pod_cidr contains tbd"
+                }, 
+                "api": {
                   "additionalProperties": {}, 
                   "type": "object", 
-                  "description": "vip contains tbd"
+                  "description": "api contains tbd"
                 }, 
                 "cluster": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "cluster contains tbd"
                 }, 
                 "kubernetes_service_ip": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "kubernetes_service_ip contains tbd"
+                }, 
+                "backend": {
+                  "items": {
+                    "type": "string"
+                  }, 
+                  "type": "array", 
+                  "description": "backend contains tbd"
                 }, 
                 "interface": {
                   "additionalProperties": {}, 
@@ -792,14 +796,17 @@
                   "description": "interface contains tbd"
                 }, 
                 "public": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "public contains tbd"
                 }, 
-                "backend": {
+                "service_cidr": {
+                  "type": "string", 
+                  "description": "service_cidr contains tbd"
+                }, 
+                "service_client": {
                   "additionalProperties": {}, 
                   "type": "object", 
-                  "description": "backend contains tbd"
+                  "description": "service_client contains tbd"
                 }
               }
             }, 
@@ -807,13 +814,11 @@
               "type": "object", 
               "properties": {
                 "ip": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "ip contains tbd"
                 }, 
                 "name": {
-                  "additionalProperties": {}, 
-                  "type": "object", 
+                  "type": "string", 
                   "description": "name contains tbd"
                 }
               }
@@ -915,6 +920,23 @@
             }, 
             "data": {
               "type": "object"
+            }, 
+            "bootstrapping": {
+              "type": "object", 
+              "properties": {
+                "enabled": {
+                  "type": "boolean", 
+                  "description": "enabled contains tbd"
+                }, 
+                "host_directory": {
+                  "type": "string", 
+                  "description": "host_directory contains tbd"
+                }, 
+                "filename": {
+                  "type": "string", 
+                  "description": "filename contains tbd"
+                }
+              }
             }, 
             "secrets": {
               "type": "object", 

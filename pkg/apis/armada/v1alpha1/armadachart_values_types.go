@@ -182,6 +182,15 @@ type AVBootstrap struct {
 	Ip string `json:"ip,omitempty"`
 }
 
+type AVBootstrapping struct {
+	// enabled contains tbd
+	Enabled bool `json:"enabled,omitempty"`
+	// filename contains tbd
+	Filename string `json:"filename,omitempty"`
+	// host_directory contains tbd
+	HostDirectory string `json:"host_directory,omitempty"`
+}
+
 type AVEndpoints struct {
 	// alerts contains tbd
 	Alerts *AVEndpointType1 `json:"alerts,omitempty"`
@@ -497,7 +506,7 @@ type AVConf struct {
 	// fluentd contains tbd
 	Fluentd *map[string]ArmadaMapString `json:"fluentd,omitempty"`
 	// httpd contains tbd
-	Httpd *map[string]ArmadaMapString `json:"httpd,omitempty"`
+	Httpd string `json:"httpd,omitempty"`
 	// ingress contains tbd
 	Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
 	// job contains tbd
@@ -521,7 +530,7 @@ type AVConf struct {
 	// novncproxy contains tbd
 	Novncproxy *map[string]ArmadaMapString `json:"novncproxy,omitempty"`
 	// openstack_version contains tbd
-	OpenstackVersion *map[string]ArmadaMapString `json:"openstack_version,omitempty"`
+	OpenstackVersion string `json:"openstack_version,omitempty"`
 	// osapi contains tbd
 	Osapi *map[string]ArmadaMapString `json:"osapi,omitempty"`
 	// osd contains tbd
@@ -553,7 +562,7 @@ type AVConf struct {
 	// scheduler contains tbd
 	Scheduler *map[string]ArmadaMapString `json:"scheduler,omitempty"`
 	// security contains tbd
-	Security *map[string]ArmadaMapString `json:"security,omitempty"`
+	Security string `json:"security,omitempty"`
 	// shipyard contains tbd
 	Shipyard *map[string]ArmadaMapString `json:"shipyard,omitempty"`
 	// software contains tbd
@@ -573,46 +582,52 @@ type AVConf struct {
 }
 
 type AVDevelopment struct {
-    // enabled contains tbd
-    Enabled bool `json:"enabled,omitempty"`
+	// enabled contains tbd
+	Enabled bool `json:"enabled,omitempty"`
 }
 
 type AVNetwork struct {
-    // backend contains tbd
-    Backend *map[string]ArmadaMapString `json:"backend,omitempty"`
-    // cluster contains tbd
-    Cluster *map[string]ArmadaMapString `json:"cluster,omitempty"`
-    // drydock contains tbd
-    Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
-    // host_namespace contains tbd
-    HostNamespace *map[string]ArmadaMapString `json:"host_namespace,omitempty"`
-    // ingress contains tbd
-    Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
-    // interface contains tbd
-    Interface *map[string]ArmadaMapString `json:"interface,omitempty"`
-    // kubernetes_netloc contains tbd
-    KubernetesNetloc *map[string]ArmadaMapString `json:"kubernetes_netloc,omitempty"`
-    // kubernetes_service_ip contains tbd
-    KubernetesServiceIp *map[string]ArmadaMapString `json:"kubernetes_service_ip,omitempty"`
-    // maas_ingress contains tbd
-    MaasIngress *map[string]ArmadaMapString `json:"maas_ingress,omitempty"`
-    // pod_cidr contains tbd
-    PodCidr *map[string]ArmadaMapString `json:"pod_cidr,omitempty"`
-    // public contains tbd
-    Public *map[string]ArmadaMapString `json:"public,omitempty"`
-    // region_proxy contains tbd
-    RegionProxy *map[string]ArmadaMapString `json:"region_proxy,omitempty"`
-    // service_cidion_api contains tbd
-    ServiceCidionApi *map[string]ArmadaMapString `json:"service_cidion_api,omitempty"`
-    // service_peer contains tbd
-    ServicePeer *map[string]ArmadaMapString `json:"service_peer,omitempty"`
-    // vip contains tbd
-    Vip *map[string]ArmadaMapString `json:"vip,omitempty"`
+	// api contains tbd
+	Api *map[string]ArmadaMapString `json:"api,omitempty"`
+	// backend contains tbd
+	Backend []string `json:"backend,omitempty"`
+	// cluster contains tbd
+	Cluster string `json:"cluster,omitempty"`
+	// drydock contains tbd
+	Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
+	// host_namespace contains tbd
+	HostNamespace bool `json:"host_namespace,omitempty"`
+	// ingress contains tbd
+	Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
+	// interface contains tbd
+	Interface *map[string]ArmadaMapString `json:"interface,omitempty"`
+	// kubernetes_netloc contains tbd
+	KubernetesNetloc string `json:"kubernetes_netloc,omitempty"`
+	// kubernetes_service_ip contains tbd
+	KubernetesServiceIp string `json:"kubernetes_service_ip,omitempty"`
+	// maas_ingress contains tbd
+	MaasIngress *map[string]ArmadaMapString `json:"maas_ingress,omitempty"`
+	// pod_cidr contains tbd
+	PodCidr string `json:"pod_cidr,omitempty"`
+	// public contains tbd
+	Public string `json:"public,omitempty"`
+	// region_api contains tbd
+	RegionApi *map[string]ArmadaMapString `json:"region_api,omitempty"`
+	// region_proxy contains tbd
+	RegionProxy *map[string]ArmadaMapString `json:"region_proxy,omitempty"`
+	// service_cidr contains tbd
+	ServiceCidr string `json:"service_cidr,omitempty"`
+	// service_client contains tbd
+	ServiceClient *map[string]ArmadaMapString `json:"service_client,omitempty"`
+	// service_peer contains tbd
+	ServicePeer *map[string]ArmadaMapString `json:"service_peer,omitempty"`
+	// vip contains tbd
+	Vip *map[string]ArmadaMapString `json:"vip,omitempty"`
 }
 
 type AVService struct {
-    // ip contains tbd
-    Ip *map[string]ArmadaMapString `json:"ip,omitempty"`
-    // name contains tbd
-    Name *map[string]ArmadaMapString `json:"name,omitempty"`
+	// ip contains tbd
+	Ip string `json:"ip,omitempty"`
+	// name contains tbd
+	Name string `json:"name,omitempty"`
 }

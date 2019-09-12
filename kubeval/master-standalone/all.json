@@ -139,6 +139,9 @@
       "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
     }, 
     {
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+    }, 
+    {
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroup"
     }, 
     {

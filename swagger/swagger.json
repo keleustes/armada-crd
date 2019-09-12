@@ -333,6 +333,23 @@
      }
     }
    },
+   "org.airshipit.armada.v1alpha1.AVBootstrapping": {
+    "type": "object",
+    "properties": {
+     "enabled": {
+      "description": "enabled contains tbd",
+      "type": "boolean"
+     },
+     "filename": {
+      "description": "filename contains tbd",
+      "type": "string"
+     },
+     "host_directory": {
+      "description": "host_directory contains tbd",
+      "type": "string"
+     }
+    }
+   },
    "org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig": {
     "type": "object"
    },
@@ -471,8 +488,7 @@
      },
      "httpd": {
       "description": "httpd contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "ingress": {
       "description": "ingress contains tbd",
@@ -531,8 +547,7 @@
      },
      "openstack_version": {
       "description": "openstack_version contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "osapi": {
       "description": "osapi contains tbd",
@@ -611,8 +626,7 @@
      },
      "security": {
       "description": "security contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "shipyard": {
       "description": "shipyard contains tbd",
@@ -1135,15 +1149,21 @@
    "org.airshipit.armada.v1alpha1.AVNetwork": {
     "type": "object",
     "properties": {
-     "backend": {
-      "description": "backend contains tbd",
+     "api": {
+      "description": "api contains tbd",
       "type": "object",
       "additionalProperties": {}
      },
+     "backend": {
+      "description": "backend contains tbd",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
      "cluster": {
       "description": "cluster contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "drydock": {
       "description": "drydock contains tbd",
@@ -1152,8 +1172,7 @@
      },
      "host_namespace": {
       "description": "host_namespace contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "boolean"
      },
      "ingress": {
       "description": "ingress contains tbd",
@@ -1167,13 +1186,11 @@
      },
      "kubernetes_netloc": {
       "description": "kubernetes_netloc contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "kubernetes_service_ip": {
       "description": "kubernetes_service_ip contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "maas_ingress": {
       "description": "maas_ingress contains tbd",
@@ -1182,11 +1199,14 @@
      },
      "pod_cidr": {
       "description": "pod_cidr contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "public": {
       "description": "public contains tbd",
+      "type": "string"
+     },
+     "region_api": {
+      "description": "region_api contains tbd",
       "type": "object",
       "additionalProperties": {}
      },
@@ -1195,8 +1215,12 @@
       "type": "object",
       "additionalProperties": {}
      },
-     "service_cidion_api": {
-      "description": "service_cidion_api contains tbd",
+     "service_cidr": {
+      "description": "service_cidr contains tbd",
+      "type": "string"
+     },
+     "service_client": {
+      "description": "service_client contains tbd",
       "type": "object",
       "additionalProperties": {}
      },
@@ -1414,13 +1438,11 @@
     "properties": {
      "ip": {
       "description": "ip contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      },
      "name": {
       "description": "name contains tbd",
-      "type": "object",
-      "additionalProperties": {}
+      "type": "string"
      }
     }
    },
@@ -1787,6 +1809,10 @@
      "bootstrap": {
       "description": "bootstrap contains tbd",
       "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrap"
+     },
+     "bootstrapping": {
+      "description": "bootstrapping contains tbd",
+      "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
      },
      "ceph_client": {
       "description": "ceph_client contains tbd",

@@ -1,3 +1,4 @@
+API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,Backend
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaBackupList,Items
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaBackupSpec,ArmadaEndpoints
 API rule violation: list_type_missing,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,ArmadaBackupSpec,Charts
@@ -45,6 +46,7 @@ API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Table
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Cells
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Conditions
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,UpdateOptions,DryRun
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVBootstrapping,HostDirectory
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVConf,ApiMetadata
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVConf,AutoBridgeAdd
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVConf,CniNetworkConfig
@@ -103,8 +105,10 @@ API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,KubernetesServiceIp
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,MaasIngress
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,PodCidr
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,RegionApi
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,RegionProxy
-API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,ServiceCidionApi
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,ServiceCidr
+API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,ServiceClient
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVNetwork,ServicePeer
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPod,MountPath
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVPod,SecurityContext

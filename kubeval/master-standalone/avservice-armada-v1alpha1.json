@@ -3,13 +3,17 @@
   "type": "object", 
   "properties": {
     "ip": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "ip contains tbd"
     }, 
     "name": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "name contains tbd"
     }
   }

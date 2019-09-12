@@ -33,8 +33,10 @@
       "description": "eventconfig contains tbd"
     }, 
     "openstack_version": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "openstack_version contains tbd"
     }, 
     "agent": {
@@ -98,8 +100,10 @@
       "description": "osd contains tbd"
     }, 
     "httpd": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "httpd contains tbd"
     }, 
     "uamlite": {
@@ -293,8 +297,10 @@
       "description": "coredns contains tbd"
     }, 
     "security": {
-      "additionalProperties": {}, 
-      "type": "object", 
+      "type": [
+        "string", 
+        "null"
+      ], 
       "description": "security contains tbd"
     }, 
     "prometheus": {

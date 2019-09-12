@@ -293,6 +293,10 @@
           "description": "data contains tbd", 
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVData"
         }, 
+        "bootstrapping": {
+          "description": "bootstrapping contains tbd", 
+          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+        }, 
         "secrets": {
           "description": "secrets contains tbd", 
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVSecrets"
@@ -455,13 +459,11 @@
       "type": "object", 
       "properties": {
         "ip": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "ip contains tbd"
         }, 
         "name": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "name contains tbd"
         }
       }
@@ -595,8 +597,7 @@
           "description": "eventconfig contains tbd"
         }, 
         "openstack_version": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "openstack_version contains tbd"
         }, 
         "agent": {
@@ -660,8 +661,7 @@
           "description": "osd contains tbd"
         }, 
         "httpd": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "httpd contains tbd"
         }, 
         "uamlite": {
@@ -855,8 +855,7 @@
           "description": "coredns contains tbd"
         }, 
         "security": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "security contains tbd"
         }, 
         "prometheus": {
@@ -1018,15 +1017,15 @@
       "additionalProperties": false, 
       "type": "object", 
       "properties": {
-        "service_cidion_api": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "service_cidion_api contains tbd"
-        }, 
         "ingress": {
           "additionalProperties": {}, 
           "type": "object", 
           "description": "ingress contains tbd"
+        }, 
+        "region_api": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "region_api contains tbd"
         }, 
         "service_peer": {
           "additionalProperties": {}, 
@@ -1039,58 +1038,68 @@
           "description": "maas_ingress contains tbd"
         }, 
         "kubernetes_netloc": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "kubernetes_netloc contains tbd"
         }, 
-        "vip": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "vip contains tbd"
-        }, 
         "public": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "public contains tbd"
         }, 
-        "host_namespace": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "host_namespace contains tbd"
+        "pod_cidr": {
+          "type": "string", 
+          "description": "pod_cidr contains tbd"
         }, 
         "region_proxy": {
           "additionalProperties": {}, 
           "type": "object", 
           "description": "region_proxy contains tbd"
         }, 
-        "pod_cidr": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "pod_cidr contains tbd"
+        "host_namespace": {
+          "type": "boolean", 
+          "description": "host_namespace contains tbd"
         }, 
         "cluster": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "type": "string", 
           "description": "cluster contains tbd"
         }, 
-        "kubernetes_service_ip": {
+        "vip": {
           "additionalProperties": {}, 
           "type": "object", 
-          "description": "kubernetes_service_ip contains tbd"
+          "description": "vip contains tbd"
+        }, 
+        "api": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "api contains tbd"
         }, 
         "interface": {
           "additionalProperties": {}, 
           "type": "object", 
           "description": "interface contains tbd"
         }, 
+        "kubernetes_service_ip": {
+          "type": "string", 
+          "description": "kubernetes_service_ip contains tbd"
+        }, 
+        "service_client": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "service_client contains tbd"
+        }, 
         "drydock": {
           "additionalProperties": {}, 
           "type": "object", 
           "description": "drydock contains tbd"
         }, 
+        "service_cidr": {
+          "type": "string", 
+          "description": "service_cidr contains tbd"
+        }, 
         "backend": {
-          "additionalProperties": {}, 
-          "type": "object", 
+          "items": {
+            "type": "string"
+          }, 
+          "type": "array", 
           "description": "backend contains tbd"
         }
       }
@@ -1939,6 +1948,24 @@
         "key_manager": {
           "description": "key_manager contains tbd", 
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
+        }
+      }
+    }, 
+    "org.airshipit.armada.v1alpha1.AVBootstrapping": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "host_directory": {
+          "type": "string", 
+          "description": "host_directory contains tbd"
+        }, 
+        "enabled": {
+          "type": "boolean", 
+          "description": "enabled contains tbd"
+        }, 
+        "filename": {
+          "type": "string", 
+          "description": "filename contains tbd"
         }
       }
     }, 

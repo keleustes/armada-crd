@@ -131,6 +131,10 @@
       "description": "data contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
     }, 
+    "bootstrapping": {
+      "description": "bootstrapping contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+    }, 
     "secrets": {
       "description": "secrets contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecrets"

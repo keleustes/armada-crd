@@ -3,19 +3,23 @@
   "$schema": "http://json-schema.org/schema#", 
   "type": "object", 
   "properties": {
-    "ip": {
+    "host_directory": {
       "type": [
         "string", 
         "null"
       ], 
-      "description": "ip contains tbd"
+      "description": "host_directory contains tbd"
     }, 
-    "name": {
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }, 
+    "filename": {
       "type": [
         "string", 
         "null"
       ], 
-      "description": "name contains tbd"
+      "description": "filename contains tbd"
     }
   }
 }
