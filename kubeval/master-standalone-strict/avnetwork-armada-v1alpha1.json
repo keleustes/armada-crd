@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "service_cidion_api": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "service_cidion_api contains tbd"
+    }, 
+    "ingress": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "ingress contains tbd"
+    }, 
+    "service_peer": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "service_peer contains tbd"
+    }, 
+    "maas_ingress": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "maas_ingress contains tbd"
+    }, 
+    "kubernetes_netloc": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "kubernetes_netloc contains tbd"
+    }, 
+    "vip": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "vip contains tbd"
+    }, 
+    "public": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "public contains tbd"
+    }, 
+    "host_namespace": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "host_namespace contains tbd"
+    }, 
+    "region_proxy": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "region_proxy contains tbd"
+    }, 
+    "pod_cidr": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "pod_cidr contains tbd"
+    }, 
+    "cluster": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "cluster contains tbd"
+    }, 
+    "kubernetes_service_ip": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "kubernetes_service_ip contains tbd"
+    }, 
+    "interface": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "interface contains tbd"
+    }, 
+    "drydock": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "drydock contains tbd"
+    }, 
+    "backend": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "backend contains tbd"
+    }
+  }
+}

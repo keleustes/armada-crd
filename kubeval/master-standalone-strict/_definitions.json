@@ -205,9 +205,8 @@
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
         }, 
         "conf": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "conf contains tbd"
+          "description": "conf contains tbd", 
+          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVConf"
         }, 
         "images": {
           "description": "images contains tbd", 
@@ -222,14 +221,12 @@
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
         }, 
         "network": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "network contains tbd"
+          "description": "network contains tbd", 
+          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
         }, 
         "service": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "service contains tbd"
+          "description": "service contains tbd", 
+          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVService"
         }, 
         "storage": {
           "description": "storage contains tbd", 
@@ -254,9 +251,8 @@
           "description": "nodes contains tbd"
         }, 
         "development": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "development contains tbd"
+          "description": "development contains tbd", 
+          "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
         }, 
         "kube_service": {
           "description": "kube_service contains tbd", 
@@ -296,11 +292,6 @@
         "data": {
           "description": "data contains tbd", 
           "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVData"
-        }, 
-        "bootstrapping": {
-          "additionalProperties": {}, 
-          "type": "object", 
-          "description": "bootstrapping contains tbd"
         }, 
         "secrets": {
           "description": "secrets contains tbd", 
@@ -459,6 +450,22 @@
     "org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig": {
       "type": "object"
     }, 
+    "org.airshipit.armada.v1alpha1.AVService": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "ip": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "ip contains tbd"
+        }, 
+        "name": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "name contains tbd"
+        }
+      }
+    }, 
     "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
       "additionalProperties": false, 
       "type": "object", 
@@ -552,6 +559,327 @@
     }, 
     "org.airshipit.armada.v1alpha1.AVPodResourceCurator": {
       "type": "object"
+    }, 
+    "org.airshipit.armada.v1alpha1.AVConf": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "fluentd": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "fluentd contains tbd"
+        }, 
+        "ingress": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "ingress contains tbd"
+        }, 
+        "sysctl": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "sysctl contains tbd"
+        }, 
+        "features": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "features contains tbd"
+        }, 
+        "encryption_provider": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "encryption_provider contains tbd"
+        }, 
+        "eventconfig": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "eventconfig contains tbd"
+        }, 
+        "openstack_version": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "openstack_version contains tbd"
+        }, 
+        "agent": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "agent contains tbd"
+        }, 
+        "osapi": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "osapi contains tbd"
+        }, 
+        "ceph": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "ceph contains tbd"
+        }, 
+        "shipyard": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "shipyard contains tbd"
+        }, 
+        "parsers": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "parsers contains tbd"
+        }, 
+        "deckhand": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "deckhand contains tbd"
+        }, 
+        "novncproxy": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "novncproxy contains tbd"
+        }, 
+        "plugins": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "plugins contains tbd"
+        }, 
+        "armada": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "armada contains tbd"
+        }, 
+        "placement": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "placement contains tbd"
+        }, 
+        "qemu": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "qemu contains tbd"
+        }, 
+        "osd": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "osd contains tbd"
+        }, 
+        "httpd": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "httpd contains tbd"
+        }, 
+        "uamlite": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "uamlite contains tbd"
+        }, 
+        "fluentbit": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "fluentbit contains tbd"
+        }, 
+        "cache": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "cache contains tbd"
+        }, 
+        "storage": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "storage contains tbd"
+        }, 
+        "nova": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "nova contains tbd"
+        }, 
+        "provisioning": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "provisioning contains tbd"
+        }, 
+        "acconfig": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "acconfig contains tbd"
+        }, 
+        "keystone": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "keystone contains tbd"
+        }, 
+        "ldap": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "ldap contains tbd"
+        }, 
+        "test": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "test contains tbd"
+        }, 
+        "consoleauth": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "consoleauth contains tbd"
+        }, 
+        "config": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "config contains tbd"
+        }, 
+        "neutron": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "neutron contains tbd"
+        }, 
+        "node": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "node contains tbd"
+        }, 
+        "api_metadata": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "api_metadata contains tbd"
+        }, 
+        "conductor": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "conductor contains tbd"
+        }, 
+        "exec": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "exec contains tbd"
+        }, 
+        "rgw_s3": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "rgw_s3 contains tbd"
+        }, 
+        "maas": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "maas contains tbd"
+        }, 
+        "job": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "job contains tbd"
+        }, 
+        "ssh": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "ssh contains tbd"
+        }, 
+        "scheduler": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "scheduler contains tbd"
+        }, 
+        "apache": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "apache contains tbd"
+        }, 
+        "spiceproxy": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "spiceproxy contains tbd"
+        }, 
+        "paste": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "paste contains tbd"
+        }, 
+        "drydock": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "drydock contains tbd"
+        }, 
+        "pool": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "pool contains tbd"
+        }, 
+        "rgw_ks": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "rgw_ks contains tbd"
+        }, 
+        "logging": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "logging contains tbd"
+        }, 
+        "metadata_agent": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "metadata_agent contains tbd"
+        }, 
+        "auto_bridge_add": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "auto_bridge_add contains tbd"
+        }, 
+        "overrides": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "overrides contains tbd"
+        }, 
+        "curator": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "curator contains tbd"
+        }, 
+        "controllers": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "controllers contains tbd"
+        }, 
+        "elasticsearch": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "elasticsearch contains tbd"
+        }, 
+        "postgresql": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "postgresql contains tbd"
+        }, 
+        "defaults": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "defaults contains tbd"
+        }, 
+        "coredns": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "coredns contains tbd"
+        }, 
+        "security": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "security contains tbd"
+        }, 
+        "prometheus": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "prometheus contains tbd"
+        }, 
+        "anchor": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "anchor contains tbd"
+        }, 
+        "cni_network_config": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "cni_network_config contains tbd"
+        }, 
+        "software": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "software contains tbd"
+        }
+      }
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaWaitNative": {
       "additionalProperties": false, 
@@ -686,61 +1014,84 @@
         }
       }
     }, 
-    "org.airshipit.armada.v1alpha1.AVEndpointType1": {
+    "org.airshipit.armada.v1alpha1.AVNetwork": {
       "additionalProperties": false, 
       "type": "object", 
       "properties": {
-        "name": {
-          "type": "string", 
-          "description": "name contains tbd"
-        }, 
-        "namespace": {
-          "type": "string", 
-          "description": "namespace contains tbd"
-        }, 
-        "auth": {
-          "additionalProperties": {
-            "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
-          }, 
-          "type": "object", 
-          "description": "auth contains tbd"
-        }, 
-        "port": {
+        "service_cidion_api": {
           "additionalProperties": {}, 
           "type": "object", 
-          "description": "port contains tbd"
+          "description": "service_cidion_api contains tbd"
         }, 
-        "hosts": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
+        "ingress": {
+          "additionalProperties": {}, 
           "type": "object", 
-          "description": "hosts contains tbd"
+          "description": "ingress contains tbd"
         }, 
-        "path": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
+        "service_peer": {
+          "additionalProperties": {}, 
           "type": "object", 
-          "description": "path contains tbd"
+          "description": "service_peer contains tbd"
         }, 
-        "scheme": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
+        "maas_ingress": {
+          "additionalProperties": {}, 
           "type": "object", 
-          "description": "scheme contains tbd"
+          "description": "maas_ingress contains tbd"
         }, 
-        "type": {
-          "type": "string", 
-          "description": "type contains tbd"
-        }, 
-        "host_fqdn_override": {
-          "additionalProperties": {
-            "type": "string"
-          }, 
+        "kubernetes_netloc": {
+          "additionalProperties": {}, 
           "type": "object", 
-          "description": "host_fqdn_override contains tbd"
+          "description": "kubernetes_netloc contains tbd"
+        }, 
+        "vip": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "vip contains tbd"
+        }, 
+        "public": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "public contains tbd"
+        }, 
+        "host_namespace": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "host_namespace contains tbd"
+        }, 
+        "region_proxy": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "region_proxy contains tbd"
+        }, 
+        "pod_cidr": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "pod_cidr contains tbd"
+        }, 
+        "cluster": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "cluster contains tbd"
+        }, 
+        "kubernetes_service_ip": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "kubernetes_service_ip contains tbd"
+        }, 
+        "interface": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "interface contains tbd"
+        }, 
+        "drydock": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "drydock contains tbd"
+        }, 
+        "backend": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "backend contains tbd"
         }
       }
     }, 
@@ -1591,6 +1942,16 @@
         }
       }
     }, 
+    "org.airshipit.armada.v1alpha1.AVDevelopment": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "enabled": {
+          "type": "boolean", 
+          "description": "enabled contains tbd"
+        }
+      }
+    }, 
     "io.k8s.apimachinery.pkg.apis.meta.v1.FieldsV1": {
       "type": "object", 
       "description": "FieldsV1 stores a set of fields in a data structure like a Trie, in JSON format.\n\nEach key is either a '.' representing the field itself, and will always map to an empty set, or a string representing a sub-field or item. The string will follow one of these four formats: 'f:<name>', where <name> is the name of a field in a struct, or key in a map 'v:<value>', where <value> is the exact json formatted value of a list item 'i:<index>', where <index> is position of a item in a list 'k:<keys>', where <keys> is a map of  a list item's key fields to their unique values If a key maps to an empty Fields value, the field that key represents is part of the set.\n\nThe exact format is defined in sigs.k8s.io/structured-merge-diff"
@@ -1672,6 +2033,64 @@
     }, 
     "org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync": {
       "type": "object"
+    }, 
+    "org.airshipit.armada.v1alpha1.AVEndpointType1": {
+      "additionalProperties": false, 
+      "type": "object", 
+      "properties": {
+        "name": {
+          "type": "string", 
+          "description": "name contains tbd"
+        }, 
+        "namespace": {
+          "type": "string", 
+          "description": "namespace contains tbd"
+        }, 
+        "auth": {
+          "additionalProperties": {
+            "$ref": "#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
+          }, 
+          "type": "object", 
+          "description": "auth contains tbd"
+        }, 
+        "port": {
+          "additionalProperties": {}, 
+          "type": "object", 
+          "description": "port contains tbd"
+        }, 
+        "hosts": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "hosts contains tbd"
+        }, 
+        "path": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "path contains tbd"
+        }, 
+        "scheme": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "scheme contains tbd"
+        }, 
+        "type": {
+          "type": "string", 
+          "description": "type contains tbd"
+        }, 
+        "host_fqdn_override": {
+          "additionalProperties": {
+            "type": "string"
+          }, 
+          "type": "object", 
+          "description": "host_fqdn_override contains tbd"
+        }
+      }
     }, 
     "org.airshipit.armada.v1alpha1.ArmadaChart": {
       "additionalProperties": false, 

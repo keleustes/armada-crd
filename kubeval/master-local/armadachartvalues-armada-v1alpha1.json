@@ -37,9 +37,8 @@
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
     }, 
     "conf": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "conf contains tbd"
+      "description": "conf contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVConf"
     }, 
     "images": {
       "description": "images contains tbd", 
@@ -54,14 +53,12 @@
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
     }, 
     "network": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "network contains tbd"
+      "description": "network contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
     }, 
     "service": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "service contains tbd"
+      "description": "service contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
     }, 
     "storage": {
       "description": "storage contains tbd", 
@@ -92,9 +89,8 @@
       "description": "nodes contains tbd"
     }, 
     "development": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "development contains tbd"
+      "description": "development contains tbd", 
+      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
     }, 
     "kube_service": {
       "description": "kube_service contains tbd", 
@@ -134,11 +130,6 @@
     "data": {
       "description": "data contains tbd", 
       "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
-    }, 
-    "bootstrapping": {
-      "additionalProperties": {}, 
-      "type": "object", 
-      "description": "bootstrapping contains tbd"
     }, 
     "secrets": {
       "description": "secrets contains tbd", 

@@ -1,0 +1,11 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "enabled": {
+      "type": "boolean", 
+      "description": "enabled contains tbd"
+    }
+  }
+}

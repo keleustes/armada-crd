@@ -442,3 +442,177 @@ type AVSecretEtcd struct {
 	// tls contains tbd
 	Tls *AVTls `json:"tls,omitempty"`
 }
+
+type AVConf struct {
+	// acconfig contains tbd
+	Acconfig *map[string]ArmadaMapString `json:"acconfig,omitempty"`
+	// agent contains tbd
+	Agent *map[string]ArmadaMapString `json:"agent,omitempty"`
+	// anchor contains tbd
+	Anchor *map[string]ArmadaMapString `json:"anchor,omitempty"`
+	// apache contains tbd
+	Apache *map[string]ArmadaMapString `json:"apache,omitempty"`
+	// api_metadata contains tbd
+	ApiMetadata *map[string]ArmadaMapString `json:"api_metadata,omitempty"`
+	// armada contains tbd
+	Armada *map[string]ArmadaMapString `json:"armada,omitempty"`
+	// auto_bridge_add contains tbd
+	AutoBridgeAdd *map[string]ArmadaMapString `json:"auto_bridge_add,omitempty"`
+	// cache contains tbd
+	Cache *map[string]ArmadaMapString `json:"cache,omitempty"`
+	// ceph contains tbd
+	Ceph *map[string]ArmadaMapString `json:"ceph,omitempty"`
+	// cni_network_config contains tbd
+	CniNetworkConfig *map[string]ArmadaMapString `json:"cni_network_config,omitempty"`
+	// conductor contains tbd
+	Conductor *map[string]ArmadaMapString `json:"conductor,omitempty"`
+	// config contains tbd
+	Config *map[string]ArmadaMapString `json:"config,omitempty"`
+	// consoleauth contains tbd
+	Consoleauth *map[string]ArmadaMapString `json:"consoleauth,omitempty"`
+	// controllers contains tbd
+	Controllers *map[string]ArmadaMapString `json:"controllers,omitempty"`
+	// coredns contains tbd
+	Coredns *map[string]ArmadaMapString `json:"coredns,omitempty"`
+	// curator contains tbd
+	Curator *map[string]ArmadaMapString `json:"curator,omitempty"`
+	// deckhand contains tbd
+	Deckhand *map[string]ArmadaMapString `json:"deckhand,omitempty"`
+	// defaults contains tbd
+	Defaults *map[string]ArmadaMapString `json:"defaults,omitempty"`
+	// drydock contains tbd
+	Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
+	// elasticsearch contains tbd
+	Elasticsearch *map[string]ArmadaMapString `json:"elasticsearch,omitempty"`
+	// encryption_provider contains tbd
+	EncryptionProvider *map[string]ArmadaMapString `json:"encryption_provider,omitempty"`
+	// eventconfig contains tbd
+	Eventconfig *map[string]ArmadaMapString `json:"eventconfig,omitempty"`
+	// exec contains tbd
+	Exec *map[string]ArmadaMapString `json:"exec,omitempty"`
+	// features contains tbd
+	Features *map[string]ArmadaMapString `json:"features,omitempty"`
+	// fluentbit contains tbd
+	Fluentbit *map[string]ArmadaMapString `json:"fluentbit,omitempty"`
+	// fluentd contains tbd
+	Fluentd *map[string]ArmadaMapString `json:"fluentd,omitempty"`
+	// httpd contains tbd
+	Httpd *map[string]ArmadaMapString `json:"httpd,omitempty"`
+	// ingress contains tbd
+	Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
+	// job contains tbd
+	Job *map[string]ArmadaMapString `json:"job,omitempty"`
+	// keystone contains tbd
+	Keystone *map[string]ArmadaMapString `json:"keystone,omitempty"`
+	// ldap contains tbd
+	Ldap *map[string]ArmadaMapString `json:"ldap,omitempty"`
+	// logging contains tbd
+	Logging *map[string]ArmadaMapString `json:"logging,omitempty"`
+	// maas contains tbd
+	Maas *map[string]ArmadaMapString `json:"maas,omitempty"`
+	// metadata_agent contains tbd
+	MetadataAgent *map[string]ArmadaMapString `json:"metadata_agent,omitempty"`
+	// neutron contains tbd
+	Neutron *map[string]ArmadaMapString `json:"neutron,omitempty"`
+	// node contains tbd
+	Node *map[string]ArmadaMapString `json:"node,omitempty"`
+	// nova contains tbd
+	Nova *map[string]ArmadaMapString `json:"nova,omitempty"`
+	// novncproxy contains tbd
+	Novncproxy *map[string]ArmadaMapString `json:"novncproxy,omitempty"`
+	// openstack_version contains tbd
+	OpenstackVersion *map[string]ArmadaMapString `json:"openstack_version,omitempty"`
+	// osapi contains tbd
+	Osapi *map[string]ArmadaMapString `json:"osapi,omitempty"`
+	// osd contains tbd
+	Osd *map[string]ArmadaMapString `json:"osd,omitempty"`
+	// overrides contains tbd
+	Overrides *map[string]ArmadaMapString `json:"overrides,omitempty"`
+	// parsers contains tbd
+	Parsers *map[string]ArmadaMapString `json:"parsers,omitempty"`
+	// paste contains tbd
+	Paste *map[string]ArmadaMapString `json:"paste,omitempty"`
+	// placement contains tbd
+	Placement *map[string]ArmadaMapString `json:"placement,omitempty"`
+	// plugins contains tbd
+	Plugins *map[string]ArmadaMapString `json:"plugins,omitempty"`
+	// pool contains tbd
+	Pool *map[string]ArmadaMapString `json:"pool,omitempty"`
+	// postgresql contains tbd
+	Postgresql *map[string]ArmadaMapString `json:"postgresql,omitempty"`
+	// prometheus contains tbd
+	Prometheus *map[string]ArmadaMapString `json:"prometheus,omitempty"`
+	// provisioning contains tbd
+	Provisioning *map[string]ArmadaMapString `json:"provisioning,omitempty"`
+	// qemu contains tbd
+	Qemu *map[string]ArmadaMapString `json:"qemu,omitempty"`
+	// rgw_ks contains tbd
+	RgwKs *map[string]ArmadaMapString `json:"rgw_ks,omitempty"`
+	// rgw_s3 contains tbd
+	RgwS3 *map[string]ArmadaMapString `json:"rgw_s3,omitempty"`
+	// scheduler contains tbd
+	Scheduler *map[string]ArmadaMapString `json:"scheduler,omitempty"`
+	// security contains tbd
+	Security *map[string]ArmadaMapString `json:"security,omitempty"`
+	// shipyard contains tbd
+	Shipyard *map[string]ArmadaMapString `json:"shipyard,omitempty"`
+	// software contains tbd
+	Software *map[string]ArmadaMapString `json:"software,omitempty"`
+	// spiceproxy contains tbd
+	Spiceproxy *map[string]ArmadaMapString `json:"spiceproxy,omitempty"`
+	// ssh contains tbd
+	Ssh *map[string]ArmadaMapString `json:"ssh,omitempty"`
+	// storage contains tbd
+	Storage *map[string]ArmadaMapString `json:"storage,omitempty"`
+	// sysctl contains tbd
+	Sysctl *map[string]ArmadaMapString `json:"sysctl,omitempty"`
+	// test contains tbd
+	Test *map[string]ArmadaMapString `json:"test,omitempty"`
+	// uamlite contains tbd
+	Uamlite *map[string]ArmadaMapString `json:"uamlite,omitempty"`
+}
+
+type AVDevelopment struct {
+    // enabled contains tbd
+    Enabled bool `json:"enabled,omitempty"`
+}
+
+type AVNetwork struct {
+    // backend contains tbd
+    Backend *map[string]ArmadaMapString `json:"backend,omitempty"`
+    // cluster contains tbd
+    Cluster *map[string]ArmadaMapString `json:"cluster,omitempty"`
+    // drydock contains tbd
+    Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
+    // host_namespace contains tbd
+    HostNamespace *map[string]ArmadaMapString `json:"host_namespace,omitempty"`
+    // ingress contains tbd
+    Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
+    // interface contains tbd
+    Interface *map[string]ArmadaMapString `json:"interface,omitempty"`
+    // kubernetes_netloc contains tbd
+    KubernetesNetloc *map[string]ArmadaMapString `json:"kubernetes_netloc,omitempty"`
+    // kubernetes_service_ip contains tbd
+    KubernetesServiceIp *map[string]ArmadaMapString `json:"kubernetes_service_ip,omitempty"`
+    // maas_ingress contains tbd
+    MaasIngress *map[string]ArmadaMapString `json:"maas_ingress,omitempty"`
+    // pod_cidr contains tbd
+    PodCidr *map[string]ArmadaMapString `json:"pod_cidr,omitempty"`
+    // public contains tbd
+    Public *map[string]ArmadaMapString `json:"public,omitempty"`
+    // region_proxy contains tbd
+    RegionProxy *map[string]ArmadaMapString `json:"region_proxy,omitempty"`
+    // service_cidion_api contains tbd
+    ServiceCidionApi *map[string]ArmadaMapString `json:"service_cidion_api,omitempty"`
+    // service_peer contains tbd
+    ServicePeer *map[string]ArmadaMapString `json:"service_peer,omitempty"`
+    // vip contains tbd
+    Vip *map[string]ArmadaMapString `json:"vip,omitempty"`
+}
+
+type AVService struct {
+    // ip contains tbd
+    Ip *map[string]ArmadaMapString `json:"ip,omitempty"`
+    // name contains tbd
+    Name *map[string]ArmadaMapString `json:"name,omitempty"`
+}

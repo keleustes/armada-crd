@@ -1,0 +1,17 @@
+{
+  "additionalProperties": false, 
+  "$schema": "http://json-schema.org/schema#", 
+  "type": "object", 
+  "properties": {
+    "ip": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "ip contains tbd"
+    }, 
+    "name": {
+      "additionalProperties": {}, 
+      "type": "object", 
+      "description": "name contains tbd"
+    }
+  }
+}
