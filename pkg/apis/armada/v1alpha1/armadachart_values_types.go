@@ -574,7 +574,7 @@ type AVConf struct {
 	// storage contains tbd
 	Storage *map[string]ArmadaMapString `json:"storage,omitempty"`
 	// sysctl contains tbd
-	Sysctl *ArmadaMapString `json:"sysctl,omitempty"`
+	Sysctl *map[string]string `json:"sysctl,omitempty"`
 	// test contains tbd
 	Test *map[string]ArmadaMapString `json:"test,omitempty"`
 	// uamlite contains tbd

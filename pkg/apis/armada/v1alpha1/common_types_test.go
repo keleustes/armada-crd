@@ -43,7 +43,7 @@ func TestComputeActualState(t *testing.T) {
 	testCondition = HelmResourceCondition{Status: ConditionStatusTrue, Type: ConditionIrreconcilable}
 	testStatus = &ArmadaStatus{ActualState: StateUnknown}
 	testStatus.ComputeActualState(testCondition, StateDeployed)
-	compareState(t, testStatus, StateFailed, false, testStatus.Reason)
+	compareState(t, testStatus, StateError, false, testStatus.Reason)
 
 	testCondition = HelmResourceCondition{Status: ConditionStatusTrue, Type: "TEST TYPE"}
 	testStatus = &ArmadaStatus{ActualState: StateUnknown}

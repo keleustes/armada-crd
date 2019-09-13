@@ -83,4 +83,11 @@ kubeval-json:
 	openapi2jsonschema -o kubeval/master-local --expanded --kubernetes swagger/swagger.json
 	openapi2jsonschema -o kubeval/master --expanded --kubernetes --prefix https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json swagger/swagger.json
 
-
+test:
+	echo "sudo systemctl stop kubelet"
+	echo -e 'docker stop $$(docker ps -qa)'
+	echo -e 'export PATH=$${PATH}:/usr/local/kubebuilder/bin'
+	mkdir -p config/crds
+	cp kubectl/* config/crds/
+	GO111MODULE=on go test ./pkg/... -coverprofile=cover.out && go tool cover -html=cover.out
+	rm -fr config/crds/
