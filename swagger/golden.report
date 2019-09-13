@@ -46,6 +46,8 @@ API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Table
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Cells
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Conditions
 API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,UpdateOptions,DryRun
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/runtime,RawExtension,Raw
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/runtime,Unknown,Raw
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVBootstrapping,HostDirectory
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVConf,ApiMetadata
 API rule violation: names_match,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1,AVConf,AutoBridgeAdd
@@ -153,3 +155,6 @@ API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,InternalEve
 API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,MicroTime,Time
 API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,StatusCause,Type
 API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,Time,Time
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,ContentEncoding
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,ContentType
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,Raw

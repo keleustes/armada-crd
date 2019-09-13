@@ -14,49 +14,42 @@
 
 package v1alpha1
 
-import ()
+import (
+	"k8s.io/apimachinery/pkg/runtime"
+)
 
 type AVPod struct {
 	// affinity contains tbd
-	Affinity *AVPodAffinity `json:"affinity,omitempty"`
+	Affinity *runtime.RawExtension `json:"affinity,omitempty"`
 	// env contains tbd
-	Env *AVPodEnv `json:"env,omitempty"`
+	Env *runtime.RawExtension `json:"env,omitempty"`
 	// mount_path contains tbd
 	MountPath string `json:"mount_path,omitempty"`
 	// lifecycle contains tbd
-	Lifecycle *AVPodLifecycle `json:"lifecycle,omitempty"`
+	Lifecycle *runtime.RawExtension `json:"lifecycle,omitempty"`
 	// replicas contains tbd
 	Replicas map[string]int `json:"replicas,omitempty"`
 	// resources contains tbd
 	Resources map[string]AVPodResources `json:"resources,omitempty"`
 	// security_context contains tbd
-	SecurityContext *AVPodSecurityContext `json:"security_context,omitempty"`
-}
-
-type AVPodSecurityContext struct {
+	SecurityContext *runtime.RawExtension `json:"security_context,omitempty"`
 }
 
 type AVPodResources struct {
 	// curator contains tbd
-	Curator *AVPodResourceCurator `json:"curator,omitempty"`
+	Curator *runtime.RawExtension `json:"curator,omitempty"`
 	// fluentbit contains tbd
-	Fluentbit *AVPodResourceFluentbit `json:"fluentbit,omitempty"`
+	Fluentbit *runtime.RawExtension `json:"fluentbit,omitempty"`
 	// limits contains tbd
-	Limits *AVPodResourceSettings `json:"limits,omitempty"`
+	Limits *runtime.RawExtension `json:"limits,omitempty"`
 	// requests contains tbd
-	Requests *AVPodResourceSettings `json:"requests,omitempty"`
+	Requests *runtime.RawExtension `json:"requests,omitempty"`
 	// image_repo_sync contains tbd
-	ImageRepoSync *AVPodResourceImageRepoSync `json:"image_repo_sync,omitempty"`
+	ImageRepoSync *runtime.RawExtension `json:"image_repo_sync,omitempty"`
 	// snapshot_repository contains tbd
-	SnapshortRepository *AVPodResourceSnapshotRepository `json:"snapshot_repository,omitempty"`
+	SnapshortRepository *runtime.RawExtension `json:"snapshot_repository,omitempty"`
 	// tests contains tbd
-	Tests *AVPodResourceTest `json:"tests,omitempty"`
-}
-
-type AVPodResourceCurator struct {
-}
-
-type AVPodResourceFluentbit struct {
+	Tests *runtime.RawExtension `json:"tests,omitempty"`
 }
 
 type AVPodResourceSettings struct {
@@ -66,59 +59,11 @@ type AVPodResourceSettings struct {
 	Memory string `json:"memory,omitempty"`
 }
 
-type AVPodResourceImageRepoSync struct {
-}
-
-type AVPodResourceTest struct {
-}
-
-type AVPodResourceSnapshotRepository struct {
-}
-
-type AVPodLifecycle struct {
-}
-
-type AVPodReplicas struct {
-}
-
-type AVPodAffinity struct {
-}
-
-type AVPodEnv struct {
-}
-
-type AVStorageclass struct {
-}
-
-type AVNetworking struct {
-}
-
-type AVLivenessprobe struct {
-}
-
 type AVImages struct {
 	// tags contains tbd
 	Tags map[string]string `json:"tags,omitempty"`
 	// pull_policy contains tbd
 	PullPolicy string `json:"pull_policy,omitempty"`
-}
-
-type AVData struct {
-}
-
-type AVDependencies struct {
-}
-
-type AVGlobal struct {
-}
-
-type AVJobs struct {
-}
-
-type AVNodes struct {
-}
-
-type AVStorage struct {
 }
 
 type AVVolume struct {
@@ -141,21 +86,6 @@ type AVVolumeBackup struct {
 	Size *string `json:"size,omitempty"`
 	// enabled contains tbd
 	Enabled *bool `json:"enabled,omitempty"`
-}
-
-type AVAnchor struct {
-}
-
-type AVApiserver struct {
-}
-
-type AVMonitoring struct {
-}
-
-type AVKubeService struct {
-}
-
-type AVCephMgrModulesConfig struct {
 }
 
 type AVSecrets struct {
@@ -454,131 +384,131 @@ type AVSecretEtcd struct {
 
 type AVConf struct {
 	// acconfig contains tbd
-	Acconfig *map[string]ArmadaMapString `json:"acconfig,omitempty"`
+	Acconfig *runtime.RawExtension `json:"acconfig,omitempty"`
 	// agent contains tbd
-	Agent *map[string]ArmadaMapString `json:"agent,omitempty"`
+	Agent *runtime.RawExtension `json:"agent,omitempty"`
 	// anchor contains tbd
-	Anchor *map[string]ArmadaMapString `json:"anchor,omitempty"`
+	Anchor *runtime.RawExtension `json:"anchor,omitempty"`
 	// apache contains tbd
-	Apache *map[string]ArmadaMapString `json:"apache,omitempty"`
+	Apache *runtime.RawExtension `json:"apache,omitempty"`
 	// api_metadata contains tbd
-	ApiMetadata *map[string]ArmadaMapString `json:"api_metadata,omitempty"`
+	ApiMetadata *runtime.RawExtension `json:"api_metadata,omitempty"`
 	// armada contains tbd
-	Armada *map[string]ArmadaMapString `json:"armada,omitempty"`
+	Armada *runtime.RawExtension `json:"armada,omitempty"`
 	// auto_bridge_add contains tbd
-	AutoBridgeAdd *map[string]ArmadaMapString `json:"auto_bridge_add,omitempty"`
+	AutoBridgeAdd *runtime.RawExtension `json:"auto_bridge_add,omitempty"`
 	// cache contains tbd
-	Cache *map[string]ArmadaMapString `json:"cache,omitempty"`
+	Cache *runtime.RawExtension `json:"cache,omitempty"`
 	// ceph contains tbd
-	Ceph *map[string]ArmadaMapString `json:"ceph,omitempty"`
+	Ceph *runtime.RawExtension `json:"ceph,omitempty"`
 	// cni_network_config contains tbd
-	CniNetworkConfig *map[string]ArmadaMapString `json:"cni_network_config,omitempty"`
+	CniNetworkConfig *runtime.RawExtension `json:"cni_network_config,omitempty"`
 	// conductor contains tbd
-	Conductor *map[string]ArmadaMapString `json:"conductor,omitempty"`
+	Conductor *runtime.RawExtension `json:"conductor,omitempty"`
 	// config contains tbd
-	Config *map[string]ArmadaMapString `json:"config,omitempty"`
+	Config *runtime.RawExtension `json:"config,omitempty"`
 	// consoleauth contains tbd
-	Consoleauth *map[string]ArmadaMapString `json:"consoleauth,omitempty"`
+	Consoleauth *runtime.RawExtension `json:"consoleauth,omitempty"`
 	// controllers contains tbd
-	Controllers *map[string]ArmadaMapString `json:"controllers,omitempty"`
+	Controllers *runtime.RawExtension `json:"controllers,omitempty"`
 	// coredns contains tbd
-	Coredns *map[string]ArmadaMapString `json:"coredns,omitempty"`
+	Coredns *runtime.RawExtension `json:"coredns,omitempty"`
 	// curator contains tbd
-	Curator *map[string]ArmadaMapString `json:"curator,omitempty"`
+	Curator *runtime.RawExtension `json:"curator,omitempty"`
 	// deckhand contains tbd
-	Deckhand *map[string]ArmadaMapString `json:"deckhand,omitempty"`
+	Deckhand *runtime.RawExtension `json:"deckhand,omitempty"`
 	// defaults contains tbd
-	Defaults *map[string]ArmadaMapString `json:"defaults,omitempty"`
+	Defaults *runtime.RawExtension `json:"defaults,omitempty"`
 	// drydock contains tbd
-	Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
+	Drydock *runtime.RawExtension `json:"drydock,omitempty"`
 	// elasticsearch contains tbd
-	Elasticsearch *map[string]ArmadaMapString `json:"elasticsearch,omitempty"`
+	Elasticsearch *runtime.RawExtension `json:"elasticsearch,omitempty"`
 	// encryption_provider contains tbd
-	EncryptionProvider *map[string]ArmadaMapString `json:"encryption_provider,omitempty"`
+	EncryptionProvider *runtime.RawExtension `json:"encryption_provider,omitempty"`
 	// eventconfig contains tbd
-	Eventconfig *map[string]ArmadaMapString `json:"eventconfig,omitempty"`
+	Eventconfig *runtime.RawExtension `json:"eventconfig,omitempty"`
 	// exec contains tbd
-	Exec *map[string]ArmadaMapInt `json:"exec,omitempty"`
+	Exec *runtime.RawExtension `json:"exec,omitempty"`
 	// features contains tbd
-	Features *map[string]ArmadaMapString `json:"features,omitempty"`
+	Features *runtime.RawExtension `json:"features,omitempty"`
 	// fluentbit contains tbd
-	Fluentbit *map[string]ArmadaMapString `json:"fluentbit,omitempty"`
+	Fluentbit *runtime.RawExtension `json:"fluentbit,omitempty"`
 	// fluentd contains tbd
-	Fluentd *map[string]ArmadaMapString `json:"fluentd,omitempty"`
+	Fluentd *runtime.RawExtension `json:"fluentd,omitempty"`
 	// httpd contains tbd
 	Httpd string `json:"httpd,omitempty"`
 	// ingress contains tbd
-	Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
+	Ingress *runtime.RawExtension `json:"ingress,omitempty"`
 	// job contains tbd
-	Job *map[string]ArmadaMapString `json:"job,omitempty"`
+	Job *runtime.RawExtension `json:"job,omitempty"`
 	// keystone contains tbd
-	Keystone *map[string]ArmadaMapString `json:"keystone,omitempty"`
+	Keystone *runtime.RawExtension `json:"keystone,omitempty"`
 	// ldap contains tbd
-	Ldap *map[string]ArmadaMapString `json:"ldap,omitempty"`
+	Ldap *runtime.RawExtension `json:"ldap,omitempty"`
 	// logging contains tbd
-	Logging *map[string]ArmadaMapString `json:"logging,omitempty"`
+	Logging *runtime.RawExtension `json:"logging,omitempty"`
 	// maas contains tbd
-	Maas *map[string]ArmadaMapString `json:"maas,omitempty"`
+	Maas *runtime.RawExtension `json:"maas,omitempty"`
 	// metadata_agent contains tbd
-	MetadataAgent *map[string]ArmadaMapString `json:"metadata_agent,omitempty"`
+	MetadataAgent *runtime.RawExtension `json:"metadata_agent,omitempty"`
 	// neutron contains tbd
-	Neutron *map[string]ArmadaMapString `json:"neutron,omitempty"`
+	Neutron *runtime.RawExtension `json:"neutron,omitempty"`
 	// node contains tbd
-	Node *map[string]ArmadaMapString `json:"node,omitempty"`
+	Node *runtime.RawExtension `json:"node,omitempty"`
 	// nova contains tbd
-	Nova *map[string]ArmadaMapString `json:"nova,omitempty"`
+	Nova *runtime.RawExtension `json:"nova,omitempty"`
 	// novncproxy contains tbd
-	Novncproxy *map[string]ArmadaMapString `json:"novncproxy,omitempty"`
+	Novncproxy *runtime.RawExtension `json:"novncproxy,omitempty"`
 	// openstack_version contains tbd
 	OpenstackVersion string `json:"openstack_version,omitempty"`
 	// osapi contains tbd
-	Osapi *map[string]ArmadaMapString `json:"osapi,omitempty"`
+	Osapi *runtime.RawExtension `json:"osapi,omitempty"`
 	// osd contains tbd
-	Osd *map[string]ArmadaMapString `json:"osd,omitempty"`
+	Osd *runtime.RawExtension `json:"osd,omitempty"`
 	// overrides contains tbd
-	Overrides *map[string]ArmadaMapString `json:"overrides,omitempty"`
+	Overrides *runtime.RawExtension `json:"overrides,omitempty"`
 	// parsers contains tbd
-	Parsers *map[string]ArmadaMapString `json:"parsers,omitempty"`
+	Parsers *runtime.RawExtension `json:"parsers,omitempty"`
 	// paste contains tbd
-	Paste *map[string]ArmadaMapString `json:"paste,omitempty"`
+	Paste *runtime.RawExtension `json:"paste,omitempty"`
 	// placement contains tbd
-	Placement *map[string]ArmadaMapString `json:"placement,omitempty"`
+	Placement *runtime.RawExtension `json:"placement,omitempty"`
 	// plugins contains tbd
-	Plugins *map[string]ArmadaMapString `json:"plugins,omitempty"`
+	Plugins *runtime.RawExtension `json:"plugins,omitempty"`
 	// pool contains tbd
-	Pool *map[string]ArmadaMapString `json:"pool,omitempty"`
+	Pool *runtime.RawExtension `json:"pool,omitempty"`
 	// postgresql contains tbd
-	Postgresql *map[string]ArmadaMapString `json:"postgresql,omitempty"`
+	Postgresql *runtime.RawExtension `json:"postgresql,omitempty"`
 	// prometheus contains tbd
-	Prometheus *map[string]ArmadaMapString `json:"prometheus,omitempty"`
+	Prometheus *runtime.RawExtension `json:"prometheus,omitempty"`
 	// provisioning contains tbd
-	Provisioning *map[string]ArmadaMapString `json:"provisioning,omitempty"`
+	Provisioning *runtime.RawExtension `json:"provisioning,omitempty"`
 	// qemu contains tbd
-	Qemu *map[string]ArmadaMapString `json:"qemu,omitempty"`
+	Qemu *runtime.RawExtension `json:"qemu,omitempty"`
 	// rgw_ks contains tbd
-	RgwKs *map[string]ArmadaMapString `json:"rgw_ks,omitempty"`
+	RgwKs *runtime.RawExtension `json:"rgw_ks,omitempty"`
 	// rgw_s3 contains tbd
-	RgwS3 *map[string]ArmadaMapString `json:"rgw_s3,omitempty"`
+	RgwS3 *runtime.RawExtension `json:"rgw_s3,omitempty"`
 	// scheduler contains tbd
-	Scheduler *map[string]ArmadaMapString `json:"scheduler,omitempty"`
+	Scheduler *runtime.RawExtension `json:"scheduler,omitempty"`
 	// security contains tbd
 	Security string `json:"security,omitempty"`
 	// shipyard contains tbd
-	Shipyard *map[string]ArmadaMapString `json:"shipyard,omitempty"`
+	Shipyard *runtime.RawExtension `json:"shipyard,omitempty"`
 	// software contains tbd
-	Software *map[string]ArmadaMapString `json:"software,omitempty"`
+	Software *runtime.RawExtension `json:"software,omitempty"`
 	// spiceproxy contains tbd
-	Spiceproxy *map[string]ArmadaMapString `json:"spiceproxy,omitempty"`
+	Spiceproxy *runtime.RawExtension `json:"spiceproxy,omitempty"`
 	// ssh contains tbd
-	Ssh *map[string]ArmadaMapString `json:"ssh,omitempty"`
+	Ssh *runtime.RawExtension `json:"ssh,omitempty"`
 	// storage contains tbd
-	Storage *map[string]ArmadaMapString `json:"storage,omitempty"`
+	Storage *runtime.RawExtension `json:"storage,omitempty"`
 	// sysctl contains tbd
 	Sysctl *map[string]string `json:"sysctl,omitempty"`
 	// test contains tbd
-	Test *map[string]ArmadaMapString `json:"test,omitempty"`
+	Test *runtime.RawExtension `json:"test,omitempty"`
 	// uamlite contains tbd
-	Uamlite *map[string]ArmadaMapString `json:"uamlite,omitempty"`
+	Uamlite *runtime.RawExtension `json:"uamlite,omitempty"`
 }
 
 type AVDevelopment struct {
@@ -588,41 +518,41 @@ type AVDevelopment struct {
 
 type AVNetwork struct {
 	// api contains tbd
-	Api *map[string]ArmadaMapString `json:"api,omitempty"`
+	Api *runtime.RawExtension `json:"api,omitempty"`
 	// backend contains tbd
 	Backend []string `json:"backend,omitempty"`
 	// cluster contains tbd
 	Cluster string `json:"cluster,omitempty"`
 	// drydock contains tbd
-	Drydock *map[string]ArmadaMapString `json:"drydock,omitempty"`
+	Drydock *runtime.RawExtension `json:"drydock,omitempty"`
 	// host_namespace contains tbd
 	HostNamespace bool `json:"host_namespace,omitempty"`
 	// ingress contains tbd
-	Ingress *map[string]ArmadaMapString `json:"ingress,omitempty"`
+	Ingress *runtime.RawExtension `json:"ingress,omitempty"`
 	// interface contains tbd
-	Interface *map[string]ArmadaMapString `json:"interface,omitempty"`
+	Interface *runtime.RawExtension `json:"interface,omitempty"`
 	// kubernetes_netloc contains tbd
 	KubernetesNetloc string `json:"kubernetes_netloc,omitempty"`
 	// kubernetes_service_ip contains tbd
 	KubernetesServiceIp string `json:"kubernetes_service_ip,omitempty"`
 	// maas_ingress contains tbd
-	MaasIngress *map[string]ArmadaMapString `json:"maas_ingress,omitempty"`
+	MaasIngress *runtime.RawExtension `json:"maas_ingress,omitempty"`
 	// pod_cidr contains tbd
 	PodCidr string `json:"pod_cidr,omitempty"`
 	// public contains tbd
 	Public string `json:"public,omitempty"`
 	// region_api contains tbd
-	RegionApi *map[string]ArmadaMapString `json:"region_api,omitempty"`
+	RegionApi *runtime.RawExtension `json:"region_api,omitempty"`
 	// region_proxy contains tbd
-	RegionProxy *map[string]ArmadaMapString `json:"region_proxy,omitempty"`
+	RegionProxy *runtime.RawExtension `json:"region_proxy,omitempty"`
 	// service_cidr contains tbd
 	ServiceCidr string `json:"service_cidr,omitempty"`
 	// service_client contains tbd
-	ServiceClient *map[string]ArmadaMapString `json:"service_client,omitempty"`
+	ServiceClient *runtime.RawExtension `json:"service_client,omitempty"`
 	// service_peer contains tbd
-	ServicePeer *map[string]ArmadaMapString `json:"service_peer,omitempty"`
+	ServicePeer *runtime.RawExtension `json:"service_peer,omitempty"`
 	// vip contains tbd
-	Vip *map[string]ArmadaMapString `json:"vip,omitempty"`
+	Vip *runtime.RawExtension `json:"vip,omitempty"`
 }
 
 type AVService struct {

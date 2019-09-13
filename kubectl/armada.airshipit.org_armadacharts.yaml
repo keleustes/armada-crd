@@ -283,411 +283,183 @@ spec:
                   description: conf contains tbd
                   properties:
                     acconfig:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: acconfig contains tbd
                       type: object
                     agent:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: agent contains tbd
                       type: object
                     anchor:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: anchor contains tbd
                       type: object
                     apache:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: apache contains tbd
                       type: object
                     api_metadata:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: api_metadata contains tbd
                       type: object
                     armada:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: armada contains tbd
                       type: object
                     auto_bridge_add:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: auto_bridge_add contains tbd
                       type: object
                     cache:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: cache contains tbd
                       type: object
                     ceph:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ceph contains tbd
                       type: object
                     cni_network_config:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: cni_network_config contains tbd
                       type: object
                     conductor:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: conductor contains tbd
                       type: object
                     config:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: config contains tbd
                       type: object
                     consoleauth:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: consoleauth contains tbd
                       type: object
                     controllers:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: controllers contains tbd
                       type: object
                     coredns:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: coredns contains tbd
                       type: object
                     curator:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: curator contains tbd
                       type: object
                     deckhand:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: deckhand contains tbd
                       type: object
                     defaults:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: defaults contains tbd
                       type: object
                     drydock:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: drydock contains tbd
                       type: object
                     elasticsearch:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: elasticsearch contains tbd
                       type: object
                     encryption_provider:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: encryption_provider contains tbd
                       type: object
                     eventconfig:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: eventconfig contains tbd
                       type: object
                     exec:
-                      additionalProperties:
-                        additionalProperties:
-                          type: integer
-                        type: object
                       description: exec contains tbd
                       type: object
                     features:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: features contains tbd
                       type: object
                     fluentbit:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: fluentbit contains tbd
                       type: object
                     fluentd:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: fluentd contains tbd
                       type: object
                     httpd:
                       description: httpd contains tbd
                       type: string
                     ingress:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ingress contains tbd
                       type: object
                     job:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: job contains tbd
                       type: object
                     keystone:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: keystone contains tbd
                       type: object
                     ldap:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ldap contains tbd
                       type: object
                     logging:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: logging contains tbd
                       type: object
                     maas:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: maas contains tbd
                       type: object
                     metadata_agent:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: metadata_agent contains tbd
                       type: object
                     neutron:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: neutron contains tbd
                       type: object
                     node:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: node contains tbd
                       type: object
                     nova:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: nova contains tbd
                       type: object
                     novncproxy:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: novncproxy contains tbd
                       type: object
                     openstack_version:
                       description: openstack_version contains tbd
                       type: string
                     osapi:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: osapi contains tbd
                       type: object
                     osd:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: osd contains tbd
                       type: object
                     overrides:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: overrides contains tbd
                       type: object
                     parsers:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: parsers contains tbd
                       type: object
                     paste:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: paste contains tbd
                       type: object
                     placement:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: placement contains tbd
                       type: object
                     plugins:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: plugins contains tbd
                       type: object
                     pool:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: pool contains tbd
                       type: object
                     postgresql:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: postgresql contains tbd
                       type: object
                     prometheus:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: prometheus contains tbd
                       type: object
                     provisioning:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: provisioning contains tbd
                       type: object
                     qemu:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: qemu contains tbd
                       type: object
                     rgw_ks:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: rgw_ks contains tbd
                       type: object
                     rgw_s3:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: rgw_s3 contains tbd
                       type: object
                     scheduler:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: scheduler contains tbd
                       type: object
                     security:
                       description: security contains tbd
                       type: string
                     shipyard:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: shipyard contains tbd
                       type: object
                     software:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: software contains tbd
                       type: object
                     spiceproxy:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: spiceproxy contains tbd
                       type: object
                     ssh:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ssh contains tbd
                       type: object
                     storage:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: storage contains tbd
                       type: object
                     sysctl:
@@ -696,17 +468,9 @@ spec:
                       description: sysctl contains tbd
                       type: object
                     test:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: test contains tbd
                       type: object
                     uamlite:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: uamlite contains tbd
                       type: object
                   type: object
@@ -8350,10 +8114,6 @@ spec:
                   description: network contains tbd
                   properties:
                     api:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: api contains tbd
                       type: object
                     backend:
@@ -8365,27 +8125,15 @@ spec:
                       description: cluster contains tbd
                       type: string
                     drydock:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: drydock contains tbd
                       type: object
                     host_namespace:
                       description: host_namespace contains tbd
                       type: boolean
                     ingress:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: ingress contains tbd
                       type: object
                     interface:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: interface contains tbd
                       type: object
                     kubernetes_netloc:
@@ -8395,10 +8143,6 @@ spec:
                       description: kubernetes_service_ip contains tbd
                       type: string
                     maas_ingress:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: maas_ingress contains tbd
                       type: object
                     pod_cidr:
@@ -8408,41 +8152,21 @@ spec:
                       description: public contains tbd
                       type: string
                     region_api:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: region_api contains tbd
                       type: object
                     region_proxy:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: region_proxy contains tbd
                       type: object
                     service_cidr:
                       description: service_cidr contains tbd
                       type: string
                     service_client:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: service_client contains tbd
                       type: object
                     service_peer:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: service_peer contains tbd
                       type: object
                     vip:
-                      additionalProperties:
-                        additionalProperties:
-                          type: string
-                        type: object
                       description: vip contains tbd
                       type: object
                   type: object
@@ -8488,23 +8212,9 @@ spec:
                             type: object
                           limits:
                             description: limits contains tbd
-                            properties:
-                              cpu:
-                                description: cpu contains tbd
-                                type: string
-                              memory:
-                                description: memory contains tbd
-                                type: string
                             type: object
                           requests:
                             description: requests contains tbd
-                            properties:
-                              cpu:
-                                description: cpu contains tbd
-                                type: string
-                              memory:
-                                description: memory contains tbd
-                                type: string
                             type: object
                           snapshot_repository:
                             description: snapshot_repository contains tbd

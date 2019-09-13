@@ -3,56 +3,20 @@
   "type": "object", 
   "properties": {
     "ingress": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "ingress contains tbd"
+      "description": "ingress contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "region_api": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "region_api contains tbd"
+      "description": "region_api contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "service_peer": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "service_peer contains tbd"
+      "description": "service_peer contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "maas_ingress": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "maas_ingress contains tbd"
+      "description": "maas_ingress contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "kubernetes_netloc": {
       "type": [
@@ -80,43 +44,16 @@
       "description": "host_namespace contains tbd"
     }, 
     "region_proxy": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "region_proxy contains tbd"
+      "description": "region_proxy contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "vip": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "vip contains tbd"
+      "description": "vip contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "api": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "api contains tbd"
+      "description": "api contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "cluster": {
       "type": [
@@ -133,43 +70,16 @@
       "description": "kubernetes_service_ip contains tbd"
     }, 
     "service_client": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "service_client contains tbd"
+      "description": "service_client contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "interface": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "interface contains tbd"
+      "description": "interface contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "drydock": {
-      "additionalProperties": {
-        "additionalProperties": {
-          "type": [
-            "string", 
-            "null"
-          ]
-        }, 
-        "type": "object"
-      }, 
-      "type": "object", 
-      "description": "drydock contains tbd"
+      "description": "drydock contains tbd", 
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "service_cidr": {
       "type": [

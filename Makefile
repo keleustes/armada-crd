@@ -62,7 +62,7 @@ openapi-gen:
 	mkdir -p swagger
 	# Ensure to build openapi-gen first from: https://github.com/keleustes/kube-openapi/tree/mapmap
 	# GO111MODULE=on go run ${OPENAPI_GEN} -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
-	openapi-gen -i "k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
+	openapi-gen -i "k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
 
 swagger-gen:
 	mkdir -p swagger

@@ -4,7 +4,7 @@
   "properties": {
     "security_context": {
       "description": "security_context contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodSecurityContext"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "mount_path": {
       "type": [
@@ -23,15 +23,15 @@
     }, 
     "affinity": {
       "description": "affinity contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "env": {
       "description": "env contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodEnv"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "lifecycle": {
       "description": "lifecycle contains tbd", 
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodLifecycle"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "resources": {
       "additionalProperties": {

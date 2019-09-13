@@ -1,10 +1,22 @@
 {
   "oneOf": [
     {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVImages"
+    }, 
+    {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestStatus"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPod"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretAnchor"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestSpec"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartValues"
@@ -13,16 +25,22 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
     }, 
     {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+    }, 
+    {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaProtectedRelease"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretKeyrings"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroup"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVGlobal"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifest"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
@@ -31,10 +49,25 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVConf"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResources"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTls"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePre"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.HelmResourceCondition"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetwork"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretEtcd"
@@ -43,16 +76,19 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSource"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType2"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupStatus"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartStatus"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrap"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodSecurityContext"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSpec"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaDelete"
@@ -64,127 +100,13 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretMaasRegion"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodEnv"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorageclass"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgrade"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNodes"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorage"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifest"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodLifecycle"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitNative"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVApiserver"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWait"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitResourcesItems"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretAnchor"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChart"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVImages"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaManifestSpec"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartStatus"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroup"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceCurator"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResources"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTlsCa"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePre"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVTls"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVService"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaHookActionItems"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartSpec"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDependencies"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodAffinity"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceTest"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretKeyrings"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolume"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointAuth"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.FieldsV1"
@@ -193,19 +115,28 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradeOptions"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgrade"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ManagedFieldsEntry"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVSecretServiceAccount"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceFluentbit"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVAnchor"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePost"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVVolumeBackup"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVBootstrapping"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChartGroupSpec"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitNative"
     }, 
     {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaTestOptions"
@@ -217,22 +148,22 @@
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference"
     }, 
     {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWait"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaWaitResourcesItems"
+    }, 
+    {
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+    }, 
+    {
       "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaTest"
     }, 
     {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDevelopment"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVEndpointType1"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSnapshotRepository"
-    }, 
-    {
-      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaUpgradePost"
+      "$ref": "https://raw.githubusercontent.com/keleustes/armada-crd/master/kubeval/master/_definitions.json#/definitions/org.airshipit.armada.v1alpha1.ArmadaChart"
     }
   ]
 }

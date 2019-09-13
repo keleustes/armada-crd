@@ -4,7 +4,7 @@
   "properties": {
     "livenessProbe": {
       "description": "livenessProbe contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVLivenessprobe"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "labels": {
       "additionalProperties": {
@@ -38,11 +38,11 @@
     }, 
     "global": {
       "description": "global contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVGlobal"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "ceph_mgr_modules_config": {
       "description": "ceph_mgr_modules_config contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVCephMgrModulesConfig"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "conf": {
       "description": "conf contains tbd", 
@@ -58,7 +58,7 @@
     }, 
     "monitoring": {
       "description": "monitoring contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVMonitoring"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "network": {
       "description": "network contains tbd", 
@@ -70,7 +70,7 @@
     }, 
     "storage": {
       "description": "storage contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorage"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "prod_environment": {
       "type": "boolean", 
@@ -88,7 +88,7 @@
     }, 
     "nodes": {
       "items": {
-        "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNodes"
+        "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
       }, 
       "type": [
         "array", 
@@ -102,11 +102,11 @@
     }, 
     "kube_service": {
       "description": "kube_service contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVKubeService"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "jobs": {
       "description": "jobs contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVJobs"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "replicas": {
       "additionalProperties": {
@@ -122,7 +122,7 @@
     }, 
     "dependencies": {
       "description": "dependencies contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVDependencies"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "deployment": {
       "additionalProperties": {
@@ -133,11 +133,11 @@
     }, 
     "networking": {
       "description": "networking contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVNetworking"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "data": {
       "description": "data contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVData"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "bootstrapping": {
       "description": "bootstrapping contains tbd", 
@@ -153,7 +153,7 @@
     }, 
     "apiserver": {
       "description": "apiserver contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVApiserver"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "endpoints": {
       "description": "endpoints contains tbd. JEB: Would have been too consistent. Different structures are used depending on the direction of the wind. Endpoints *map[string]AVEndpoint `json:\"endpoints,omitempty\"`", 
@@ -174,11 +174,11 @@
     }, 
     "anchor": {
       "description": "anchor contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVAnchor"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "storageclass": {
       "description": "storageclass contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVStorageclass"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }
   }
 }

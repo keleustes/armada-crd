@@ -30,42 +30,20 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor":                        schema_pkg_apis_armada_v1alpha1_AVAnchor(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver":                     schema_pkg_apis_armada_v1alpha1_AVApiserver(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap":                     schema_pkg_apis_armada_v1alpha1_AVBootstrap(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping":                 schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig":          schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf":                          schema_pkg_apis_armada_v1alpha1_AVConf(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData":                          schema_pkg_apis_armada_v1alpha1_AVData(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies":                  schema_pkg_apis_armada_v1alpha1_AVDependencies(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment":                   schema_pkg_apis_armada_v1alpha1_AVDevelopment(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointAuth":                  schema_pkg_apis_armada_v1alpha1_AVEndpointAuth(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointPort":                  schema_pkg_apis_armada_v1alpha1_AVEndpointPort(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType1":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType1(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpointType2":                 schema_pkg_apis_armada_v1alpha1_AVEndpointType2(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints":                     schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal":                        schema_pkg_apis_armada_v1alpha1_AVGlobal(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages":                        schema_pkg_apis_armada_v1alpha1_AVImages(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs":                          schema_pkg_apis_armada_v1alpha1_AVJobs(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService":                   schema_pkg_apis_armada_v1alpha1_AVKubeService(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe":                 schema_pkg_apis_armada_v1alpha1_AVLivenessprobe(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring":                    schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork":                       schema_pkg_apis_armada_v1alpha1_AVNetwork(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking":                    schema_pkg_apis_armada_v1alpha1_AVNetworking(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes":                         schema_pkg_apis_armada_v1alpha1_AVNodes(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod":                           schema_pkg_apis_armada_v1alpha1_AVPod(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity":                   schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv":                        schema_pkg_apis_armada_v1alpha1_AVPodEnv(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle":                  schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodReplicas":                   schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator":            schema_pkg_apis_armada_v1alpha1_AVPodResourceCurator(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit":          schema_pkg_apis_armada_v1alpha1_AVPodResourceFluentbit(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync":      schema_pkg_apis_armada_v1alpha1_AVPodResourceImageRepoSync(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings":           schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository": schema_pkg_apis_armada_v1alpha1_AVPodResourceSnapshotRepository(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest":               schema_pkg_apis_armada_v1alpha1_AVPodResourceTest(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources":                  schema_pkg_apis_armada_v1alpha1_AVPodResources(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext":            schema_pkg_apis_armada_v1alpha1_AVPodSecurityContext(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretAnchor":                  schema_pkg_apis_armada_v1alpha1_AVSecretAnchor(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretEtcd":                    schema_pkg_apis_armada_v1alpha1_AVSecretEtcd(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretKeyrings":                schema_pkg_apis_armada_v1alpha1_AVSecretKeyrings(ref),
@@ -73,8 +51,6 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecretServiceAccount":          schema_pkg_apis_armada_v1alpha1_AVSecretServiceAccount(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets":                       schema_pkg_apis_armada_v1alpha1_AVSecrets(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService":                       schema_pkg_apis_armada_v1alpha1_AVService(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage":                       schema_pkg_apis_armada_v1alpha1_AVStorage(ref),
-		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass":                  schema_pkg_apis_armada_v1alpha1_AVStorageclass(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTls":                           schema_pkg_apis_armada_v1alpha1_AVTls(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVTlsCa":                         schema_pkg_apis_armada_v1alpha1_AVTlsCa(ref),
 		"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume":                        schema_pkg_apis_armada_v1alpha1_AVVolume(ref),
@@ -174,26 +150,9 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta":                                            schema_pkg_apis_meta_v1_TypeMeta(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions":                                       schema_pkg_apis_meta_v1_UpdateOptions(ref),
 		"k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent":                                          schema_pkg_apis_meta_v1_WatchEvent(ref),
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVAnchor(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVApiserver(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
+		"k8s.io/apimachinery/pkg/runtime.RawExtension":                                             schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref),
+		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                                                 schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
+		"k8s.io/apimachinery/pkg/runtime.Unknown":                                                  schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
 	}
 }
 
@@ -263,16 +222,6 @@ func schema_pkg_apis_armada_v1alpha1_AVBootstrapping(ref common.ReferenceCallbac
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVCephMgrModulesConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -282,599 +231,157 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 					"acconfig": {
 						SchemaProps: spec.SchemaProps{
 							Description: "acconfig contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"agent": {
 						SchemaProps: spec.SchemaProps{
 							Description: "agent contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"anchor": {
 						SchemaProps: spec.SchemaProps{
 							Description: "anchor contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"apache": {
 						SchemaProps: spec.SchemaProps{
 							Description: "apache contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"api_metadata": {
 						SchemaProps: spec.SchemaProps{
 							Description: "api_metadata contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"armada": {
 						SchemaProps: spec.SchemaProps{
 							Description: "armada contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"auto_bridge_add": {
 						SchemaProps: spec.SchemaProps{
 							Description: "auto_bridge_add contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"cache": {
 						SchemaProps: spec.SchemaProps{
 							Description: "cache contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"ceph": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ceph contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"cni_network_config": {
 						SchemaProps: spec.SchemaProps{
 							Description: "cni_network_config contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"conductor": {
 						SchemaProps: spec.SchemaProps{
 							Description: "conductor contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"config": {
 						SchemaProps: spec.SchemaProps{
 							Description: "config contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"consoleauth": {
 						SchemaProps: spec.SchemaProps{
 							Description: "consoleauth contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"controllers": {
 						SchemaProps: spec.SchemaProps{
 							Description: "controllers contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"coredns": {
 						SchemaProps: spec.SchemaProps{
 							Description: "coredns contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"curator": {
 						SchemaProps: spec.SchemaProps{
 							Description: "curator contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"deckhand": {
 						SchemaProps: spec.SchemaProps{
 							Description: "deckhand contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"defaults": {
 						SchemaProps: spec.SchemaProps{
 							Description: "defaults contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"drydock": {
 						SchemaProps: spec.SchemaProps{
 							Description: "drydock contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"elasticsearch": {
 						SchemaProps: spec.SchemaProps{
 							Description: "elasticsearch contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"encryption_provider": {
 						SchemaProps: spec.SchemaProps{
 							Description: "encryption_provider contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"eventconfig": {
 						SchemaProps: spec.SchemaProps{
 							Description: "eventconfig contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"exec": {
 						SchemaProps: spec.SchemaProps{
 							Description: "exec contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"integer"},
-													Format: "int32",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"features": {
 						SchemaProps: spec.SchemaProps{
 							Description: "features contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"fluentbit": {
 						SchemaProps: spec.SchemaProps{
 							Description: "fluentbit contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"fluentd": {
 						SchemaProps: spec.SchemaProps{
 							Description: "fluentd contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"httpd": {
@@ -887,254 +394,67 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 					"ingress": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ingress contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"job": {
 						SchemaProps: spec.SchemaProps{
 							Description: "job contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"keystone": {
 						SchemaProps: spec.SchemaProps{
 							Description: "keystone contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"ldap": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ldap contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"logging": {
 						SchemaProps: spec.SchemaProps{
 							Description: "logging contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"maas": {
 						SchemaProps: spec.SchemaProps{
 							Description: "maas contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"metadata_agent": {
 						SchemaProps: spec.SchemaProps{
 							Description: "metadata_agent contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"neutron": {
 						SchemaProps: spec.SchemaProps{
 							Description: "neutron contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"node": {
 						SchemaProps: spec.SchemaProps{
 							Description: "node contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"nova": {
 						SchemaProps: spec.SchemaProps{
 							Description: "nova contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"novncproxy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "novncproxy contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"openstack_version": {
@@ -1147,346 +467,91 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 					"osapi": {
 						SchemaProps: spec.SchemaProps{
 							Description: "osapi contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"osd": {
 						SchemaProps: spec.SchemaProps{
 							Description: "osd contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"overrides": {
 						SchemaProps: spec.SchemaProps{
 							Description: "overrides contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"parsers": {
 						SchemaProps: spec.SchemaProps{
 							Description: "parsers contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"paste": {
 						SchemaProps: spec.SchemaProps{
 							Description: "paste contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"placement": {
 						SchemaProps: spec.SchemaProps{
 							Description: "placement contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"plugins": {
 						SchemaProps: spec.SchemaProps{
 							Description: "plugins contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"pool": {
 						SchemaProps: spec.SchemaProps{
 							Description: "pool contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"postgresql": {
 						SchemaProps: spec.SchemaProps{
 							Description: "postgresql contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"prometheus": {
 						SchemaProps: spec.SchemaProps{
 							Description: "prometheus contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"provisioning": {
 						SchemaProps: spec.SchemaProps{
 							Description: "provisioning contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"qemu": {
 						SchemaProps: spec.SchemaProps{
 							Description: "qemu contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"rgw_ks": {
 						SchemaProps: spec.SchemaProps{
 							Description: "rgw_ks contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"rgw_s3": {
 						SchemaProps: spec.SchemaProps{
 							Description: "rgw_s3 contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"scheduler": {
 						SchemaProps: spec.SchemaProps{
 							Description: "scheduler contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"security": {
@@ -1499,116 +564,31 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 					"shipyard": {
 						SchemaProps: spec.SchemaProps{
 							Description: "shipyard contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"software": {
 						SchemaProps: spec.SchemaProps{
 							Description: "software contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"spiceproxy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "spiceproxy contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"ssh": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ssh contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"storage": {
 						SchemaProps: spec.SchemaProps{
 							Description: "storage contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"sysctl": {
@@ -1629,72 +609,20 @@ func schema_pkg_apis_armada_v1alpha1_AVConf(ref common.ReferenceCallback) common
 					"test": {
 						SchemaProps: spec.SchemaProps{
 							Description: "test contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"uamlite": {
 						SchemaProps: spec.SchemaProps{
 							Description: "uamlite contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 				},
 			},
 		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVData(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVDependencies(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
+		Dependencies: []string{
+			"k8s.io/apimachinery/pkg/runtime.RawExtension"},
 	}
 }
 
@@ -2532,16 +1460,6 @@ func schema_pkg_apis_armada_v1alpha1_AVEndpoints(ref common.ReferenceCallback) c
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVGlobal(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVImages(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2576,46 +1494,6 @@ func schema_pkg_apis_armada_v1alpha1_AVImages(ref common.ReferenceCallback) comm
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVJobs(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVKubeService(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVLivenessprobe(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVMonitoring(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2625,24 +1503,7 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"api": {
 						SchemaProps: spec.SchemaProps{
 							Description: "api contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"backend": {
@@ -2669,24 +1530,7 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"drydock": {
 						SchemaProps: spec.SchemaProps{
 							Description: "drydock contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"host_namespace": {
@@ -2699,47 +1543,13 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"ingress": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ingress contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"interface": {
 						SchemaProps: spec.SchemaProps{
 							Description: "interface contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"kubernetes_netloc": {
@@ -2759,24 +1569,7 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"maas_ingress": {
 						SchemaProps: spec.SchemaProps{
 							Description: "maas_ingress contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"pod_cidr": {
@@ -2796,47 +1589,13 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"region_api": {
 						SchemaProps: spec.SchemaProps{
 							Description: "region_api contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"region_proxy": {
 						SchemaProps: spec.SchemaProps{
 							Description: "region_proxy contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"service_cidr": {
@@ -2849,95 +1608,26 @@ func schema_pkg_apis_armada_v1alpha1_AVNetwork(ref common.ReferenceCallback) com
 					"service_client": {
 						SchemaProps: spec.SchemaProps{
 							Description: "service_client contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"service_peer": {
 						SchemaProps: spec.SchemaProps{
 							Description: "service_peer contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"vip": {
 						SchemaProps: spec.SchemaProps{
 							Description: "vip contains tbd",
-							Type:        []string{"object"},
-							AdditionalProperties: &spec.SchemaOrBool{
-								Allows: true,
-								Schema: &spec.Schema{
-									SchemaProps: spec.SchemaProps{
-										Type: []string{"object"},
-										AdditionalProperties: &spec.SchemaOrBool{
-											Allows: true,
-											Schema: &spec.Schema{
-												SchemaProps: spec.SchemaProps{
-													Type:   []string{"string"},
-													Format: "",
-												},
-											},
-										},
-									},
-								},
-							},
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 				},
 			},
 		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVNetworking(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVNodes(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
+		Dependencies: []string{
+			"k8s.io/apimachinery/pkg/runtime.RawExtension"},
 	}
 }
 
@@ -2950,13 +1640,13 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 					"affinity": {
 						SchemaProps: spec.SchemaProps{
 							Description: "affinity contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"env": {
 						SchemaProps: spec.SchemaProps{
 							Description: "env contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"mount_path": {
@@ -2969,7 +1659,7 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 					"lifecycle": {
 						SchemaProps: spec.SchemaProps{
 							Description: "lifecycle contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"replicas": {
@@ -3004,84 +1694,14 @@ func schema_pkg_apis_armada_v1alpha1_AVPod(ref common.ReferenceCallback) common.
 					"security_context": {
 						SchemaProps: spec.SchemaProps{
 							Description: "security_context contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodAffinity", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodEnv", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodLifecycle", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodSecurityContext"},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodAffinity(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodEnv(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodLifecycle(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodReplicas(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodResourceCurator(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodResourceFluentbit(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodResourceImageRepoSync(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResources", "k8s.io/apimachinery/pkg/runtime.RawExtension"},
 	}
 }
 
@@ -3111,26 +1731,6 @@ func schema_pkg_apis_armada_v1alpha1_AVPodResourceSettings(ref common.ReferenceC
 	}
 }
 
-func schema_pkg_apis_armada_v1alpha1_AVPodResourceSnapshotRepository(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodResourceTest(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
 func schema_pkg_apis_armada_v1alpha1_AVPodResources(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -3140,60 +1740,50 @@ func schema_pkg_apis_armada_v1alpha1_AVPodResources(ref common.ReferenceCallback
 					"curator": {
 						SchemaProps: spec.SchemaProps{
 							Description: "curator contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"fluentbit": {
 						SchemaProps: spec.SchemaProps{
 							Description: "fluentbit contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"limits": {
 						SchemaProps: spec.SchemaProps{
 							Description: "limits contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"requests": {
 						SchemaProps: spec.SchemaProps{
 							Description: "requests contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"image_repo_sync": {
 						SchemaProps: spec.SchemaProps{
 							Description: "image_repo_sync contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"snapshot_repository": {
 						SchemaProps: spec.SchemaProps{
 							Description: "snapshot_repository contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"tests": {
 						SchemaProps: spec.SchemaProps{
 							Description: "tests contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceCurator", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceFluentbit", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceImageRepoSync", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSettings", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceSnapshotRepository", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPodResourceTest"},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVPodSecurityContext(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
+			"k8s.io/apimachinery/pkg/runtime.RawExtension"},
 	}
 }
 
@@ -3372,26 +1962,6 @@ func schema_pkg_apis_armada_v1alpha1_AVService(ref common.ReferenceCallback) com
 						},
 					},
 				},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVStorage(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
-			},
-		},
-	}
-}
-
-func schema_pkg_apis_armada_v1alpha1_AVStorageclass(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Type: []string{"object"},
 			},
 		},
 	}
@@ -4331,13 +2901,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"anchor": {
 						SchemaProps: spec.SchemaProps{
 							Description: "anchor contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"apiserver": {
 						SchemaProps: spec.SchemaProps{
 							Description: "apiserver contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"bootstrap": {
@@ -4370,7 +2940,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"ceph_mgr_modules_config": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ceph_mgr_modules_config contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"command_prefix": {
@@ -4396,13 +2966,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"data": {
 						SchemaProps: spec.SchemaProps{
 							Description: "data contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"dependencies": {
 						SchemaProps: spec.SchemaProps{
 							Description: "dependencies contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"deployment": {
@@ -4456,19 +3026,19 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"global": {
 						SchemaProps: spec.SchemaProps{
 							Description: "global contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"jobs": {
 						SchemaProps: spec.SchemaProps{
 							Description: "jobs contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"kube_service": {
 						SchemaProps: spec.SchemaProps{
 							Description: "kube_service contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"labels": {
@@ -4497,7 +3067,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"livenessProbe": {
 						SchemaProps: spec.SchemaProps{
 							Description: "livenessProbe contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"manifests": {
@@ -4518,7 +3088,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"monitoring": {
 						SchemaProps: spec.SchemaProps{
 							Description: "monitoring contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"network": {
@@ -4530,7 +3100,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"networking": {
 						SchemaProps: spec.SchemaProps{
 							Description: "networking contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"nodes": {
@@ -4540,7 +3110,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 							Items: &spec.SchemaOrArray{
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
-										Ref: ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes"),
+										Ref: ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 									},
 								},
 							},
@@ -4589,13 +3159,13 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 					"storage": {
 						SchemaProps: spec.SchemaProps{
 							Description: "storage contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"storageclass": {
 						SchemaProps: spec.SchemaProps{
 							Description: "storageclass contains tbd",
-							Ref:         ref("github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass"),
+							Ref:         ref("k8s.io/apimachinery/pkg/runtime.RawExtension"),
 						},
 					},
 					"volume": {
@@ -4608,7 +3178,7 @@ func schema_pkg_apis_armada_v1alpha1_ArmadaChartValues(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVAnchor", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVApiserver", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVCephMgrModulesConfig", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVData", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDependencies", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVGlobal", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVJobs", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVKubeService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVLivenessprobe", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVMonitoring", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetworking", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNodes", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorage", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVStorageclass", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume"},
+			"github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrap", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVBootstrapping", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVConf", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVDevelopment", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVEndpoints", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVImages", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVNetwork", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVPod", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVSecrets", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVService", "github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1.AVVolume", "k8s.io/apimachinery/pkg/runtime.RawExtension"},
 	}
 }
 
@@ -7931,5 +6501,88 @@ func schema_pkg_apis_meta_v1_WatchEvent(ref common.ReferenceCallback) common.Ope
 		},
 		Dependencies: []string{
 			"k8s.io/apimachinery/pkg/runtime.RawExtension"},
+	}
+}
+
+func schema_k8sio_apimachinery_pkg_runtime_RawExtension(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "RawExtension is used to hold extensions in external versions.\n\nTo use this, make a field which has RawExtension as its type in your external, versioned struct, and Object in your internal struct. You also need to register your various plugin types.\n\n// Internal package: type MyAPIObject struct {\n\truntime.TypeMeta `json:\",inline\"`\n\tMyPlugin runtime.Object `json:\"myPlugin\"`\n} type PluginA struct {\n\tAOption string `json:\"aOption\"`\n}\n\n// External package: type MyAPIObject struct {\n\truntime.TypeMeta `json:\",inline\"`\n\tMyPlugin runtime.RawExtension `json:\"myPlugin\"`\n} type PluginA struct {\n\tAOption string `json:\"aOption\"`\n}\n\n// On the wire, the JSON will look something like this: {\n\t\"kind\":\"MyAPIObject\",\n\t\"apiVersion\":\"v1\",\n\t\"myPlugin\": {\n\t\t\"kind\":\"PluginA\",\n\t\t\"aOption\":\"foo\",\n\t},\n}\n\nSo what happens? Decode first uses json or yaml to unmarshal the serialized data into your external MyAPIObject. That causes the raw JSON to be stored, but not unpacked. The next step is to copy (using pkg/conversion) into the internal struct. The runtime package's DefaultScheme has conversion functions installed which will unpack the JSON stored in RawExtension, turning it into the correct object type, and storing it in the Object. (TODO: In the case where the object is of an unknown type, a runtime.Unknown object will be created and stored.)",
+				Type:        []string{"object"},
+			},
+		},
+	}
+}
+
+func schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "TypeMeta is shared by all top level objects. The proper way to use it is to inline it in your type, like this: type MyAwesomeAPIObject struct {\n     runtime.TypeMeta    `json:\",inline\"`\n     ... // other fields\n} func (obj *MyAwesomeAPIObject) SetGroupVersionKind(gvk *metav1.GroupVersionKind) { metav1.UpdateTypeMeta(obj,gvk) }; GroupVersionKind() *GroupVersionKind\n\nTypeMeta is provided here for convenience. You may use it directly from this package or define your own with the same fields.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+				},
+			},
+		},
+	}
+}
+
+func schema_k8sio_apimachinery_pkg_runtime_Unknown(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Unknown allows api objects with unknown types to be passed-through. This can be used to deal with the API objects from a plug-in. Unknown objects still have functioning TypeMeta features-- kind, version, etc. metadata and field mutatation.",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"Raw": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Raw will hold the complete serialized object which couldn't be matched with a registered type. Most likely, nothing should be done with this except for passing it through the system.",
+							Type:        []string{"string"},
+							Format:      "byte",
+						},
+					},
+					"ContentEncoding": {
+						SchemaProps: spec.SchemaProps{
+							Description: "ContentEncoding is encoding used to encode 'Raw' data. Unspecified means no encoding.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"ContentType": {
+						SchemaProps: spec.SchemaProps{
+							Description: "ContentType  is serialization method used to serialize 'Raw'. Unspecified means ContentTypeJSON.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+				},
+				Required: []string{"Raw", "ContentEncoding", "ContentType"},
+			},
+		},
 	}
 }

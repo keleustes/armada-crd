@@ -4,31 +4,31 @@
   "properties": {
     "tests": {
       "description": "tests contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceTest"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "limits": {
       "description": "limits contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "fluentbit": {
       "description": "fluentbit contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceFluentbit"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "image_repo_sync": {
       "description": "image_repo_sync contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceImageRepoSync"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "snapshot_repository": {
       "description": "snapshot_repository contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSnapshotRepository"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "curator": {
       "description": "curator contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceCurator"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }, 
     "requests": {
       "description": "requests contains tbd", 
-      "$ref": "_definitions.json#/definitions/org.airshipit.armada.v1alpha1.AVPodResourceSettings"
+      "$ref": "_definitions.json#/definitions/io.k8s.apimachinery.pkg.apis.meta.runtime.RawExtension"
     }
   }
 }

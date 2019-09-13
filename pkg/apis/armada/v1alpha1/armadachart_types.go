@@ -27,9 +27,9 @@ import (
 
 type ArmadaChartValues struct {
 	// anchor contains tbd
-	Anchor *AVAnchor `json:"anchor,omitempty"`
+	Anchor *runtime.RawExtension `json:"anchor,omitempty"`
 	// apiserver contains tbd
-	Apiserver *AVApiserver `json:"apiserver,omitempty"`
+	Apiserver *runtime.RawExtension `json:"apiserver,omitempty"`
 	// bootstrap contains tbd
 	Bootstrap *AVBootstrap `json:"bootstrap,omitempty"`
 	// bootstrapping contains tbd
@@ -37,15 +37,15 @@ type ArmadaChartValues struct {
 	// ceph_client contains tbd
 	CephClient *map[string]string `json:"ceph_client,omitempty"`
 	// ceph_mgr_modules_config contains tbd
-	CephMgrModulesConfig *AVCephMgrModulesConfig `json:"ceph_mgr_modules_config,omitempty"`
+	CephMgrModulesConfig *runtime.RawExtension `json:"ceph_mgr_modules_config,omitempty"`
 	// command_prefix contains tbd
 	CommandPrefix []string `json:"command_prefix,omitempty"`
 	// conf contains tbd
 	Conf *AVConf `json:"conf,omitempty"`
 	// data contains tbd
-	Data *AVData `json:"data,omitempty"`
+	Data *runtime.RawExtension `json:"data,omitempty"`
 	// dependencies contains tbd
-	Dependencies *AVDependencies `json:"dependencies,omitempty"`
+	Dependencies *runtime.RawExtension `json:"dependencies,omitempty"`
 	// deployment contains tbd
 	Deployment *map[string]bool `json:"deployment,omitempty"`
 	// development contains tbd
@@ -60,26 +60,26 @@ type ArmadaChartValues struct {
 	// images contains tbd
 	Images *AVImages `json:"images,omitempty"`
 	// global contains tbd
-	Global *AVGlobal `json:"global,omitempty"`
+	Global *runtime.RawExtension `json:"global,omitempty"`
 	// jobs contains tbd
-	Jobs *AVJobs `json:"jobs,omitempty"`
+	Jobs *runtime.RawExtension `json:"jobs,omitempty"`
 	// kube_service contains tbd
-	KubeService *AVKubeService `json:"kube_service,omitempty"`
+	KubeService *runtime.RawExtension `json:"kube_service,omitempty"`
 	// labels contains tbd
 	// +k8s:openapi-gen=true
 	Labels *map[string]ArmadaMapString `json:"labels,omitempty"`
 	// livenessProbe contains tbd
-	Livenessprobe *AVLivenessprobe `json:"livenessProbe,omitempty"`
+	Livenessprobe *runtime.RawExtension `json:"livenessProbe,omitempty"`
 	// manifests contains tbd
 	Manifests *map[string]bool `json:"manifests,omitempty"`
 	// monitoring contains tbd
-	Monitoring *AVMonitoring `json:"monitoring,omitempty"`
+	Monitoring *runtime.RawExtension `json:"monitoring,omitempty"`
 	// network contains tbd
 	Network *AVNetwork `json:"network,omitempty"`
 	// networking contains tbd
-	Networking *AVNetworking `json:"networking,omitempty"`
+	Networking *runtime.RawExtension `json:"networking,omitempty"`
 	// nodes contains tbd
-	Nodes []AVNodes `json:"nodes,omitempty"`
+	Nodes []runtime.RawExtension `json:"nodes,omitempty"`
 	// pod contains tbd
 	Pod *AVPod `json:"pod,omitempty"`
 	// prod_environment contains tbd
@@ -91,9 +91,9 @@ type ArmadaChartValues struct {
 	// service contains tbd
 	Service *AVService `json:"service,omitempty"`
 	// storage contains tbd
-	Storage *AVStorage `json:"storage,omitempty"`
+	Storage *runtime.RawExtension `json:"storage,omitempty"`
 	// storageclass contains tbd
-	Storageclass *AVStorageclass `json:"storageclass,omitempty"`
+	Storageclass *runtime.RawExtension `json:"storageclass,omitempty"`
 	// volume contains tbd
 	Volume *AVVolume `json:"volume,omitempty"`
 }
