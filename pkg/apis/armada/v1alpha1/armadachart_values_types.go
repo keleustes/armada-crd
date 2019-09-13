@@ -20,35 +20,46 @@ import (
 
 type AVPod struct {
 	// affinity contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Affinity *runtime.RawExtension `json:"affinity,omitempty"`
 	// env contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Env *runtime.RawExtension `json:"env,omitempty"`
 	// mount_path contains tbd
 	MountPath string `json:"mount_path,omitempty"`
 	// lifecycle contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Lifecycle *runtime.RawExtension `json:"lifecycle,omitempty"`
 	// replicas contains tbd
 	Replicas map[string]int `json:"replicas,omitempty"`
 	// resources contains tbd
 	Resources map[string]AVPodResources `json:"resources,omitempty"`
 	// security_context contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	SecurityContext *runtime.RawExtension `json:"security_context,omitempty"`
 }
 
 type AVPodResources struct {
 	// curator contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Curator *runtime.RawExtension `json:"curator,omitempty"`
 	// fluentbit contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Fluentbit *runtime.RawExtension `json:"fluentbit,omitempty"`
 	// limits contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Limits *runtime.RawExtension `json:"limits,omitempty"`
 	// requests contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Requests *runtime.RawExtension `json:"requests,omitempty"`
 	// image_repo_sync contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	ImageRepoSync *runtime.RawExtension `json:"image_repo_sync,omitempty"`
 	// snapshot_repository contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	SnapshortRepository *runtime.RawExtension `json:"snapshot_repository,omitempty"`
 	// tests contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Tests *runtime.RawExtension `json:"tests,omitempty"`
 }
 
@@ -384,130 +395,189 @@ type AVSecretEtcd struct {
 
 type AVConf struct {
 	// acconfig contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Acconfig *runtime.RawExtension `json:"acconfig,omitempty"`
 	// agent contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Agent *runtime.RawExtension `json:"agent,omitempty"`
 	// anchor contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Anchor *runtime.RawExtension `json:"anchor,omitempty"`
 	// apache contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Apache *runtime.RawExtension `json:"apache,omitempty"`
 	// api_metadata contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	ApiMetadata *runtime.RawExtension `json:"api_metadata,omitempty"`
 	// armada contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Armada *runtime.RawExtension `json:"armada,omitempty"`
 	// auto_bridge_add contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	AutoBridgeAdd *runtime.RawExtension `json:"auto_bridge_add,omitempty"`
 	// cache contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Cache *runtime.RawExtension `json:"cache,omitempty"`
 	// ceph contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Ceph *runtime.RawExtension `json:"ceph,omitempty"`
 	// cni_network_config contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	CniNetworkConfig *runtime.RawExtension `json:"cni_network_config,omitempty"`
 	// conductor contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Conductor *runtime.RawExtension `json:"conductor,omitempty"`
 	// config contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Config *runtime.RawExtension `json:"config,omitempty"`
 	// consoleauth contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Consoleauth *runtime.RawExtension `json:"consoleauth,omitempty"`
 	// controllers contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Controllers *runtime.RawExtension `json:"controllers,omitempty"`
 	// coredns contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Coredns *runtime.RawExtension `json:"coredns,omitempty"`
 	// curator contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Curator *runtime.RawExtension `json:"curator,omitempty"`
 	// deckhand contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Deckhand *runtime.RawExtension `json:"deckhand,omitempty"`
 	// defaults contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Defaults *runtime.RawExtension `json:"defaults,omitempty"`
 	// drydock contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Drydock *runtime.RawExtension `json:"drydock,omitempty"`
 	// elasticsearch contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Elasticsearch *runtime.RawExtension `json:"elasticsearch,omitempty"`
 	// encryption_provider contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	EncryptionProvider *runtime.RawExtension `json:"encryption_provider,omitempty"`
 	// eventconfig contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Eventconfig *runtime.RawExtension `json:"eventconfig,omitempty"`
 	// exec contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Exec *runtime.RawExtension `json:"exec,omitempty"`
 	// features contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Features *runtime.RawExtension `json:"features,omitempty"`
 	// fluentbit contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Fluentbit *runtime.RawExtension `json:"fluentbit,omitempty"`
 	// fluentd contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Fluentd *runtime.RawExtension `json:"fluentd,omitempty"`
 	// httpd contains tbd
 	Httpd string `json:"httpd,omitempty"`
 	// ingress contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Ingress *runtime.RawExtension `json:"ingress,omitempty"`
 	// job contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Job *runtime.RawExtension `json:"job,omitempty"`
 	// keystone contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Keystone *runtime.RawExtension `json:"keystone,omitempty"`
 	// ldap contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Ldap *runtime.RawExtension `json:"ldap,omitempty"`
 	// logging contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Logging *runtime.RawExtension `json:"logging,omitempty"`
 	// maas contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Maas *runtime.RawExtension `json:"maas,omitempty"`
 	// metadata_agent contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	MetadataAgent *runtime.RawExtension `json:"metadata_agent,omitempty"`
 	// neutron contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Neutron *runtime.RawExtension `json:"neutron,omitempty"`
 	// node contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Node *runtime.RawExtension `json:"node,omitempty"`
 	// nova contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Nova *runtime.RawExtension `json:"nova,omitempty"`
 	// novncproxy contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Novncproxy *runtime.RawExtension `json:"novncproxy,omitempty"`
 	// openstack_version contains tbd
 	OpenstackVersion string `json:"openstack_version,omitempty"`
 	// osapi contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Osapi *runtime.RawExtension `json:"osapi,omitempty"`
 	// osd contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Osd *runtime.RawExtension `json:"osd,omitempty"`
 	// overrides contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Overrides *runtime.RawExtension `json:"overrides,omitempty"`
 	// parsers contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Parsers *runtime.RawExtension `json:"parsers,omitempty"`
 	// paste contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Paste *runtime.RawExtension `json:"paste,omitempty"`
 	// placement contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Placement *runtime.RawExtension `json:"placement,omitempty"`
 	// plugins contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Plugins *runtime.RawExtension `json:"plugins,omitempty"`
 	// pool contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Pool *runtime.RawExtension `json:"pool,omitempty"`
 	// postgresql contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Postgresql *runtime.RawExtension `json:"postgresql,omitempty"`
 	// prometheus contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Prometheus *runtime.RawExtension `json:"prometheus,omitempty"`
 	// provisioning contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Provisioning *runtime.RawExtension `json:"provisioning,omitempty"`
 	// qemu contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Qemu *runtime.RawExtension `json:"qemu,omitempty"`
 	// rgw_ks contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	RgwKs *runtime.RawExtension `json:"rgw_ks,omitempty"`
 	// rgw_s3 contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	RgwS3 *runtime.RawExtension `json:"rgw_s3,omitempty"`
 	// scheduler contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Scheduler *runtime.RawExtension `json:"scheduler,omitempty"`
 	// security contains tbd
 	Security string `json:"security,omitempty"`
 	// shipyard contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Shipyard *runtime.RawExtension `json:"shipyard,omitempty"`
 	// software contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Software *runtime.RawExtension `json:"software,omitempty"`
 	// spiceproxy contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Spiceproxy *runtime.RawExtension `json:"spiceproxy,omitempty"`
 	// ssh contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Ssh *runtime.RawExtension `json:"ssh,omitempty"`
 	// storage contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Storage *runtime.RawExtension `json:"storage,omitempty"`
 	// sysctl contains tbd
 	Sysctl *map[string]string `json:"sysctl,omitempty"`
 	// test contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Test *runtime.RawExtension `json:"test,omitempty"`
 	// uamlite contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Uamlite *runtime.RawExtension `json:"uamlite,omitempty"`
 }
 
@@ -518,40 +588,50 @@ type AVDevelopment struct {
 
 type AVNetwork struct {
 	// api contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Api *runtime.RawExtension `json:"api,omitempty"`
 	// backend contains tbd
 	Backend []string `json:"backend,omitempty"`
 	// cluster contains tbd
 	Cluster string `json:"cluster,omitempty"`
 	// drydock contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Drydock *runtime.RawExtension `json:"drydock,omitempty"`
 	// host_namespace contains tbd
 	HostNamespace bool `json:"host_namespace,omitempty"`
 	// ingress contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Ingress *runtime.RawExtension `json:"ingress,omitempty"`
 	// interface contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Interface *runtime.RawExtension `json:"interface,omitempty"`
 	// kubernetes_netloc contains tbd
 	KubernetesNetloc string `json:"kubernetes_netloc,omitempty"`
 	// kubernetes_service_ip contains tbd
 	KubernetesServiceIp string `json:"kubernetes_service_ip,omitempty"`
 	// maas_ingress contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	MaasIngress *runtime.RawExtension `json:"maas_ingress,omitempty"`
 	// pod_cidr contains tbd
 	PodCidr string `json:"pod_cidr,omitempty"`
 	// public contains tbd
 	Public string `json:"public,omitempty"`
 	// region_api contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	RegionApi *runtime.RawExtension `json:"region_api,omitempty"`
 	// region_proxy contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	RegionProxy *runtime.RawExtension `json:"region_proxy,omitempty"`
 	// service_cidr contains tbd
 	ServiceCidr string `json:"service_cidr,omitempty"`
 	// service_client contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	ServiceClient *runtime.RawExtension `json:"service_client,omitempty"`
 	// service_peer contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	ServicePeer *runtime.RawExtension `json:"service_peer,omitempty"`
 	// vip contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Vip *runtime.RawExtension `json:"vip,omitempty"`
 }
 

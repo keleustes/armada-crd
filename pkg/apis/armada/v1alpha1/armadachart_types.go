@@ -27,8 +27,10 @@ import (
 
 type ArmadaChartValues struct {
 	// anchor contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Anchor *runtime.RawExtension `json:"anchor,omitempty"`
 	// apiserver contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Apiserver *runtime.RawExtension `json:"apiserver,omitempty"`
 	// bootstrap contains tbd
 	Bootstrap *AVBootstrap `json:"bootstrap,omitempty"`
@@ -37,14 +39,17 @@ type ArmadaChartValues struct {
 	// ceph_client contains tbd
 	CephClient *map[string]string `json:"ceph_client,omitempty"`
 	// ceph_mgr_modules_config contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	CephMgrModulesConfig *runtime.RawExtension `json:"ceph_mgr_modules_config,omitempty"`
 	// command_prefix contains tbd
 	CommandPrefix []string `json:"command_prefix,omitempty"`
 	// conf contains tbd
 	Conf *AVConf `json:"conf,omitempty"`
 	// data contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Data *runtime.RawExtension `json:"data,omitempty"`
 	// dependencies contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Dependencies *runtime.RawExtension `json:"dependencies,omitempty"`
 	// deployment contains tbd
 	Deployment *map[string]bool `json:"deployment,omitempty"`
@@ -60,25 +65,32 @@ type ArmadaChartValues struct {
 	// images contains tbd
 	Images *AVImages `json:"images,omitempty"`
 	// global contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Global *runtime.RawExtension `json:"global,omitempty"`
 	// jobs contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Jobs *runtime.RawExtension `json:"jobs,omitempty"`
 	// kube_service contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	KubeService *runtime.RawExtension `json:"kube_service,omitempty"`
 	// labels contains tbd
 	// +k8s:openapi-gen=true
 	Labels *map[string]ArmadaMapString `json:"labels,omitempty"`
 	// livenessProbe contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Livenessprobe *runtime.RawExtension `json:"livenessProbe,omitempty"`
 	// manifests contains tbd
 	Manifests *map[string]bool `json:"manifests,omitempty"`
 	// monitoring contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Monitoring *runtime.RawExtension `json:"monitoring,omitempty"`
 	// network contains tbd
 	Network *AVNetwork `json:"network,omitempty"`
 	// networking contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Networking *runtime.RawExtension `json:"networking,omitempty"`
 	// nodes contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Nodes []runtime.RawExtension `json:"nodes,omitempty"`
 	// pod contains tbd
 	Pod *AVPod `json:"pod,omitempty"`
@@ -91,8 +103,10 @@ type ArmadaChartValues struct {
 	// service contains tbd
 	Service *AVService `json:"service,omitempty"`
 	// storage contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Storage *runtime.RawExtension `json:"storage,omitempty"`
 	// storageclass contains tbd
+	// +k8s:openapi-gen:schema-type-format=object
 	Storageclass *runtime.RawExtension `json:"storageclass,omitempty"`
 	// volume contains tbd
 	Volume *AVVolume `json:"volume,omitempty"`
