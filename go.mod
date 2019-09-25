@@ -12,7 +12,6 @@ require (
 	github.com/go-openapi/validate v0.19.2
 	github.com/gogo/protobuf v1.3.0 // indirect
 	github.com/google/go-cmp v0.3.1 // indirect
-	github.com/googleapis/gnostic v0.3.1 // indirect
 	github.com/hashicorp/golang-lru v0.5.3 // indirect
 	github.com/imdario/mergo v0.3.7 // indirect
 	github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e // indirect
@@ -36,12 +35,12 @@ require (
 	k8s.io/apiextensions-apiserver v0.0.0
 	k8s.io/apimachinery v0.0.0
 	k8s.io/apiserver v0.0.0
-	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
+	k8s.io/client-go v0.0.0-20190918160344-1fbdaa4c8d90
 	k8s.io/component-base v0.0.0 // indirect
 	k8s.io/gengo v0.0.0-20190826232639-a874a240740c // indirect
 	k8s.io/kube-openapi v0.0.0-20190816220812-743ec37842bf
 	k8s.io/utils v0.0.0-20190829053155-3a4a5477acf8 // indirect
-	sigs.k8s.io/controller-runtime v0.2.0-beta.3
+	sigs.k8s.io/controller-runtime v0.2.2
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190820212518-960c3cc04183 // indirect
 	sigs.k8s.io/yaml v1.1.0
 )
@@ -68,4 +67,5 @@ replace (
 	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.0.0-20190918163543-cfa506e53441
 	k8s.io/metrics => k8s.io/metrics v0.0.0-20190918162108-227c654b2546
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.0.0-20190918161442-d4c9c65c82af
+	sigs.k8s.io/controller-runtime v0.2.2 => github.com/keleustes/controller-runtime v0.2.0-beta.1.0.20190925063420-587bc6ca5913
 )
