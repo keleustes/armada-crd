@@ -178,8 +178,8 @@ github.com/json-iterator/go v1.1.7 h1:KfgG9LzI+pYjr4xvmz/5H4FXjokeP+rlHLhv3iH62F
 github.com/json-iterator/go v1.1.7/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7VTCxuUUipMqKk8s4w=
-github.com/keleustes/controller-runtime v0.2.0-beta.1.0.20190925063420-587bc6ca5913 h1:/f6UL0j/VkVANSlyLyR4pLe6DXND6w1uhesAtyGCxgI=
-github.com/keleustes/controller-runtime v0.2.0-beta.1.0.20190925063420-587bc6ca5913/go.mod h1:NpVyRdh8G5LKrsvSxAbkkP5qyjg/faXKoJ5687iazdA=
+github.com/keleustes/controller-runtime v1.16.0 h1:tJxv7K548Ci8YPzU9yurdd93s4zkJmlSs8BncOBdjcY=
+github.com/keleustes/controller-runtime v1.16.0/go.mod h1:NpVyRdh8G5LKrsvSxAbkkP5qyjg/faXKoJ5687iazdA=
 github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQLJ+jE2L00=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
