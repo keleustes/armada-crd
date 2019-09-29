@@ -53,6 +53,10 @@ crd-yaml:
 	mkdir -p kubectl
 	GO111MODULE=on controller-gen crd paths=./pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
 	GO111MODULE=on controller-gen object paths=./pkg/apis/armada/... output:object:dir=./pkg/apis/armada/v1alpha1 output:none
+	GO111MODULE=on controller-gen crd paths=./pkg/apis/kubeflow/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	GO111MODULE=on controller-gen object paths=./pkg/apis/kubeflow/... output:object:dir=./pkg/apis/kubeflow/v1beta1 output:none
+	GO111MODULE=on controller-gen crd paths=./pkg/apis/openstacklcm/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	GO111MODULE=on controller-gen object paths=./pkg/apis/openstacklcm/... output:object:dir=./pkg/apis/openstacklcm/v1alpha1 output:none
 
 openapi-gen:
 	# GO111MODULE=on go get -u k8s.io/kube-openapi/cmd/openapi-gen

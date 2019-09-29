@@ -1,0 +1,157 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: null
+  name: oslcs.openstacklcm.airshipit.org
+spec:
+  additionalPrinterColumns:
+  - JSONPath: .status.actualState
+    description: State
+    name: State
+    type: string
+  - JSONPath: .spec.targetState
+    description: Target State
+    name: Target State
+    type: string
+  - JSONPath: .status.satisfied
+    description: Satisfied
+    name: Satisfied
+    type: boolean
+  group: openstacklcm.airshipit.org
+  names:
+    kind: Oslc
+    listKind: OslcList
+    plural: oslcs
+    shortNames:
+    - oslc
+    singular: oslc
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: Oslc is the Schema for the openstackdeployments API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: OslcSpec defines the desired state of Oslc
+          properties:
+            flowKind:
+              description: Kind of flow applied to the OpenstackService.
+              type: string
+            revisionHistoryLimit:
+              description: revisionHistoryLimit is the maximum number of revisions
+                that will be maintained in the DeletePhase's revision history. The
+                revision history consists of all revisions not represented by a currently
+                applied DeletePhaseSpec version. The default value is 10.
+              format: int32
+              type: integer
+            serviceEndPoint:
+              description: Openstack Service EndPoint
+              type: string
+            serviceName:
+              description: Openstack Service Name
+              type: string
+            source:
+              description: Points to chart or location
+              properties:
+                location:
+                  description: '``url`` or ``path`` to the flow''s parent directory'
+                  type: string
+                type:
+                  description: 'source to build the flow: ``generated``, ``local``,
+                    or ``tar``'
+                  type: string
+              required:
+              - location
+              - type
+              type: object
+            targetState:
+              description: Target state of the Lcm Custom Resources
+              type: string
+          required:
+          - flowKind
+          - serviceName
+          - source
+          - targetState
+          type: object
+        status:
+          description: OslcStatus defines the observed state of Oslc
+          properties:
+            actualPhase:
+              description: Actual phase of the OpenstackService
+              type: string
+            actualState:
+              description: Actual state of the Lcm Custom Resources
+              type: string
+            conditions:
+              description: 'List of conditions and states related to the resource.
+                JEB: Feature kind of overlap with event recorder'
+              items:
+                description: LcmResourceCondition represents one current condition
+                  of an Lcm resource A condition might not show up if it is not happening.
+                  For example, if a chart is not deploying, the Deploying condition
+                  would not show up. If a chart is deploying and encountered a problem
+                  that prevents the deployment, the Deploying condition's status will
+                  would be False and communicate the problem back.
+                properties:
+                  lastTransitionTime:
+                    format: date-time
+                    type: string
+                  message:
+                    type: string
+                  reason:
+                    type: string
+                  resourceName:
+                    type: string
+                  resourceVersion:
+                    format: int32
+                    type: integer
+                  status:
+                    description: LcmResourceConditionStatus represents the current
+                      status of a Condition
+                    type: string
+                  type:
+                    type: string
+                required:
+                - status
+                - type
+                type: object
+              type: array
+            reason:
+              description: Reason indicates the reason for any related failures.
+              type: string
+            satisfied:
+              description: Succeeded indicates if the release's ActualState satisfies
+                its target state
+              type: boolean
+          required:
+          - actualPhase
+          - actualState
+          - satisfied
+          type: object
+      type: object
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
