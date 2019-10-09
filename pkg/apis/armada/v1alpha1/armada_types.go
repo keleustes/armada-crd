@@ -56,8 +56,8 @@ type ArmadaWait struct {
 // HookActionItems
 type ArmadaHookActionItems struct {
 	Labels *map[string]string `json:"labels,omitempty"`
-	Name   string        `json:"name,omitempty"`
-	Type   string        `json:"type"`
+	Name   string             `json:"name,omitempty"`
+	Type   string             `json:"type"`
 }
 
 // Delete

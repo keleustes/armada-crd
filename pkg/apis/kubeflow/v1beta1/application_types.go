@@ -50,7 +50,7 @@ type KfDefList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
 	// +listType=set
-	Items           []KfDef `json:"items"`
+	Items []KfDef `json:"items"`
 }
 
 type KfDefSpec struct {
@@ -83,7 +83,7 @@ type Application struct {
 }
 
 type KustomizeConfig struct {
-	RepoRef  *RepoRef `json:"repoRef,omitempty"`
+	RepoRef *RepoRef `json:"repoRef,omitempty"`
 	// +listType=set
 	Overlays []string `json:"overlays,omitempty"`
 	// +listType=map
