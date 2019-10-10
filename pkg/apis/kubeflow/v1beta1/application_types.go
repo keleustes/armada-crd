@@ -237,3 +237,8 @@ type StorageOption struct {
 	// Whether to create persistent storage for storing all Kubeflow Pipeline artifacts or not.
 	CreatePipelinePersistentStorage bool
 }
+
+// ======= Schema Registration =======
+func init() {
+	SchemeBuilder.Register(&KfDef{}, &KfDefList{})
+}
