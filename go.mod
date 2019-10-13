@@ -16,7 +16,7 @@ require (
 	k8s.io/apiserver v0.0.0-20191008120233-c29386a6051d
 	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
 	k8s.io/kube-openapi v0.0.0-20190918143330-0270cf2f1c1d
-	sigs.k8s.io/controller-runtime v0.2.2
+	sigs.k8s.io/controller-runtime v0.3.0
 	sigs.k8s.io/yaml v1.1.0
 )
 
@@ -42,5 +42,5 @@ replace (
 	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.0.0-20191003003732-7d49cdad1c12
 	k8s.io/metrics => k8s.io/metrics v0.0.0-20191003002233-837aead57baf
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.0.0-20191003001538-80f33ca02582
-	sigs.k8s.io/controller-runtime => github.com/keleustes/controller-runtime v1.16.1
+	sigs.k8s.io/controller-runtime => github.com/keleustes/controller-runtime v1.16.2
 )
