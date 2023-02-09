@@ -3,7 +3,7 @@ module github.com/keleustes/armada-crd
 go 1.13
 
 require (
-	github.com/emicklei/go-restful v2.10.0+incompatible
+	github.com/emicklei/go-restful v2.16.0+incompatible
 	github.com/go-openapi/spec v0.19.3
 	github.com/go-openapi/strfmt v0.19.3
 	github.com/go-openapi/validate v0.19.5
