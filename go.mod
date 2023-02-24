@@ -8,7 +8,7 @@ require (
 	github.com/go-openapi/strfmt v0.19.3
 	github.com/go-openapi/validate v0.19.5
 	github.com/onsi/gomega v1.8.1
-	golang.org/x/net v0.0.0-20191007182048-72f939374954
+	golang.org/x/net v0.7.0
 	gopkg.in/yaml.v2 v2.2.8
 	k8s.io/api v0.18.2
 	k8s.io/apiextensions-apiserver v0.18.2
