@@ -31,22 +31,22 @@ all: clean generate openapi-gen swagger-gen kubeval-json
 ## --------------------------------------
 
 $(CONTROLLER_GEN): $(TOOLS_DIR)/go.mod # Build controller-gen from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(BINDIR)/controller-gen sigs.k8s.io/controller-tools/cmd/controller-gen
+	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/controller-gen sigs.k8s.io/controller-tools/cmd/controller-gen
 
 $(GOLANGCI_LINT): $(TOOLS_DIR)/go.mod # Build golangci-lint from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(BINDIR)/golangci-lint github.com/golangci/golangci-lint/cmd/golangci-lint
+	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/golangci-lint github.com/golangci/golangci-lint/cmd/golangci-lint
 
 $(KUBEBUILDER): $(TOOLS_DIR)/go.mod
 	cd $(TOOLS_DIR); ./install_kubebuilder.sh
 
 $(KIND): $(TOOLS_DIR)/go.mod # Build kind from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(BINDIR)/kind sigs.k8s.io/kind
+	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/kind sigs.k8s.io/kind
 
 $(KUBEVAL): $(TOOLS_DIR)/go.mod # Build kubeval from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(BINDIR)/kubeval github.com/instrumenta/kubeval
+	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/kubeval github.com/instrumenta/kubeval
 
 $(OPENAPI_GEN): $(TOOLS_DIR)/go.mod # Build openapi-gen from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(BINDIR)/openapi-gen k8s.io/kube-openapi/cmd/openapi-gen
+	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/openapi-gen k8s.io/kube-openapi/cmd/openapi-gen
 
 .PHONY: install-tools
 install-tools: $(CONTROLLER_GEN) $(GOLANGCI_LINT) $(KUBEBUILDER) $(KIND) $(KUBEVAL) $(OPENAPI_GEN)
@@ -116,8 +116,8 @@ crd-yaml: $(CONTROLLER_GEN)
 
 .PHONY: openapi-gen
 openapi-gen: $(OPENAPI_GEN)
-	# mkdir -p $HOME/src/k8s.io/kube-openapi/boilerplate/
-	# touch -p $HOME/src/k8s.io/kube-openapi/boilerplate/boilerplate.go.txt
+	mkdir -p $(HOME)/src/k8s.io/kube-openapi/boilerplate/
+	touch $(HOME)/src/k8s.io/kube-openapi/boilerplate/boilerplate.go.txt
 	mkdir -p pkg/generated
 	mkdir -p swagger
 	$(OPENAPI_GEN) -i "k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/apis/meta/v1,github.com/keleustes/armada-crd/pkg/apis/armada/v1alpha1"   -o pkg   -p generated   -O openapi_generated   -r ./swagger/golden.report
@@ -157,7 +157,7 @@ test:
 	GO111MODULE=on go test ./pkg/... -coverprofile=cover.out && go tool cover -html=cover.out
 	rm -fr config/crds/
 
-clusterexist=$(shell kind get clusters | grep armadacrd  | wc -l)
+clusterexist=$(shell tools/bin/kind get clusters | grep armadacrd  | wc -l)
 ifeq ($(clusterexist), 1)
   testcluster=$(shell kind get kubeconfig-path --name="armadacrd")
   SETKUBECONFIG=KUBECONFIG=$(testcluster)
