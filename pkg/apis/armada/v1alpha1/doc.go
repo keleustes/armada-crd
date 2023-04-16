@@ -21,7 +21,7 @@
 package v1alpha1
 
 import (
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	logf "sigs.k8s.io/controller-runtime/pkg/log"
 )
 
 var tlog = logf.Log.WithName("debug")

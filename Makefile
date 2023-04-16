@@ -49,7 +49,8 @@ $(OPENAPI_GEN): $(TOOLS_DIR)/go.mod # Build openapi-gen from tools folder.
 	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/openapi-gen k8s.io/kube-openapi/cmd/openapi-gen
 
 .PHONY: install-tools
-install-tools: $(CONTROLLER_GEN) $(GOLANGCI_LINT) $(KUBEBUILDER) $(KIND) $(KUBEVAL) $(OPENAPI_GEN)
+# install-tools: $(CONTROLLER_GEN) $(GOLANGCI_LINT) $(KUBEBUILDER) $(KIND) $(KUBEVAL) $(OPENAPI_GEN)
+install-tools: $(CONTROLLER_GEN) $(KUBEBUILDER) $(KIND)
 
 ## --------------------------------------
 ## Linting
