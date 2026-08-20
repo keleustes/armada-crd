@@ -148,22 +148,20 @@ jobs:
         with:
           go-version-file: go.mod
           cache: true
-      # Deliberately held at v6 + golangci-lint v1 while every other pin in this
-      # file moved to current (2026-08-18). This one is NOT a standalone bump:
-      # golangci-lint-action v7+ requires golangci-lint v2, whose config schema
-      # is incompatible (`linters.default` / `linters.exclusions` replace
-      # `disable-all` / `issues.exclude-rules`) and whose module path gained a
-      # `/v2/` segment. meta/bootstrap/stacks/go.sh generates a v1 `.golangci.yml`
-      # and pins GOLANGCI_VERSION=v1.61.0 in the Makefile, so action + config +
-      # binary are internally consistent today; bumping the action alone breaks
-      # every bootstrapped go project. Migrating all three together is the real
-      # change, and it needs a go toolchain to verify.
+      # Moved to action v7 + golangci-lint v2.12.2, matching the fleet reference
+      # kubedge/kubedge-operator-base (53f4ccc). golangci-lint-action v7+ requires
+      # golangci-lint v2, whose config schema is incompatible with v1
+      # (`linters.default` / `linters.exclusions` replace `disable-all` /
+      # `issues.exclude-rules`) and whose module path gained a `/v2/` segment.
       #
-      # Note the retrofit path behaves differently: `retrofit-project.sh` ships
-      # this workflow without running go.sh, so a retrofitted repo has no
-      # `.golangci.yml` at all and runs the action's own defaults. That is why
-      # kubedge/kubesim_lte is green on action v9 — it is not evidence that a
-      # bootstrapped project would be.
-      - uses: golangci/golangci-lint-action@v6
+      # That incompatibility is why the shipped template held at v6 + v1.61.0:
+      # meta/bootstrap/stacks/go.sh generates a v1 `.golangci.yml` and pins
+      # GOLANGCI_VERSION=v1.61.0, so bumping the action alone would break every
+      # BOOTSTRAPPED go project. This repo is RETROFITTED, not bootstrapped —
+      # `retrofit-project.sh` never ran go.sh, so there is no `.golangci.yml`
+      # here at all and the action runs its own defaults. With no v1 config to
+      # invalidate, the v2 migration is a pin change only. Same reasoning, same
+      # outcome, as the reference repo.
+      - uses: golangci/golangci-lint-action@v7
         with:
-          version: v1.61.0
+          version: v2.12.2
