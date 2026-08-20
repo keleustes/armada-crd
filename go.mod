@@ -1,6 +1,6 @@
 module github.com/keleustes/armada-crd
 
-go 1.18
+go 1.22
 
 require (
 	github.com/emicklei/go-restful v2.16.0+incompatible
@@ -17,7 +17,7 @@ require (
 	k8s.io/client-go v0.27.1
 	k8s.io/kube-openapi v0.0.0-20230308215209-15aac26d736a
 	sigs.k8s.io/controller-runtime v0.14.6
-	sigs.k8s.io/yaml v1.3.0
+	sigs.k8s.io/yaml v1.6.0
 )
 
 require (
@@ -72,6 +72,7 @@ require (
 	go.opentelemetry.io/otel/sdk v1.10.0 // indirect
 	go.opentelemetry.io/otel/trace v1.10.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.19.0 // indirect
+	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/oauth2 v0.0.0-20220223155221-ee480838109b // indirect
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/term v0.6.0 // indirect
