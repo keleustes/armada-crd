@@ -169,6 +169,6 @@ jobs:
       # here at all and the action runs its own defaults. With no v1 config to
       # invalidate, the v2 migration is a pin change only. Same reasoning, same
       # outcome, as the reference repo.
-      - uses: golangci/golangci-lint-action@v7
+      - uses: golangci/golangci-lint-action@v9
         with:
           version: v2.12.2
