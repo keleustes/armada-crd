@@ -30,8 +30,13 @@ var cfg *rest.Config
 var c client.Client
 
 func TestMain(m *testing.M) {
+	// kubectl/ is where `make generate-manifests` writes the CRDs. Point at it
+	// directly so a plain `go test ./...` works — which is what CI runs. This
+	// used to reference config/crds, a directory `make test` created by copying
+	// kubectl/* into it and deleted afterwards, so the suite only ever passed
+	// via make and always failed under bare `go test`.
 	t := &envtest.Environment{
-		CRDDirectoryPaths: []string{filepath.Join("..", "..", "..", "..", "config", "crds")},
+		CRDDirectoryPaths: []string{filepath.Join("..", "..", "..", "..", "kubectl")},
 	}
 
 	err := SchemeBuilder.AddToScheme(scheme.Scheme)
@@ -48,6 +53,10 @@ func TestMain(m *testing.M) {
 	}
 
 	code := m.Run()
-	t.Stop()
+	// Report rather than ignore: a failed teardown leaves the envtest control
+	// plane (etcd / kube-apiserver) running, which breaks the next run.
+	if err := t.Stop(); err != nil {
+		log.Printf("failed to stop the test environment: %v", err)
+	}
 	os.Exit(code)
 }

@@ -11,11 +11,12 @@ CRD_ROOT            ?= $(MANIFEST_ROOT)/crd/bases
 
 # Binaries.
 CONTROLLER_GEN      := $(TOOLS_BIN_DIR)/controller-gen
-GOLANGCI_LINT       := $(TOOLS_BIN_DIR)/golangci-lint
 KUBEBUILDER         := $(TOOLS_BIN_DIR)/kubebuilder
 OPENAPI_GEN         := $(TOOLS_BIN_DIR)/openapi-gen
-KIND                := $(TOOLS_BIN_DIR)/kind
-KUBEVAL             := $(TOOLS_BIN_DIR)/kubeval
+# Taken from PATH — see the note by the tooling recipes below.
+GOLANGCI_LINT       := golangci-lint
+KIND                := kind
+KUBEVAL             := kubeval
 
 # linting
 LINTER_CMD          := $(GOLANGCI_LINT)
@@ -30,38 +31,38 @@ all: clean generate openapi-gen swagger-gen kubeval-json
 ## Tooling Binaries
 ## --------------------------------------
 
-$(CONTROLLER_GEN): $(TOOLS_DIR)/go.mod # Build controller-gen from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/controller-gen sigs.k8s.io/controller-tools/cmd/controller-gen
+# NOTE: these recipes `cd $(TOOLS_DIR)` first, so the -o path must be relative
+# to tools/ (bin/x), NOT $(TOOLS_BIN_DIR) (tools/bin/x) — the latter nests the
+# binary at tools/tools/bin/x, where nothing looks for it.
 
-$(GOLANGCI_LINT): $(TOOLS_DIR)/go.mod # Build golangci-lint from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/golangci-lint github.com/golangci/golangci-lint/cmd/golangci-lint
+$(CONTROLLER_GEN): $(TOOLS_DIR)/go.mod # Build controller-gen from tools folder.
+	cd $(TOOLS_DIR); go build -tags=tools -o bin/controller-gen sigs.k8s.io/controller-tools/cmd/controller-gen
 
 $(KUBEBUILDER): $(TOOLS_DIR)/go.mod
 	cd $(TOOLS_DIR); ./install_kubebuilder.sh
 
-$(KIND): $(TOOLS_DIR)/go.mod # Build kind from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/kind sigs.k8s.io/kind
-
-$(KUBEVAL): $(TOOLS_DIR)/go.mod # Build kubeval from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/kubeval github.com/instrumenta/kubeval
-
 $(OPENAPI_GEN): $(TOOLS_DIR)/go.mod # Build openapi-gen from tools folder.
-	cd $(TOOLS_DIR); go build -tags=tools -o $(TOOLS_BIN_DIR)/openapi-gen k8s.io/kube-openapi/cmd/openapi-gen
+	cd $(TOOLS_DIR); go build -tags=tools -o bin/openapi-gen k8s.io/kube-openapi/cmd/openapi-gen
+
+# golangci-lint, kind and kubeval are no longer pinned in tools/tools.go: their
+# transitive deps pull the legacy google.golang.org/genproto monolith, which
+# collides with the split genproto/googleapis/{api,rpc} modules that
+# controller-tools v0.21.0 needs ("ambiguous import" on `go mod tidy`). Use the
+# system binaries; CI pins golangci-lint in .github/workflows/ci.yml.
 
 .PHONY: install-tools
-# install-tools: $(CONTROLLER_GEN) $(GOLANGCI_LINT) $(KUBEBUILDER) $(KIND) $(KUBEVAL) $(OPENAPI_GEN)
-install-tools: $(CONTROLLER_GEN) $(KUBEBUILDER) $(KIND)
+install-tools: $(CONTROLLER_GEN) $(OPENAPI_GEN)
 
 ## --------------------------------------
 ## Linting
 ## --------------------------------------
 
 .PHONY: lint
-lint: $(GOLANGCI_LINT) ## Lint codebase
-	$(GOLANGCI_LINT) run -v
+lint: ## Lint codebase (system golangci-lint; CI pins the version)
+	$(LINTER_CMD) run -v
 
-lint-full: $(GOLANGCI_LINT) ## Run slower linters to detect possible issues
-	$(GOLANGCI_LINT) run -v --fast=false
+lint-full: ## Run with the repeat caps lifted — golangci truncates repeats by default
+	$(LINTER_CMD) run -v --max-same-issues 0 --max-issues-per-linter 0
 
 # Run go fmt against code
 fmt:
@@ -95,9 +96,11 @@ generate-go: $(CONTROLLER_GEN)
 .PHONY: generate-manifests
 generate-manifests: $(CONTROLLER_GEN) ## Generate manifests e.g. CRD, RBAC etc.
 	mkdir -p kubectl
-	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/armada/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
-	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/kubeflow/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
-	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/openstacklcm/... crd:trivialVersions=true output:crd:dir=./kubectl output:none
+	# crd:trivialVersions was dropped in controller-gen v0.6; v0.21.0 emits
+	# apiextensions.k8s.io/v1 CRDs (v1beta1 was removed in Kubernetes 1.22).
+	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/armada/... output:crd:dir=./kubectl output:none
+	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/kubeflow/... output:crd:dir=./kubectl output:none
+	GO111MODULE=on $(CONTROLLER_GEN) crd paths=./pkg/apis/openstacklcm/... output:crd:dir=./kubectl output:none
 
 
 .PHONY: clean
@@ -148,17 +151,18 @@ kubeval-json:
 ## Testing
 ## --------------------------------------
 
+# The envtest suite reads its CRDs straight from kubectl/ now, so this no longer
+# stages a throwaway config/crds copy — which meant the tests only ever passed
+# via `make test` and always failed under a plain `go test ./...` (what CI runs).
+# Set KUBEBUILDER_ASSETS if the control-plane binaries are not already on PATH:
+#   go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
+#   export KUBEBUILDER_ASSETS="$$(setup-envtest use -p path)"
 .PHONY: test
 test:
-	echo "sudo systemctl stop kubelet"
-	echo -e 'docker stop $$(docker ps -qa)'
-	echo -e 'export PATH=$${PATH}:/usr/local/kubebuilder/bin'
-	mkdir -p config/crds
-	cp kubectl/* config/crds/
 	GO111MODULE=on go test ./pkg/... -coverprofile=cover.out && go tool cover -html=cover.out
-	rm -fr config/crds/
 
-clusterexist=$(shell tools/bin/kind get clusters | grep armadacrd  | wc -l)
+# Evaluated on every make invocation, so it must stay quiet when kind is absent.
+clusterexist=$(shell $(KIND) get clusters 2>/dev/null | grep -c armadacrd)
 ifeq ($(clusterexist), 1)
   testcluster=$(shell kind get kubeconfig-path --name="armadacrd")
   SETKUBECONFIG=KUBECONFIG=$(testcluster)

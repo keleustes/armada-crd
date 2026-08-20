@@ -185,7 +185,7 @@ func (obj *ArmadaChart) Init() {
 	}
 	if obj.Spec.TargetState == "" {
 		// TODO(JEB): Big temporary kludge to deal with helm-toolkit
-		if strings.Contains(obj.ObjectMeta.Name, "-htk") {
+		if strings.Contains(obj.Name, "-htk") {
 			obj.Spec.TargetState = StateUninitialized
 		} else {
 			obj.Spec.TargetState = StateDeployed
@@ -217,7 +217,7 @@ func ToArmadaChart(u *unstructured.Unstructured) *ArmadaChart {
 
 // Convert a typed ArmadaChart into an unstructured.Unstructured
 func (obj *ArmadaChart) FromArmadaChart() *unstructured.Unstructured {
-	u := NewArmadaChartVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewArmadaChartVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(obj)
 	if err != nil {
 		tlog.Error(err, "Can't not convert ArmadaChart")

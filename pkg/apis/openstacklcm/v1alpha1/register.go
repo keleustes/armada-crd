@@ -15,5 +15,8 @@ var (
 	SchemeGroupVersion = schema.GroupVersion{Group: "openstacklcm.airshipit.org", Version: "v1alpha1"}
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
+	// Deferred fleet-wide migration to runtime.NewSchemeBuilder; tracked as an
+	// owed follow-up alongside the same change in kubedge-operator-base.
+	//nolint:staticcheck // SA1019: scheme.Builder deprecation, migration pending
 	SchemeBuilder = &scheme.Builder{GroupVersion: SchemeGroupVersion}
 )

@@ -22,10 +22,6 @@ import (
 
 const (
 	KfConfigFile = "app.yaml"
-
-	// Used for populating plugin missing errors and identifying those
-	// errors.
-	notFoundErrPrefix = "Missing plugin"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -59,11 +55,10 @@ type KfDefSpec struct {
 	// +patchStrategy=merge
 	// +patchMergeKey=name
 	Applications []Application `json:"applications,omitempty" patchStrategy:"merge" patchMergeKey:"name"`
-	// +listType=map
-	// +listMapKey=name
-	// +patchStrategy=merge
-	// +patchMergeKey=name
-	Plugins []Plugin `json:"plugins,omitempty" patchStrategy:"merge" patchMergeKey:"name"`
+	// Plugin carries its identity in metadata.name, not a top-level `name`
+	// property, so it cannot be a list-map key; atomic is the honest listType.
+	// +listType=atomic
+	Plugins []Plugin `json:"plugins,omitempty"`
 	// +listType=map
 	// +listMapKey=name
 	// +patchStrategy=merge
@@ -78,7 +73,9 @@ type KfDefSpec struct {
 
 // Application defines an application to install
 type Application struct {
-	Name            string           `json:"name,omitempty"`
+	// +kubebuilder:validation:Required
+	// Required: it is the x-kubernetes-list-map-key for this list.
+	Name            string           `json:"name"`
 	KustomizeConfig *KustomizeConfig `json:"kustomizeConfig,omitempty"`
 }
 
@@ -119,7 +116,9 @@ type Plugin struct {
 // Secret provides information about secrets needed to configure Kubeflow.
 // Secrets can be provided via references.
 type Secret struct {
-	Name         string        `json:"name,omitempty"`
+	// +kubebuilder:validation:Required
+	// Required: it is the x-kubernetes-list-map-key for this list.
+	Name         string        `json:"name"`
 	SecretSource *SecretSource `json:"secretSource,omitempty"`
 }
 
@@ -146,7 +145,9 @@ type SecretRef struct {
 // Deployment manager configs, etc...)
 type Repo struct {
 	// Name is a name to identify the repository.
-	Name string `json:"name,omitempty"`
+	// +kubebuilder:validation:Required
+	// Required: it is the x-kubernetes-list-map-key for this list.
+	Name string `json:"name"`
 	// URI where repository can be obtained.
 	// Can use any URI understood by go-getter:
 	// https://github.com/hashicorp/go-getter/blob/master/README.md#installation-and-usage
@@ -169,7 +170,9 @@ type KfDefStatus struct {
 }
 
 type RepoCache struct {
-	Name      string `json:"name,omitempty"`
+	// +kubebuilder:validation:Required
+	// Required: it is the x-kubernetes-list-map-key for this list.
+	Name      string `json:"name"`
 	LocalPath string `json:"localPath,string"`
 }
 
@@ -206,7 +209,9 @@ type KfDefCondition struct {
 }
 
 type NameValue struct {
-	Name         string `json:"name,omitempty"`
+	// +kubebuilder:validation:Required
+	// Required: it is the x-kubernetes-list-map-key for this list.
+	Name         string `json:"name"`
 	Value        string `json:"value,omitempty"`
 	InitRequired bool   `json:"initRequired,omitempty"`
 }

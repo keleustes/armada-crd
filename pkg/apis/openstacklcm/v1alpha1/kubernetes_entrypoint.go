@@ -324,6 +324,9 @@ func (obj *KubernetesDependency) IsServiceReady(u *unstructured.Unstructured) bo
 		return false
 	}
 
+	// Deferred fleet-wide migration to discoveryv1.EndpointSlice; tracked as an
+	// owed follow-up alongside the same change in kubedge-operator-base.
+	//nolint:staticcheck // SA1019: corev1.Endpoints deprecation, migration pending
 	endpointsu := corev1.Endpoints{}
 	err1u := runtime.DefaultUnstructuredConverter.FromUnstructured(u.UnstructuredContent(), &endpointsu)
 	if err1u != nil {
@@ -343,6 +346,9 @@ func (obj *KubernetesDependency) IsServiceFailedOrError(u *unstructured.Unstruct
 		return false
 	}
 
+	// Deferred fleet-wide migration to discoveryv1.EndpointSlice; tracked as an
+	// owed follow-up alongside the same change in kubedge-operator-base.
+	//nolint:staticcheck // SA1019: corev1.Endpoints deprecation, migration pending
 	endpointsu := corev1.Endpoints{}
 	err1u := runtime.DefaultUnstructuredConverter.FromUnstructured(u.UnstructuredContent(), &endpointsu)
 	if err1u != nil {

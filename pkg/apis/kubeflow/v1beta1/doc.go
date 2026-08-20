@@ -19,9 +19,3 @@
 // +groupName=kubeflow.airshipit.org
 
 package v1beta1
-
-import (
-	logf "sigs.k8s.io/controller-runtime/pkg/log"
-)
-
-var tlog = logf.Log.WithName("debug")

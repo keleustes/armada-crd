@@ -71,7 +71,7 @@ func ToPlanningPhase(u *unstructured.Unstructured) *PlanningPhase {
 
 // Convert a typed PlanningPhase into an unstructured.Unstructured
 func (obj *PlanningPhase) FromPlanningPhase() *unstructured.Unstructured {
-	u := NewPlanningPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewPlanningPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -97,7 +97,7 @@ func (obj *PlanningPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *PlanningPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for PlanningPhase

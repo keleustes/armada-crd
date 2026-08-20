@@ -78,7 +78,7 @@ func ToInstallPhase(u *unstructured.Unstructured) *InstallPhase {
 
 // Convert a typed InstallPhase into an unstructured.Unstructured
 func (obj *InstallPhase) FromInstallPhase() *unstructured.Unstructured {
-	u := NewInstallPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewInstallPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -104,7 +104,7 @@ func (obj *InstallPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *InstallPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for InstallPhase

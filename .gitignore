@@ -62,3 +62,6 @@ prototypes/
 # The tracked policy file, if any, is .claude/settings.json — this is its
 # operator-local counterpart.
 .claude/settings.local.json
+
+# Tool binaries built from tools/go.mod by the Makefile.
+tools/bin/

@@ -132,7 +132,7 @@ func ToOslc(u *unstructured.Unstructured) *Oslc {
 
 // Convert a typed Oslc into an unstructured.Unstructured
 func (obj *Oslc) FromOslc() *unstructured.Unstructured {
-	u := NewOslcVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewOslcVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -157,7 +157,7 @@ func (obj *Oslc) IsSatisfied() bool {
 }
 
 func (obj *Oslc) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for Oslc

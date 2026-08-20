@@ -80,7 +80,7 @@ func ToTrafficRolloutPhase(u *unstructured.Unstructured) *TrafficRolloutPhase {
 
 // Convert a typed TrafficRolloutPhase into an unstructured.Unstructured
 func (obj *TrafficRolloutPhase) FromTrafficRolloutPhase() *unstructured.Unstructured {
-	u := NewTrafficRolloutPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewTrafficRolloutPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -106,7 +106,7 @@ func (obj *TrafficRolloutPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *TrafficRolloutPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for TrafficRolloutPhase

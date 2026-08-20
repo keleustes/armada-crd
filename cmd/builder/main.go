@@ -19,7 +19,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"strings"
@@ -43,20 +42,14 @@ func main() {
 		swaggerFilename = os.Args[1]
 	}
 
-	// Generate the definition names from the map keys returned
-	// from GetOpenAPIDefinitions. Anonymous function returning empty
-	// Ref is not used.
-	var defNames []string
-	for name, _ := range generated.GetOpenAPIDefinitions(func(name string) spec.Ref {
-		return spec.Ref{}
-	}) {
-		defNames = append(defNames, name)
-	}
-
 	// Create a minimal builder config, then call the builder with the definition names.
 	config := createOpenAPIBuilderConfig()
 	config.GetDefinitions = generated.GetOpenAPIDefinitions
-	// Build the Paths using a simple WebService for the final spec
+	// Build the Paths using a simple WebService for the final spec.
+	// Migrating to BuildOpenAPISpecFromRoutes means restructuring how routes are
+	// handed to the builder, which would change the generated swagger; deferred
+	// so it can be verified against the golden output separately.
+	//nolint:staticcheck // SA1019: BuildOpenAPISpec deprecation, migration pending
 	swagger, serr := builder.BuildOpenAPISpec(createWebServices(), config)
 	if serr != nil {
 		log.Fatalf("ERROR: %s", serr.Error())
@@ -67,7 +60,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("json marshal error: %s", err.Error())
 	}
-	err = ioutil.WriteFile(swaggerFilename, specBytes, 0644)
+	err = os.WriteFile(swaggerFilename, specBytes, 0644)
 	if err != nil {
 		log.Fatalf("stdout write error: %s", err.Error())
 	}
@@ -100,6 +93,9 @@ func createOpenAPIBuilderConfig() *common.Config {
 			},
 			// 404: *spec.ResponseRef("#/responses/NotFound"),
 		},
+		// Pairs with the BuildOpenAPISpec deferral above: GetOperationIDAndTagsFromRoute
+		// cannot be combined with the legacy builder call, so both migrate together.
+		//nolint:staticcheck // SA1019: GetOperationIDAndTags deprecation, migration pending
 		GetOperationIDAndTags: func(r *restful.Route) (string, []string, error) {
 			return r.Operation, nil, nil
 		},

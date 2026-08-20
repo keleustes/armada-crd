@@ -113,7 +113,7 @@ func ToArmadaChartGroup(u *unstructured.Unstructured) *ArmadaChartGroup {
 
 // Convert a typed ArmadaChartGroup into an unstructured.Unstructured
 func (obj *ArmadaChartGroup) FromArmadaChartGroup() *unstructured.Unstructured {
-	u := NewArmadaChartGroupVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewArmadaChartGroupVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -181,22 +181,22 @@ func NewArmadaChartGroupVersionKind(namespace string, name string) *unstructured
 // GetMockCharts returns a mock list of ArmadaChart the same name/namespace as the cr
 func (obj *ArmadaChartGroup) GetMockCharts() *ArmadaCharts {
 	labels := map[string]string{
-		"app": obj.ObjectMeta.Name,
+		"app": obj.Name,
 	}
 
-	var res = NewArmadaCharts(obj.ObjectMeta.Name)
+	var res = NewArmadaCharts(obj.Name)
 
 	for _, chartname := range obj.Spec.Charts {
 		res.List.Items = append(res.List.Items, ArmadaChart{
 			ObjectMeta: metav1.ObjectMeta{
 				Name:      chartname,
-				Namespace: obj.ObjectMeta.Namespace,
+				Namespace: obj.Namespace,
 				Labels:    labels,
 			},
 			Spec: ArmadaChartSpec{
 				ChartName: chartname,
 				Release:   chartname + "-release",
-				Namespace: obj.ObjectMeta.Namespace,
+				Namespace: obj.Namespace,
 				Upgrade: &ArmadaUpgrade{
 					NoHooks: false,
 				},

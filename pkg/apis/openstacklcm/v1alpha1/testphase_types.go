@@ -103,7 +103,7 @@ func ToTestPhase(u *unstructured.Unstructured) *TestPhase {
 
 // Convert a typed TestPhase into an unstructured.Unstructured
 func (obj *TestPhase) FromTestPhase() *unstructured.Unstructured {
-	u := NewTestPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewTestPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -129,7 +129,7 @@ func (obj *TestPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *TestPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for TestPhase

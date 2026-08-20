@@ -74,7 +74,7 @@ func ToDeletePhase(u *unstructured.Unstructured) *DeletePhase {
 
 // Convert a typed DeletePhase into an unstructured.Unstructured
 func (obj *DeletePhase) FromDeletePhase() *unstructured.Unstructured {
-	u := NewDeletePhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewDeletePhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -100,7 +100,7 @@ func (obj *DeletePhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *DeletePhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for DeletePhase
