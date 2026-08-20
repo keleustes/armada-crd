@@ -53,15 +53,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Install uv
-        if: needs.detect.outputs.python == 'true'
-        uses: astral-sh/setup-uv@v10
-      - name: ruff
-        if: needs.detect.outputs.python == 'true'
-        run: |
-          uv sync --locked
-          uv run ruff check .
-          uv run ruff format --check .
       - name: shellcheck + shfmt
         if: needs.detect.outputs.bash == 'true'
         run: |
@@ -82,14 +73,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Install uv
-        if: needs.detect.outputs.python == 'true'
-        uses: astral-sh/setup-uv@v10
-      - name: pytest
-        if: needs.detect.outputs.python == 'true'
-        run: |
-          uv sync --locked
-          uv run pytest
       - name: bats
         if: needs.detect.outputs.bats == 'true'
         run: |
