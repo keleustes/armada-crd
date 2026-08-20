@@ -6,16 +6,24 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+// Backup storage backends.
+const (
+	BackupStorageTypeOffsite BackupStorageType = "Offsite"
+	BackupStorageTypeCeph    BackupStorageType = "Ceph"
+)
+
+// Secret keys and file names for the backup storage backends. These are plain
+// strings, not BackupStorageType values, so they are kept in their own group —
+// sharing a group with the typed constants above would imply they inherit that
+// type, which they do not.
 const (
 	// Offsite related consts
-	BackupStorageTypeOffsite         BackupStorageType = "Offsite"
-	OffsiteSecretCredentialsFileName                   = "credentials"
-	OffsiteSecretConfigFileName                        = "config"
+	OffsiteSecretCredentialsFileName = "credentials"
+	OffsiteSecretConfigFileName      = "config"
 
 	// Ceph related consts
-	BackupStorageTypeCeph BackupStorageType = "Ceph"
-	CephAccessToken                         = "access-token"
-	CephCredentialsJson                     = "credentials.json"
+	CephAccessToken     = "access-token"
+	CephCredentialsJson = "credentials.json"
 )
 
 type BackupStorageType string

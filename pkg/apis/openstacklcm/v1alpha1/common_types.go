@@ -69,36 +69,36 @@ const (
 // These represent acceptable values for a LcmResourceConditionStatus
 const (
 	ConditionStatusTrue    LcmResourceConditionStatus = "True"
-	ConditionStatusFalse                              = "False"
-	ConditionStatusUnknown                            = "Unknown"
+	ConditionStatusFalse   LcmResourceConditionStatus = "False"
+	ConditionStatusUnknown LcmResourceConditionStatus = "Unknown"
 )
 
 // These represent acceptable values for a LcmResourceConditionType
 const (
 	ConditionIrreconcilable LcmResourceConditionType = "Irreconcilable"
-	ConditionPending                                 = "Pending"
-	ConditionInitialized                             = "Initializing"
-	ConditionError                                   = "Error"
-	ConditionRunning                                 = "Running"
-	ConditionDeployed                                = "Deployed"
-	ConditionFailed                                  = "Failed"
+	ConditionPending        LcmResourceConditionType = "Pending"
+	ConditionInitialized    LcmResourceConditionType = "Initializing"
+	ConditionError          LcmResourceConditionType = "Error"
+	ConditionRunning        LcmResourceConditionType = "Running"
+	ConditionDeployed       LcmResourceConditionType = "Deployed"
+	ConditionFailed         LcmResourceConditionType = "Failed"
 )
 
 // The following represent the more fine-grained reasons for a given condition
 const (
 	// Successful Conditions Reasons
 	ReasonInstallSuccessful        LcmResourceConditionReason = "InstallSuccessful"
-	ReasonReconcileSuccessful                                 = "ReconcileSuccessful"
-	ReasonUninstallSuccessful                                 = "UninstallSuccessful"
-	ReasonUpdateSuccessful                                    = "UpdateSuccessful"
-	ReasonUnderlyingResourcesReady                            = "UnderlyingResourcesReady"
-	ReasonUnderlyingResourcesError                            = "UnderlyingResourcesError"
+	ReasonReconcileSuccessful      LcmResourceConditionReason = "ReconcileSuccessful"
+	ReasonUninstallSuccessful      LcmResourceConditionReason = "UninstallSuccessful"
+	ReasonUpdateSuccessful         LcmResourceConditionReason = "UpdateSuccessful"
+	ReasonUnderlyingResourcesReady LcmResourceConditionReason = "UnderlyingResourcesReady"
+	ReasonUnderlyingResourcesError LcmResourceConditionReason = "UnderlyingResourcesError"
 
 	// Error Condition Reasons
 	ReasonInstallError   LcmResourceConditionReason = "InstallError"
-	ReasonReconcileError                            = "ReconcileError"
-	ReasonUninstallError                            = "UninstallError"
-	ReasonUpdateError                               = "UpdateError"
+	ReasonReconcileError LcmResourceConditionReason = "ReconcileError"
+	ReasonUninstallError LcmResourceConditionReason = "UninstallError"
+	ReasonUpdateError    LcmResourceConditionReason = "UpdateError"
 )
 
 // LcmResourceCondition represents one current condition of an Lcm resource
@@ -249,11 +249,12 @@ func (s *LcmResourceConditionListHelper) FindCondition(conditionType LcmResource
 func (s *OpenstackLcmStatus) ComputeActualState(cond LcmResourceCondition, target LcmResourceState) {
 	// TODO(Ian): finish this
 	if cond.Status == ConditionStatusTrue {
-		if cond.Type == ConditionPending {
+		switch cond.Type {
+		case ConditionPending:
 			s.ActualState = StatePending
 			s.Succeeded = (s.ActualState == target)
 			s.Reason = ""
-		} else if cond.Type == ConditionInitialized {
+		case ConditionInitialized:
 			// Since that condition is set almost systematically
 			// let's do not recompute the state.
 			if (s.ActualState == "") || (s.ActualState == StateUnknown) {
@@ -261,32 +262,32 @@ func (s *OpenstackLcmStatus) ComputeActualState(cond LcmResourceCondition, targe
 				s.Succeeded = (s.ActualState == target)
 				s.Reason = ""
 			}
-		} else if cond.Type == ConditionRunning {
+		case ConditionRunning:
 			// The deployment is still running
 			s.ActualState = StateRunning
 			s.Succeeded = false
 			s.Reason = ""
-		} else if cond.Type == ConditionDeployed {
+		case ConditionDeployed:
 			// No change is expected anymore. It is deployed
 			s.ActualState = StateDeployed
 			s.Succeeded = (s.ActualState == target)
 			s.Reason = ""
-		} else if cond.Type == ConditionFailed {
+		case ConditionFailed:
 			// No change is expected anymore. It is failed
 			s.ActualState = StateFailed
 			s.Succeeded = false
 			s.Reason = cond.Reason.String()
-		} else if cond.Type == ConditionIrreconcilable {
+		case ConditionIrreconcilable:
 			// We can't reconcile the subresources and the CRD
 			s.ActualState = StateError
 			s.Succeeded = false
 			s.Reason = cond.Reason.String()
-		} else if cond.Type == ConditionError {
+		case ConditionError:
 			// We have a bug somewhere.
 			s.ActualState = StateError
 			s.Succeeded = false
 			s.Reason = cond.Reason.String()
-		} else {
+		default:
 			s.Succeeded = (s.ActualState == target)
 			s.Reason = ""
 		}
@@ -329,16 +330,24 @@ type PhaseSpec struct {
 // Backup/Restore related types
 type BackupStorageType string
 
+// Backup storage backends.
+const (
+	BackupStorageTypeOffsite BackupStorageType = "Offsite"
+	BackupStorageTypeCeph    BackupStorageType = "Ceph"
+)
+
+// Secret keys and file names for the backup storage backends. These are plain
+// strings, not BackupStorageType values, so they are kept in their own group —
+// sharing a group with the typed constants above would imply they inherit that
+// type, which they do not.
 const (
 	// Offsite related consts
-	BackupStorageTypeOffsite         BackupStorageType = "Offsite"
-	OffsiteSecretCredentialsFileName                   = "credentials"
-	OffsiteSecretConfigFileName                        = "config"
+	OffsiteSecretCredentialsFileName = "credentials"
+	OffsiteSecretConfigFileName      = "config"
 
 	// Ceph related consts
-	BackupStorageTypeCeph BackupStorageType = "Ceph"
-	CephAccessToken                         = "access-token"
-	CephCredentialsJson                     = "credentials.json"
+	CephAccessToken     = "access-token"
+	CephCredentialsJson = "credentials.json"
 )
 
 // SubResourceList represent the list of

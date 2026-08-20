@@ -142,7 +142,7 @@ func ToUpgradePhase(u *unstructured.Unstructured) *UpgradePhase {
 
 // Convert a typed UpgradePhase into an unstructured.Unstructured
 func (obj *UpgradePhase) FromUpgradePhase() *unstructured.Unstructured {
-	u := NewUpgradePhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewUpgradePhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -168,7 +168,7 @@ func (obj *UpgradePhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *UpgradePhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for UpgradePhase

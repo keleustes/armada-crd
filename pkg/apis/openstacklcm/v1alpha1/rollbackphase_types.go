@@ -126,7 +126,7 @@ func ToRollbackPhase(u *unstructured.Unstructured) *RollbackPhase {
 
 // Convert a typed RollbackPhase into an unstructured.Unstructured
 func (obj *RollbackPhase) FromRollbackPhase() *unstructured.Unstructured {
-	u := NewRollbackPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewRollbackPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -152,7 +152,7 @@ func (obj *RollbackPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *RollbackPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for RollbackPhase

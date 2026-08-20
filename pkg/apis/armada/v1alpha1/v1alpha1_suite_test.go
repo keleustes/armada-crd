@@ -48,6 +48,10 @@ func TestMain(m *testing.M) {
 	}
 
 	code := m.Run()
-	t.Stop()
+	// Report rather than ignore: a failed teardown leaves the envtest control
+	// plane (etcd / kube-apiserver) running, which breaks the next run.
+	if err := t.Stop(); err != nil {
+		log.Printf("failed to stop the test environment: %v", err)
+	}
 	os.Exit(code)
 }

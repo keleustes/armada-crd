@@ -106,7 +106,7 @@ func ToArmadaManifest(u *unstructured.Unstructured) *ArmadaManifest {
 
 // Convert a typed ArmadaManifest into an unstructured.Unstructured
 func (obj *ArmadaManifest) FromArmadaManifest() *unstructured.Unstructured {
-	u := NewArmadaManifestVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewArmadaManifestVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(obj)
 	if err != nil {
 		tlog.Error(err, "Can't not convert ArmadaChartGroup")
@@ -166,22 +166,22 @@ func (obj *ArmadaManifest) AsString() string {
 // the names specified in the ArmadaManifest Spec
 func (obj *ArmadaManifest) GetMockChartGroups() *ArmadaChartGroups {
 	labels := map[string]string{
-		"app": obj.ObjectMeta.Name,
+		"app": obj.Name,
 	}
 
-	var res = NewArmadaChartGroups(obj.ObjectMeta.Name)
+	var res = NewArmadaChartGroups(obj.Name)
 
 	for _, chartgroupname := range obj.Spec.ChartGroups {
 		res.List.Items = append(res.List.Items,
 			ArmadaChartGroup{
 				ObjectMeta: metav1.ObjectMeta{
 					Name:      chartgroupname,
-					Namespace: obj.ObjectMeta.Namespace,
+					Namespace: obj.Namespace,
 					Labels:    labels,
 				},
 				Spec: ArmadaChartGroupSpec{
 					Charts:      make([]string, 0),
-					Description: "Created by " + obj.ObjectMeta.Name,
+					Description: "Created by " + obj.Name,
 					Name:        chartgroupname,
 					Sequenced:   false,
 					TestCharts:  false,

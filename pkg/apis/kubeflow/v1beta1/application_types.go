@@ -22,10 +22,6 @@ import (
 
 const (
 	KfConfigFile = "app.yaml"
-
-	// Used for populating plugin missing errors and identifying those
-	// errors.
-	notFoundErrPrefix = "Missing plugin"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

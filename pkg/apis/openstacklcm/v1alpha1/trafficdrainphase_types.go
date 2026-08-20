@@ -79,7 +79,7 @@ func ToTrafficDrainPhase(u *unstructured.Unstructured) *TrafficDrainPhase {
 
 // Convert a typed TrafficDrainPhase into an unstructured.Unstructured
 func (obj *TrafficDrainPhase) FromTrafficDrainPhase() *unstructured.Unstructured {
-	u := NewTrafficDrainPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewTrafficDrainPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -105,7 +105,7 @@ func (obj *TrafficDrainPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *TrafficDrainPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for TrafficDrainPhase

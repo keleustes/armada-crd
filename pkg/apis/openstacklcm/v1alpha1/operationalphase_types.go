@@ -83,7 +83,7 @@ func ToOperationalPhase(u *unstructured.Unstructured) *OperationalPhase {
 
 // Convert a typed OperationalPhase into an unstructured.Unstructured
 func (obj *OperationalPhase) FromOperationalPhase() *unstructured.Unstructured {
-	u := NewOperationalPhaseVersionKind(obj.ObjectMeta.Namespace, obj.ObjectMeta.Name)
+	u := NewOperationalPhaseVersionKind(obj.Namespace, obj.Name)
 	tmp, err := runtime.DefaultUnstructuredConverter.ToUnstructured(*obj)
 	if err != nil {
 		return u
@@ -109,7 +109,7 @@ func (obj *OperationalPhase) IsSatisfied() bool {
 
 // Name of the Phase
 func (obj *OperationalPhase) GetName() string {
-	return obj.ObjectMeta.Name
+	return obj.Name
 }
 
 // Returns a GKV for OperationalPhase
