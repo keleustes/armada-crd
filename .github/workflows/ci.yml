@@ -135,6 +135,13 @@ jobs:
         with:
           go-version-file: go.mod
           cache: true
+      # pkg/apis/armada/v1alpha1 runs against a real control plane via envtest,
+      # which needs the kube-apiserver/etcd binaries in KUBEBUILDER_ASSETS.
+      # Project-local addition, not part of the shipped class-M workflow.
+      - name: envtest assets
+        run: |
+          go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
+          echo "KUBEBUILDER_ASSETS=$("$(go env GOPATH)/bin/setup-envtest" use -p path)" >> "$GITHUB_ENV"
       - run: go test ./... -race -coverprofile=cover.out
 
   golangci-lint:

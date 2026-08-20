@@ -1,26 +1,11 @@
-
 ---
-apiVersion: apiextensions.k8s.io/v1beta1
+apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.3.0
-  creationTimestamp: null
+    controller-gen.kubebuilder.io/version: v0.21.0
   name: armadamanifests.armada.airshipit.org
 spec:
-  additionalPrinterColumns:
-  - JSONPath: .status.actual_state
-    description: State
-    name: State
-    type: string
-  - JSONPath: .spec.target_state
-    description: Target State
-    name: Target State
-    type: string
-  - JSONPath: .status.satisfied
-    description: Satisfied
-    name: Satisfied
-    type: boolean
   group: armada.airshipit.org
   names:
     kind: ArmadaManifest
@@ -30,113 +15,127 @@ spec:
     - amf
     singular: armadamanifest
   scope: Namespaced
-  subresources:
-    status: {}
-  validation:
-    openAPIV3Schema:
-      description: ArmadaManifest is the Schema for the armadamanifests API
-      properties:
-        apiVersion:
-          description: 'APIVersion defines the versioned schema of this representation
-            of an object. Servers should convert recognized schemas to the latest
-            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-          type: string
-        kind:
-          description: 'Kind is a string value representing the REST resource this
-            object represents. Servers may infer this from the endpoint the client
-            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-          type: string
-        metadata:
-          type: object
-        spec:
-          description: ======= ArmadaManifestSpec Definition ======= ArmadaManifestSpec
-            defines the desired state of ArmadaManifest
-          properties:
-            chart_groups:
-              description: References ChartGroup document of all groups
-              items:
-                type: string
-              type: array
-            release_prefix:
-              description: Appends to the front of all charts released by the manifest
-                in order to manage releases throughout their lifecycle
-              type: string
-            revisionHistoryLimit:
-              description: revisionHistoryLimit is the maximum number of revisions
-                that will be maintained in the ArmadaManifest's revision history.
-                The revision history consists of all revisions not represented by
-                a currently applied ArmadaManifest version. The default value is 10.
-              format: int32
-              type: integer
-            target_state:
-              description: Target state of the Helm Custom Resources
-              type: string
-          required:
-          - chart_groups
-          - release_prefix
-          - target_state
-          type: object
-        status:
-          description: ======= ArmadaManifestStatus Definition ======= ArmadaManifestStatus
-            defines the observed state of ArmadaManifest
-          properties:
-            actual_state:
-              description: Actual state of the Helm Custom Resources
-              type: string
-            conditions:
-              description: 'List of conditions and states related to the resource.
-                JEB: Feature kind of overlap with event recorder'
-              items:
-                description: HelmResourceCondition represents one current condition
-                  of an Helm resource A condition might not show up if it is not happening.
-                  For example, if a chart is not deploying, the Deploying condition
-                  would not show up. If a chart is deploying and encountered a problem
-                  that prevents the deployment, the Deploying condition's status will
-                  would be False and communicate the problem back.
-                properties:
-                  lastTransitionTime:
-                    format: date-time
-                    type: string
-                  message:
-                    type: string
-                  reason:
-                    type: string
-                  resourceName:
-                    type: string
-                  resourceVersion:
-                    format: int32
-                    type: integer
-                  status:
-                    description: HelmResourceConditionStatus represents the current
-                      status of a Condition
-                    type: string
-                  type:
-                    type: string
-                required:
-                - status
-                - type
-                type: object
-              type: array
-            reason:
-              description: Reason indicates the reason for any related failures.
-              type: string
-            satisfied:
-              description: Satisfied indicates if the release's ActualState satisfies
-                its target state
-              type: boolean
-          required:
-          - actual_state
-          - satisfied
-          type: object
-      type: object
-  version: v1alpha1
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - description: State
+      jsonPath: .status.actual_state
+      name: State
+      type: string
+    - description: Target State
+      jsonPath: .spec.target_state
+      name: Target State
+      type: string
+    - description: Satisfied
+      jsonPath: .status.satisfied
+      name: Satisfied
+      type: boolean
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: ArmadaManifest is the Schema for the armadamanifests API
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: |-
+              ======= ArmadaManifestSpec Definition =======
+              ArmadaManifestSpec defines the desired state of ArmadaManifest
+            properties:
+              chart_groups:
+                description: References ChartGroup document of all groups
+                items:
+                  type: string
+                type: array
+              release_prefix:
+                description: Appends to the front of all charts released by the manifest
+                  in order to manage releases throughout their lifecycle
+                type: string
+              revisionHistoryLimit:
+                description: |-
+                  revisionHistoryLimit is the maximum number of revisions that will
+                  be maintained in the ArmadaManifest's revision history. The revision history
+                  consists of all revisions not represented by a currently applied
+                  ArmadaManifest version. The default value is 10.
+                format: int32
+                type: integer
+              target_state:
+                description: Target state of the Helm Custom Resources
+                type: string
+            required:
+            - chart_groups
+            - release_prefix
+            - target_state
+            type: object
+          status:
+            description: |-
+              ======= ArmadaManifestStatus Definition =======
+              ArmadaManifestStatus defines the observed state of ArmadaManifest
+            properties:
+              actual_state:
+                description: Actual state of the Helm Custom Resources
+                type: string
+              conditions:
+                description: 'List of conditions and states related to the resource.
+                  JEB: Feature kind of overlap with event recorder'
+                items:
+                  description: |-
+                    HelmResourceCondition represents one current condition of an Helm resource
+                    A condition might not show up if it is not happening.
+                    For example, if a chart is not deploying, the Deploying condition would not show up.
+                    If a chart is deploying and encountered a problem that prevents the deployment,
+                    the Deploying condition's status will would be False and communicate the problem back.
+                  properties:
+                    lastTransitionTime:
+                      format: date-time
+                      type: string
+                    message:
+                      type: string
+                    reason:
+                      type: string
+                    resourceName:
+                      type: string
+                    resourceVersion:
+                      format: int32
+                      type: integer
+                    status:
+                      description: HelmResourceConditionStatus represents the current
+                        status of a Condition
+                      type: string
+                    type:
+                      type: string
+                  required:
+                  - status
+                  - type
+                  type: object
+                type: array
+              reason:
+                description: Reason indicates the reason for any related failures.
+                type: string
+              satisfied:
+                description: Satisfied indicates if the release's ActualState satisfies
+                  its target state
+                type: boolean
+            required:
+            - actual_state
+            - satisfied
+            type: object
+        type: object
     served: true
     storage: true
-status:
-  acceptedNames:
-    kind: ""
-    plural: ""
-  conditions: []
-  storedVersions: []
+    subresources:
+      status: {}
