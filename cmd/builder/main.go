@@ -24,12 +24,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/emicklei/go-restful"
-	"github.com/go-openapi/spec"
+	"github.com/emicklei/go-restful/v3"
 	"github.com/keleustes/armada-crd/pkg/generated"
 	"k8s.io/kube-openapi/pkg/builder"
 	"k8s.io/kube-openapi/pkg/common"
 	"k8s.io/kube-openapi/pkg/util"
+	"k8s.io/kube-openapi/pkg/validation/spec"
 )
 
 // TODO: Change this to output the generated swagger to stdout.
@@ -93,7 +93,11 @@ func createOpenAPIBuilderConfig() *common.Config {
 			},
 		},
 		CommonResponses: map[int]spec.Response{
-			401: *spec.NewResponse().WithDescription("Unauthorized"),
+			401: {
+				ResponseProps: spec.ResponseProps{
+					Description: "Unauthorized",
+				},
+			},
 			// 404: *spec.ResponseRef("#/responses/NotFound"),
 		},
 		GetOperationIDAndTags: func(r *restful.Route) (string, []string, error) {
