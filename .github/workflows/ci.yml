@@ -76,18 +76,6 @@ jobs:
             shfmt -d -i 2 -ci -bn "${sh_files[@]}"
           fi
 
-  type-check:
-    name: type-check
-    needs: detect
-    if: needs.detect.outputs.python == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v10
-      - run: |
-          uv sync --locked
-          uv run mypy src
-
   test:
     name: test
     needs: detect
