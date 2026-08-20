@@ -1,0 +1,64 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Obsidian (per-vault state when the project is opened as a vault)
+.obsidian/
+.trash/
+
+# Environment / secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Node (for tooling like prettier/markdownlint)
+node_modules/
+
+# Bats (test artifacts)
+*.tap
+
+# Logs and tmp
+*.log
+tmp/
+.tmp/
+
+# Project-local data (re-include if you actually want to ship samples)
+data/
+
+# Operator scratch (never committed)
+/.local/
+prototypes/
+
+# Claude Code operator-local session grants (per-operator, never committed).
+# The tracked policy file, if any, is .claude/settings.json — this is its
+# operator-local counterpart.
+.claude/settings.local.json
