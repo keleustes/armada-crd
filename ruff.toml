@@ -1,0 +1,10 @@
+# armada-crd is a Go project: every Python file here is claude-meta tooling that runs
+# under `uv run --script` (Python 3.14) and is linted meta-side, not by this repo.
+# force-exclude so the pre-commit ruff hooks, which pass files by name, honour it too.
+force-exclude = true
+extend-exclude = [
+  ".agents/",
+  ".claude/",
+  "plugins/",
+  "bin/*.py",
+]
