@@ -20,6 +20,9 @@
 .env.*
 !.env.example
 
+# Rust and Java — cargo's and Maven's build output, at any depth (rust/target/, java/target/)
+target/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -58,10 +61,14 @@ data/
 /.local/
 prototypes/
 
-# Claude Code operator-local session grants (per-operator, never committed).
-# The tracked policy file, if any, is .claude/settings.json — this is its
-# operator-local counterpart.
+# Claude Code operator-local settings (per-operator, never committed). Reconciled
+# against the tracked floor .claude/settings-template.json by bin/reconcile-settings.py,
+# which creates the file by hand — so this line, not Claude Code's global exclude,
+# keeps it out of git. This repo never tracks a .claude/settings.json.
 .claude/settings.local.json
 
 # Tool binaries built from tools/go.mod by the Makefile.
 tools/bin/
+# Claude Code worktrees (`claude --worktree`, subagent isolation) — inside a session's scope,
+# never committed (spec sibling-access-practice)
+.claude/worktrees/
